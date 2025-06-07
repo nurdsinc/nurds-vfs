@@ -1,0 +1,13 @@
+[
+    "bandwidthPeriod",
+    "lastBillingDate",
+    "nextBillingDate",
+    "billingPeriod",
+    "created",
+    "inFreeMonth",
+    "overchargeEmails",
+    "plan",
+    "projectId",
+    "name",
+    "status"
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "type"
+    },
+    {
+        "name": "emailAddress"
+    },
+    {
+        "name": "phoneNumber"
+    },
+    {
+        "name": "insuranceCompany"
+    },
+    {
+        "name": "claims"
+    }
+]

@@ -1,0 +1,49 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "sidePanels": {
+        "detail": [
+            {
+                "name": "activities",
+                "label": "Activities",
+                "view": "crm:views/record/panels/activities",
+                "aclScope": "Activities"
+            },
+            {
+                "name": "history",
+                "label": "History",
+                "view": "crm:views/record/panels/history",
+                "aclScope": "Activities"
+            },
+            {
+                "name": "tasks",
+                "label": "Tasks",
+                "view": "crm:views/record/panels/tasks",
+                "aclScope": "Task"
+            }
+        ]
+    },
+    "relationshipPanels": {
+        "vehicle": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "primaryDriver": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "additionalDrivers": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "creditCard": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    },
+    "kanbanViewMode": true,
+    "color": "#f900ea",
+    "iconClass": "fas fa-car-on"
+}

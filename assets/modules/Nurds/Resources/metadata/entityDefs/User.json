@@ -1,0 +1,7 @@
+{
+    "fields": {
+        "userName": {
+            "maxLength": 255
+        }
+    }
+}

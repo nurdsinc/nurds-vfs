@@ -1,0 +1,154 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "fullName"
+                },
+                {
+                    "name": "roleId"
+                },
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "timezone"
+                },
+                {
+                    "name": "account"
+                },
+                {
+                    "name": "startapp"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "inboundNumbers"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "allowRecordings"
+                },
+                {
+                    "name": "restrictedCid"
+                },
+                {
+                    "name": "disableTrunksPrefix"
+                },
+                {
+                    "name": "sendWelcomeEmail"
+                }
+            ],
+            [
+                {
+                    "name": "addons"
+                },
+                {
+                    "name": "allowedOutboundRoutes"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "info",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Settings"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "allowedTenantTrunks"
+                },
+                {
+                    "name": "callsLimit"
+                },
+                {
+                    "name": "conferences"
+                },
+                {
+                    "name": "emergencyTrunks"
+                }
+            ],
+            [
+                {
+                    "name": "extensions"
+                },
+                {
+                    "name": "inboundCallsLimit"
+                },
+                {
+                    "name": "ivrs"
+                },
+                {
+                    "name": "outboundProfiles"
+                }
+            ],
+            [
+                {
+                    "name": "parkingLots"
+                },
+                {
+                    "name": "queues"
+                },
+                {
+                    "name": "vpbxDevices"
+                },
+                {
+                    "name": "trunks"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Limits",
+        "hidden": false,
+        "noteText": "Control the maximum count of Trunks, Extensions, IVRs, Groups, etc.",
+        "noteStyle": "info",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "json"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Json",
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "label": ""
+    }
+]

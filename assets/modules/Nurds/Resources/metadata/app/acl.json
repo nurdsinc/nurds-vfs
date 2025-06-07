@@ -1,0 +1,12 @@
+{
+    "adminMandatory": {
+        "scopeLevel": {
+            "User": {
+                "create": "yes",
+                "read": "all",
+                "edit": "all",
+                "delete": "all"
+            }
+        }
+    }
+}

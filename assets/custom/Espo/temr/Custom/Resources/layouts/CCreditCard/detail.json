@@ -1,0 +1,67 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "transactionType"
+                }
+            ],
+            [
+                {
+                    "name": "nameOnCard"
+                },
+                {
+                    "name": "cardType"
+                }
+            ],
+            [
+                {
+                    "name": "token"
+                },
+                {
+                    "name": "cVV"
+                }
+            ],
+            [
+                {
+                    "name": "expirationDate"
+                },
+                {
+                    "name": "last4"
+                }
+            ],
+            [
+                {
+                    "name": "billingAddressStreet"
+                },
+                {
+                    "name": "billingAddressState"
+                }
+            ],
+            [
+                {
+                    "name": "billingAddressCity"
+                },
+                {
+                    "name": "billingAddressPostalCode"
+                }
+            ],
+            [
+                {
+                    "name": "fingerprint"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

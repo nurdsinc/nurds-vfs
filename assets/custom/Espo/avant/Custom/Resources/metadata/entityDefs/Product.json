@@ -1,0 +1,34 @@
+{
+    "fields": {
+        "uM": {
+            "type": "enum",
+            "required": false,
+            "options": [
+                "SF",
+                "SQ",
+                "LF",
+                "FT",
+                "IN",
+                "CM",
+                "EA",
+                "HR"
+            ],
+            "default": "EA",
+            "isSorted": false,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true,
+            "style": {
+                "SF": null,
+                "SQ": null,
+                "LF": null,
+                "FT": null,
+                "IN": null,
+                "CM": null,
+                "EA": null,
+                "HR": null
+            }
+        }
+    }
+}

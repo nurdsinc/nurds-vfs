@@ -1,0 +1,11 @@
+[
+    "assignedUser",
+    "paidFrom",
+    "status",
+    "type",
+    "dueDate",
+    "datePaid",
+    "teams",
+    "parent",
+    "payee"
+]

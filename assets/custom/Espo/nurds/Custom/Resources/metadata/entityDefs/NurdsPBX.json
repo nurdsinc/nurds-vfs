@@ -1,0 +1,410 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "pattern": "$noBadCharacters",
+            "readOnlyAfterCreate": true,
+            "options": []
+        },
+        "description": {
+            "type": "text"
+        },
+        "website": {
+            "type": "url",
+            "strip": true
+        },
+        "emailAddress": {
+            "type": "email"
+        },
+        "phoneNumber": {
+            "type": "phone",
+            "typeList": [
+                "Office",
+                "Mobile",
+                "Fax",
+                "Other"
+            ],
+            "defaultType": "Office"
+        },
+        "billingAddress": {
+            "type": "address"
+        },
+        "billingAddressStreet": {
+            "type": "text",
+            "maxLength": 255,
+            "dbType": "varchar"
+        },
+        "billingAddressCity": {
+            "type": "varchar"
+        },
+        "billingAddressState": {
+            "type": "varchar"
+        },
+        "billingAddressCountry": {
+            "type": "varchar"
+        },
+        "billingAddressPostalCode": {
+            "type": "varchar"
+        },
+        "shippingAddress": {
+            "type": "address",
+            "view": "crm:views/account/fields/shipping-address"
+        },
+        "shippingAddressStreet": {
+            "type": "text",
+            "maxLength": 255,
+            "dbType": "varchar"
+        },
+        "shippingAddressCity": {
+            "type": "varchar"
+        },
+        "shippingAddressState": {
+            "type": "varchar"
+        },
+        "shippingAddressCountry": {
+            "type": "varchar"
+        },
+        "shippingAddressPostalCode": {
+            "type": "varchar"
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": false,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "path": {
+            "type": "varchar",
+            "maxLength": 25,
+            "options": [],
+            "isCustom": true,
+            "copyToClipboard": true,
+            "readOnly": true
+        },
+        "prefix": {
+            "type": "varchar",
+            "maxLength": 10,
+            "options": [],
+            "isCustom": true
+        },
+        "enabled": {
+            "notNull": true,
+            "type": "bool",
+            "default": true,
+            "isCustom": true
+        },
+        "addons": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "sonata-billing",
+                "sonata-dialer",
+                "sonata-recordings",
+                "sonata-stats",
+                "sonata-switchboard",
+                "vitxi"
+            ],
+            "default": [],
+            "style": {
+                "sonata-billing": null,
+                "sonata-dialer": null,
+                "sonata-recordings": null,
+                "sonata-stats": null,
+                "sonata-switchboard": null,
+                "vitxi": null
+            },
+            "isCustom": true
+        },
+        "allowRecordings": {
+            "notNull": true,
+            "type": "bool",
+            "default": true,
+            "isCustom": true
+        },
+        "cidName": {
+            "type": "varchar",
+            "maxLength": 25,
+            "options": [],
+            "tooltip": true,
+            "isCustom": true
+        },
+        "allowedOutboundRoutes": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "1",
+                "2",
+                "3"
+            ],
+            "default": [
+                "1",
+                "2"
+            ],
+            "style": {
+                "1": null,
+                "2": null,
+                "3": null
+            },
+            "isCustom": true,
+            "tooltip": true
+        },
+        "allowedTenantTrunks": {
+            "type": "int",
+            "default": 1,
+            "isCustom": true
+        },
+        "callsLimit": {
+            "type": "int",
+            "default": 10,
+            "isCustom": true
+        },
+        "conferences": {
+            "type": "int",
+            "isCustom": true
+        },
+        "disableTrunksPrefix": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "timezone": {
+            "type": "enum",
+            "options": [
+                "America/New_York",
+                "America/Chicago",
+                "America/Phoenix",
+                "America/Denver",
+                "America/Los_Angeles",
+                "America/Anchorage",
+                "Pacific/Honolulu"
+            ],
+            "style": {
+                "America/New_York": null,
+                "America/Chicago": null,
+                "America/Phoenix": null,
+                "America/Denver": null,
+                "America/Los_Angeles": null,
+                "America/Anchorage": null,
+                "Pacific/Honolulu": null
+            },
+            "default": "America/Phoenix",
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "emergencyTrunks": {
+            "type": "int",
+            "default": 1,
+            "isCustom": true
+        },
+        "extensions": {
+            "type": "int",
+            "default": 10,
+            "isCustom": true
+        },
+        "inboundCallsLimit": {
+            "type": "int",
+            "default": 10,
+            "isCustom": true
+        },
+        "ivrs": {
+            "type": "int",
+            "default": 3,
+            "isCustom": true
+        },
+        "outboundProfiles": {
+            "type": "int",
+            "default": 3,
+            "isCustom": true
+        },
+        "parkingLots": {
+            "type": "int",
+            "isCustom": true
+        },
+        "queues": {
+            "type": "int",
+            "isCustom": true
+        },
+        "restrictedCid": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "trunks": {
+            "type": "int",
+            "isCustom": true
+        },
+        "vpbxDevices": {
+            "type": "int",
+            "isCustom": true
+        },
+        "tenantId": {
+            "type": "int",
+            "disableFormatting": true,
+            "isCustom": true,
+            "readOnly": true
+        },
+        "json": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "cidNumber": {
+            "type": "varchar",
+            "maxLength": 25,
+            "copyToClipboard": true,
+            "options": [],
+            "isCustom": true
+        },
+        "sendWelcomeEmail": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "fullName": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
+        },
+        "userPassword": {
+            "type": "password",
+            "isCustom": true
+        },
+        "startapp": {
+            "type": "enum",
+            "options": [
+                "dashboard"
+            ],
+            "style": {
+                "dashboard": null
+            },
+            "default": "dashboard",
+            "tooltip": true,
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "roleId": {
+            "type": "enum",
+            "options": [
+                "1",
+                "3",
+                "4"
+            ],
+            "default": "4",
+            "style": {
+                "1": null,
+                "3": null,
+                "4": null
+            },
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "account": {
+            "type": "link"
+        },
+        "inboundNumbers": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "default": [],
+            "allowCustomOptions": true,
+            "style": {},
+            "isCustom": true
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "entityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent"
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent"
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent"
+        },
+        "account": {
+            "type": "belongsTo",
+            "foreign": "cNurdsPBXs",
+            "entity": "Account",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc"
+    },
+    "indexes": {
+        "name": {
+            "columns": [
+                "name",
+                "deleted"
+            ]
+        },
+        "assignedUser": {
+            "columns": [
+                "assignedUserId",
+                "deleted"
+            ]
+        },
+        "createdAt": {
+            "columns": [
+                "createdAt"
+            ]
+        },
+        "createdAtId": {
+            "unique": true,
+            "columns": [
+                "createdAt",
+                "id"
+            ]
+        }
+    }
+}

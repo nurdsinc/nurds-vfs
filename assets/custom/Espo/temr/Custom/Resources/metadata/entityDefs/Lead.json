@@ -1,0 +1,9 @@
+{
+    "fields": {
+        "cPassword": {
+            "type": "password",
+            "tooltip": true,
+            "isCustom": true
+        }
+    }
+}

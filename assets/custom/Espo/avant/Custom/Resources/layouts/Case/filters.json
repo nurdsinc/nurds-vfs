@@ -1,0 +1,18 @@
+[
+    "inboundEmail",
+    "contact",
+    "claimNumber",
+    "claim",
+    "assignedUser",
+    "parent",
+    "type",
+    "status",
+    "priority",
+    "account",
+    "createdAt",
+    "createdBy",
+    "number",
+    "modifiedAt",
+    "description",
+    "teams"
+]

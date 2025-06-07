@@ -1,0 +1,39 @@
+[
+    {
+        "name": "name",
+        "width": 15,
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "user"
+    },
+    {
+        "name": "insuranceCompany"
+    },
+    {
+        "name": "createdAt"
+    },
+    {
+        "name": "phoneNumber"
+    },
+    {
+        "name": "serviceRequested"
+    },
+    {
+        "name": "emailAddress",
+        "notSortable": true
+    },
+    {
+        "name": "createdBy"
+    },
+    {
+        "name": "typeOfLoss"
+    },
+    {
+        "name": "dateOfLoss"
+    }
+]

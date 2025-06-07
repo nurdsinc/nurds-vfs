@@ -1,0 +1,8 @@
+{
+    "fields": {
+        "cPassword": "Password"
+    },
+    "tooltips": {
+        "cPassword": "Initial Password"
+    }
+}

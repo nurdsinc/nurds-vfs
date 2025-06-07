@@ -1,0 +1,414 @@
+{
+    "fields": {
+        "primaryContact": {
+            "type": "link",
+            "layoutDetailDisabled": false,
+            "layoutListDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": true,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "type": {
+            "type": "enum",
+            "options": [
+                "",
+                "Contractor",
+                "Investor",
+                "Partner",
+                "Property Management",
+                "Insurance Company",
+                "Roofer",
+                "Mitigations",
+                "Realtor",
+                "Affiliate",
+                "Insurance Agent"
+            ],
+            "default": "",
+            "required": false,
+            "isSorted": false,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+        "commission": {
+            "type": "enum",
+            "required": false,
+            "isSorted": false,
+            "audited": false,
+            "isCustom": true
+        },
+        "dealflow": {
+            "type": "link"
+        },
+        "stages": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        },
+        "contactForm": {
+            "skipOrmDefs": true,
+            "isCustom": true
+        },
+        "manycases": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "campaigns": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "documentsPrimary": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "phoneNumber": {
+            "defaultType": "Mobile"
+        },
+        "vendorSource": {
+            "type": "enum",
+            "required": false,
+            "options": [
+                "Networking",
+                "Phoenix",
+                "Referral",
+                "WTS",
+                "NA",
+                "Aspen"
+            ],
+            "default": "NA",
+            "audited": true,
+            "isSorted": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "companyName": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "maxLength": 30,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "cRM": {
+            "type": "enum",
+            "required": false,
+            "options": [
+                "Yes",
+                "No",
+                "Pending",
+                "Collect Payment",
+                "Interested",
+                "Needs Integration",
+                "Needs Customization",
+                "NA"
+            ],
+            "default": "NA",
+            "isSorted": false,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "recurrings": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "claims": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "companyLogo": {
+            "type": "image",
+            "maxFileSize": null,
+            "isCustom": true
+        },
+        "clientCRMSystem": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "clientCRMLogin": {
+            "type": "text",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "additionalContacts": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "additionalContact": {
+            "type": "link"
+        },
+        "claim": {
+            "type": "link"
+        },
+        "progressReports": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "discProfile": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "High D",
+                "High I",
+                "High S",
+                "High C"
+            ],
+            "style": {
+                "High D": "danger",
+                "High I": "warning",
+                "High S": "success",
+                "High C": "primary"
+            },
+            "displayAsLabel": true,
+            "isCustom": true
+        },
+        "billingAddress": {
+            "type": "address",
+            "trim": true
+        },
+        "shippingAddress": {
+            "type": "address"
+        },
+        "leads": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "leads1": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "jobTitle": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "estimatesFolders": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "estimatesFolders1": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "primaryContact": {
+            "type": "belongsTo",
+            "foreign": "accounts",
+            "entity": "Contact",
+            "isCustom": true
+        },
+        "dealflow": {
+            "type": "belongsTo",
+            "foreign": "accounts",
+            "entity": "Dealflow",
+            "isCustom": true
+        },
+        "stages": {
+            "type": "hasMany",
+            "foreign": "account",
+            "entity": "Stages",
+            "isCustom": true
+        },
+        "manycases": {
+            "type": "hasMany",
+            "relationName": "casesAccounts",
+            "foreign": "manyaccounts",
+            "entity": "Case",
+            "isCustom": true,
+            "audited": false
+        },
+        "campaigns": {
+            "type": "hasMany",
+            "foreign": "accountsPrimary",
+            "entity": "Campaign",
+            "isCustom": true,
+            "audited": false
+        },
+        "documentsPrimary": {
+            "type": "hasMany",
+            "foreign": "account",
+            "entity": "Document",
+            "isCustom": true,
+            "audited": false
+        },
+        "opportunities": {
+            "audited": false
+        },
+        "cases": {
+            "audited": false
+        },
+        "documents": {
+            "audited": true
+        },
+        "contacts": {
+            "audited": false
+        },
+        "recurrings": {
+            "type": "hasMany",
+            "foreign": "vendor",
+            "entity": "Recurring",
+            "audited": false,
+            "isCustom": true
+        },
+        "claims": {
+            "type": "hasMany",
+            "foreign": "account",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        },
+        "companyLogo": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "disabled": true
+        },
+        "additionalContacts": {
+            "type": "hasMany",
+            "foreign": "account",
+            "entity": "AdditionalContact",
+            "audited": false,
+            "isCustom": true
+        },
+        "additionalContact": {
+            "type": "belongsTo",
+            "foreign": "account1",
+            "entity": "AdditionalContact",
+            "isCustom": true
+        },
+        "claim": {
+            "type": "belongsTo",
+            "foreign": "accounts",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        },
+        "progressReports": {
+            "type": "hasMany",
+            "relationName": "progressReportAccount",
+            "foreign": "accounts",
+            "entity": "ProgressReport",
+            "audited": false,
+            "isCustom": true
+        },
+        "invoices": {
+            "audited": true
+        },
+        "lead": {
+            "type": "belongsTo",
+            "foreign": "accounts",
+            "entity": "Lead",
+            "audited": false,
+            "isCustom": true
+        },
+        "leads": {
+            "type": "hasMany",
+            "foreign": "account",
+            "entity": "Lead",
+            "audited": false,
+            "isCustom": true
+        },
+        "leads1": {
+            "type": "hasMany",
+            "foreign": "account",
+            "entity": "Lead",
+            "audited": false,
+            "isCustom": true
+        },
+        "callsPrimary": {
+            "audited": false
+        },
+        "estimatesFolders": {
+            "type": "hasMany",
+            "foreign": "account",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        },
+        "estimatesFolders1": {
+            "type": "hasMany",
+            "relationName": "estimatesFolderAccount",
+            "foreign": "accounts",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "sortBy": "name",
+        "asc": true,
+        "textFilterFields": [
+            "name",
+            "emailAddress",
+            "companyName",
+            "phoneNumber"
+        ],
+        "orderBy": "createdAt",
+        "order": "desc",
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "optimisticConcurrencyControl": false
+}

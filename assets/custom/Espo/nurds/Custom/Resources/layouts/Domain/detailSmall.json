@@ -1,0 +1,53 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "applyPrivacy"
+                }
+            ],
+            [
+                {
+                    "name": "locked"
+                },
+                {
+                    "name": "url"
+                }
+            ],
+            [
+                {
+                    "name": "registeredDate"
+                },
+                {
+                    "name": "expiryDate"
+                }
+            ],
+            [
+                {
+                    "name": "autoRenew"
+                },
+                {
+                    "name": "autoRenewDays"
+                }
+            ],
+            [
+                {
+                    "name": "domainId"
+                },
+                {
+                    "name": "tld"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

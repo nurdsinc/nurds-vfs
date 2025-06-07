@@ -1,0 +1,50 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "billingPeriod"
+                },
+                {
+                    "name": "bandwidthPeriod"
+                }
+            ],
+            [
+                {
+                    "name": "lastBillingDate"
+                },
+                {
+                    "name": "nextBillingDate"
+                }
+            ],
+            [
+                {
+                    "name": "inFreeMonth"
+                },
+                {
+                    "name": "overchargeEmails"
+                }
+            ],
+            [
+                {
+                    "name": "recurringManualSubscription"
+                },
+                {
+                    "name": "streamUpdatedAt"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

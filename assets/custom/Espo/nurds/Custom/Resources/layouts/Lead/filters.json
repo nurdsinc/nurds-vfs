@@ -1,0 +1,20 @@
+[
+    "assignedUser",
+    "teams",
+    "createdAt",
+    "createdBy",
+    "modifiedAt",
+    "npnNumber",
+    "address",
+    "accountName",
+    "campaign",
+    "emailAddress",
+    "phoneNumber",
+    "status",
+    "source",
+    "opportunityAmountConverted",
+    "industry",
+    "targetLists",
+    "createdAccount",
+    "cTags"
+]

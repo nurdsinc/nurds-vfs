@@ -1,0 +1,45 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "bandwidthPeriod"
+                }
+            ],
+            [
+                {
+                    "name": "billingPeriod"
+                },
+                {
+                    "name": "inFreeMonth"
+                }
+            ],
+            [
+                {
+                    "name": "lastBillingDate"
+                },
+                {
+                    "name": "nextBillingDate"
+                }
+            ],
+            [
+                {
+                    "name": "overchargeEmails"
+                },
+                {
+                    "name": "recurringManualSubscription"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

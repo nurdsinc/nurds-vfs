@@ -1,0 +1,20 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "status",
+        "width": 22
+    },
+    {
+        "name": "attachments"
+    },
+    {
+        "name": "type"
+    },
+    {
+        "name": "createdAt",
+        "width": 22
+    }
+]

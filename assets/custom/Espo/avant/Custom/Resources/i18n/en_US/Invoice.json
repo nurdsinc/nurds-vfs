@@ -1,0 +1,19 @@
+{
+    "fields": {
+        "claim": "Claim",
+        "account": "Vendor",
+        "balanceDue": "Balance Due",
+        "balanceDueCurrency": "Balance Due (Currency)",
+        "balanceDueConverted": "Balance Due (Converted)",
+        "totalReceived": "Total Received",
+        "totalReceivedCurrency": "Total Received (Currency)",
+        "totalReceivedConverted": "Total Received (Converted)",
+        "datePaid": "Date Paid",
+        "checks": "Checks"
+    },
+    "links": {
+        "claim": "Claim",
+        "account": "Vendor",
+        "checks": "Checks"
+    }
+}

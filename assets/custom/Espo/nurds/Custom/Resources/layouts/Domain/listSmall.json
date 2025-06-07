@@ -1,0 +1,24 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "url"
+    },
+    {
+        "name": "registeredDate"
+    },
+    {
+        "name": "expiryDate"
+    },
+    {
+        "name": "locked"
+    },
+    {
+        "name": "applyPrivacy"
+    },
+    {
+        "name": "status"
+    }
+]

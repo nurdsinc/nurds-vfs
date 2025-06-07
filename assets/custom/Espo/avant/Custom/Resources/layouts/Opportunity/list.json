@@ -1,0 +1,36 @@
+[
+    {
+        "name": "name",
+        "width": 15,
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "client"
+    },
+    {
+        "name": "claims2"
+    },
+    {
+        "name": "ticket"
+    },
+    {
+        "name": "type"
+    },
+    {
+        "name": "category"
+    },
+    {
+        "name": "amount",
+        "align": "right"
+    },
+    {
+        "name": "stage"
+    },
+    {
+        "name": "createdAt"
+    },
+    {
+        "name": "amountConverted"
+    }
+]

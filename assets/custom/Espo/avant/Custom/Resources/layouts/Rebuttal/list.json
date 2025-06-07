@@ -1,0 +1,19 @@
+[
+    {
+        "name": "name",
+        "width": 25,
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "attachments",
+        "width": 50,
+        "notSortable": true,
+        "align": "left"
+    },
+    {
+        "name": "claims",
+        "notSortable": true,
+        "align": "right"
+    }
+]

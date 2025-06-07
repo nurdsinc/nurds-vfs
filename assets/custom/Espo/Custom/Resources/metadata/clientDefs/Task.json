@@ -1,0 +1,8 @@
+{
+    "relationshipPanels": {
+        "ExternalMonitoring": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    }
+}

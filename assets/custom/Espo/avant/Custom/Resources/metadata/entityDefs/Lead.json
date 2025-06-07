@@ -1,0 +1,874 @@
+{
+    "fields": {
+        "name": {
+            "type": "personName",
+            "isPersonalData": true
+        },
+        "salutationName": {
+            "type": "enum",
+            "options": [
+                "",
+                "Mr.",
+                "Ms.",
+                "Mrs.",
+                "Dr."
+            ]
+        },
+        "firstName": {
+            "type": "varchar",
+            "maxLength": 100,
+            "default": "",
+            "trim": true
+        },
+        "lastName": {
+            "type": "varchar",
+            "maxLength": 100,
+            "default": "",
+            "trim": true
+        },
+        "title": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "New",
+                "Assigned",
+                "In Process",
+                "Converted",
+                "Recycled",
+                "Dead"
+            ],
+            "default": "New",
+            "style": {
+                "Converted": "success",
+                "Recycled": "danger",
+                "Dead": "danger"
+            },
+            "audited": true,
+            "fieldManagerAdditionalParamList": [
+                {
+                    "name": "notActualOptions",
+                    "view": "views/admin/field-manager/fields/not-actual-options"
+                }
+            ],
+            "notActualOptions": [
+                "Converted",
+                "Recycled",
+                "Dead"
+            ]
+        },
+        "source": {
+            "type": "enum",
+            "options": [
+                "",
+                "Inside Sales",
+                "Referral",
+                "Call In",
+                "Partner",
+                "Other",
+                "EDDM"
+            ],
+            "default": "",
+            "style": {
+                "": null,
+                "Inside Sales": null,
+                "Referral": null,
+                "Call In": null,
+                "Partner": null,
+                "Other": null,
+                "EDDM": null
+            }
+        },
+        "industry": {
+            "type": "enum",
+            "view": "crm:views/lead/fields/industry",
+            "customizationOptionsDisabled": true,
+            "default": "",
+            "isSorted": true
+        },
+        "opportunityAmount": {
+            "type": "currency",
+            "audited": true
+        },
+        "opportunityAmountConverted": {
+            "type": "currencyConverted",
+            "readOnly": true
+        },
+        "website": {
+            "type": "url",
+            "strip": true
+        },
+        "address": {
+            "name": "address",
+            "type": "address",
+            "isPersonalData": true,
+            "dynamicLogicVisible": null,
+            "dynamicLogicReadOnly": null,
+            "inlineEditDisabled": false,
+            "tooltip": false
+        },
+        "addressStreet": {
+            "type": "text",
+            "maxLength": 255,
+            "dbType": "varchar"
+        },
+        "addressCity": {
+            "type": "varchar",
+            "trim": true
+        },
+        "addressState": {
+            "type": "varchar",
+            "trim": true
+        },
+        "addressCountry": {
+            "type": "varchar",
+            "trim": true
+        },
+        "addressPostalCode": {
+            "type": "varchar",
+            "trim": true
+        },
+        "emailAddress": {
+            "type": "email",
+            "isPersonalData": true
+        },
+        "phoneNumber": {
+            "type": "phone",
+            "typeList": [
+                "Mobile",
+                "Office",
+                "Home",
+                "Fax",
+                "Other"
+            ],
+            "defaultType": "Mobile",
+            "isPersonalData": true
+        },
+        "doNotCall": {
+            "type": "bool"
+        },
+        "description": {
+            "type": "text"
+        },
+        "convertedAt": {
+            "type": "datetime",
+            "layoutMassUpdateDisabled": true,
+            "readOnly": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "view": "views/fields/assigned-user"
+        },
+        "acceptanceStatus": {
+            "type": "varchar",
+            "notStorable": true,
+            "exportDisabled": true,
+            "disabled": true
+        },
+        "acceptanceStatusMeetings": {
+            "type": "enum",
+            "notStorable": true,
+            "layoutAvailabilityList": [
+                "filters"
+            ],
+            "importDisabled": true,
+            "exportDisabled": true,
+            "view": "crm:views/lead/fields/acceptance-status",
+            "link": "meetings",
+            "column": "status"
+        },
+        "acceptanceStatusCalls": {
+            "type": "enum",
+            "notStorable": true,
+            "layoutAvailabilityList": [
+                "filters"
+            ],
+            "importDisabled": true,
+            "exportDisabled": true,
+            "view": "crm:views/lead/fields/acceptance-status",
+            "link": "calls",
+            "column": "status"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "campaign": {
+            "type": "link",
+            "layoutListDisabled": true
+        },
+        "createdAccount": {
+            "type": "link",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true
+        },
+        "createdContact": {
+            "type": "link",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "view": "crm:views/lead/fields/created-contact"
+        },
+        "createdOpportunity": {
+            "defaultAttributes": null
+        },
+        "targetLists": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true
+        },
+        "targetList": {
+            "type": "link",
+            "notStorable": true,
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutFiltersDisabled": true,
+            "entity": "TargetList",
+            "directAccessDisabled": true
+        },
+        "targetListIsOptedOut": {
+            "type": "bool",
+            "notStorable": true,
+            "readOnly": true,
+            "disabled": true
+        },
+        "companyName": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "lossAddress": {
+            "name": "lossAddress",
+            "type": "address",
+            "dynamicLogicVisible": null,
+            "dynamicLogicReadOnly": {
+                "conditionGroup": [
+                    {
+                        "type": "isTrue",
+                        "attribute": "sameAsPhysicalAddress"
+                    }
+                ]
+            },
+            "isPersonalData": false,
+            "inlineEditDisabled": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "sameAsPhysicalAddress": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "type": {
+            "type": "enum",
+            "required": false,
+            "options": [
+                "Potential New Client",
+                "Potential New Vendor",
+                ""
+            ],
+            "style": {
+                "Potential New Client": null,
+                "Potential New Vendor": null,
+                "": null
+            },
+            "default": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "insuranceCompany": {
+            "type": "link"
+        },
+        "mortgageCompany": {
+            "type": "link"
+        },
+        "dateOfLoss": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "typeOfLoss": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "Water",
+                "Wind",
+                "Fire",
+                "Hail",
+                "Flood",
+                "Roof",
+                "Drain Backup",
+                "Tree",
+                "Freeze",
+                "Interior",
+                "Hurricane",
+                "Ice",
+                "Lightning",
+                "Rain",
+                "Sewage",
+                "Smoke",
+                "Theft",
+                "Tornado",
+                "Vandalism",
+                "Other"
+            ],
+            "style": {
+                "Water": null,
+                "Wind": null,
+                "Fire": null,
+                "Hail": null,
+                "Flood": null,
+                "Roof": null,
+                "Drain Backup": null,
+                "Tree": null,
+                "Freeze": null,
+                "Interior": null,
+                "Hurricane": null,
+                "Ice": null,
+                "Lightning": null,
+                "Rain": null,
+                "Sewage": null,
+                "Smoke": null,
+                "Theft": null,
+                "Tornado": null,
+                "Vandalism": null,
+                "Other": null
+            },
+            "maxCount": null,
+            "isCustom": true
+        },
+        "policyType": {
+            "type": "enum",
+            "options": [
+                "ACV",
+                "RCV",
+                ""
+            ],
+            "style": {
+                "ACV": null,
+                "RCV": null,
+                "": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "policyNumber": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "claimNumber": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "propertyType": {
+            "type": "enum",
+            "options": [
+                "Home",
+                "Business",
+                "Unknown"
+            ],
+            "style": {
+                "Home": null,
+                "Business": null,
+                "Unknown": null
+            },
+            "default": "Unknown",
+            "isCustom": true
+        },
+        "dwellingCoverage": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "otherStructuresCoverage": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "contentsCoverage": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "lossOfUseCoverage": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "endorsements": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "Earthquake",
+                "Earth Movement",
+                "Inflation Guard",
+                "Sewer Backup",
+                "Scheduled Personal Property",
+                "Personal Property Replacement Cost",
+                "Home Business",
+                "Watercraft",
+                "Theft",
+                "Secondary Residence",
+                "Personal Injury",
+                "Mitigation",
+                "Mold",
+                "Water Backup",
+                "Other"
+            ],
+            "style": {
+                "Earthquake": null,
+                "Earth Movement": null,
+                "Inflation Guard": null,
+                "Sewer Backup": null,
+                "Scheduled Personal Property": null,
+                "Personal Property Replacement Cost": null,
+                "Home Business": null,
+                "Watercraft": null,
+                "Theft": null,
+                "Secondary Residence": null,
+                "Personal Injury": null,
+                "Mitigation": null,
+                "Mold": null,
+                "Water Backup": null,
+                "Other": null
+            },
+            "maxCount": null,
+            "isCustom": true
+        },
+        "policyNotes": {
+            "type": "wysiwyg",
+            "default": null,
+            "height": null,
+            "minHeight": null,
+            "isCustom": true
+        },
+        "deductible": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "claim": {
+            "type": "link",
+            "readOnly": true,
+            "defaultAttributes": null
+        },
+        "policy": {
+            "type": "link",
+            "readOnly": true,
+            "defaultAttributes": null
+        },
+        "account": {
+            "type": "link"
+        },
+        "serviceRequested": {
+            "type": "enum",
+            "options": [
+                "",
+                "Public Adjuster",
+                "Property Damage Appraisal",
+                "Umpiring a Disputed Property Claim",
+                "Estimatics of a Property Damage Claim",
+                "Consultation in Regards to a Property Damage Claim",
+                "Not Sure, I would like a phone call to discuss"
+            ],
+            "style": {
+                "": null,
+                "Public Adjuster": null,
+                "Property Damage Appraisal": null,
+                "Umpiring a Disputed Property Claim": null,
+                "Estimatics of a Property Damage Claim": null,
+                "Consultation in Regards to a Property Damage Claim": null,
+                "Not Sure, I would like a phone call to discuss": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "inceptionDate": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
+        },
+        "discProfile": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "High D",
+                "High I",
+                "High S",
+                "High C"
+            ],
+            "style": {
+                "High D": "danger",
+                "High I": "warning",
+                "High S": "success",
+                "High C": "primary"
+            },
+            "isCustom": true
+        },
+        "companyCamLink": {
+            "type": "url",
+            "isCustom": true
+        },
+        "dropBoxLink": {
+            "type": "url",
+            "isCustom": true
+        },
+        "matterportLink": {
+            "type": "url",
+            "isCustom": true
+        },
+        "lossUnitType": {
+            "type": "enum",
+            "options": [
+                "",
+                "Residential",
+                "Commercial",
+                "Multi-Family"
+            ],
+            "style": {
+                "": null,
+                "Residential": null,
+                "Commercial": null,
+                "Multi-Family": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "rcvAcv": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "priorPayment": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "initialOffer": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "adjuster": {
+            "type": "link"
+        },
+        "recoverableDepreciationDeadline": {
+            "notNull": false,
+            "type": "date",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "tollingDeadline": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true,
+            "tooltip": true
+        },
+        "user": {
+            "type": "link"
+        },
+        "appointmentTime": {
+            "notNull": false,
+            "type": "datetime",
+            "minuteStep": 30,
+            "isCustom": true
+        },
+        "salesRabbitStatus": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "salesRabbitId": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "latitude": {
+            "notNull": false,
+            "type": "float",
+            "isCustom": true
+        },
+        "longitude": {
+            "notNull": false,
+            "type": "float",
+            "isCustom": true
+        },
+        "estimatesFolders": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "insuranceCompany": {
+            "type": "belongsTo",
+            "foreign": "leads",
+            "entity": "InsuranceCompany",
+            "audited": false,
+            "isCustom": true
+        },
+        "mortgageCompany": {
+            "type": "belongsTo",
+            "foreign": "leads",
+            "entity": "MortgageCompany",
+            "audited": false,
+            "isCustom": true
+        },
+        "claim": {
+            "type": "belongsTo",
+            "foreign": "leads",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        },
+        "policy": {
+            "type": "belongsTo",
+            "foreign": "leads",
+            "entity": "Policy",
+            "audited": false,
+            "isCustom": true
+        },
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "entityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "leads",
+            "layoutRelationshipsDisabled": true,
+            "audited": true
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "leads",
+            "layoutRelationshipsDisabled": true,
+            "audited": true
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "audited": true
+        },
+        "cases": {
+            "type": "hasMany",
+            "entity": "Case",
+            "foreign": "lead",
+            "audited": true
+        },
+        "emails": {
+            "type": "hasChildren",
+            "entity": "Email",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "campaign": {
+            "type": "belongsTo",
+            "entity": "Campaign",
+            "foreign": "leads"
+        },
+        "campaignLogRecords": {
+            "type": "hasChildren",
+            "entity": "CampaignLogRecord",
+            "foreign": "parent"
+        },
+        "targetLists": {
+            "type": "hasMany",
+            "entity": "TargetList",
+            "foreign": "leads"
+        },
+        "documents": {
+            "type": "hasMany",
+            "entity": "Document",
+            "foreign": "leads",
+            "audited": true
+        },
+        "adjuster": {
+            "type": "belongsTo",
+            "foreign": "leads",
+            "entity": "Adjuster",
+            "audited": false,
+            "isCustom": true
+        },
+        "user": {
+            "type": "belongsTo",
+            "foreign": "leads",
+            "entity": "User",
+            "audited": false,
+            "isCustom": true
+        },
+        "estimatesFolders": {
+            "type": "hasMany",
+            "relationName": "estimatesFolderLead",
+            "foreign": "leads",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "convertEntityList": [
+        "Account",
+        "Contact",
+        "Opportunity"
+    ],
+    "convertFields": {
+        "Contact": [],
+        "Account": {
+            "name": "companyName",
+            "billingAddressStreet": "addressStreet",
+            "billingAddressCity": "addressCity",
+            "billingAddressState": "addressState",
+            "billingAddressPostalCode": "addressPostalCode",
+            "billingAddressCountry": "addressCountry"
+        },
+        "Opportunity": {
+            "amount": "opportunityAmount",
+            "leadSource": "source"
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "emailAddress",
+            "accountName",
+            "companyName",
+            "addressStreet",
+            "lossAddressStreet"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "indexes": {
+        "firstName": {
+            "columns": [
+                "firstName",
+                "deleted"
+            ]
+        },
+        "name": {
+            "columns": [
+                "firstName",
+                "lastName"
+            ]
+        },
+        "status": {
+            "options": [
+                "New",
+                "Assigned",
+                "Interested",
+                "Ready to Sign",
+                "Follow Up",
+                "In Process",
+                "Converted",
+                "Recycled",
+                "Dead"
+            ],
+            "style": {
+                "New": "info",
+                "Assigned": "primary",
+                "Interested": "success",
+                "Ready to Sign": "success",
+                "Follow Up": "warning",
+                "In Process": "primary",
+                "Converted": "success",
+                "Recycled": "danger",
+                "Dead": "danger"
+            },
+            "tooltip": true,
+            "displayAsLabel": true
+        },
+        "createdAt": {
+            "columns": [
+                "createdAt",
+                "deleted"
+            ]
+        },
+        "createdAtStatus": {
+            "columns": [
+                "createdAt",
+                "status"
+            ]
+        },
+        "assignedUser": {
+            "columns": [
+                "assignedUserId",
+                "deleted"
+            ]
+        },
+        "assignedUserStatus": {
+            "columns": [
+                "assignedUserId",
+                "status"
+            ]
+        }
+    }
+}

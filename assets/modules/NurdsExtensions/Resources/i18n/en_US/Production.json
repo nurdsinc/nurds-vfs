@@ -1,0 +1,16 @@
+{
+    "fields": {
+        "startDate": "Start Date"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks"
+    },
+    "labels": {
+        "Create Production": "Create Production"
+    },
+    "tooltips": {
+        "startDate": "What date is your project planned to start?"
+    }
+}

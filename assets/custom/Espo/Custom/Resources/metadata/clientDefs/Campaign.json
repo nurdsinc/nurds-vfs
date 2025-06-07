@@ -1,0 +1,106 @@
+{
+    "relationshipPanels": {
+        "SMSBots": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "targetLists": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Email"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Newsletter"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Mail"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "SMS"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "excludingTargetLists": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Email"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Newsletter"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Mail"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "SMS"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "body": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "type",
+                            "value": "SMS"
+                        }
+                    ]
+                }
+            }
+        },
+        "options": {
+            "status": [
+                {
+                    "optionList": [
+                        "Planning",
+                        "Inactive",
+                        "Complete",
+                        "Needs Review"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "isEmpty",
+                            "attribute": "targetListsIds",
+                            "data": {
+                                "field": "targetLists"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,33 @@
+[
+    {
+        "name": "claims"
+    },
+    {
+        "name": "payee"
+    },
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "type"
+    },
+    {
+        "name": "amount"
+    },
+    {
+        "name": "dueDate"
+    },
+    {
+        "name": "datePaid"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "paidFrom"
+    },
+    {
+        "name": "parent"
+    }
+]

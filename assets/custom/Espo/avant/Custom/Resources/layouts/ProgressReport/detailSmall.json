@@ -1,0 +1,162 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "claim"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "mostRecentUpdate"
+                }
+            ]
+        ],
+        "style": "success",
+        "dynamicLogicVisible": null,
+        "customLabel": "1. What's the most recent update we can send this client about his claim?"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "problemsWithClaim"
+                }
+            ]
+        ],
+        "style": "danger",
+        "dynamicLogicVisible": null,
+        "customLabel": "2. What are the problems or snags we are running into regarding this claim?"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "expectationsInComingWeeks"
+                }
+            ]
+        ],
+        "style": "primary",
+        "dynamicLogicVisible": null,
+        "customLabel": "3. What can they expect in a few weeks regarding this claim?"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "personalAssistantNextSteps"
+                }
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": null,
+        "customLabel": "4. What can assistant do on this claim?"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "publicAdjusterNextSteps"
+                }
+            ]
+        ],
+        "style": "warning",
+        "dynamicLogicVisible": null,
+        "customLabel": "5. What can PA do on this claim?"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "currentStatus"
+                },
+                {
+                    "name": "newStatus"
+                },
+                {
+                    "name": "jobType"
+                }
+            ]
+        ],
+        "style": "success",
+        "dynamicLogicVisible": null,
+        "customLabel": "6. What status does this claim need to be at?"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "scheduleChecklist"
+                },
+                {
+                    "name": "timeToSend"
+                }
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": null,
+        "customLabel": "Schedule"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "accounts"
+                },
+                {
+                    "name": "adjusters"
+                }
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": null,
+        "customLabel": "Included in Update"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "alerts"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "sendToInsured"
+                }
+            ]
+        ],
+        "style": "primary",
+        "dynamicLogicVisible": null,
+        "customLabel": "Insured"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "sendToVendor"
+                }
+            ]
+        ],
+        "style": "danger",
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "has",
+                    "attribute": "alerts",
+                    "value": "Send Custom Email"
+                }
+            ]
+        },
+        "customLabel": "Referral Partner Custom Email"
+    }
+]

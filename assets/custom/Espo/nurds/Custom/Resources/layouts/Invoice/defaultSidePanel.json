@@ -1,0 +1,17 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "cDatePaid"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "isLocked"
+    }
+]

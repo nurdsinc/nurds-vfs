@@ -1,0 +1,138 @@
+{
+    "fields": {
+        "commission": {
+            "type": "enum",
+            "required": false,
+            "isSorted": true,
+            "options": [],
+            "audited": false,
+            "isCustom": true
+        },
+        "documents": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "primaryOutboundNumber": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "adjusters": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "claims": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "category": {
+            "type": "enum",
+            "options": [
+                "Public Adjuster",
+                "Office Assistant",
+                "Sales Rep",
+                ""
+            ],
+            "style": {
+                "Public Adjuster": null,
+                "Office Assistant": null,
+                "Sales Rep": null,
+                "": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "claims1": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "leads": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "estimatesFolders": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "documents": {
+            "type": "hasMany",
+            "foreign": "user",
+            "entity": "Document",
+            "audited": false,
+            "isCustom": true
+        },
+        "adjusters": {
+            "type": "hasMany",
+            "foreign": "user",
+            "entity": "Adjuster",
+            "audited": false,
+            "isCustom": true
+        },
+        "claims": {
+            "type": "hasMany",
+            "foreign": "user",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        },
+        "claims1": {
+            "type": "hasMany",
+            "foreign": "user1",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        },
+        "leads": {
+            "type": "hasMany",
+            "foreign": "user",
+            "entity": "Lead",
+            "audited": false,
+            "isCustom": true
+        },
+        "estimatesFolders": {
+            "type": "hasMany",
+            "foreign": "user",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        },
+        "cClaimStatus": {
+            "type": "hasMany",
+            "foreign": "statusModifiedBy",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

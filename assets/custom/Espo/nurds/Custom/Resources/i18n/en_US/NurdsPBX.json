@@ -1,0 +1,88 @@
+{
+    "fields": {
+        "billingAddress": "Billing Address",
+        "shippingAddress": "Shipping Address",
+        "website": "Website",
+        "path": "Path",
+        "prefix": "Prefix",
+        "enabled": "Enabled",
+        "addons": "Addons",
+        "allowRecordings": "Allow Recordings",
+        "cidName": "CID Name",
+        "allowedOutboundRoutes": "Outbound Routes",
+        "allowedTenantTrunks": "Allowed Tenant Trunks",
+        "callsLimit": "Calls Limit",
+        "conferences": "Conferences",
+        "disableTrunksPrefix": "Disable Trunks Prefix",
+        "timezone": "Timezone",
+        "emergencyTrunks": "Emergency Trunks",
+        "extensions": "Extensions",
+        "inboundCallsLimit": "Inbound Calls Limit",
+        "ivrs": "IVRS",
+        "outboundProfiles": "Outbound Profiles",
+        "parkingLots": "Parking Lots",
+        "queues": "Queues",
+        "restrictedCid": "Restricted CID",
+        "trunks": "Trunks",
+        "vpbxDevices": "VPBX Devices",
+        "tenantId": "Tenant Id",
+        "json": "Json",
+        "cidNumber": "CID Number",
+        "sendWelcomeEmail": "Send Welcome Email",
+        "fullName": "Full Name",
+        "userPassword": "User Password",
+        "startapp": "Start App",
+        "roleId": "Role",
+        "account": "Account",
+        "inboundNumbers": "Inbound Numbers",
+        "name": "Nurds App Id"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks",
+        "account": "Account"
+    },
+    "labels": {
+        "Create NurdsPBX": "Create Nurds PBX"
+    },
+    "options": {
+        "addons": {
+            "sonata-billing": "Billing",
+            "sonata-dialer": "Dialer",
+            "sonata-recordings": "Recordings",
+            "sonata-stats": "Stats",
+            "sonata-switchboard": "Switchboard",
+            "vitxi": "Vitxi"
+        },
+        "allowedOutboundRoutes": {
+            "1": "10/11/12 Digit Dialing Rule",
+            "2": "911/922/988 Dialing Rule",
+            "3": "International Dialing Rule"
+        },
+        "timezone": {
+            "America/New_York": "New York (EST)",
+            "America/Chicago": "Chicago (Central)",
+            "America/Phoenix": "Phoenix",
+            "America/Denver": "Denver (MST)",
+            "America/Los_Angeles": "Los Angeles (PST)",
+            "America/Anchorage": "Anchorage (Alaska)",
+            "Pacific/Honolulu": "Honolulu"
+        },
+        "startapp": {
+            "dashboard": "Dashboard"
+        },
+        "roleId": {
+            "1": "Super Administrator",
+            "3": "Portal",
+            "4": "Tenant Administrator"
+        },
+        "inboundNumbers": []
+    },
+    "tooltips": {
+        "cidName": "Nurds App Id (ex: Nurds)",
+        "allowedOutboundRoutes": "Which outbound routes are allowed?",
+        "sendWelcomeEmail": "When creating original record should a welcome email be sent?",
+        "startapp": "Initial landing page on login"
+    }
+}

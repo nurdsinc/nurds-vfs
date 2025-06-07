@@ -1,0 +1,22 @@
+{
+    "fields": {
+        "parent": {
+            "entityList": [
+                "Account",
+                "Lead",
+                "Contact",
+                "Opportunity",
+                "Case",
+                "InsuranceCompany",
+                "Policy",
+                "Claim",
+                "MortgageCompany",
+                "AdditionalContact",
+                "Inspection",
+                "Check",
+                "ProgressReport",
+                "Vendor"
+            ]
+        }
+    }
+}

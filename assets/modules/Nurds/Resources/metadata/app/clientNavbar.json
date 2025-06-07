@@ -1,0 +1,15 @@
+{
+    "menuItems": {
+        "nurdsProfile": {
+            "order": 0,
+            "groupIndex": 2,
+            "link": "#NurdsProfile",
+            "labelTranslation": "Global.labels.Nurds Profile",
+            "accessDataList": [
+                {
+                    "isAdminOnly": true
+                }
+            ]
+        }
+    }
+}

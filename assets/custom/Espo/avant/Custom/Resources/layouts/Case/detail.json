@@ -1,0 +1,113 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "number"
+                },
+                {
+                    "name": "inboundEmail"
+                }
+            ],
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "account"
+                }
+            ],
+            [
+                {
+                    "name": "contact"
+                },
+                {
+                    "name": "parent"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "priority"
+                },
+                {
+                    "name": "type"
+                }
+            ],
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "dateInspectionScheduled"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "claimNumber"
+                },
+                {
+                    "name": "policyNumber"
+                }
+            ],
+            [
+                {
+                    "name": "claim"
+                },
+                {
+                    "name": "policy"
+                }
+            ],
+            [
+                {
+                    "name": "mortgageCompany"
+                },
+                {
+                    "name": "insuranceCompany"
+                }
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "primary",
+        "label": "Claim Info"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "inspectionReport"
+                },
+                {
+                    "name": "damageConfirmed"
+                }
+            ],
+            [
+                {
+                    "name": "inspectionNotes",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": null,
+        "customLabel": "Inspection Info"
+    }
+]

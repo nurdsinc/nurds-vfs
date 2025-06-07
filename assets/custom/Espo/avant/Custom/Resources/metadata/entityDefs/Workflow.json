@@ -1,0 +1,10 @@
+{
+    "serviceActions": {
+        "Call":{
+            "commissionServiceAction": {
+                "serviceName": "CommissionService",
+                "methodName": "commissionServiceAction"
+            }
+        }
+    }
+}

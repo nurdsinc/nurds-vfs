@@ -1,0 +1,23 @@
+{
+    "labels": {
+        "Create Outbound": "Create Outbound"
+    },
+    "fields": {
+        "phoneNumber": "Phone Number",
+        "status": "Status",
+        "priority": "Priority",
+        "callSid": "Call SID"
+    },
+    "options": {
+        "status": {
+            "inqueue": "In Queue",
+            "completed": "Completed",
+            "hangup": "Hangup",
+            "busy": "Busy",
+            "no-answer": "No Answer",
+            "canceled": "Canceled",
+            "failed": "Failed",
+            "in-progress": "In Progress"
+        }
+    }
+}

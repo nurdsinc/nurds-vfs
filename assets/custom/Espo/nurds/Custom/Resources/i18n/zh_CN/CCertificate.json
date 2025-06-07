@@ -1,0 +1,10 @@
+{
+  "links": {
+    "meetings": "会晤",
+    "calls": "通话",
+    "tasks": "任务"
+  },
+  "labels": {
+    "Create CCertificate": "创建 Certificate"
+  }
+}

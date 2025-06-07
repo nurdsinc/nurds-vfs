@@ -1,0 +1,8 @@
+{
+    "fields": {
+        "planType": "Plan Type"
+    },
+    "tooltips": {
+        "planType": "You can chose from multiple Plan Types: Free, Team, Pro, Enterprise."
+    }
+}

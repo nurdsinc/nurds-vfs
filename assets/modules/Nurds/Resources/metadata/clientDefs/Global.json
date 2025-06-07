@@ -1,0 +1,8 @@
+{
+    "viewSetupHandlers": {
+        "list": [
+            "__APPEND__",
+            "nurds:handlers/make-call"
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "label": "",
+        "rows": [
+            [
+                {
+                    "name": "name",
+                    "fullWidth": true
+                },
+                false
+            ],
+            [
+                {
+                    "name": "receipts"
+                },
+                {
+                    "name": "amount"
+                }
+            ]
+        ]
+    }
+]

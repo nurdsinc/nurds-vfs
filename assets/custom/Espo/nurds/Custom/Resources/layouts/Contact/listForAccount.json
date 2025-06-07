@@ -1,0 +1,28 @@
+[
+    {
+        "name": "name",
+        "link": "true",
+        "view": "crm:views\/contact\/fields\/name-for-account"
+    },
+    {
+        "name": "account",
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "title",
+        "align": "left"
+    },
+    {
+        "name": "emailAddress",
+        "align": "left"
+    },
+    {
+        "name": "phoneNumber",
+        "align": "left"
+    },
+    {
+        "name": "cStatus",
+        "align": "right"
+    }
+]

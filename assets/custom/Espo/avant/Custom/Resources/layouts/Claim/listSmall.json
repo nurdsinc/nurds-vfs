@@ -1,0 +1,26 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "rcvAcv",
+        "width": 20
+    },
+    {
+        "name": "claimNumber"
+    },
+    {
+        "name": "insuranceCompany"
+    },
+    {
+        "name": "dateofLoss"
+    },
+    {
+        "name": "assignedUser",
+        "width": 20
+    }
+]

@@ -1,0 +1,14 @@
+{
+    "scopeNames": {
+        "SendGrid": "Send Grid",
+        "SMSBot": "SMS Bot",
+        "Production": "Production",
+        "ExternalMonitoring": "External Monitoring"
+    },
+    "scopeNamesPlural": {
+        "SendGrid": "Send Grids",
+        "SMSBot": "SMS Bots",
+        "Production": "Productions",
+        "ExternalMonitoring": "External Monitorings"
+    }
+}

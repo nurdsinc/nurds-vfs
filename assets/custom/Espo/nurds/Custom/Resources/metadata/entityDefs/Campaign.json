@@ -1,0 +1,38 @@
+{
+    "fields": {
+        "type": {
+            "options": [
+                "",
+                "Email",
+                "Newsletter",
+                "Web",
+                "Television",
+                "Radio",
+                "Mail",
+                "SMS"
+            ],
+            "style": {
+                "": null,
+                "Email": null,
+                "Newsletter": null,
+                "Web": null,
+                "Television": null,
+                "Radio": null,
+                "Mail": null,
+                "SMS": null
+            }
+        },
+        "cFrom": {
+            "type": "enum",
+            "options": [
+                "14807257807"
+            ],
+            "style": {
+                "14807257807": null
+            },
+            "default": "14807257807",
+            "maxLength": 100,
+            "isCustom": true
+        }
+    }
+}

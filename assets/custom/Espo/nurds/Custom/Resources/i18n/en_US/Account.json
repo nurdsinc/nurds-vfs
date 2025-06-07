@@ -1,0 +1,50 @@
+{
+    "fields": {
+        "cStartDate": "Start Date",
+        "cTags": "Tags",
+        "cStatus": "Status",
+        "cModules": "Modules",
+        "appId": "App Id",
+        "cDomains": "Domains",
+        "cPassword": "Password",
+        "cNurdsPBXs": "Nurds PBXs",
+        "groupId": "Group Id",
+        "package": "Package"
+    },
+    "tooltips": {
+        "cStartDate": "This date is for when billing starts.",
+        "appId": "Nurds App Id or Tenant Id",
+        "groupId": "Group ID from auth1.nurds.com"
+    },
+    "options": {
+        "cTags": [],
+        "cStatus": {
+            "Pending": "Pending",
+            "Active": "Active",
+            "Inactive": "Inactive",
+            "Needs Review": "Needs Review",
+            "Cancelled": "Cancelled",
+            "Disabled": "Disabled"
+        },
+        "cModules": {
+            "Advanced": "Advanced",
+            "Google": "Google",
+            "Sales": "Sales",
+            "Project Management": "Project Management",
+            "VoIP": "VoIP",
+            "Outlook": "Outlook",
+            "Real Estate": "Real Estate",
+            "MailChimp": "MailChimp"
+        },
+        "package": {
+            "Free": "Free",
+            "Pro": "Pro",
+            "Team": "Team",
+            "Enterprise": "Enterprise"
+        }
+    },
+    "links": {
+        "cDomains": "Domains",
+        "cNurdsPBXs": "Nurds PBXs"
+    }
+}

@@ -1,0 +1,14 @@
+[
+    "status",
+    "update",
+    "assignedUser",
+    "teams",
+    "hasDNSZone",
+    "registeredDate",
+    "name",
+    "applyPrivacy",
+    "locked",
+    "autoRenew",
+    "renew",
+    "autoRenewDays"
+]

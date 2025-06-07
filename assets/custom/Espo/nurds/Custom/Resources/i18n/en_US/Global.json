@@ -1,0 +1,26 @@
+{
+    "scopeNames": {
+        "CCertificate": "Certificate",
+        "NurdsPBX": "Nurds PBX",
+        "CDid": "DID",
+        "CallEvent": "Call Event",
+        "CNurdBuilder": "Nurd Builder",
+        "NurdBuilder": "Nurd Builder",
+        "CPermit": "Permit"
+    },
+    "scopeNamesPlural": {
+        "CCertificate": "Certificates",
+        "Domain": "Domains",
+        "Zone": "Zones",
+        "NurdsPBX": "Nurds PBXs",
+        "CDid": "DIDs",
+        "CallEvent": "Call Events",
+        "CNurdBuilder": "Nurd Builders",
+        "NurdBuilder": "Nurd Builders",
+        "CPermit": "Permits"
+    },
+    "labels": {
+        "Schedule CallEvent": "Schedule Call Event",
+        "Log CallEvent": "Log Call Event"
+    }
+}

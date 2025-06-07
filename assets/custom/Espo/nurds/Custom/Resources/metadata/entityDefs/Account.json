@@ -1,0 +1,152 @@
+{
+    "fields": {
+        "cStartDate": {
+            "notNull": false,
+            "type": "date",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "cTags": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "optionsReference": "Contact.tags",
+            "default": [],
+            "isSorted": true,
+            "allowCustomOptions": true,
+            "displayAsLabel": true,
+            "style": [],
+            "isCustom": true
+        },
+        "cStatus": {
+            "type": "enum",
+            "default": "Pending",
+            "optionsReference": "Contact.cStatus",
+            "displayAsLabel": true,
+            "style": {
+                "Pending": "primary",
+                "Active": "success",
+                "Inactive": "info",
+                "Needs Review": "warning",
+                "Cancelled": "danger",
+                "Disabled": "danger"
+            },
+            "maxLength": 100,
+            "isCustom": true,
+            "options": [
+                "Pending",
+                "Active",
+                "Inactive",
+                "Needs Review",
+                "Cancelled",
+                "Disabled"
+            ]
+        },
+        "cModules": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "default": [],
+            "options": [
+                "Advanced",
+                "Google",
+                "Sales",
+                "Project Management",
+                "VoIP",
+                "Outlook",
+                "Real Estate",
+                "MailChimp"
+            ],
+            "isSorted": true,
+            "audited": true,
+            "isCustom": true
+        },
+        "appId": {
+            "type": "varchar",
+            "maxLength": 25,
+            "options": [],
+            "tooltip": true,
+            "isCustom": true
+        },
+        "assignedUsers": {
+            "type": "linkMultiple",
+            "view": "views/fields/assigned-users",
+            "maxCount": 10
+        },
+        "assignedUser": {
+            "disabled": true
+        },
+        "cPassword": {
+            "type": "password",
+            "isCustom": true
+        },
+        "groupId": {
+            "type": "varchar",
+            "maxLength": 100,
+            "copyToClipboard": true,
+            "audited": true,
+            "options": [],
+            "tooltip": true,
+            "isCustom": true
+        },
+        "package": {
+            "type": "enum",
+            "options": [
+                "Free",
+                "Pro",
+                "Team",
+                "Enterprise"
+            ],
+            "style": {
+                "Free": null,
+                "Pro": null,
+                "Team": null,
+                "Enterprise": null
+            },
+            "default": "Enterprise",
+            "maxLength": 100,
+            "isCustom": true,
+            "audited": true
+        }
+    },
+    "collection": {
+        "orderBy": "name",
+        "order": "asc",
+        "textFilterFields": [
+            "name",
+            "emailAddress",
+            "phoneNumber",
+            "billingAddressCity",
+            "billingAddressStreet",
+            "billingAddressState",
+            "billingAddressPostalCode"
+        ],
+        "fullTextSearch": true,
+        "countDisabled": false
+    },
+    "optimisticConcurrencyControl": false,
+    "links": {
+        "assignedUsers": {
+            "type": "hasMany",
+            "entity": "User",
+            "relationName": "entityUser",
+            "layoutRelationshipsDisabled": true
+        },
+        "assignedUser": {
+            "disabled": true
+        },
+        "cDomains": {
+            "type": "hasMany",
+            "relationName": "cDomainAccount",
+            "foreign": "accounts",
+            "entity": "Domain",
+            "audited": false,
+            "isCustom": true
+        },
+        "cNurdsPBXs": {
+            "type": "hasMany",
+            "foreign": "account",
+            "entity": "NurdsPBX",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

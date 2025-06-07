@@ -1,0 +1,20 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "domainId"
+    },
+    {
+        "name": "update"
+    },
+    {
+        "name": "digitalOcean"
+    }
+]

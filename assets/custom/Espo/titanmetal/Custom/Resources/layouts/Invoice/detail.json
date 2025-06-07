@@ -1,0 +1,91 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "number"
+                },
+                {
+                    "name": "salesOrder"
+                }
+            ],
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "account"
+                }
+            ],
+            [
+                {
+                    "name": "amount"
+                },
+                {
+                    "name": "quote"
+                }
+            ],
+            [
+                {
+                    "name": "dateInvoiced"
+                },
+                {
+                    "name": "opportunity"
+                }
+            ],
+            [
+                {
+                    "name": "dateDue"
+                },
+                {
+                    "name": "cDeliveryDate"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "billingAddress"
+                },
+                {
+                    "name": "shippingAddress"
+                }
+            ],
+            [
+                {
+                    "name": "billingContact"
+                },
+                {
+                    "name": "shippingContact"
+                }
+            ],
+            [
+                {
+                    "name": "tax"
+                },
+                {
+                    "name": "shippingProvider"
+                }
+            ],
+            [
+                {
+                    "name": "priceBook"
+                },
+                {
+                    "name": "buyerReference"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Details"
+    }
+]

@@ -1,0 +1,60 @@
+{
+    "fields": {
+        "json": "Json",
+        "uniqueId": "Unique Id",
+        "to": "To",
+        "SMSBots": "SMS Bots",
+        "emailRequested": "Email Requested",
+        "requestAttempts": "Request Attempts",
+        "accountName": "Company Name",
+        "tags": "Tags",
+        "mailingAddress": "Mailing Address",
+        "mailingAddressStreet": "Mailing Address Street",
+        "mailingAddressCity": "Mailing Address City",
+        "mailingAddressState": "Mailing Address State",
+        "mailingAddressCountry": "Mailing Address Country",
+        "mailingAddressPostalCode": "Mailing Address Postal Code",
+        "mailingAddressMap": "Mailing Address Map",
+        "age": "Age",
+        "saleDate": "Sale Date",
+        "deedDate": "Deed Date",
+        "salePrice": "Sale Price",
+        "salePriceCurrency": "Sale Price (Currency)",
+        "salePriceConverted": "Sale Price (Converted)",
+        "subdivisionName": "Subdivision Name",
+        "cashValue": "Cash Value",
+        "cashValueCurrency": "Cash Value (Currency)",
+        "cashValueConverted": "Cash Value (Converted)",
+        "apn": "APN",
+        "spouse": "Spouse",
+        "nameSpouse": "Spouse Name",
+        "nameSpouseSalutation": "Name Spouse Salutation",
+        "nameSpouseFirst": "Name Spouse First",
+        "nameSpouseLast": "Name Spouse Last",
+        "nameSpouseMiddle": "Name Spouse Middle",
+        "firstNameSpouse": "Spouse First Name",
+        "middleNameSpouse": "Spouse Middle Name",
+        "lastNameSpouse": "Spouse Last Name",
+        "hoa": "HOA",
+        "dob": "DOB",
+        "lookupPerson": "Lookup Person",
+        "personLookupId": "Person Lookup Id",
+        "npnNumber": "NPN Number"
+    },
+    "links": {
+        "SMSBots": "SMS Bots"
+    },
+    "tooltips": {
+        "emailRequested": "Request was sent for email address",
+        "requestAttempts": "How many times have you requested the email address?",
+        "lookupPerson": "Attempt to find an email address and phone number for the record. (Addon Required)",
+        "personLookupId": "Used for skip tracing. (Addon Required)",
+        "npnNumber": "National Producer Number"
+    },
+    "options": {
+        "tags": {
+            "New": "New",
+            "Closed": "Closed"
+        }
+    }
+}

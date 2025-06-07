@@ -1,0 +1,14 @@
+[
+    {
+        "name": "name",
+        "width": 15,
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "attachments",
+        "width": 35,
+        "notSortable": true,
+        "align": "left"
+    }
+]

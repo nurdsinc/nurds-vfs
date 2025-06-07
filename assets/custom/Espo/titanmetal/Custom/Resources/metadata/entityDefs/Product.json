@@ -1,0 +1,24 @@
+{
+    "fields": {
+        "cUnitType": {
+            "type": "enum",
+            "options": [
+                "IN",
+                "FT",
+                "SQIN",
+                "SQFT",
+                "EACH"
+            ],
+            "style": {
+                "IN": null,
+                "FT": null,
+                "SQIN": null,
+                "SQFT": null,
+                "EACH": null
+            },
+            "default": "EACH",
+            "maxLength": 100,
+            "isCustom": true
+        }
+    }
+}

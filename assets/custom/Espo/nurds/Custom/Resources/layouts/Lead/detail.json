@@ -1,0 +1,73 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "accountName"
+                }
+            ],
+            [
+                {
+                    "name": "age"
+                },
+                {
+                    "name": "dob"
+                }
+            ],
+            [
+                {
+                    "name": "title"
+                },
+                {
+                    "name": "industry"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "address"
+                },
+                {
+                    "name": "website"
+                }
+            ],
+            [
+                {
+                    "name": "spouse"
+                },
+                {
+                    "name": "nameSpouse"
+                }
+            ],
+            [
+                {
+                    "name": "npnNumber"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Details"
+    }
+]

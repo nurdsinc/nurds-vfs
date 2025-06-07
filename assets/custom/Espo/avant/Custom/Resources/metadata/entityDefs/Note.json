@@ -1,0 +1,10 @@
+{
+    "fields":{
+        "sticky":{
+            "type": "bool",
+            "default": false,
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

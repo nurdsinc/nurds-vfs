@@ -1,0 +1,37 @@
+.nurds-id {
+    color: var(--navbar-inverse-color);
+}
+
+@media screen and (min-width: 768px) {
+    .nurds-id {
+        width: 100%; /* Makes sure it spans the parent container */
+        padding-left: 15px; /* Adds left padding */
+        text-align: left; /* Ensures text is left-aligned */
+        display: block; /* Ensures default block behavior for larger screens */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .nurds-id {
+        text-align: center; /* Centers text horizontally */
+        display: flex; /* Enables flexbox for centering */
+        justify-content: center; /* Horizontally centers the content */
+        align-items: center; /* Vertically centers the content */
+        padding-top: 10px; /* Adds padding to the top */
+    }
+}
+
+/* Show the div when the body does NOT have the 'minimized' class */
+body.has-navbar[data-navbar="side"]:not(.minimized) .nurds-id {
+    display: block;
+}
+
+/* Hide the div when the body HAS the 'minimized' class */
+body.has-navbar.minimized[data-navbar="side"] .nurds-id {
+    display: none;
+}
+
+/* Show the div when the body has BOTH 'minimized' and 'side-menu-opened' classes */
+body.has-navbar.minimized.side-menu-opened[data-navbar="side"] .nurds-id {
+    display: block;
+}

@@ -1,0 +1,17 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "emailRequested"
+    },
+    {
+        "name": "requestAttempts"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "convertedAt"
+    }
+]

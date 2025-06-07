@@ -1,0 +1,48 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "filterList": [
+        "__APPEND__",
+        {
+            "isReportFilter": true,
+            "name": "reportFilter5f4e8b2287e7135fd",
+            "accessDataList": [
+                {
+                    "teamIdList": [
+                        "5f1f24f8ed23579f8"
+                    ]
+                }
+            ]
+        },
+        {
+            "isReportFilter": true,
+            "name": "reportFilter5f4e8b5f2468e1442",
+            "accessDataList": [
+                {
+                    "teamIdList": [
+                        "5f1f24f8ed23579f8"
+                    ]
+                }
+            ]
+        },
+        {
+            "isReportFilter": true,
+            "name": "reportFilter5f4e8b7c97ffd5fdf",
+            "accessDataList": [
+                {
+                    "teamIdList": [
+                        "5f1f24f8ed23579f8"
+                    ]
+                }
+            ]
+        }
+    ],
+    "relationshipPanels": {
+        "claims": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    }
+}

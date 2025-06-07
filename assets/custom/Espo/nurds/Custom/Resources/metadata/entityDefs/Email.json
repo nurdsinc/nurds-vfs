@@ -1,0 +1,17 @@
+{
+    "fields": {
+        "parent": {
+            "entityList": [
+                "Account",
+                "Lead",
+                "Contact",
+                "Opportunity",
+                "Case",
+                "Invoice",
+                "NurdsPBX",
+                "CNurdBuilder",
+                "CPermit"
+            ]
+        }
+    }
+}

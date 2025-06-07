@@ -1,0 +1,103 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "type"
+                },
+                {
+                    "name": "startDate"
+                }
+            ],
+            [
+                {
+                    "name": "budget"
+                },
+                {
+                    "name": "endDate"
+                }
+            ],
+            [
+                {
+                    "name": "targetLists"
+                },
+                {
+                    "name": "excludingTargetLists"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "contactsTemplate"
+                },
+                {
+                    "name": "leadsTemplate"
+                }
+            ],
+            [
+                {
+                    "name": "accountsTemplate"
+                },
+                {
+                    "name": "mailMergeOnlyWithAddress"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "mailMerge",
+        "label": "Mail Merge"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cFrom"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "body"
+                }
+            ],
+            [
+                {
+                    "name": "errorLog"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "type",
+                    "value": "SMS"
+                }
+            ]
+        },
+        "style": "default",
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": "Variable Examples:\n${firstName}, ${emailAddress}, ${phoneNumber}",
+        "noteStyle": "info",
+        "customLabel": "SMS"
+    }
+]

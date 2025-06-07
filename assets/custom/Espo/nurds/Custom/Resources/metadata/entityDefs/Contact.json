@@ -1,0 +1,63 @@
+{
+    "fields": {
+        "tags": {
+            "options": [
+                "Lead",
+                "Client",
+                "Contacted",
+                "Friendly",
+                "Expiring",
+                "Contractor",
+                "Roofer",
+                "Affiliate",
+                "Referral Partner",
+                "Attorney",
+                "Public Adjuster",
+                "Website Review",
+                "SSL Issue"
+            ],
+            "style": {
+                "Lead": null,
+                "Client": null,
+                "Contacted": null,
+                "Friendly": null,
+                "Expiring": null,
+                "Contractor": null,
+                "Roofer": null,
+                "Affiliate": null,
+                "Referral Partner": null,
+                "Attorney": null,
+                "Public Adjuster": null,
+                "Website Review": null,
+                "SSL Issue": null
+            }
+        },
+        "cStatus": {
+            "type": "enum",
+            "options": [
+                "Pending",
+                "Active",
+                "Inactive",
+                "Needs Review",
+                "Cancelled",
+                "Disabled"
+            ],
+            "style": {
+                "Pending": "primary",
+                "Active": "success",
+                "Inactive": "info",
+                "Needs Review": "warning",
+                "Cancelled": "danger",
+                "Disabled": "danger"
+            },
+            "default": "Pending",
+            "displayAsLabel": true,
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "account": {
+            "createButton": true,
+            "autocompleteOnEmpty": true
+        }
+    }
+}

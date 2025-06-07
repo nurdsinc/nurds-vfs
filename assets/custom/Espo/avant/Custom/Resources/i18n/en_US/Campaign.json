@@ -1,0 +1,10 @@
+{
+    "fields": {
+        "accountsPrimary": "Vendor",
+        "accounts": "Vendors"
+    },
+    "links": {
+        "accountsPrimary": "Vendor",
+        "accounts": "Vendors"
+    }
+}

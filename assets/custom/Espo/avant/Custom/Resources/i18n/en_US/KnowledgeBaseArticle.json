@@ -1,0 +1,12 @@
+{
+    "fields": {
+        "claim": "Claim",
+        "claim1": "Claim",
+        "claims": "Claims"
+    },
+    "links": {
+        "claim": "Claim",
+        "claim1": "Claim",
+        "claims": "Claims"
+    }
+}

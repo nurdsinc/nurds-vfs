@@ -1,0 +1,13 @@
+{
+  "fields": {
+    "address": "Adres"
+  },
+  "links": {
+    "meetings": "vergaderingen",
+    "calls": "gesprekken",
+    "tasks": "taken"
+  },
+  "labels": {
+    "Create AdditionalContact": "Klant Additional Contact"
+  }
+}

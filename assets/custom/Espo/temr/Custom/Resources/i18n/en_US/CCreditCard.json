@@ -1,0 +1,29 @@
+{
+    "fields": {
+        "billingAddress": "Billing Address",
+        "billingAddressStreet": "Billing Address Street",
+        "billingAddressCity": "Billing Address City",
+        "billingAddressState": "Billing Address State",
+        "billingAddressCountry": "Billing Address Country",
+        "billingAddressPostalCode": "Billing Address Postal Code",
+        "billingAddressMap": "Billing Address Map",
+        "cVV": "CVV",
+        "token": "Token",
+        "nameOnCard": "Name On Card",
+        "last4": "Last 4",
+        "cardType": "Card Type",
+        "trips": "Trips",
+        "expirationDate": "Expiration Date",
+        "transactionType": "Transaction Type",
+        "fingerprint": "Fingerprint"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks",
+        "trips": "Trips"
+    },
+    "labels": {
+        "Create CCreditCard": "Create CreditCard"
+    }
+}

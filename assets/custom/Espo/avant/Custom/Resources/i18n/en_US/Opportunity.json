@@ -1,0 +1,82 @@
+{
+    "fields": {
+        "type": "Type",
+        "claim": "Claim",
+        "account": "Vendor",
+        "documents": "Documents",
+        "contacts": "Clients",
+        "category": "Category",
+        "ticket": "Ticket",
+        "document": "Document",
+        "documentss": "Documents",
+        "claimStatus": "Claim Status",
+        "claimName": "Claim Name",
+        "check": "Check",
+        "client": "Insured",
+        "estimatesFolders": "Estimates Folders",
+        "estimatesFolders1": "Estimates Folders1"
+    },
+    "options": {
+        "type": {
+            "Insurance": "Insurance",
+            "Rapid Restore": "Rapid Restore",
+            "APA": "APA",
+            "Other": "Other",
+            "NWPA": "NWPA"
+        },
+        "stage": {
+            "Prospecting": "Pending",
+            "Qualification": "Item Needed",
+            "Needs Analysis": "Pending Review",
+            "Value Proposition": "Manager Review",
+            "Id. Decision Makers": "Ready to Process",
+            "Perception Analysis": "Negotiating",
+            "Proposal/Price Quote": "Legal/Steve",
+            "Negotiation/Review": "Waiting on Check",
+            "Closed Won": "Payment Received / Won",
+            "Closed Lost": "Closed Lost",
+            "Pending": "Pending",
+            "Item Needed": "Item Needed",
+            "Needs Review": "Needs Review",
+            "Ready to Process": "Ready to Process",
+            "Waiting on Response": "Waiting on Response",
+            "Negotiating": "Negotiating",
+            "Legal/Steve": "Legal/Steve",
+            "Waiting on Check": "Waiting on Check",
+            "Payment Received / Won": "Payment Received / Won"
+        },
+        "category": {
+            "Mitigation": "Mitigation",
+            "Recoverable Depreciation": "Recoverable Depreciation",
+            "ACV": "ACV Initial",
+            "RCV": "RCV",
+            "Contents": "Contents ",
+            "ALE": "ALE",
+            "Deductible": "Deductible",
+            "Other": "Other",
+            "": "",
+            "NA": "NA",
+            "Insurance Estimate": "Insurance Estimate",
+            "Vendor Estimate": "Vendor Estimate",
+            "Other Estimate": "Other Estimate",
+            "Repair Estimate": "Repair Estimate",
+            "Supplement Estimate": "Supplement"
+        }
+    },
+    "links": {
+        "claim": "Claim",
+        "account": "Vendor",
+        "documents": "Documents",
+        "contacts": "Clients",
+        "ticket": "Ticket",
+        "document": "Document",
+        "documentss": "Documents",
+        "check": "Check",
+        "client": "Insured",
+        "estimatesFolders": "Estimates Folders",
+        "estimatesFolders1": "Estimates Folders1"
+    },
+    "labels": {
+        "Create Opportunity": "Create Receivable"
+    }
+}

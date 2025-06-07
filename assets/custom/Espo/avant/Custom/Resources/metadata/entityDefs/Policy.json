@@ -1,0 +1,420 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "trim": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": false,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "dwelling": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "otherStructures": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "personalProperty": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "additionalLivingExpenses": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "personalLiability": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "medicalPayments": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "deductable": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "startDate": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "expirationDate": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "premium": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "itemsCovered": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "Fire",
+                "Flood",
+                "Hail",
+                "Explosions",
+                "Lightning",
+                "Theft",
+                "Vandalism",
+                "Damage from Vehicles",
+                "Damage from Aircraft",
+                "Riots & Civil Commotion",
+                "Volcanic Eruption",
+                "Earth Movement",
+                "Water Damage",
+                "Vermin",
+                "Neglect, Wear & Tear",
+                "Settling, Shrinking, Bulging, Expanding",
+                "Pets",
+                "Mold",
+                "Intentional Loss",
+                "War, Government Action, Nuclear Hazard",
+                "Ordinance or Law",
+                "Smog, Rust, & Corrosion"
+            ],
+            "style": {
+                "Fire": null,
+                "Flood": null,
+                "Hail": null,
+                "Explosions": null,
+                "Lightning": null,
+                "Theft": null,
+                "Vandalism": null,
+                "Damage from Vehicles": null,
+                "Damage from Aircraft": null,
+                "Riots & Civil Commotion": null,
+                "Volcanic Eruption": null,
+                "Earth Movement": null,
+                "Water Damage": null,
+                "Vermin": null,
+                "Neglect, Wear & Tear": null,
+                "Settling, Shrinking, Bulging, Expanding": null,
+                "Pets": null,
+                "Mold": null,
+                "Intentional Loss": null,
+                "War, Government Action, Nuclear Hazard": null,
+                "Ordinance or Law": null,
+                "Smog, Rust, & Corrosion": null
+            },
+            "maxCount": null,
+            "isCustom": true
+        },
+        "exclusions": {
+            "type": "text",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true,
+            "rows": null,
+            "cutHeight": null
+        },
+        "limit": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "number": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true,
+            "trim": false
+        },
+        "type": {
+            "type": "enum",
+            "options": [
+                "",
+                "Builder's Risk",
+                "Businessowner's Policy",
+                "Commercial Property Insurance",
+                "Flood",
+                "HO-1: Basic Form",
+                "HO-2: Broad Form",
+                "HO-3: Special Form",
+                "HO-8: Modified Coverage Form",
+                "HOB",
+                "Other"
+            ],
+            "style": {
+                "": null,
+                "Builder's Risk": null,
+                "Businessowner's Policy": null,
+                "Commercial Property Insurance": null,
+                "Flood": null,
+                "HO-1: Basic Form": null,
+                "HO-2: Broad Form": null,
+                "HO-3: Special Form": null,
+                "HO-8: Modified Coverage Form": null,
+                "HOB": null,
+                "Other": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "claim": {
+            "type": "link"
+        },
+        "contact": {
+            "type": "link"
+        },
+        "endorsements": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "Earthquake",
+                "Earth Movement",
+                "Inflation Guard",
+                "Sewer Backup",
+                "Scheduled Personal Property",
+                "Personal Property Replacement Cost",
+                "Home Business",
+                "Watercraft",
+                "Theft",
+                "Secondary Residence",
+                "Personal Injury",
+                "Mitigation",
+                "Mold",
+                "Water Backup",
+                "Other"
+            ],
+            "style": {
+                "Earthquake": null,
+                "Earth Movement": null,
+                "Inflation Guard": null,
+                "Sewer Backup": null,
+                "Scheduled Personal Property": null,
+                "Personal Property Replacement Cost": null,
+                "Home Business": null,
+                "Watercraft": null,
+                "Theft": null,
+                "Secondary Residence": null,
+                "Personal Injury": null,
+                "Mitigation": null,
+                "Mold": null,
+                "Water Backup": null,
+                "Other": null
+            },
+            "maxCount": null,
+            "isCustom": true
+        },
+        "valueType": {
+            "type": "enum",
+            "options": [
+                "ACV",
+                "RCV",
+                ""
+            ],
+            "style": {
+                "ACV": null,
+                "RCV": null,
+                "": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "contentsCoverage": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "lossOfUseCoverage": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "notes": {
+            "type": "wysiwyg",
+            "default": null,
+            "height": null,
+            "minHeight": null,
+            "isCustom": true
+        },
+        "insuranceCompany": {
+            "type": "link"
+        },
+        "leads": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "cases": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "inceptionDate": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "EntityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "claim": {
+            "type": "belongsTo",
+            "foreign": "policies",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        },
+        "contact": {
+            "type": "belongsTo",
+            "foreign": "policies",
+            "entity": "Contact",
+            "audited": false,
+            "isCustom": true
+        },
+        "insuranceCompany": {
+            "type": "belongsTo",
+            "foreign": "policies",
+            "entity": "InsuranceCompany",
+            "audited": false,
+            "isCustom": true
+        },
+        "leads": {
+            "type": "hasMany",
+            "foreign": "policy",
+            "entity": "Lead",
+            "audited": false,
+            "isCustom": true
+        },
+        "cases": {
+            "type": "hasMany",
+            "foreign": "policy",
+            "entity": "Case",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name"
+        ],
+        "fullTextSearch": false
+    },
+    "indexes": {
+        "name": {
+            "columns": [
+                "name",
+                "deleted"
+            ]
+        },
+        "assignedUser": {
+            "columns": [
+                "assignedUserId",
+                "deleted"
+            ]
+        }
+    }
+}

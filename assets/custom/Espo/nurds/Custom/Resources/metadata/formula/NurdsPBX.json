@@ -1,0 +1,3 @@
+{
+    "beforeSaveCustomScript": "phoneNumber = cidNumber;"
+}

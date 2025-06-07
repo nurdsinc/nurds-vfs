@@ -1,0 +1,30 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "from"
+    },
+    {
+        "name": "to"
+    },
+    {
+        "name": "source"
+    },
+    {
+        "name": "contact"
+    },
+    {
+        "name": "lead"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "createdAt"
+    },
+    {
+        "name": "modifiedAt"
+    }
+]

@@ -1,0 +1,13 @@
+{
+    "fields": {
+        "cUnitType": {
+            "type": "enum",
+            "default": "EACH",
+            "optionsReference": "Product.cUnitType",
+            "readOnly": true,
+            "style": {},
+            "maxLength": 100,
+            "isCustom": true
+        }
+    }
+}

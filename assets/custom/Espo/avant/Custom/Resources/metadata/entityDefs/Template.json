@@ -1,0 +1,22 @@
+{
+    "fields": {
+        "claims": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "claims": {
+            "type": "hasMany",
+            "relationName": "templateClaim",
+            "foreign": "templates",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

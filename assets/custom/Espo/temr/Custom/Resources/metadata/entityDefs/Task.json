@@ -1,0 +1,19 @@
+{
+    "fields": {
+        "parent": {
+            "entityList": [
+                "Account",
+                "Contact",
+                "Lead",
+                "Opportunity",
+                "Case",
+                "Production",
+                "ExternalMonitoring",
+                "CTrip",
+                "CVehicle",
+                "CCreditCard",
+                "CReview"
+            ]
+        }
+    }
+}

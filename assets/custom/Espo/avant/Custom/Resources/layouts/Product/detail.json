@@ -1,0 +1,80 @@
+[
+    {
+        "label": "Overview",
+        "style": "default",
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "category"
+                },
+                {
+                    "name": "brand"
+                }
+            ]
+        ]
+    },
+    {
+        "label": "Price",
+        "style": "default",
+        "rows": [
+            [
+                {
+                    "name": "costPrice"
+                },
+                {
+                    "name": "pricingType"
+                }
+            ],
+            [
+                {
+                    "name": "listPrice"
+                },
+                {
+                    "name": "pricingFactor"
+                }
+            ],
+            [
+                {
+                    "name": "unitPrice"
+                },
+                {
+                    "name": "uM"
+                }
+            ]
+        ]
+    },
+    {
+        "label": "Details",
+        "style": "default",
+        "rows": [
+            [
+                {
+                    "name": "partNumber"
+                },
+                {
+                    "name": "weight"
+                }
+            ],
+            [
+                {
+                    "name": "url"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ]
+    }
+]

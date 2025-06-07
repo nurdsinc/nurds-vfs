@@ -1,0 +1,41 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "userName"
+                },
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "title"
+                }
+            ],
+            [
+                {
+                    "name": "category"
+                },
+                {
+                    "name": "commission"
+                },
+                {
+                    "name": "gender"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                },
+                {
+                    "name": "primaryOutboundNumber"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

@@ -1,0 +1,51 @@
+{
+    "fields": {
+        "cTags": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "default": [],
+            "optionsReference": "Contact.tags",
+            "allowCustomOptions": true,
+            "displayAsLabel": true,
+            "style": [],
+            "isCustom": true
+        },
+        "personLookupId": {
+            "readOnly": false
+        },
+        "collaborators": {
+            "type": "linkMultiple",
+            "view": "views/fields/collaborators",
+            "maxCount": 30,
+            "fieldManagerParamList": [
+                "readOnly",
+                "readOnlyAfterCreate",
+                "audited",
+                "autocompleteOnEmpty",
+                "maxCount",
+                "inlineEditDisabled",
+                "tooltipText"
+            ]
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "accountName",
+            "emailAddress"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "optimisticConcurrencyControl": false,
+    "links": {
+        "collaborators": {
+            "type": "hasMany",
+            "entity": "User",
+            "relationName": "entityCollaborator",
+            "layoutRelationshipsDisabled": true
+        }
+    }
+}

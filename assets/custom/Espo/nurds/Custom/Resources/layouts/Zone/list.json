@@ -1,0 +1,26 @@
+[
+    {
+        "name": "zoneId",
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "type"
+    },
+    {
+        "name": "domain"
+    },
+    {
+        "name": "data"
+    },
+    {
+        "name": "ttl"
+    },
+    {
+        "name": "status"
+    }
+]

@@ -1,0 +1,170 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "category"
+                },
+                {
+                    "name": "type"
+                }
+            ],
+            [
+                {
+                    "name": "brand"
+                },
+                {
+                    "name": "cUnitType"
+                }
+            ],
+            [
+                {
+                    "name": "template"
+                },
+                {
+                    "name": "variantAttributeOptions"
+                }
+            ]
+        ],
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Overview",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "quantity"
+                },
+                {
+                    "name": "quantityReserved"
+                }
+            ],
+            [
+                {
+                    "name": "quantityOnHand"
+                },
+                {
+                    "name": "quantitySoftReserved"
+                }
+            ],
+            [
+                {
+                    "name": "quantityInTransit"
+                },
+                {
+                    "name": "quantityOnOrder"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "quantity",
+        "label": "Quantity"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "costPrice"
+                },
+                {
+                    "name": "pricingType"
+                }
+            ],
+            [
+                {
+                    "name": "listPrice"
+                },
+                {
+                    "name": "pricingFactor"
+                }
+            ],
+            [
+                {
+                    "name": "unitPrice"
+                },
+                {
+                    "name": "isTaxFree"
+                }
+            ]
+        ],
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Price",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "isInventory"
+                },
+                {
+                    "name": "inventoryNumberType"
+                }
+            ],
+            [
+                {
+                    "name": "removalStrategy"
+                },
+                {
+                    "name": "expirationDays"
+                }
+            ]
+        ],
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Details",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "partNumber"
+                },
+                {
+                    "name": "weight"
+                }
+            ],
+            [
+                {
+                    "name": "url"
+                },
+                {
+                    "name": "allowFractionalQuantity"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "attributes"
+                }
+            ]
+        ],
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "$template",
+        "name": "template",
+        "label": ""
+    }
+]

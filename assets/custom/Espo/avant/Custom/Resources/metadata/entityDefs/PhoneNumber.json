@@ -1,0 +1,10 @@
+{
+    "fields": {
+        "invalid": {
+            "type": "bool"
+        },
+        "optOut": {
+            "type": "bool"
+        }
+    }
+}

@@ -1,0 +1,2604 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "trim": true
+        },
+        "description": {
+            "type": "text",
+            "default": "**CUSTOMER EXPECTATIONS:**",
+            "tooltip": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": false,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "claimNumber": {
+            "type": "varchar",
+            "required": false,
+            "audited": true,
+            "isCustom": true,
+            "trim": false,
+            "default": null,
+            "maxLength": 50,
+            "options": []
+        },
+        "dateofLoss": {
+            "notNull": false,
+            "type": "date",
+            "required": false,
+            "audited": false,
+            "isCustom": true,
+            "default": null,
+            "after": null,
+            "before": null
+        },
+        "existingClaim": {
+            "type": "enum",
+            "options": [
+                "New",
+                "Existing"
+            ],
+            "default": "New",
+            "audited": true,
+            "isCustom": true,
+            "style": {
+                "New": null,
+                "Existing": null
+            }
+        },
+        "insuranceType": {
+            "type": "enum",
+            "required": false,
+            "options": [
+                "",
+                "Residential",
+                "Residential Rental",
+                "Multi-Family",
+                "Commercial"
+            ],
+            "default": "",
+            "isSorted": true,
+            "audited": true,
+            "isCustom": true,
+            "style": {
+                "": null,
+                "Residential": null,
+                "Residential Rental": null,
+                "Multi-Family": null,
+                "Commercial": null
+            }
+        },
+        "engagement": {
+            "type": "enum",
+            "required": false,
+            "options": [
+                "no",
+                "yes",
+                "send_now"
+            ],
+            "isSorted": false,
+            "audited": false,
+            "isCustom": true,
+            "default": "no",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "PA"
+                }
+            ],
+            "readOnly": false,
+            "tooltip": false,
+            "style": {
+                "no": null,
+                "yes": null,
+                "send_now": null
+            }
+        },
+        "loeSent": {
+            "notNull": false,
+            "type": "date",
+            "required": false,
+            "audited": false,
+            "isCustom": true,
+            "default": null,
+            "after": null,
+            "before": null
+        },
+        "loeDetails": {
+            "type": "text",
+            "required": false,
+            "rows": 4,
+            "lengthOfCut": 400,
+            "maxLength": 512,
+            "seeMoreDisabled": false,
+            "isCustom": true,
+            "default": null,
+            "cutHeight": null
+        },
+        "notes": {
+            "type": "wysiwyg",
+            "required": false,
+            "height": 50,
+            "minHeight": 100,
+            "seeMoreDisabled": false,
+            "isCustom": true,
+            "default": null
+        },
+        "status": {
+            "type": "enum",
+            "required": false,
+            "options": [
+                "",
+                "Pending",
+                "LOR Missing Info",
+                "Not Approved to File",
+                "Approved to File",
+                "Pending Inspection",
+                "Adj Complete-Avant Report",
+                "Pending Review",
+                "Negotiation",
+                "Partial Construction Approved",
+                "Full Construction Approved",
+                "IC-3rd Party",
+                "Construction: Roof LLC",
+                "Construction Complete Gameplan",
+                "Bill Depreciation",
+                "Depreciation Billed",
+                "Review Depreciation Response",
+                "Pending Appr-Review",
+                "Appraisal Approved",
+                "Appraisal-Demand Sent",
+                "In Appraisal",
+                "Appraisal-Decision Rec'd",
+                "Hire Engineer",
+                "Coverage Dispute",
+                "In Litigation",
+                "Collections",
+                "Pend. Final SalesRep Pay",
+                "Dropped-Other",
+                "Customer Cancel",
+                "Dropped-Low Damage",
+                "Lost",
+                "Claim Dropped/Lost",
+                "Closed"
+            ],
+            "default": null,
+            "isSorted": false,
+            "audited": true,
+            "isCustom": true,
+            "readOnly": false,
+            "tooltip": true,
+            "style": {
+                "": null,
+                "Pending": "warning",
+                "LOR Missing Info": "warning",
+                "Not Approved to File": "warning",
+                "Approved to File": "warning",
+                "Pending Inspection": "warning",
+                "Adj Complete-Avant Report": "info",
+                "Pending Review": "primary",
+                "Negotiation": "info",
+                "Partial Construction Approved": "info",
+                "Full Construction Approved": "success",
+                "IC-3rd Party": "success",
+                "Construction: Roof LLC": "success",
+                "Construction Complete Gameplan": "info",
+                "Bill Depreciation": "info",
+                "Depreciation Billed": "info",
+                "Review Depreciation Response": "primary",
+                "Pending Appr-Review": "primary",
+                "Appraisal Approved": "danger",
+                "Appraisal-Demand Sent": "danger",
+                "In Appraisal": "danger",
+                "Appraisal-Decision Rec'd": "danger",
+                "Hire Engineer": "danger",
+                "Coverage Dispute": "primary",
+                "In Litigation": "danger",
+                "Collections": "info",
+                "Pend. Final SalesRep Pay": "primary",
+                "Dropped-Other": null,
+                "Customer Cancel": null,
+                "Dropped-Low Damage": null,
+                "Lost": null,
+                "Claim Dropped/Lost": null,
+                "Closed": null
+            },
+            "displayAsLabel": true
+        },
+        "type": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "required": false,
+            "options": [
+                "Business Interruption",
+                "Collapse",
+                "Drain Backup",
+                "Earthquake",
+                "Fire",
+                "Freeze",
+                "Frozen Plumbing",
+                "Flood",
+                "Hail",
+                "Hurricane",
+                "Ice",
+                "Interior",
+                "Lightning",
+                "Other",
+                "Pipe Break",
+                "Power Surge",
+                "Rain",
+                "Roof",
+                "Sewer",
+                "Sewer Backup",
+                "Smoke",
+                "Theft",
+                "Tornado",
+                "Tree",
+                "Vandalism",
+                "Vehicles",
+                "Water",
+                "Water Damage",
+                "Water Leak",
+                "Wind",
+                "Wind/Hail",
+                "Wind/Rain",
+                "Windstorm"
+            ],
+            "audited": false,
+            "isCustom": true,
+            "style": {
+                "Business Interruption": null,
+                "Collapse": null,
+                "Drain Backup": null,
+                "Earthquake": null,
+                "Fire": null,
+                "Freeze": null,
+                "Frozen Plumbing": null,
+                "Flood": null,
+                "Hail": null,
+                "Hurricane": null,
+                "Ice": null,
+                "Interior": null,
+                "Lightning": null,
+                "Other": null,
+                "Pipe Break": null,
+                "Power Surge": null,
+                "Rain": null,
+                "Roof": null,
+                "Sewer": null,
+                "Sewer Backup": null,
+                "Smoke": null,
+                "Theft": null,
+                "Tornado": null,
+                "Tree": null,
+                "Vandalism": null,
+                "Vehicles": null,
+                "Water": null,
+                "Water Damage": null,
+                "Water Leak": null,
+                "Wind": null,
+                "Wind/Hail": null,
+                "Wind/Rain": null,
+                "Windstorm": null
+            },
+            "maxCount": null
+        },
+        "paFee": {
+            "type": "enum",
+            "required": false,
+            "isSorted": true,
+            "options": [
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18",
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
+            ],
+            "audited": false,
+            "isCustom": true,
+            "default": "25",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "PA"
+                }
+            ],
+            "readOnly": false,
+            "tooltip": false,
+            "style": {
+                "5": null,
+                "6": null,
+                "7": null,
+                "8": null,
+                "9": null,
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null,
+                "20": null,
+                "21": null,
+                "22": null,
+                "23": null,
+                "24": null,
+                "25": null
+            }
+        },
+        "deductible": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "audited": false,
+            "isCustom": true,
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "COC"
+                }
+            ],
+            "readOnly": false,
+            "tooltip": false,
+            "default": null,
+            "maxLength": 25,
+            "options": []
+        },
+        "depreciation": {
+            "type": "currency",
+            "required": false,
+            "audited": false,
+            "isCustom": true,
+            "default": null,
+            "min": null,
+            "max": null
+        },
+        "itemsNeeded": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "required": false,
+            "options": [
+                "Signature Required",
+                "Deductible",
+                "Proof of Loss",
+                "Certified Policy",
+                "Need Adjuster Appointment",
+                "Engineer Report",
+                "Fire Report",
+                "Estimate Required",
+                "Mitigation Estimate",
+                "Mold Estimate",
+                "Roof Estimate",
+                "Build Back Required",
+                "Restoration Agreement",
+                "Waiting for Insurance Estimate",
+                "Recoverable Depreciation",
+                "Certificate of Completion",
+                "Missing Claim Number",
+                "Need LOE",
+                "Need LOR",
+                "Packout",
+                "Asbestos Test",
+                "Abatement",
+                "Mold Test",
+                "Electronic Cleaning",
+                "Fabric Cleaning",
+                "Mitigation Payment",
+                "Dwelling Payment",
+                "Contents Payment",
+                "ALE Payment",
+                "Other Payment",
+                "PA Release"
+            ],
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true,
+            "style": {
+                "Signature Required": null,
+                "Deductible": null,
+                "Proof of Loss": null,
+                "Certified Policy": null,
+                "Need Adjuster Appointment": null,
+                "Engineer Report": null,
+                "Fire Report": null,
+                "Estimate Required": null,
+                "Mitigation Estimate": null,
+                "Mold Estimate": null,
+                "Roof Estimate": null,
+                "Build Back Required": null,
+                "Restoration Agreement": null,
+                "Waiting for Insurance Estimate": null,
+                "Recoverable Depreciation": null,
+                "Certificate of Completion": null,
+                "Missing Claim Number": null,
+                "Need LOE": null,
+                "Need LOR": null,
+                "Packout": null,
+                "Asbestos Test": null,
+                "Abatement": null,
+                "Mold Test": null,
+                "Electronic Cleaning": null,
+                "Fabric Cleaning": null,
+                "Mitigation Payment": null,
+                "Dwelling Payment": null,
+                "Contents Payment": null,
+                "ALE Payment": null,
+                "Other Payment": null,
+                "PA Release": null
+            },
+            "maxCount": null
+        },
+        "services": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "required": false,
+            "audited": true,
+            "options": [
+                "MIT",
+                "PA",
+                "COC",
+                "CONT",
+                "MOLD",
+                "ABS",
+                "HYG"
+            ],
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true,
+            "style": {
+                "MIT": null,
+                "PA": null,
+                "COC": null,
+                "CONT": null,
+                "MOLD": null,
+                "ABS": null,
+                "HYG": null
+            },
+            "maxCount": null
+        },
+        "currentAdjusterAppointment": {
+            "notNull": false,
+            "type": "datetime",
+            "required": false,
+            "audited": true,
+            "readOnly": true,
+            "tooltip": false,
+            "isCustom": true,
+            "default": null,
+            "after": null,
+            "before": null,
+            "minuteStep": 30
+        },
+        "mitRec": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true,
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "MIT"
+                }
+            ],
+            "default": null,
+            "min": null,
+            "max": null
+        },
+        "dwellingRec": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true,
+            "default": null,
+            "min": null,
+            "max": null
+        },
+        "contentRec": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true,
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "CONT"
+                }
+            ],
+            "default": null,
+            "min": null,
+            "max": null
+        },
+        "paAmount": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true,
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "PA"
+                }
+            ],
+            "default": null,
+            "min": null,
+            "max": null
+        },
+        "aleRec": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true,
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "PA"
+                }
+            ],
+            "default": null,
+            "min": null,
+            "max": null
+        },
+        "customerOwed": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true,
+            "default": null,
+            "min": null,
+            "max": null
+        },
+        "vendorOwed": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true,
+            "default": null,
+            "min": null,
+            "max": null
+        },
+        "totalExpenses": {
+            "type": "currency",
+            "required": false,
+            "tooltipText": "(dumpster, pods, estimator, out of pocket expenses, etc)",
+            "audited": true,
+            "readOnly": false,
+            "tooltip": true,
+            "isCustom": true,
+            "default": null,
+            "min": null,
+            "max": null
+        },
+        "deductibleReceived": {
+            "type": "enum",
+            "required": false,
+            "options": [
+                "Yes",
+                "No",
+                "Pending",
+                "Waived",
+                "Not Collected",
+                "Deducted",
+                "Other"
+            ],
+            "default": "Pending",
+            "audited": true,
+            "isSorted": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true,
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "COC"
+                }
+            ],
+            "style": {
+                "Yes": null,
+                "No": null,
+                "Pending": null,
+                "Waived": null,
+                "Not Collected": null,
+                "Deducted": null,
+                "Other": null
+            }
+        },
+        "rcvAcv": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "tooltipText": "Actual Cash Value/Replacement Cost Value",
+            "readOnly": false,
+            "tooltip": true,
+            "isCustom": true,
+            "default": null,
+            "min": null,
+            "max": null
+        },
+        "paAgreement": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "PA"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "mitAgreement": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "MIT"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "contractorAgreement": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "COC"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "asbestosReport": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "ABS"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "hygReport": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "HYG"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "moldEstimate": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "MOLD"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "mitEstimate": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "MIT"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "repairEstimate": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "COC"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "certificateOfCompletion": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "COC"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "contentEstimate": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "CONT"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "paRelease": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "PA"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "certifiedCopyOfPolicy": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "PA"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "proofOfLoss": {
+            "notNull": true,
+            "type": "bool",
+            "dynamicLogicVisible": [
+                {
+                    "type": "has",
+                    "attribute": "services",
+                    "value": "PA"
+                }
+            ],
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "repairEstimateNeeded": {
+            "notNull": true,
+            "type": "bool",
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "mitEstimateNeeded": {
+            "notNull": true,
+            "type": "bool",
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "contentEstimateNeeded": {
+            "notNull": true,
+            "type": "bool",
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "supplementEstimateNeeded": {
+            "notNull": true,
+            "type": "bool",
+            "audited": true,
+            "default": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "deductibleAmount": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true,
+            "default": null,
+            "min": null,
+            "max": null
+        },
+        "campaign": {
+            "type": "link"
+        },
+        "documents": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "inventories": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "opportunities": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "payables": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "stages": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "policy": {
+            "type": "link"
+        },
+        "mortgageCompany": {
+            "type": "link"
+        },
+        "claimWizardId": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": 25,
+            "options": [],
+            "isCustom": true
+        },
+        "estimatedLoss": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "relatedTo": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "mailingAddress": {
+            "type": "address",
+            "dynamicLogicVisible": null,
+            "dynamicLogicReadOnly": null,
+            "name": "mailingAddress",
+            "label": "Mailing Address",
+            "tooltipText": null,
+            "inlineEditDisabled": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "lossAddress": {
+            "type": "address",
+            "dynamicLogicVisible": null,
+            "dynamicLogicReadOnly": null,
+            "name": "lossAddress",
+            "label": "Loss Address",
+            "tooltipText": null,
+            "inlineEditDisabled": false,
+            "tooltip": false,
+            "isCustom": true,
+            "viewMap": true
+        },
+        "feeRate": {
+            "type": "varchar",
+            "audited": true,
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "policyType": {
+            "type": "enum",
+            "options": [
+                "",
+                "Builder's Risk",
+                "Businessowner's Policy",
+                "Commercial Property Insurance",
+                "Flood",
+                "HO-1: Basic Form",
+                "HO-2: Broad Form",
+                "HO-3: Special Form",
+                "HO-8: Modified Coverage Form",
+                "HOB",
+                "Other"
+            ],
+            "style": {
+                "": null,
+                "Builder's Risk": null,
+                "Businessowner's Policy": null,
+                "Commercial Property Insurance": null,
+                "Flood": null,
+                "HO-1: Basic Form": null,
+                "HO-2: Broad Form": null,
+                "HO-3: Special Form": null,
+                "HO-8: Modified Coverage Form": null,
+                "HOB": null,
+                "Other": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "policyNumber": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "policies": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "insuranceCompany": {
+            "type": "link",
+            "defaultAttributes": null
+        },
+        "contact": {
+            "type": "link"
+        },
+        "account": {
+            "type": "link",
+            "defaultAttributes": null
+        },
+        "contractedDate": {
+            "notNull": false,
+            "type": "date",
+            "audited": true,
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "cases": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "propertyType": {
+            "type": "enum",
+            "options": [
+                "Home",
+                "Business",
+                "Unknown"
+            ],
+            "style": {
+                "Home": null,
+                "Business": null,
+                "Unknown": null
+            },
+            "default": "Unknown",
+            "isCustom": true
+        },
+        "endorsements": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "Earthquake",
+                "Earth Movement",
+                "Inflation Guard",
+                "Sewer Backup",
+                "Scheduled Personal Property",
+                "Personal Property Replacement Cost",
+                "Home Business",
+                "Watercraft",
+                "Theft",
+                "Secondary Residence",
+                "Personal Injury",
+                "Mitigation",
+                "Mold",
+                "Water Backup",
+                "Other"
+            ],
+            "style": {
+                "Earthquake": null,
+                "Earth Movement": null,
+                "Inflation Guard": null,
+                "Sewer Backup": null,
+                "Scheduled Personal Property": null,
+                "Personal Property Replacement Cost": null,
+                "Home Business": null,
+                "Watercraft": null,
+                "Theft": null,
+                "Secondary Residence": null,
+                "Personal Injury": null,
+                "Mitigation": null,
+                "Mold": null,
+                "Water Backup": null,
+                "Other": null
+            },
+            "maxCount": null,
+            "isCustom": true
+        },
+        "projection": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true,
+            "audited": true
+        },
+        "leads": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "inspectionRequested": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true,
+            "audited": true
+        },
+        "reInspectionRequested": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true,
+            "audited": true
+        },
+        "dateInspectionRequested": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true,
+            "readOnly": false,
+            "audited": true
+        },
+        "dateReInspectionRequested": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true,
+            "readOnly": false,
+            "audited": true
+        },
+        "inspectionRequestedBy": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true,
+            "readOnly": true,
+            "trim": false
+        },
+        "reInspectionRequestedBy": {
+            "type": "varchar",
+            "readOnly": true,
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true,
+            "trim": false
+        },
+        "dateInspectionCompleted": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "dateReInspectionCompleted": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "knowledgeBaseArticles": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "inspections": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "user": {
+            "type": "link"
+        },
+        "hasInteriorDamage": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "closedStatus": {
+            "type": "enum",
+            "options": [
+                "",
+                "Won",
+                "No Coverage",
+                "Denied",
+                "Cancellation",
+                "Prior Claim",
+                "Review for Construction"
+            ],
+            "style": {
+                "": null,
+                "Won": null,
+                "No Coverage": null,
+                "Denied": null,
+                "Cancellation": null,
+                "Prior Claim": null,
+                "Review for Construction": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "checks": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "adjusters": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "servicesRequestedOfECS": {
+            "type": "enum",
+            "options": [
+                "Property Damage Appraisal ",
+                "Umpiring a Disputed Property Claim ",
+                "Estimatics of a Property damage Claim ",
+                "Supplementing a Property Damage Claim ",
+                "Consultation in Regards to a Property Damage Claim ",
+                "Damage Assessment of a Property Damage Claim "
+            ],
+            "style": {
+                "Property Damage Appraisal ": null,
+                "Umpiring a Disputed Property Claim ": null,
+                "Estimatics of a Property damage Claim ": null,
+                "Supplementing a Property Damage Claim ": null,
+                "Consultation in Regards to a Property Damage Claim ": null,
+                "Damage Assessment of a Property Damage Claim ": null
+            },
+            "default": "Property Damage Appraisal ",
+            "isCustom": true
+        },
+        "matterportLink": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "companyCamLink": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "dropBoxLink": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "demandSentInToCarrier": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "appraiserNamed": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "umpireAppointed": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "appraisalInspectionDone": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "umpireInspectionDone": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "dateAppraiserAssigned": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "dateUmpireAssigned": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "appraisalInspection": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "umpireInspection": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "lossUnitType": {
+            "type": "enum",
+            "options": [
+                "",
+                "Residential",
+                "Commercial",
+                "Multi-Family"
+            ],
+            "style": {
+                "": null,
+                "Residential": null,
+                "Commercial": null,
+                "Multi-Family": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "carrierIntOffer": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "eCSIntOffer": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "umpireEst": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "awardSettle": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "supplementTotal": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "totalIncrease": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "potentialIncrease": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "driveTime": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": 25,
+            "options": [],
+            "isCustom": true
+        },
+        "totalLossAssessment": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "adjuster": {
+            "type": "link"
+        },
+        "adjuster1": {
+            "type": "link"
+        },
+        "adjuster12": {
+            "type": "link"
+        },
+        "adjuster123": {
+            "type": "link"
+        },
+        "jobType": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "Public Adjuster",
+                "Appraisal",
+                "Umpire",
+                "Supplement",
+                "Consulting",
+                "Estimatics"
+            ],
+            "style": {
+                "Public Adjuster": null,
+                "Appraisal": null,
+                "Umpire": null,
+                "Supplement": null,
+                "Consulting": null,
+                "Estimatics": null
+            },
+            "maxCount": null,
+            "isCustom": true
+        },
+        "contractorPaEst": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "umpireAwardSettle": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "damagedAreas": {
+            "type": "enum",
+            "options": [
+                "Roof",
+                "Exterior",
+                "Interior",
+                "Unsure"
+            ],
+            "style": {
+                "Roof": null,
+                "Exterior": null,
+                "Interior": null,
+                "Unsure": null
+            },
+            "default": "Unsure",
+            "isSorted": true,
+            "isCustom": true
+        },
+        "lossAddressState": {
+            "default": "CO"
+        },
+        "streetView": {
+            "type": "image",
+            "maxFileSize": null,
+            "isCustom": true
+        },
+        "appraisalStatus": {
+            "type": "enum",
+            "options": [
+                "",
+                "Assignment Intake",
+                "Intake Processing",
+                "File Setup",
+                "Setup Processing",
+                "Awaiting Signature of DOA",
+                "DOA Signature Received",
+                "DOA Processing",
+                "DOA Sent to Carrier",
+                "20 Day Limit Wait",
+                "Carrier has Named their Appraiser",
+                "Named Appraiser Processing",
+                "Contact Appraiser",
+                "Umpire List Processing",
+                "Exchange of Umpire Lists",
+                "Umpire Vetting",
+                "Umpire Vetting Processing",
+                "Umpire Named",
+                "Preparation for Inspection",
+                "Appraisal Inspection Scheduled",
+                "Appraisal Inspection Completed",
+                "Awaiting Docs From GC",
+                "Awaiting Docs From PA",
+                "Awaiting Docs From Insured",
+                "Document Processing ",
+                "Compiling Estimate",
+                "Estimate Written & Sent to Appraiser",
+                "Awaiting Carrier Appraisers Response",
+                "Processing Appraisers Estimate",
+                "Reviewing Appraisers Estimate",
+                "Revising Estimate in Response",
+                "Negotiation",
+                "Awaiting APP to Sign Award",
+                "Umpire Needed",
+                "Processing Position Statement from Ump",
+                "Umpire Inspection Scheduled ",
+                "Umpire Awaiting Payment",
+                "Award & Invoice",
+                "Pending Payment",
+                "Paid & Closed",
+                "Insured Cancelled",
+                "Contractor/PA Cancelled"
+            ],
+            "style": {
+                "": null,
+                "Assignment Intake": null,
+                "Intake Processing": null,
+                "File Setup": null,
+                "Setup Processing": null,
+                "Awaiting Signature of DOA": null,
+                "DOA Signature Received": null,
+                "DOA Processing": null,
+                "DOA Sent to Carrier": null,
+                "20 Day Limit Wait": null,
+                "Carrier has Named their Appraiser": null,
+                "Named Appraiser Processing": null,
+                "Contact Appraiser": null,
+                "Umpire List Processing": null,
+                "Exchange of Umpire Lists": null,
+                "Umpire Vetting": null,
+                "Umpire Vetting Processing": null,
+                "Umpire Named": null,
+                "Preparation for Inspection": null,
+                "Appraisal Inspection Scheduled": null,
+                "Appraisal Inspection Completed": null,
+                "Awaiting Docs From GC": null,
+                "Awaiting Docs From PA": null,
+                "Awaiting Docs From Insured": null,
+                "Document Processing ": null,
+                "Compiling Estimate": null,
+                "Estimate Written & Sent to Appraiser": null,
+                "Awaiting Carrier Appraisers Response": null,
+                "Processing Appraisers Estimate": null,
+                "Reviewing Appraisers Estimate": null,
+                "Revising Estimate in Response": null,
+                "Negotiation": null,
+                "Awaiting APP to Sign Award": null,
+                "Umpire Needed": null,
+                "Processing Position Statement from Ump": null,
+                "Umpire Inspection Scheduled ": null,
+                "Umpire Awaiting Payment": null,
+                "Award & Invoice": null,
+                "Pending Payment": null,
+                "Paid & Closed": null,
+                "Insured Cancelled": null,
+                "Contractor/PA Cancelled": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "accounts": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "adjusterPA": {
+            "type": "link",
+            "isCustom": true
+        },
+        "progressReports": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "invoices": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "umpireStatus": {
+            "type": "enum",
+            "options": [
+                "Selected as Umpire",
+                "Awaiting Payment Inspection",
+                "Carrier Pending Payment",
+                "Insured Pending Payment",
+                "Write Estimate",
+                "Award Waiting on Signature",
+                "Close File",
+                "File Canceled"
+            ],
+            "style": {
+                "Selected as Umpire": null,
+                "Awaiting Payment Inspection": null,
+                "Carrier Pending Payment": null,
+                "Insured Pending Payment": null,
+                "Write Estimate": null,
+                "Award Waiting on Signature": null,
+                "Close File": null,
+                "File Canceled": null
+            },
+            "default": "Selected as Umpire",
+            "isCustom": true
+        },
+        "estimaticsStatus": {
+            "type": "enum",
+            "options": [
+                "",
+                "Contract Signed",
+                "Send Retainer Invoice",
+                "On Hold",
+                "Awaiting on Pics & Scope Notes to Start",
+                "Need Elevation Photos & Measurements",
+                "Need EV",
+                "Need Interior Photos",
+                "Need Elevation Photos",
+                "Need Int. & Ext. Photos",
+                "Awaiting Scope Notes to Start",
+                "Awaiting Pics to Start",
+                "All Needed Info received",
+                "Estimating",
+                "Awaiting Approval to Fax",
+                "Faxed to Ins. Company",
+                "2nd Inspection",
+                "Awaiting New Scope",
+                "Negotiation",
+                "Need Photo to Settle",
+                "Need Final Amount to Invoice",
+                "Settled/Awaiting on Job Completion to Send Final Invoice",
+                "No Increase Depreciation Released",
+                "No Increate Dead Deal",
+                "Billing",
+                "Completed",
+                "Customer Cancelled"
+            ],
+            "style": {
+                "": null,
+                "Contract Signed": null,
+                "Send Retainer Invoice": null,
+                "On Hold": null,
+                "Awaiting on Pics & Scope Notes to Start": null,
+                "Need Elevation Photos & Measurements": null,
+                "Need EV": null,
+                "Need Interior Photos": null,
+                "Need Elevation Photos": null,
+                "Need Int. & Ext. Photos": null,
+                "Awaiting Scope Notes to Start": null,
+                "Awaiting Pics to Start": null,
+                "All Needed Info received": null,
+                "Estimating": null,
+                "Awaiting Approval to Fax": null,
+                "Faxed to Ins. Company": null,
+                "2nd Inspection": null,
+                "Awaiting New Scope": null,
+                "Negotiation": null,
+                "Need Photo to Settle": null,
+                "Need Final Amount to Invoice": null,
+                "Settled/Awaiting on Job Completion to Send Final Invoice": null,
+                "No Increase Depreciation Released": null,
+                "No Increate Dead Deal": null,
+                "Billing": null,
+                "Completed": null,
+                "Customer Cancelled": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "tollingDeadline": {
+            "notNull": false,
+            "type": "date",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "recoverableDepreciationDeadline": {
+            "notNull": false,
+            "type": "date",
+            "tooltip": true,
+            "isCustom": true,
+            "required": false
+        },
+        "mailingAddressState": {
+            "default": "CO"
+        },
+        "increasePercentage": {
+            "notNull": false,
+            "type": "float",
+            "isCustom": true
+        },
+        "priorPayment": {
+            "type": "currency",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "genClaimUpdate": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "vendors": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "user1": {
+            "type": "link"
+        },
+        "rebuttals": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "dwellingCoverage": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "otherStructuresCoverage": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "contentsCoverage": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "lossOfUseCoverage": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "emailAddress": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "contact",
+            "field": "emailAddress",
+            "view": "views/fields/foreign-email",
+            "isCustom": true
+        },
+        "checksDeposited": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "runAccounting": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true,
+            "default": true
+        },
+        "trustAccountPayments": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "totalBusinessFunds": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "businessPayments": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "deductibleInvoiceSent": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true,
+            "tooltip": true
+        },
+        "deductibleAmtRecieved": {
+            "type": "varchar",
+            "trim": true,
+            "maxLength": 25,
+            "options": [],
+            "isCustom": true
+        },
+        "goldenStarClaim": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "itemsToSupplementNegotiate": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Starter",
+                "Ridge",
+                "Waste",
+                "Pricing",
+                "Shed",
+                "Paint",
+                "Interior",
+                "A/C",
+                "D/R All",
+                "Vents/Flashing"
+            ],
+            "isCustom": true
+        },
+        "summary": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "maxLength": 300,
+            "isCustom": true
+        },
+        "lowballClaim": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "estimatesFolder": {
+            "type": "attachmentMultiple",
+            "previewSize": "medium",
+            "sourceList": [
+                "Document"
+            ],
+            "accept": [],
+            "isCustom": true
+        },
+        "rCVEst": {
+            "type": "currency",
+            "required": false,
+            "isCustom": true
+        },
+        "estimateName": {
+            "type": "varchar",
+            "required": false,
+            "options": [],
+            "isCustom": true
+        },
+        "depreciationEst": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "estimatesFolders": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "gamePlan": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true,
+            "required": false,
+            "tooltip": true
+        },
+        "highlight": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "Obtain Photos",
+                "Solar Panels",
+                "Tarp",
+                "Pool Tarp",
+                "Upset Customer",
+                "Pending Customer Decison: See Description",
+                "Customer Rec'd ACV",
+                "Exterior Paint",
+                "Interior",
+                "Personal Property",
+                "Re-Opened Claim",
+                "Previous Claim",
+                "HVAC Replacement",
+                "HVAC-Inspected by Ins",
+                "HVAC: Pursue",
+                "HVAC-Denied",
+                "HVAC Bought",
+                "Double Layer",
+                "CONSTRUCTION",
+                "PWI Items",
+                "ACV Only Policy",
+                "Persnickety",
+                "Avant Estimate Needed",
+                "Adjuster Reviewed",
+                "Appraisal"
+            ],
+            "style": {
+                "Obtain Photos": "danger",
+                "Solar Panels": "warning",
+                "Tarp": "success",
+                "Pool Tarp": "success",
+                "Upset Customer": "danger",
+                "Pending Customer Decison: See Description": null,
+                "Customer Rec'd ACV": "danger",
+                "Exterior Paint": "success",
+                "Interior": "success",
+                "Personal Property": "success",
+                "Re-Opened Claim": "danger",
+                "Previous Claim": "warning",
+                "HVAC Replacement": "info",
+                "HVAC-Inspected by Ins": "info",
+                "HVAC: Pursue": "info",
+                "HVAC-Denied": "info",
+                "HVAC Bought": "info",
+                "Double Layer": "warning",
+                "CONSTRUCTION": "success",
+                "PWI Items": "danger",
+                "ACV Only Policy": "danger",
+                "Persnickety": "info",
+                "Avant Estimate Needed": "warning",
+                "Adjuster Reviewed": "success",
+                "Appraisal": "primary"
+            },
+            "displayAsList": true,
+            "audited": true,
+            "tooltip": true,
+            "isCustom": true,
+            "isSorted": true,
+            "default": [],
+            "allowCustomOptions": true
+        },
+        "thirdPartyContractorHighlight": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "insChecksSentToCustomerHighlight": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "tooltip": true,
+            "isCustom": true
+        },
+        "notesHighlight": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "rows": 2,
+            "isCustom": true
+        },
+        "interiorExteriorHighlight": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "tooltip": true,
+            "isCustom": true
+        },
+        "insVendorHVACInspectionHighlight": {
+            "notNull": false,
+            "type": "datetime",
+            "minuteStep": 5,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "hVACNotesHighlight": {
+            "type": "varchar",
+            "trim": false,
+            "options": [],
+            "isCustom": true
+        },
+        "solarInfoHighlight": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "tooltip": true,
+            "isCustom": true
+        },
+        "salesRepresentative": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "required": false,
+            "options": [
+                "David Duarte",
+                "Donald Rogers",
+                "Steven Cooper",
+                "Stephanie McGinity",
+                "Alex Bolanos",
+                "Adam Crawford",
+                "Logan Fox",
+                "Eddie V",
+                "Jorge Contreras",
+                "Francisco Miranda",
+                "Alex Richardson",
+                "John Morris",
+                "Dee Moore",
+                "Andrea Carter",
+                "Jeff Carter"
+            ],
+            "style": {
+                "David Duarte": null,
+                "Donald Rogers": null,
+                "Steven Cooper": null,
+                "Stephanie McGinity": null,
+                "Alex Bolanos": null,
+                "Adam Crawford": null,
+                "Logan Fox": null,
+                "Eddie V": null,
+                "Jorge Contreras": null,
+                "Francisco Miranda": null,
+                "Alex Richardson": null,
+                "John Morris": null,
+                "Dee Moore": null,
+                "Andrea Carter": null,
+                "Jeff Carter": null
+            },
+            "isSorted": true,
+            "allowCustomOptions": true,
+            "isCustom": true,
+            "default": []
+        },
+        "sentToConstructionOn": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "isCustom": true,
+            "tooltip": true
+        },
+        "cOCDate": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
+        },
+        "interiorDamageHighlight": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "tooltip": true,
+            "isCustom": true
+        },
+        "photosNeededHighlight": {
+            "type": "varchar",
+            "options": [],
+            "tooltip": true,
+            "isCustom": true
+        },
+        "hVACDamageHighlight": {
+            "type": "enum",
+            "options": [
+                "Low",
+                "Medium-High",
+                "Needs Adjuster Review"
+            ],
+            "style": {
+                "Low": null,
+                "Medium-High": null,
+                "Needs Adjuster Review": null
+            },
+            "default": "Needs Adjuster Review",
+            "isCustom": true
+        },
+        "salesRepNew": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "David Duarte",
+                "Stephanie McGinity",
+                "Adam Crawford",
+                "Donald Rogers",
+                "Kevin Beltran",
+                "Logan Fox",
+                "Jorge Contreras",
+                "Alex Bolanos",
+                "John Morris",
+                "Alex Richardson",
+                "Francisco Miranda",
+                "Eddie Robles",
+                "Steven Cooper",
+                "Kody Talson"
+            ],
+            "style": {
+                "David Duarte": null,
+                "Stephanie McGinity": null,
+                "Adam Crawford": null,
+                "Donald Rogers": null,
+                "Kevin Beltran": null,
+                "Logan Fox": null,
+                "Jorge Contreras": null,
+                "Alex Bolanos": null,
+                "John Morris": null,
+                "Alex Richardson": null,
+                "Francisco Miranda": null,
+                "Eddie Robles": null,
+                "Steven Cooper": null,
+                "Kody Talson": null
+            },
+            "isCustom": true
+        },
+        "deductibleInvDate": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "tooltip": true,
+            "isCustom": true,
+            "maxLength": 25
+        },
+        "insuranceApprovedRCV": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "expectedFunds": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "avantsettlementamount": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "templates": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "secondSRCPayable": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "firstSRCOwed": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "statusModifiedAt": {
+            "notNull": false,
+            "type": "datetime",
+            "readOnly": true,
+            "minuteStep": 30,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "statusModifiedBy": {
+            "type": "link"
+        },
+        "payables1": {
+            "type": "link"
+        },
+        "nonRecoverableRCV": {
+            "type": "currency",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "billableDeductible": {
+            "type": "currency",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "adjReviewed1stInsEst": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "checksReconcile": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "constructionNotes": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "deductibleNotes": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "audited": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "EntityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "campaign": {
+            "type": "belongsTo",
+            "foreign": "claims",
+            "entity": "Campaign",
+            "audited": false,
+            "isCustom": true
+        },
+        "documents": {
+            "type": "hasMany",
+            "foreign": "claim",
+            "entity": "Document",
+            "audited": false,
+            "isCustom": true
+        },
+        "inventories": {
+            "type": "hasMany",
+            "relationName": "claimInventory",
+            "foreign": "claims",
+            "entity": "Inventory",
+            "audited": false,
+            "isCustom": true
+        },
+        "opportunities": {
+            "type": "hasMany",
+            "relationName": "claimOpportunity",
+            "foreign": "claims",
+            "entity": "Opportunity",
+            "audited": false,
+            "isCustom": true
+        },
+        "payables": {
+            "type": "hasMany",
+            "foreign": "claim",
+            "entity": "Payables",
+            "audited": false,
+            "isCustom": true
+        },
+        "stages": {
+            "type": "hasMany",
+            "relationName": "claimStages",
+            "foreign": "claims",
+            "entity": "Stages",
+            "audited": false,
+            "isCustom": true
+        },
+        "policy": {
+            "type": "belongsTo",
+            "foreign": "claims",
+            "entity": "Policy",
+            "audited": false,
+            "isCustom": true
+        },
+        "mortgageCompany": {
+            "type": "belongsTo",
+            "foreign": "claims",
+            "entity": "MortgageCompany",
+            "audited": false,
+            "isCustom": true
+        },
+        "policies": {
+            "type": "hasMany",
+            "foreign": "claim",
+            "entity": "Policy",
+            "audited": false,
+            "isCustom": true
+        },
+        "insuranceCompany": {
+            "type": "belongsTo",
+            "foreign": "claims",
+            "entity": "InsuranceCompany",
+            "audited": false,
+            "isCustom": true
+        },
+        "contact": {
+            "type": "belongsTo",
+            "foreign": "claims",
+            "entity": "Contact",
+            "audited": false,
+            "isCustom": true
+        },
+        "account": {
+            "type": "belongsTo",
+            "foreign": "claims",
+            "entity": "Account",
+            "audited": false,
+            "isCustom": true
+        },
+        "cases": {
+            "type": "hasMany",
+            "foreign": "claim",
+            "entity": "Case",
+            "audited": false,
+            "isCustom": true
+        },
+        "leads": {
+            "type": "hasMany",
+            "foreign": "claim",
+            "entity": "Lead",
+            "audited": false,
+            "isCustom": true
+        },
+        "knowledgeBaseArticles": {
+            "type": "hasMany",
+            "relationName": "knowledgeBaseArticleClaim",
+            "foreign": "claims",
+            "entity": "KnowledgeBaseArticle",
+            "audited": false,
+            "isCustom": true
+        },
+        "inspections": {
+            "type": "hasMany",
+            "foreign": "claim",
+            "entity": "Inspection",
+            "audited": false,
+            "isCustom": true
+        },
+        "user": {
+            "type": "belongsTo",
+            "foreign": "claims",
+            "entity": "User",
+            "audited": false,
+            "isCustom": true
+        },
+        "checks": {
+            "type": "hasMany",
+            "foreign": "claim",
+            "entity": "Check",
+            "audited": false,
+            "isCustom": true
+        },
+        "adjusters": {
+            "type": "hasMany",
+            "relationName": "adjusterClaim",
+            "foreign": "claims",
+            "entity": "Adjuster",
+            "audited": false,
+            "isCustom": true
+        },
+        "adjuster": {
+            "type": "belongsTo",
+            "foreign": "claims1",
+            "entity": "Adjuster",
+            "audited": false,
+            "isCustom": true
+        },
+        "adjuster1": {
+            "type": "belongsTo",
+            "foreign": "claims12",
+            "entity": "Adjuster",
+            "audited": false,
+            "isCustom": true
+        },
+        "adjuster12": {
+            "type": "belongsTo",
+            "foreign": "claims123",
+            "entity": "Adjuster",
+            "audited": false,
+            "isCustom": true
+        },
+        "adjuster123": {
+            "type": "belongsTo",
+            "foreign": "claims1234",
+            "entity": "Adjuster",
+            "audited": false,
+            "isCustom": true
+        },
+        "streetView": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "disabled": true
+        },
+        "accounts": {
+            "type": "hasMany",
+            "foreign": "claim",
+            "entity": "Account",
+            "audited": false,
+            "isCustom": true
+        },
+        "adjusterPA": {
+            "type": "belongsTo",
+            "foreign": "claim",
+            "entity": "Adjuster",
+            "isCustom": true
+        },
+        "progressReports": {
+            "type": "hasMany",
+            "foreign": "claim",
+            "entity": "ProgressReport",
+            "audited": false,
+            "isCustom": true
+        },
+        "invoices": {
+            "type": "hasMany",
+            "foreign": "claim",
+            "entity": "Invoice",
+            "audited": false,
+            "isCustom": true
+        },
+        "vendors": {
+            "type": "hasMany",
+            "relationName": "claimVendor",
+            "foreign": "claims",
+            "entity": "Vendor",
+            "audited": false,
+            "isCustom": true
+        },
+        "user1": {
+            "type": "belongsTo",
+            "foreign": "claims1",
+            "entity": "User",
+            "audited": false,
+            "isCustom": true
+        },
+        "rebuttals": {
+            "type": "hasMany",
+            "relationName": "claimRebuttal",
+            "foreign": "claims",
+            "entity": "Rebuttal",
+            "audited": false,
+            "isCustom": true
+        },
+        "estimatesFolder": {
+            "type": "hasChildren",
+            "entity": "Attachment",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "relationName": "attachments",
+            "disabled": true
+        },
+        "estimatesFolders": {
+            "type": "hasMany",
+            "foreign": "claim",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        },
+        "templates": {
+            "type": "hasMany",
+            "relationName": "templateClaim",
+            "foreign": "claims",
+            "entity": "Template",
+            "audited": false,
+            "isCustom": true
+        },
+        "statusModifiedBy": {
+            "type": "belongsTo",
+            "foreign": "cClaimStatus",
+            "entity": "User",
+            "audited": false,
+            "isCustom": true
+        },
+        "payables1": {
+            "type": "belongsTo",
+            "foreign": "claims",
+            "entity": "Payables",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "claimNumber",
+            "policyNumber",
+            "contact.firstName",
+            "contact.lastName",
+            "lossAddressStreet",
+            "contact.companyName"
+        ],
+        "fullTextSearch": true,
+        "countDisabled": false
+    },
+    "indexes": {
+        "name": {
+            "columns": [
+                "name",
+                "deleted"
+            ]
+        },
+        "assignedUser": {
+            "columns": [
+                "assignedUserId",
+                "deleted"
+            ]
+        }
+    }
+}

@@ -1,0 +1,452 @@
+{
+    "jobPeriod": 7800,
+    "jobPeriodForActiveProcess": 36000,
+    "jobRerunAttemptNumber": 1,
+    "cronMinInterval": 2,
+    "jobMaxPortion": 15,
+    "jobRunInParallel": false,
+    "jobPoolConcurrencyNumber": 8,
+    "daemonMaxProcessNumber": 5,
+    "daemonInterval": 10,
+    "daemonProcessTimeout": 36000,
+    "jobForceUtc": false,
+    "recordsPerPage": 50,
+    "recordsPerPageSmall": 25,
+    "recordsPerPageSelect": 20,
+    "recordsPerPageKanban": 15,
+    "applicationName": "NurdsCRM (nurds)",
+    "timeZone": "America/Phoenix",
+    "dateFormat": "MM/DD/YYYY",
+    "timeFormat": "hh:mm A",
+    "weekStart": 0,
+    "thousandSeparator": ",",
+    "decimalMark": ".",
+    "exportDelimiter": ",",
+    "currencyList": [
+        "USD"
+    ],
+    "defaultCurrency": "USD",
+    "baseCurrency": "USD",
+    "currencyRates": [],
+    "currencyNoJoinMode": false,
+    "outboundEmailIsShared": true,
+    "outboundEmailFromName": "NurdsCRM",
+    "outboundEmailFromAddress": "",
+    "smtpServer": "",
+    "smtpPort": 587,
+    "smtpAuth": false,
+    "smtpSecurity": "TLS",
+    "smtpUsername": "",
+    "language": "en_US",
+    "authenticationMethod": "Oidc",
+    "globalSearchEntityList": [
+        "Account",
+        "Contact",
+        "Lead",
+        "Opportunity"
+    ],
+    "tabList": [
+        {
+            "type": "divider",
+            "id": "342567",
+            "text": "$CRM"
+        },
+        "Account",
+        "Contact",
+        "Lead",
+        "Opportunity",
+        {
+            "type": "group",
+            "text": "$SalesPack",
+            "iconClass": "fas fa-boxes",
+            "color": null,
+            "id": "610184",
+            "itemList": [
+                "Product",
+                {
+                    "type": "divider",
+                    "text": null,
+                    "id": "622756"
+                },
+                "Quote",
+                "SalesOrder",
+                "Invoice",
+                "DeliveryOrder",
+                "ReturnOrder",
+                {
+                    "type": "divider",
+                    "text": null,
+                    "id": "707374"
+                },
+                "PurchaseOrder",
+                "ReceiptOrder",
+                {
+                    "type": "divider",
+                    "text": null,
+                    "id": "378438"
+                },
+                "TransferOrder",
+                "InventoryAdjustment",
+                {
+                    "type": "divider",
+                    "text": null,
+                    "id": "356669"
+                },
+                "Warehouse",
+                "InventoryNumber",
+                {
+                    "type": "divider",
+                    "text": null,
+                    "id": "804375"
+                },
+                "InventoryTransaction"
+            ]
+        },
+        {
+            "type": "group",
+            "text": "Misc Tab",
+            "iconClass": "fas fa-atom",
+            "color": null,
+            "id": "141705",
+            "itemList": [
+                "CCertificate",
+                "Domain",
+                "ExternalMonitoring",
+                "SMSBot",
+                "Zone"
+            ]
+        },
+        {
+            "type": "divider",
+            "text": "$Activities",
+            "id": "219419"
+        },
+        "Email",
+        "Meeting",
+        "Call",
+        "Task",
+        "Calendar",
+        {
+            "type": "divider",
+            "id": "655187",
+            "text": "$Support"
+        },
+        "Case",
+        "KnowledgeBaseArticle",
+        {
+            "type": "divider",
+            "text": null,
+            "id": "137994"
+        },
+        "_delimiter_",
+        {
+            "type": "divider",
+            "text": "$Marketing",
+            "id": "463280"
+        },
+        "Campaign",
+        "TargetList",
+        {
+            "type": "divider",
+            "text": "$Business",
+            "id": "518202"
+        },
+        "Document",
+        {
+            "type": "divider",
+            "text": "$Organization",
+            "id": "566592"
+        },
+        "User",
+        "Team",
+        "WorkingTimeCalendar",
+        {
+            "type": "divider",
+            "text": null,
+            "id": "898671"
+        },
+        "EmailTemplate",
+        "Template",
+        "Import",
+        {
+            "type": "divider",
+            "text": null,
+            "id": "291212"
+        }
+    ],
+    "quickCreateList": [
+        "Account",
+        "Contact",
+        "Lead",
+        "Opportunity",
+        "Meeting",
+        "Call",
+        "Task",
+        "Case",
+        "Email"
+    ],
+    "exportDisabled": false,
+    "adminNotifications": true,
+    "adminNotificationsNewVersion": true,
+    "adminNotificationsCronIsNotConfigured": true,
+    "adminNotificationsNewExtensionVersion": true,
+    "assignmentEmailNotifications": false,
+    "assignmentEmailNotificationsEntityList": [
+        "Lead",
+        "Opportunity",
+        "Task",
+        "Case"
+    ],
+    "assignmentNotificationsEntityList": [
+        "Call",
+        "Email"
+    ],
+    "portalStreamEmailNotifications": true,
+    "streamEmailNotificationsEntityList": [
+        "Case"
+    ],
+    "streamEmailNotificationsTypeList": [
+        "Post",
+        "Status",
+        "EmailReceived"
+    ],
+    "emailNotificationsDelay": 30,
+    "emailMessageMaxSize": 25,
+    "emailRecipientAddressMaxCount": 100,
+    "notificationsCheckInterval": 10,
+    "popupNotificationsCheckInterval": 15,
+    "maxEmailAccountCount": 2,
+    "followCreatedEntities": false,
+    "b2cMode": false,
+    "theme": "Light",
+    "themeParams": {
+        "navbar": "side"
+    },
+    "massEmailMaxPerHourCount": 100,
+    "massEmailMaxPerBatchCount": 10,
+    "massEmailVerp": false,
+    "personalEmailMaxPortionSize": 50,
+    "inboundEmailMaxPortionSize": 50,
+    "emailAddressLookupEntityTypeList": [
+        "User"
+    ],
+    "emailAddressSelectEntityTypeList": [
+        "User",
+        "Contact",
+        "Lead",
+        "Account"
+    ],
+    "emailAddressEntityLookupDefaultOrder": [
+        "User",
+        "Contact",
+        "Lead",
+        "Account"
+    ],
+    "phoneNumberEntityLookupDefaultOrder": [
+        "User",
+        "Contact",
+        "Lead",
+        "Account"
+    ],
+    "authTokenLifetime": 0,
+    "authTokenMaxIdleTime": 48,
+    "userNameRegularExpression": "[^a-z0-9\\-@_\\.\\s]",
+    "addressFormat": 1,
+    "displayListViewRecordCount": true,
+    "dashboardLayout": [
+        {
+            "name": "My Nurds",
+            "layout": [
+                {
+                    "id": "default-stream",
+                    "name": "Stream",
+                    "x": 0,
+                    "y": 0,
+                    "width": 2,
+                    "height": 4
+                },
+                {
+                    "id": "default-activities",
+                    "name": "Activities",
+                    "x": 2,
+                    "y": 2,
+                    "width": 2,
+                    "height": 4
+                }
+            ]
+        }
+    ],
+    "calendarEntityList": [
+        "Meeting",
+        "Call",
+        "Task"
+    ],
+    "activitiesEntityList": [
+        "Meeting",
+        "Call"
+    ],
+    "historyEntityList": [
+        "Meeting",
+        "Call",
+        "Email"
+    ],
+    "busyRangesEntityList": [
+        "Meeting",
+        "Call"
+    ],
+    "emailAutoReplySuppressPeriod": "2 hours",
+    "emailAutoReplyLimit": 5,
+    "cleanupJobPeriod": "1 month",
+    "cleanupActionHistoryPeriod": "15 days",
+    "cleanupAuthTokenPeriod": "1 month",
+    "cleanupSubscribers": true,
+    "cleanupAudit": true,
+    "cleanupAuditPeriod": "3 months",
+    "currencyFormat": 2,
+    "currencyDecimalPlaces": 2,
+    "aclAllowDeleteCreated": false,
+    "aclAllowDeleteCreatedThresholdPeriod": "24 hours",
+    "attachmentAvailableStorageList": null,
+    "attachmentUploadMaxSize": 50,
+    "attachmentUploadChunkSize": 4,
+    "inlineAttachmentUploadMaxSize": 20,
+    "textFilterUseContainsForVarchar": true,
+    "tabColorsDisabled": false,
+    "massPrintPdfMaxCount": 50,
+    "emailKeepParentTeamsEntityList": [
+        "Case"
+    ],
+    "streamEmailWithContentEntityTypeList": [
+        "Case"
+    ],
+    "recordListMaxSizeLimit": 200,
+    "noteDeleteThresholdPeriod": "1 month",
+    "noteEditThresholdPeriod": "7 days",
+    "emailForceUseExternalClient": false,
+    "useWebSocket": false,
+    "auth2FAMethodList": [
+        "Totp"
+    ],
+    "auth2FAInPortal": false,
+    "personNameFormat": "firstLast",
+    "newNotificationCountInTitle": false,
+    "pdfEngine": "Dompdf",
+    "smsProvider": null,
+    "mapProvider": "Google",
+    "defaultFileStorage": "AwsS3",
+    "ldapUserNameAttribute": "sAMAccountName",
+    "ldapUserFirstNameAttribute": "givenName",
+    "ldapUserLastNameAttribute": "sn",
+    "ldapUserTitleAttribute": "title",
+    "ldapUserEmailAddressAttribute": "mail",
+    "ldapUserPhoneNumberAttribute": "telephoneNumber",
+    "ldapUserObjectClass": "person",
+    "ldapPortalUserLdapAuth": false,
+    "passwordGenerateLength": 10,
+    "massActionIdleCountThreshold": 100,
+    "exportIdleCountThreshold": 1000,
+    "oidcJwtSignatureAlgorithmList": [
+        "RS256"
+    ],
+    "oidcUsernameClaim": "preferred_username",
+    "oidcFallback": false,
+    "oidcScopes": [
+        "profile",
+        "email",
+        "phone"
+    ],
+    "listViewSettingsDisabled": false,
+    "cleanupDeletedRecords": true,
+    "phoneNumberNumericSearch": true,
+    "phoneNumberInternational": true,
+    "phoneNumberPreferredCountryList": [
+        "us"
+    ],
+    "wysiwygCodeEditorDisabled": false,
+    "customPrefixDisabled": false,
+    "listPagination": true,
+    "fullTextSearchMinLength": 4,
+    "oidcLogoutUrl": "/?logout",
+    "auth2FA": false,
+    "passwordStrengthLength": null,
+    "passwordStrengthLetterCount": null,
+    "passwordStrengthBothCases": false,
+    "passwordStrengthNumberCount": null,
+    "passwordRecoveryDisabled": false,
+    "passwordRecoveryForAdminDisabled": false,
+    "passwordRecoveryNoExposure": false,
+    "passwordRecoveryForInternalUsersDisabled": false,
+    "oidcTeamsIds": [],
+    "oidcTeamsNames": {},
+    "oidcTeamsColumns": {},
+    "maintenanceMode": false,
+    "cronDisabled": false,
+    "fiscalYearShift": 0,
+    "addressCountryList": [],
+    "addressCityList": [],
+    "addressStateList": [],
+    "emailAddressIsOptedOutByDefault": false,
+    "workingTimeCalendarName": null,
+    "workingTimeCalendarId": null,
+    "planType": "Enterprise",
+    "appLogAdminAllowed": false,
+    "notePinnedMaxCount": 5,
+    "phoneNumberExtensions": true,
+    "starsLimit": 500,
+    "quickSearchFullTextAppendWildcard": true,
+    "authIpAddressCheck": false,
+    "authIpAddressWhitelist": [],
+    "authIpAddressCheckExcludedUsersIds": [],
+    "authIpAddressCheckExcludedUsersNames": {},
+    "userThemesDisabled": false,
+    "avatarsDisabled": false,
+    "scopeColorsDisabled": false,
+    "tabIconsDisabled": false,
+    "dashletsOptions": {},
+    "adminPanelIframeUrl": "https://s.espocrm.com/?google-integration=96ea385d4e0a9d0ba460925d713d8f63&sales-pack=799ba07927a6a02c6a0ae59de64ec1ec",
+    "tabQuickSearch": true,
+    "passwordStrengthSpecialCharacterCount": null,
+    "availableReactions": [
+        "Like",
+        "Dislike",
+        "Love",
+        "Smile",
+        "Surprise",
+        "Laugh",
+        "Meh",
+        "Sad"
+    ],
+    "streamReactionsCheckMaxSize": 50,
+    "emailScheduledBatchCount": 50,
+    "emailAddressMaxCount": 10,
+    "phoneNumberMaxCount": 10,
+    "digitalOceanToken": "dop_v1_c8dca41300691892b7def46dfc0024b37bb52c8b2dcb8eabd88e086bd94b171d",
+    "digitalOceanUrl": "https://api.digitalocean.com/v2",
+    "adminPanelIframeDisabled": true,
+    "awsS3Storage": {
+        "bucketName": "nurds",
+        "path": "nurds",
+        "credentials": {
+            "key": "Q8W99JP7CK1T06CYZ3HR",
+            "secret": "DxpgneD5tTDDKP0CJDbzrykhjX7p59wOKgAvqT3n"
+        },
+        "region": "ewr1",
+        "endpoint": "https://ewr1.vultrobjects.com"
+    },
+    "authTokenPreventConcurrent": true,
+    "oidcAuthorizationEndpoint": "https://auth1.nurds.com/application/o/authorize/",
+    "oidcTokenEndpoint": "https://auth1.nurds.com/application/o/token/",
+    "oidcJwksEndpoint": "https://auth1.nurds.com/application/o/nurds/jwks/",
+    "oidcClientId": "rd4lAzDlEvuEUqB06SOLobFOed2P7LWFjpXzCR6I",
+    "oidcCreateUser": true,
+    "oidcSync": true,
+    "oidcAllowAdminUser": true,
+    "oidcAllowRegularUserFallback": false,
+    "oidcGroupClaim": "teams",
+    "oidcSyncTeams": true,
+    "oidcAuthorizationPrompt": "select_account",
+    "oidcClientSecret": "2OFsBfvNDA3gkPnmn5uxGvOdwpYiTwqwvLHO92VO4b0D2XzlSpSRfOckoMVjW4xPYEH5XdP194Cl3FGM6qhFkZrjlA6afQTfAEUWdVwSh9ffZ4KnlBeVN8aSJqOCmq9X",
+    "nurdsLogo": "data:image/jpeg;base64,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",
+    "companyLogoId": null,
+    "companyLogoName": null
+}

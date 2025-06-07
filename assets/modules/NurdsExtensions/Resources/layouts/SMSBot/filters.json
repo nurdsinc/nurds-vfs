@@ -1,0 +1,16 @@
+[
+    "from",
+    "to",
+    "status",
+    "source",
+    "name",
+    "body",
+    "direction",
+    "teams",
+    "modifiedAt",
+    "createdAt",
+    "messageId",
+    "lead",
+    "campaign",
+    "contact"
+]

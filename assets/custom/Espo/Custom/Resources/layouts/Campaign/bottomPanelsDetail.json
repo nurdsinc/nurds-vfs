@@ -1,0 +1,34 @@
+{
+    "campaignLogRecords": {
+        "index": 0
+    },
+    "_delimiter_": {
+        "index": 1
+    },
+    "opportunities": {
+        "index": 2
+    },
+    "leads": {
+        "index": 3
+    },
+    "accounts": {
+        "index": 4
+    },
+    "contacts": {
+        "index": 5
+    },
+    "SMSBots": {
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "type",
+                    "value": "SMS"
+                }
+            ]
+        },
+        "style": "default",
+        "sticked": false,
+        "index": 6
+    }
+}

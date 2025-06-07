@@ -1,0 +1,24 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "checkNumber"
+    },
+    {
+        "name": "contact"
+    },
+    {
+        "name": "claim"
+    },
+    {
+        "name": "amount"
+    },
+    {
+        "name": "dateReceived"
+    },
+    {
+        "name": "status"
+    }
+]

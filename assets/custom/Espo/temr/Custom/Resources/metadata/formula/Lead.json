@@ -1,0 +1,3 @@
+{
+    "beforeSaveCustomScript": "//This is meant to grab the json data sent from a form containing the raw password and updating the record with it.\n$password = json\\retrieve(json, 'cPassword');\nifThen(\n    cPassword == null && $password != '',\n    cPassword = $password\n);"
+}

@@ -1,0 +1,21 @@
+{
+    "options": {
+        "type": {
+            "": "",
+            "Email": "Email",
+            "Newsletter": "Newsletter",
+            "Web": "Web",
+            "Television": "Television",
+            "Radio": "Radio",
+            "Mail": "Mail",
+            "SMS": "SMS",
+            "TEST": "TEST"
+        },
+        "cFrom": {
+            "14807257807": "14807257807"
+        }
+    },
+    "fields": {
+        "cFrom": "From"
+    }
+}

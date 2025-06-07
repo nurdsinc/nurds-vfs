@@ -1,0 +1,17 @@
+{
+    "fields": {
+        "cDatePaid": {
+            "notNull": false,
+            "type": "date",
+            "audited": true,
+            "isCustom": true
+        },
+        "cPaymentLink": {
+            "type": "url",
+            "copyToClipboard": true,
+            "strip": true,
+            "audited": true,
+            "isCustom": true
+        }
+    }
+}

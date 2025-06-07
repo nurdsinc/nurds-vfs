@@ -1,0 +1,8 @@
+{
+    "relationshipPanels": {
+        "claimStatus": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    }
+}

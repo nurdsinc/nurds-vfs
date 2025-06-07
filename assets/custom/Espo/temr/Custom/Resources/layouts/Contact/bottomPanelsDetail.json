@@ -1,0 +1,36 @@
+{
+    "activities": {
+        "disabled": true
+    },
+    "history": {
+        "disabled": true
+    },
+    "_delimiter_": {
+        "disabled": true
+    },
+    "stream": {
+        "sticked": true,
+        "index": 0
+    },
+    "cTrips": {
+        "index": 1
+    },
+    "cAdditionalTrips": {
+        "index": 2
+    },
+    "opportunities": {
+        "index": 3
+    },
+    "cases": {
+        "index": 4
+    },
+    "targetLists": {
+        "index": 5
+    },
+    "SMSBots": {
+        "index": 6
+    },
+    "campaignLogRecords": {
+        "index": 7
+    }
+}

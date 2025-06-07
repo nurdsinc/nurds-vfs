@@ -1,0 +1,9 @@
+{
+  "links": {
+    "calls": "Anrufe",
+    "tasks": "Aufgaben"
+  },
+  "labels": {
+    "Create Check": "Check erstellen"
+  }
+}

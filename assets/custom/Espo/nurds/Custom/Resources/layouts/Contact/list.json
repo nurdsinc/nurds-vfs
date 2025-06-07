@@ -1,0 +1,33 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "title"
+    },
+    {
+        "name": "emailAddress",
+        "notSortable": true,
+        "align": "left"
+    },
+    {
+        "name": "phoneNumber",
+        "notSortable": true,
+        "align": "left"
+    },
+    {
+        "name": "account",
+        "align": "left"
+    },
+    {
+        "name": "tags",
+        "width": 25,
+        "notSortable": true,
+        "align": "left"
+    },
+    {
+        "name": "cStatus",
+        "align": "right"
+    }
+]

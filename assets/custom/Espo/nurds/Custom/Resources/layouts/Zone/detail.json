@@ -1,0 +1,115 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "type"
+                },
+                {
+                    "name": "zoneId"
+                }
+            ],
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "update"
+                }
+            ],
+            [
+                {
+                    "name": "domain"
+                },
+                {
+                    "name": "ttl"
+                }
+            ],
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "error"
+                }
+            ],
+            [
+                {
+                    "name": "data",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "style": "default",
+        "dynamicLogicVisible": null,
+        "customLabel": "Primary"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "port"
+                },
+                {
+                    "name": "weight"
+                }
+            ],
+            [
+                {
+                    "name": "priority"
+                },
+                false
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "or",
+                    "value": [
+                        {
+                            "type": "equals",
+                            "attribute": "type",
+                            "value": "MX"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "type",
+                            "value": "SRV"
+                        }
+                    ]
+                }
+            ]
+        },
+        "customLabel": "MX | SRV"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "tag"
+                },
+                {
+                    "name": "flags"
+                }
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "type",
+                    "value": "CAA"
+                }
+            ]
+        },
+        "customLabel": "CAA"
+    }
+]

@@ -1,0 +1,37 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "color": "#4664d4",
+    "iconClass": "fas fa-robot",
+    "relationshipPanels": {
+        "lead": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "campaign": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "contact": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "messageId": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "messageId"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "kanbanViewMode": false
+}

@@ -1,0 +1,32 @@
+{
+    "fields": {
+        "claim1": {
+            "type": "link"
+        },
+        "claims": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "claim1": {
+            "type": "belongsTo",
+            "foreign": "knowledgeBaseArticles",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        },
+        "claims": {
+            "type": "hasMany",
+            "relationName": "knowledgeBaseArticleClaim",
+            "foreign": "knowledgeBaseArticles",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

@@ -1,0 +1,82 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "claim"
+                }
+            ],
+            [
+                {
+                    "name": "contact"
+                },
+                {
+                    "name": "attachment"
+                }
+            ],
+            [
+                {
+                    "name": "deposited"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "checkNumber"
+                },
+                {
+                    "name": "type"
+                }
+            ],
+            [
+                {
+                    "name": "amount"
+                },
+                {
+                    "name": "dateReceived"
+                }
+            ],
+            [
+                {
+                    "name": "pAFeeCharged"
+                },
+                {
+                    "name": "category"
+                }
+            ],
+            [
+                {
+                    "name": "insuredOwed"
+                },
+                {
+                    "name": "vendorOwed"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "danger",
+        "dynamicLogicStyled": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "status",
+                    "value": "Issued"
+                }
+            ]
+        },
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Overview"
+    }
+]

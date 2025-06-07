@@ -1,0 +1,17 @@
+{
+    "labels": {
+        "Create Expense": "Create Expense"
+    },
+    "fields": {
+        "receipts": "Receipts",
+        "amount": "Amount",
+        "contacts": "Contacts",
+        "cases": "Cases",
+        "claim": "Claim"
+    },
+    "links": {
+        "contacts": "Contacts",
+        "cases": "Cases",
+        "claim": "Claim"
+    }
+}

@@ -1,0 +1,90 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "fileAttachment"
+                },
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                false,
+                {
+                    "name": "estimateType"
+                }
+            ],
+            [
+                {
+                    "name": "claim"
+                },
+                {
+                    "name": "client"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "rCVestimates"
+                }
+            ],
+            [
+                {
+                    "name": "depreciationEst"
+                },
+                {
+                    "name": "pWI"
+                },
+                {
+                    "name": "aCVEst"
+                }
+            ],
+            [
+                {
+                    "name": "nonRecoverableRCV"
+                },
+                {
+                    "name": "newChecksReleased"
+                }
+            ],
+            [
+                {
+                    "name": "notes"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "customLabel": "Details"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "check"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "isTrue",
+                    "attribute": "newChecksReleased"
+                }
+            ]
+        },
+        "style": "success",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Associated Checks"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "name": "name",
+        "width": 25,
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "cUnitType",
+        "align": "left"
+    },
+    {
+        "name": "quantityOnHand",
+        "align": "left"
+    },
+    {
+        "name": "brand",
+        "width": 11,
+        "align": "left"
+    },
+    {
+        "name": "status",
+        "width": 11
+    },
+    {
+        "name": "costPrice",
+        "align": "right"
+    },
+    {
+        "name": "unitPrice",
+        "width": 16,
+        "align": "right"
+    }
+]

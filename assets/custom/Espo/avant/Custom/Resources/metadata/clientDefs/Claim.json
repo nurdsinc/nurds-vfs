@@ -1,0 +1,589 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "sidePanels": {
+        "detail": [
+            {
+                "name": "activities",
+                "label": "Activities",
+                "view": "crm:views/record/panels/activities",
+                "aclScope": "Activities"
+            },
+            {
+                "name": "history",
+                "label": "History",
+                "view": "crm:views/record/panels/history",
+                "aclScope": "Activities"
+            },
+            {
+                "name": "tasks",
+                "label": "Tasks",
+                "view": "crm:views/record/panels/tasks",
+                "aclScope": "Task"
+            }
+        ]
+    },
+    "color": "#d40000",
+    "iconClass": "fas fa-id-card",
+    "kanbanViewMode": true,
+    "dynamicLogic": {
+        "fields": {
+            "reInspectionRequested": {
+                "readOnly": null
+            },
+            "inspectionRequested": {
+                "readOnly": null
+            },
+            "dateReInspectionRequested": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "reInspectionRequested"
+                        }
+                    ]
+                }
+            },
+            "dateReInspectionCompleted": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "reInspectionRequested"
+                        }
+                    ]
+                }
+            },
+            "reInspectionRequestedBy": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "reInspectionRequested"
+                        }
+                    ]
+                }
+            },
+            "mitAgreement": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "services",
+                            "value": "MIT"
+                        }
+                    ]
+                },
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "mitAgreement"
+                        }
+                    ]
+                }
+            },
+            "mitEstimate": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "services",
+                            "value": "MIT"
+                        }
+                    ]
+                },
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "mitEstimate"
+                        }
+                    ]
+                }
+            },
+            "dwellingRec": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "hasInteriorDamage"
+                        }
+                    ]
+                }
+            },
+            "contentRec": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "hasInteriorDamage"
+                        }
+                    ]
+                }
+            },
+            "thirdPartyContractorHighlight": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "highlight",
+                            "value": "3rd Party"
+                        }
+                    ]
+                }
+            },
+            "insChecksSentToCustomerHighlight": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "highlight"
+                        },
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Customer Rec'd Depreciation Check"
+                                },
+                                {
+                                    "type": "or",
+                                    "value": [
+                                        {
+                                            "type": "has",
+                                            "attribute": "highlight",
+                                            "value": "Customer Rec'd ACV"
+                                        },
+                                        {
+                                            "type": "has",
+                                            "attribute": "highlight",
+                                            "value": "Customer Rec'd Supp Check"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "notesHighlight": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "highlight"
+                        },
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Multiple Adjustments"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Personal Property"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Previous Claim"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "PWI Items"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Tarp"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Pool Tarp"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Double Layer"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Re-Opened Claim"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Pending Customer Decison: See Description"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Upset Customer"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "ACV Only Policy"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Obtain Photos"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Persnickety"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "interiorExteriorHighlight": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "highlight"
+                        },
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Exterior Paint"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "insVendorHVACInspectionHighlight": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "highlight"
+                        },
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "HVAC-Inspected by Ins"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "hVACNotesHighlight": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "highlight"
+                        },
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "HVAC Bought"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "HVAC-Denied"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "HVAC Replacement"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "HVAC-Inspected by Ins"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "HVAC: Pursue"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "solarInfoHighlight": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "highlight"
+                        },
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Solar Panels"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "sentToConstructionOn": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "highlight",
+                            "value": "CONSTRUCTION"
+                        }
+                    ]
+                }
+            },
+            "cOCDate": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "highlight",
+                            "value": "CONSTRUCTION"
+                        }
+                    ]
+                }
+            },
+            "interiorDamageHighlight": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "highlight"
+                        },
+                        {
+                            "type": "and",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Interior"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "photosNeededHighlight": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "highlight"
+                        },
+                        {
+                            "type": "and",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "Obtain Photos"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "hVACDamageHighlight": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "highlight"
+                        },
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "HVAC-Denied"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "HVAC Bought"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "HVAC Replacement"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "HVAC-Inspected by Ins"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "highlight",
+                                    "value": "HVAC: Pursue"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "deductibleInvDate": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "deductibleInvoiceSent"
+                        }
+                    ]
+                }
+            },
+            "insuranceApprovedRCV": {
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "status",
+                            "value": "Pending Review"
+                        }
+                    ]
+                }
+            },
+            "adjReviewed1stInsEst": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "status",
+                            "value": "Pending Review"
+                        }
+                    ]
+                }
+            },
+            "constructionNotes": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "highlight",
+                            "value": "CONSTRUCTION"
+                        }
+                    ]
+                }
+            },
+            "priorPayment": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "highlight",
+                            "value": "Re-Opened Claim"
+                        }
+                    ]
+                }
+            }
+        },
+        "options": {
+            "status": [
+                {
+                    "optionList": [
+                        "Pending"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "isEmpty",
+                            "attribute": "jobType"
+                        }
+                    ]
+                },
+                {
+                    "optionList": [
+                        "Pending",
+                        "LOR Missing Info",
+                        "Not Approved to File",
+                        "Approved to File",
+                        "Pending Inspection",
+                        "Adj Complete-Avant Report",
+                        "Pending Review",
+                        "Negotiation",
+                        "Partial Construction Approved",
+                        "Full Construction Approved",
+                        "IC-3rd Party",
+                        "Construction: Roof LLC",
+                        "Construction Complete Gameplan",
+                        "Bill Depreciation",
+                        "Depreciation Billed",
+                        "Review Depreciation Response",
+                        "Pending Appr-Review",
+                        "Appraisal Approved",
+                        "Appraisal-Demand Sent",
+                        "In Appraisal",
+                        "Appraisal-Decision Rec'd",
+                        "Hire Engineer",
+                        "Coverage Dispute",
+                        "In Litigation",
+                        "Collections",
+                        "Pend. Final SalesRep Pay",
+                        "Dropped-Other",
+                        "Customer Cancel",
+                        "Dropped-Low Damage",
+                        "Lost",
+                        "Claim Dropped/Lost",
+                        "Closed"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "jobType",
+                            "value": "Public Adjuster"
+                        }
+                    ]
+                }
+            ],
+            "jobType": [
+                {
+                    "optionList": [
+                        "Public Adjuster",
+                        "Appraisal",
+                        "Consulting"
+                    ],
+                    "conditionGroup": null
+                }
+            ]
+        }
+    },
+    "relationshipPanels": {
+        "statusModifiedBy": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "payables1": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    }
+}

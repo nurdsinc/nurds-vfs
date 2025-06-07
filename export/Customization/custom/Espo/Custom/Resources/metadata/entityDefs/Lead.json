@@ -1,0 +1,62 @@
+{
+    "fields": {
+        "json": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "uniqueId": {
+            "type": "varchar",
+            "maxLength": 50,
+            "options": [],
+            "isCustom": true
+        },
+        "to": {
+            "type": "varchar",
+            "maxLength": 25,
+            "options": [],
+            "isCustom": true
+        },
+        "SMSBots": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        },
+        "emailRequested": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true,
+            "audited": true,
+            "readOnly": true
+        },
+        "requestAttempts": {
+            "type": "int",
+            "default": 0,
+            "min": 0,
+            "readOnly": true,
+            "tooltip": true,
+            "isCustom": true,
+            "audited": true
+        },
+        "accountName": {
+            "options": []
+        }
+    },
+    "links": {
+        "SMSBots": {
+            "type": "hasMany",
+            "foreign": "lead",
+            "entity": "SMSBot",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

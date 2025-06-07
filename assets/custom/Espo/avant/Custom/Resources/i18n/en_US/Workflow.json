@@ -1,0 +1,8 @@
+{
+    "serviceActions": {
+        "commissionServiceAction": "Commissions"
+    },
+    "serviceActionsHelp": {
+        "commissionServiceAction": "This will generate commissions for Sales Manager and Salesmen"
+    }
+}

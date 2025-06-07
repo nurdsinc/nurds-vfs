@@ -1,0 +1,14 @@
+{
+    "fields": {
+        "tags": {
+            "options": [
+                "New Home Sale",
+                "Rental"
+            ],
+            "style": {
+                "New Home Sale": null,
+                "Rental": null
+            }
+        }
+    }
+}

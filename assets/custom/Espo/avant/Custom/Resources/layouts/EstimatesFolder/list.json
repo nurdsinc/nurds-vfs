@@ -1,0 +1,24 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "fileAttachment"
+    },
+    {
+        "name": "rCVestimates"
+    },
+    {
+        "name": "depreciationEst"
+    },
+    {
+        "name": "aCVEst"
+    },
+    {
+        "name": "createdAt"
+    },
+    {
+        "name": "claim"
+    }
+]

@@ -1,0 +1,12 @@
+{
+    "fields": {
+        "json": "Json"
+    },
+    "links": [],
+    "labels": {
+        "Create SendGrid": "Create Send Grid"
+    },
+    "tooltips": {
+        "json": "Raw Payload"
+    }
+}

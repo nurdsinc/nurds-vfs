@@ -1,0 +1,20 @@
+{
+    "fields": {
+        "dashboardLocked": {
+            "type": "bool"
+        },
+        "exportDelimiter": {
+            "type": "varchar",
+            "default": ",",
+            "required": true,
+            "maxLength": 1,
+            "options": [
+                ",",
+                ";",
+                "\\t",
+                "|"
+            ]
+        }
+    },
+    "noDeletedAttribute": true
+}

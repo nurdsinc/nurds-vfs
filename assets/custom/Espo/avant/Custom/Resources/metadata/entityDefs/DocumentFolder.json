@@ -1,0 +1,21 @@
+{
+    "fields": {
+        "estimatesFolders": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "estimatesFolders": {
+            "type": "hasMany",
+            "foreign": "folder",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "fields": {
+        "json": "Json",
+        "uniqueId": "Unique Id",
+        "to": "To",
+        "SMSBots": "SMS Bots",
+        "emailRequested": "Email Requested",
+        "requestAttempts": "Request Attempts",
+        "accountName": "Company Name"
+    },
+    "links": {
+        "SMSBots": "SMS Bots"
+    },
+    "tooltips": {
+        "emailRequested": "Request was sent for email address",
+        "requestAttempts": "How many times have you requested the email address?"
+    }
+}

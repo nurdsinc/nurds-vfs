@@ -1,0 +1,143 @@
+{
+    "fields": {
+        "typeOfRoof": "Type of Roof",
+        "patio": "Patio",
+        "patioTiedIn": "Tied In",
+        "patioStormDamage": "Storm Damage",
+        "patioArea": "Patio Area",
+        "patioLength": "Patio Length",
+        "patioWidth": "Patio Width",
+        "claim": "Claim",
+        "squares": "Squares",
+        "patioRoofType": "Patio Roof Type",
+        "tarpNeeded": "Tarp Needed",
+        "dripEdge": "Drip Edge",
+        "interiorDamage": "Interior Damage",
+        "additionalStructureDamage": "Additional Structure Damage",
+        "condition": "Condition",
+        "description": "Summary",
+        "layers": "Layers",
+        "rainCaps": "Rain Caps",
+        "rainDiverter": "Rain Diverter",
+        "meterMasts": "Meter Masts",
+        "aCUnits": "A/C Units",
+        "exhaustCaps": "Exhaust Caps",
+        "offRidgeVents": "Off-Ridge Vents",
+        "chimneys": "Chimneys",
+        "evapCoolers": "Evap Coolers",
+        "tVAntennas": "TV Antennas",
+        "splitBoots": "Split Boots",
+        "skyLights": "Sky Lights",
+        "solarHeaters": "Solar Heaters",
+        "solarPanels": "Solar Panels",
+        "pVCLF": "PVC LF",
+        "valleyType": "Valley Type",
+        "valleyLF": "Valley LF",
+        "turbines": "Turbines",
+        "aMNotes": "AM Notes",
+        "satelliteDishes": "Satellite Dishes",
+        "pipeJacksSm": "Pipe Jacks (Sm)",
+        "pipeJacksLg": "Pipe Jacks (Lg)",
+        "otherVents": "Other Vents",
+        "multipleStoriesSQs": "Multiple Stories (SQ's)",
+        "addlLayersSQs": "Add'l Layers (SQ's)",
+        "pitches212SQs": "Pitches > 2/12 (SQ's)",
+        "contentsDamage": "Contents Damage",
+        "flooringDamage": "Flooring Damage",
+        "typesOfFlooring": "Type(s) of Flooring",
+        "tarpNotes": "Tarp Notes",
+        "patioNotes": "Patio Notes",
+        "claimNumber": "Claim Number",
+        "dateOfInpsection": "Date Of Inspection",
+        "meeting": "Meeting",
+        "meetings1": "Meetings",
+        "adjuster": "Adjuster",
+        "contact": "Client",
+        "riskPhoto": "Risk Photo",
+        "layersPhoto": "Layers Photo",
+        "numberOfLayers": "Number of Layers",
+        "status": "Status"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks",
+        "claim": "Claim",
+        "meeting": "Meeting",
+        "meetings1": "Meetings",
+        "adjuster": "Adjuster",
+        "contact": "Client"
+    },
+    "labels": {
+        "Create Inspection": "Create Inspection"
+    },
+    "options": {
+        "typeOfRoof": {
+            "Gable": "Gable",
+            "Hip": "Hip",
+            "Tile": "Tile",
+            "Metal": "Metal",
+            "Flat": "Flat",
+            "Shingle": "Shingle",
+            "": "Not Selected"
+        },
+        "patioRoofType": {
+            "": "Not Selected",
+            "Roll Roofing": "Roll Roofing",
+            "Modified Bitumen": "Modified Bitumen",
+            "Metal": "Metal",
+            "3 Tab": "3 Tab",
+            "Laminate": "Laminate",
+            "Foam": "Foam",
+            "Elastomeric Coating": "Elastomeric Coating"
+        },
+        "condition": {
+            "": "Not Selected",
+            "Repairable": "Repairable",
+            "Maybe Repairable": "Maybe Repairable",
+            "Not Repairable": "Not Repairable"
+        },
+        "valleyType": {
+            "Layered": "Layered",
+            "Metal": "Metal",
+            "Woven": "Woven"
+        },
+        "typesOfFlooring": {
+            "Carpet": "Carpet",
+            "Tile": "Tile",
+            "Wood": "Wood",
+            "Laminate": "Laminate",
+            "Other": "Other"
+        },
+        "numberOfLayers": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10"
+        },
+        "status": {
+            "Completed": "Completed",
+            "Rescheduled": "Rescheduled",
+            "Pending": "Pending"
+        }
+    },
+    "tooltips": {
+        "patio": "Is there a patio roof?",
+        "patioTiedIn": "Is the patio tied into the roof?",
+        "patioStormDamage": "Was the patio damaged in a storm?",
+        "tarpNeeded": "Is there a need for a tarp?",
+        "pVCLF": "Total linear feet of PVC pipe",
+        "pipeJacksSm": "Number of jacks that are 1' or 1.5'",
+        "pipeJacksLg": "Number of jacks that are 2', 3' or 4'",
+        "valleyLF": "Total linear feet of valley",
+        "otherVents": "Total number of vents that are off-ridge",
+        "tarpNotes": "Include area(s) to tarp, any leaks, etc",
+        "riskPhoto": "Front of Risk"
+    }
+}

@@ -1,0 +1,81 @@
+[
+    {
+        "name": "name",
+        "link": "true"
+    },
+    {
+        "name": "title",
+        "width": 5,
+        "align": "left"
+    },
+    {
+        "name": "accountName",
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "address",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "emailAddress",
+        "width": 20,
+        "notSortable": true
+    },
+    {
+        "name": "phoneNumber"
+    },
+    {
+        "name": "website",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "industry",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "description",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "createdOpportunity",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "opportunityAmount",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "source",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "cTags",
+        "width": 15,
+        "notSortable": true,
+        "align": "left"
+    },
+    {
+        "name": "status",
+        "align": "right",
+        "hidden": true
+    },
+    {
+        "name": "assignedUser",
+        "align": "right",
+        "hidden": true
+    },
+    {
+        "name": "createdAt",
+        "width": 13,
+        "align": "right",
+        "hidden": true
+    }
+]

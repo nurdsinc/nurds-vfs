@@ -1,0 +1,60 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "authType"
+                }
+            ],
+            [
+                {
+                    "name": "ignoreList"
+                },
+                {
+                    "name": "maxDistance"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "username"
+                },
+                {
+                    "name": "password"
+                }
+            ],
+            [
+                {
+                    "name": "apiKey"
+                }
+            ],
+            [
+                {
+                    "name": "token"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "info",
+        "dynamicLogicStyled": null,
+        "tabBreak": true,
+        "tabLabel": "Authentication",
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Details"
+    }
+]

@@ -1,0 +1,55 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "url"
+                }
+            ],
+            [
+                {
+                    "name": "registeredDate"
+                },
+                {
+                    "name": "expiryDate"
+                }
+            ],
+            [
+                {
+                    "name": "autoRenew"
+                },
+                {
+                    "name": "autoRenewDays"
+                }
+            ],
+            [
+                {
+                    "name": "digitalOceanResponse"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "json"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "info",
+        "hidden": true,
+        "customLabel": "Json"
+    }
+]

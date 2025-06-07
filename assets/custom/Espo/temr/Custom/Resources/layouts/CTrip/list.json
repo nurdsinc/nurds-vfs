@@ -1,0 +1,19 @@
+[
+    {
+        "name": "tripNumber",
+        "width": 16
+    },
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "primaryDriver",
+        "width": 16
+    },
+    {
+        "name": "tags",
+        "width": 16,
+        "notSortable": true
+    }
+]

@@ -1,0 +1,376 @@
+{
+    "fields": {
+        "source": {
+            "options": [
+                "",
+                "Call",
+                "Email",
+                "Existing Customer",
+                "Partner",
+                "Public Relations",
+                "Web Site",
+                "Campaign",
+                "Other",
+                "WTS"
+            ],
+            "required": false,
+            "isSorted": false,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+        "type": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Potential New Client",
+                "Potential New Vendor",
+                ""
+            ],
+            "style": {
+                "Potential New Client": null,
+                "Potential New Vendor": null,
+                "": null
+            },
+            "default": "Potential New Client",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "address": {
+            "name": "address",
+            "type": "address",
+            "isPersonalData": true,
+            "dynamicLogicVisible": null,
+            "dynamicLogicReadOnly": null,
+            "inlineEditDisabled": false,
+            "tooltip": false
+        },
+        "lossAddress": {
+            "name": "lossAddress",
+            "type": "address",
+            "dynamicLogicVisible": null,
+            "dynamicLogicReadOnly": {
+                "conditionGroup": [
+                    {
+                        "type": "isTrue",
+                        "attribute": "sameAsPhysicalAddress"
+                    }
+                ]
+            },
+            "isPersonalData": false,
+            "inlineEditDisabled": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "sameAsPhysicalAddress": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "status": {
+            "options": [
+                "New",
+                "Assigned",
+                "Interested",
+                "Ready to Sign",
+                "Follow Up",
+                "In Process",
+                "Converted",
+                "Recycled",
+                "Dead"
+            ],
+            "style": {
+                "New": "info",
+                "Assigned": "primary",
+                "Interested": "success",
+                "Ready to Sign": "success",
+                "Follow Up": "warning",
+                "In Process": "primary",
+                "Converted": "success",
+                "Recycled": "danger",
+                "Dead": "danger"
+            },
+            "tooltip": true,
+            "displayAsLabel": true
+        },
+        "opportunityAmount": {
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true
+        },
+        "insuranceCompany": {
+            "type": "link"
+        },
+        "mortgageCompany": {
+            "type": "link"
+        },
+        "dateOfLoss": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "typeOfLoss": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "Water",
+                "Wind",
+                "Fire",
+                "Hail",
+                "Flood",
+                "Roof",
+                "Drain Backup",
+                "Tree",
+                "Freeze",
+                "Interior",
+                "Hurricane",
+                "Ice",
+                "Lightning",
+                "Rain",
+                "Sewage",
+                "Smoke",
+                "Theft",
+                "Tornado",
+                "Vandalism",
+                "Other"
+            ],
+            "style": {
+                "Water": null,
+                "Wind": null,
+                "Fire": null,
+                "Hail": null,
+                "Flood": null,
+                "Roof": null,
+                "Drain Backup": null,
+                "Tree": null,
+                "Freeze": null,
+                "Interior": null,
+                "Hurricane": null,
+                "Ice": null,
+                "Lightning": null,
+                "Rain": null,
+                "Sewage": null,
+                "Smoke": null,
+                "Theft": null,
+                "Tornado": null,
+                "Vandalism": null,
+                "Other": null
+            },
+            "maxCount": null,
+            "isCustom": true
+        },
+        "policyType": {
+            "type": "enum",
+            "options": [
+                "ACV",
+                "RCV",
+                ""
+            ],
+            "style": {
+                "ACV": null,
+                "RCV": null,
+                "": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "policyNumber": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "claimNumber": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "propertyType": {
+            "type": "enum",
+            "options": [
+                "Home",
+                "Business",
+                "Unknown"
+            ],
+            "style": {
+                "Home": null,
+                "Business": null,
+                "Unknown": null
+            },
+            "default": "Unknown",
+            "isCustom": true
+        },
+        "dwellingCoverage": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "otherStructuresCoverage": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "contentsCoverage": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "lossOfUseCoverage": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "endorsements": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "Earthquake",
+                "Earth Movement",
+                "Inflation Guard",
+                "Sewer Backup",
+                "Scheduled Personal Property",
+                "Personal Property Replacement Cost",
+                "Home Business",
+                "Watercraft",
+                "Theft",
+                "Secondary Residence",
+                "Personal Injury",
+                "Mitigation",
+                "Mold",
+                "Water Backup",
+                "Other"
+            ],
+            "style": {
+                "Earthquake": null,
+                "Earth Movement": null,
+                "Inflation Guard": null,
+                "Sewer Backup": null,
+                "Scheduled Personal Property": null,
+                "Personal Property Replacement Cost": null,
+                "Home Business": null,
+                "Watercraft": null,
+                "Theft": null,
+                "Secondary Residence": null,
+                "Personal Injury": null,
+                "Mitigation": null,
+                "Mold": null,
+                "Water Backup": null,
+                "Other": null
+            },
+            "maxCount": null,
+            "isCustom": true
+        },
+        "policyNotes": {
+            "type": "wysiwyg",
+            "default": null,
+            "height": null,
+            "minHeight": null,
+            "isCustom": true
+        },
+        "deductible": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "claim": {
+            "type": "link",
+            "readOnly": true,
+            "defaultAttributes": null
+        },
+        "createdOpportunity": {
+            "defaultAttributes": null
+        },
+        "policy": {
+            "type": "link",
+            "readOnly": true,
+            "defaultAttributes": null
+        },
+        "salesForce": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "name": {
+            "required": false
+        },
+        "companyName": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "firstName": {
+            "trim": true,
+            "default": null,
+            "options": []
+        },
+        "lastName": {
+            "trim": true,
+            "default": null,
+            "options": []
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "companyName",
+            "emailAddress"
+        ],
+        "fullTextSearch": false
+    },
+    "links": {
+        "insuranceCompany": {
+            "type": "belongsTo",
+            "foreign": "leads",
+            "entity": "InsuranceCompany",
+            "audited": false,
+            "isCustom": true
+        },
+        "mortgageCompany": {
+            "type": "belongsTo",
+            "foreign": "leads",
+            "entity": "MortgageCompany",
+            "audited": false,
+            "isCustom": true
+        },
+        "claim": {
+            "type": "belongsTo",
+            "foreign": "leads",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        },
+        "policy": {
+            "type": "belongsTo",
+            "foreign": "leads",
+            "entity": "Policy",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "fields": {
+        "cNumber": {
+            "type": "number",
+            "len": 36,
+            "notNull": false,
+            "unique": false,
+            "nextNumber": 1000,
+            "padLength": 5,
+            "copyToClipboard": true,
+            "prefix": "TMS-",
+            "isCustom": true
+        }
+    }
+}

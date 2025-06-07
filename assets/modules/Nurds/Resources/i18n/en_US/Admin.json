@@ -1,0 +1,12 @@
+{
+    "messages": {
+        "upgradeVersion": "NurdsCRM will be upgraded to version **{version}**. Please be patient as this may take a while.",
+        "upgradeDone": "NurdsCRM has been upgraded to version **{version}**.",
+        "upgradeBackup": "We recommend making a backup of your NurdsCRM files and data before upgrading.",
+        "newVersionIsAvailable": "New NurdsCRM version {latestVersion} is available. This will be upgraded at our next available upgrade window." ,
+        "upgradeInfo": "NurdsCRM will upgrade during the next scheduled upgrade window.",
+        "cronIsNotConfigured": "Scheduled jobs are not running. Hence inbound emails, notifications and reminders are not working. Please contact your administrator to enable.",
+        "rebuildRequired": "You need to run rebuild from CLI. Please request that your administrator run a rebuild.",
+        "downloadUpgradePackage": "Upgrades are avilable for this package. Please contact an administrator."
+    }
+}

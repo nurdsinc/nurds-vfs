@@ -1,0 +1,27 @@
+{
+    "fields": {
+        "parent": {
+            "entityList": [
+                "Account",
+                "Contact",
+                "Lead",
+                "Opportunity",
+                "Case",
+                "Production",
+                "ExternalMonitoring"
+            ]
+        },
+        "ExternalMonitoring": {
+            "type": "link"
+        }
+    },
+    "links": {
+        "ExternalMonitoring": {
+            "type": "belongsTo",
+            "foreign": "tasks",
+            "entity": "ExternalMonitoring",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

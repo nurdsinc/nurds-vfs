@@ -1,0 +1,41 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "accuracy"
+                },
+                {
+                    "name": "cleanliness"
+                }
+            ],
+            [
+                {
+                    "name": "communication"
+                },
+                {
+                    "name": "convenience"
+                }
+            ],
+            [
+                {
+                    "name": "maintenance"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

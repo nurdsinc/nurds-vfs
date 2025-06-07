@@ -1,0 +1,7 @@
+[
+    "name",
+    "emailAddress",
+    "phoneNumber",
+    "billingAddress",
+    "createdAt"
+]

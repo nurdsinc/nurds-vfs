@@ -1,0 +1,53 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "number"
+                }
+            ],
+            [
+                {
+                    "name": "cPaymentLink"
+                }
+            ],
+            [
+                {
+                    "name": "salesOrder"
+                }
+            ],
+            [
+                {
+                    "name": "account"
+                }
+            ],
+            [
+                {
+                    "name": "quote"
+                }
+            ],
+            [
+                {
+                    "name": "opportunity"
+                }
+            ],
+            [
+                {
+                    "name": "dateInvoiced"
+                }
+            ],
+            [
+                {
+                    "name": "amount"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

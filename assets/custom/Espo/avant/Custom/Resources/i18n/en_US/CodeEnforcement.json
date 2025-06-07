@@ -1,0 +1,37 @@
+{
+    "fields": {
+        "billingAddress": "Billing Address",
+        "shippingAddress": "Shipping Address",
+        "website": "Website",
+        "codesEnforced": "Codes Enforced",
+        "minResidentialRValue": "Min Residential R Value",
+        "minCommercialRValue": "Min Commercial R Value"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks"
+    },
+    "labels": {
+        "Create CodeEnforcement": "Create Code Enforcement"
+    },
+    "tooltips": {
+        "codesEnforced": "What building codes are enforced"
+    },
+    "options": {
+        "codesEnforced": {
+            "Drip Edge": "Drip Edge",
+            "Valley Liner": "Valley Liner",
+            "Under Layment": "Under Layment",
+            "Ice & Water Shield": "Ice & Water Shield"
+        },
+        "minResidentialRValue": {
+            "R-49": "R-49",
+            "": "NA"
+        },
+        "minCommercialRValue": {
+            "R-30CI": "R-30CI",
+            "": "NA"
+        }
+    }
+}

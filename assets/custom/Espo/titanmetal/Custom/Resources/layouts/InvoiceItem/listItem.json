@@ -1,0 +1,33 @@
+[
+    {
+        "name": "name"
+    },
+    {
+        "name": "quantity",
+        "width": 9
+    },
+    {
+        "name": "taxRate",
+        "width": 9
+    },
+    {
+        "name": "cUnitType",
+        "align": "right",
+        "width": 9
+    },
+    {
+        "name": "listPrice",
+        "align": "right",
+        "width": 15
+    },
+    {
+        "name": "unitPrice",
+        "align": "right",
+        "width": 15
+    },
+    {
+        "name": "amount",
+        "align": "right",
+        "width": 15
+    }
+]

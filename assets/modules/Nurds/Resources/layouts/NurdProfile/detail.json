@@ -1,0 +1,22 @@
+[
+    {
+        "tabBreak": true,
+        "tabLabel": "$label:Settings",
+        "rows": [
+            [
+                {"name": "dashboardLocked"},
+                false
+            ]
+        ]
+    },
+    {
+        "tabBreak": true,
+        "tabLabel": "$label:General",
+        "rows": [
+            [
+                {"name": "exportDelimiter"},
+                false
+            ]
+        ]
+    }
+]

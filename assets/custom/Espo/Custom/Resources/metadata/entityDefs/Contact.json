@@ -1,0 +1,67 @@
+{
+    "fields": {
+        "dob": {
+            "notNull": false,
+            "type": "date",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "gender": {
+            "type": "enum",
+            "options": [
+                "Unknown",
+                "M",
+                "F"
+            ],
+            "style": {
+                "Unknown": null,
+                "M": null,
+                "F": null
+            },
+            "default": "Unknown",
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "age": {
+            "type": "int",
+            "isCustom": true
+        },
+        "tags": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "default": [],
+            "options": [
+                "Lead",
+                "Client"
+            ],
+            "style": {
+                "Lead": null,
+                "Client": null
+            },
+            "allowCustomOptions": true,
+            "isSorted": true,
+            "displayAsLabel": true,
+            "isCustom": true
+        },
+        "SMSBots": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "SMSBots": {
+            "type": "hasMany",
+            "foreign": "contact",
+            "entity": "SMSBot",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

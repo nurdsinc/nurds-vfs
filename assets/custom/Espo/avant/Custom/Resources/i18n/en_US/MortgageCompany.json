@@ -1,0 +1,19 @@
+{
+    "fields": {
+        "billingAddress": "Billing Address",
+        "shippingAddress": "Shipping Address",
+        "website": "Website",
+        "leads": "Leads",
+        "cases": "Tickets"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks",
+        "leads": "Leads",
+        "cases": "Tickets"
+    },
+    "labels": {
+        "Create MortgageCompany": "Create Mortgage Company"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "fields": {
+        "parent": {
+            "entityList": [
+                "Adjuster",
+                "Contact",
+                "Claim",
+                "Lead",
+                "Account",
+                "Case",
+                "Opportunity",
+                "InsuranceCompany",
+                "Policy",
+                "Claim",
+                "MortgageCompany",
+                "AdditionalContact",
+                "Inspection",
+                "Check",
+                "ProgressReport",
+                "Vendor"
+            ]
+        }
+    },
+    "collection": {
+        "fullTextSearch": true
+    }
+}

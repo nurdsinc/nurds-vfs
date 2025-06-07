@@ -1,0 +1,75 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "companyName"
+                },
+                {
+                    "name": "jobTitle"
+                },
+                {
+                    "name": "website"
+                }
+            ],
+            [
+                {
+                    "name": "billingAddress"
+                },
+                {
+                    "name": "shippingAddress"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "clientCRMSystem"
+                },
+                {
+                    "name": "clientCRMLogin"
+                },
+                {
+                    "name": "additionalContact"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "type"
+                },
+                {
+                    "name": "sicCode"
+                },
+                {
+                    "name": "industry"
+                },
+                {
+                    "name": "vendorSource"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Details"
+    }
+]

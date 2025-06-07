@@ -1,0 +1,26 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "emailRequested"
+    },
+    {
+        "name": "requestAttempts"
+    },
+    {
+        "name": "lookupPerson"
+    },
+    {
+        "name": "personLookupId"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "tags"
+    },
+    {
+        "name": "convertedAt"
+    }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "scheduleChecklist",
+        "notSortable": true
+    },
+    {
+        "name": "timeToSend"
+    },
+    {
+        "name": "claim"
+    },
+    {
+        "name": "accounts",
+        "notSortable": true
+    },
+    {
+        "name": "adjusters",
+        "notSortable": true
+    }
+]

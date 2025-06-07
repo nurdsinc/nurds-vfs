@@ -1,0 +1,83 @@
+{
+    "fields": {
+        "domainId": "Domain Id",
+        "tld": "TLD",
+        "status": "Status",
+        "registeredDate": "Registered Date",
+        "expiryDate": "Expiry Date",
+        "registeredDateLong": "Registered Date Long",
+        "expiryDateLong": "Expiry Date Long",
+        "locked": "Locked",
+        "autoRenewDays": "Auto Renew Days",
+        "nameserver1": "Nameserver 1",
+        "nameserver2": "Nameserver 2",
+        "nameserver3": "Nameserver 3",
+        "nameserver4": "Nameserver 4",
+        "hasDNSZone": "Has DNS Zone",
+        "autoRenew": "Auto Renew",
+        "applyPrivacy": "Apply Privacy",
+        "url": "Url",
+        "registrantName": "RegistrantName",
+        "organisation": "Organisation",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "addressStreet": "Address Street",
+        "addressCity": "Address City",
+        "addressState": "Address State",
+        "addressCountry": "Address Country",
+        "addressPostalCode": "Address Postal Code",
+        "addressMap": "Address Map",
+        "contactId": "Contact Id",
+        "update": "Update",
+        "renew": "Renew",
+        "description": "Result Message",
+        "digitalOcean": "Digital Ocean",
+        "digitalOceanResponse": "Digital Ocean Response",
+        "zones": "Zones",
+        "rackspaceEmail": "Rackspace Email",
+        "json": "Json",
+        "accounts": "Accounts"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks",
+        "zones": "Zones",
+        "accounts": "Accounts"
+    },
+    "labels": {
+        "Create Domain": "Create Domain"
+    },
+    "options": {
+        "tld": {
+            ".com": ".com",
+            ".net": ".net",
+            ".us": ".us",
+            ".org": ".org",
+            ".biz": ".biz",
+            ".bz": ".bz",
+            ".solutions": ".solutions",
+            ".io": ".io",
+            ".foundation": ".foundation",
+            ".report": ".report",
+            ".claims": ".claims",
+            ".co": ".co"
+        },
+        "status": {
+            "Registered": "Registered",
+            "On Hold": "On Hold",
+            "Deleted": "Deleted",
+            "Expired": "Expired",
+            "Blocked": "Blocked",
+            "Transferred Away": "Transferred Away",
+            "Pending": "Pending",
+            "Third Party": "Third Party"
+        }
+    },
+    "tooltips": {
+        "renew": "If selected will renew the domain for 1 year.",
+        "digitalOcean": "Manage DNS Records via Digital Ocean.",
+        "rackspaceEmail": "Creates the rack space zones required for emails"
+    }
+}

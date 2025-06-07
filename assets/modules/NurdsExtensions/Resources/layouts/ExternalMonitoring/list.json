@@ -1,0 +1,27 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "authType"
+    },
+    {
+        "name": "maxDistance"
+    },
+    {
+        "name": "source"
+    },
+    {
+        "name": "records"
+    },
+    {
+        "name": "taskCount"
+    },
+    {
+        "name": "description"
+    },
+    {
+        "name": "status"
+    }
+]

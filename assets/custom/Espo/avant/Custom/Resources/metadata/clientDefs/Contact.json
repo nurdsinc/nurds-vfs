@@ -1,0 +1,29 @@
+{
+    "filterList": [
+        {
+            "name": "emailSent",
+            "label": "Email Sent",
+            "style": "success"
+        },
+        {
+            "name": "hasCall",
+            "label": "Has Call",
+            "style": "success"
+        },
+        {
+            "name": "hasComment",
+            "label": "Has Comment",
+            "style": "success"
+        }
+    ],
+    "dynamicLogic": {
+        "fields": {
+            "name": {
+                "visible": null
+            }
+        }
+    },
+    "kanbanViewMode": false,
+    "color": "#a4c5e0",
+    "iconClass": "fas fa-id-badge"
+}

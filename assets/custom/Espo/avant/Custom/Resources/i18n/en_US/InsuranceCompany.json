@@ -1,0 +1,21 @@
+{
+    "fields": {
+        "billingAddress": "Billing Address",
+        "claims": "Claims",
+        "adjusters": "Adjusters",
+        "leads": "Leads",
+        "policies": "Policies",
+        "cases": "Tickets",
+        "adjusters1": "Adjusters",
+        "carrierLogo": "Carrier Logo",
+        "shippingAddress": "Shipping Address"
+    },
+    "links": {
+        "claims": "Claims",
+        "adjusters": "Adjusters",
+        "leads": "Leads",
+        "policies": "Policies",
+        "cases": "Tickets",
+        "adjusters1": "Adjusters"
+    }
+}

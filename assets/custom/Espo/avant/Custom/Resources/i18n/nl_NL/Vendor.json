@@ -1,0 +1,14 @@
+{
+  "fields": {
+    "billingAddress": "Facturatie adres",
+    "shippingAddress": "Verzending adres"
+  },
+  "links": {
+    "meetings": "Vergaderingen",
+    "calls": "Gesprekken",
+    "tasks": "Taken"
+  },
+  "labels": {
+    "Create Vendor": "Klant Vendor"
+  }
+}

@@ -1,0 +1,49 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "permitNumber",
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "permitType",
+        "align": "left"
+    },
+    {
+        "name": "permitStatus",
+        "align": "left"
+    },
+    {
+        "name": "projectName",
+        "width": 16
+    },
+    {
+        "name": "district",
+        "align": "left"
+    },
+    {
+        "name": "address",
+        "align": "left"
+    },
+    {
+        "name": "appliedDate",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "issuedDate",
+        "align": "left"
+    },
+    {
+        "name": "expirationDate",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "finalizedDate",
+        "align": "left"
+    }
+]

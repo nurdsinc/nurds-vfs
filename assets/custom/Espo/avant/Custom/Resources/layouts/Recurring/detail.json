@@ -1,0 +1,62 @@
+[
+    {
+        "style": "default",
+        "rows": [
+            [
+                {
+                    "name": "recID"
+                },
+                {
+                    "name": "active"
+                }
+            ],
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "payee"
+                }
+            ],
+            [
+                {
+                    "name": "parent"
+                },
+                {
+                    "name": "type"
+                }
+            ],
+            [
+                {
+                    "name": "amount"
+                },
+                {
+                    "name": "frequency"
+                }
+            ],
+            [
+                {
+                    "name": "day"
+                },
+                {
+                    "name": "dueDate"
+                }
+            ],
+            [
+                {
+                    "name": "paidFrom"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ],
+        "label": "Overview"
+    }
+]

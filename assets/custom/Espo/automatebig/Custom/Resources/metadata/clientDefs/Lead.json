@@ -1,0 +1,28 @@
+{
+    "dynamicLogic": {
+        "fields": {
+            "name": {
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "isEmpty",
+                            "attribute": "accountName"
+                        },
+                        {
+                            "type": "isEmpty",
+                            "attribute": "emailAddress"
+                        },
+                        {
+                            "type": "isEmpty",
+                            "attribute": "phoneNumber"
+                        },
+                        {
+                            "type": "isEmpty",
+                            "attribute": "addressStreet"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

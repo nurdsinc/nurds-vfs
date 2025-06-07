@@ -1,0 +1,44 @@
+{
+    "fields": {
+        "cTags": "Tags",
+        "cStatus": "Status",
+        "dob": "Date of Birth",
+        "cTrips": "Trips (Primary Driver)",
+        "cDriversLicenseBack": "Drivers License Back",
+        "cDriversLicenseExpiration": "Drivers License Expiration",
+        "cDriversLicenseFront": "Drivers License Front",
+        "cDriversLicenseNumber": "Drivers License Number",
+        "cDriversLicenseState": "Drivers License State",
+        "cProfileImage": "Profile Image",
+        "cAdditionalTrips": "Trips (Additional Driver)",
+        "cSpouse": "Spouse",
+        "cContact": "Contact",
+        "cPassword": "Password"
+    },
+    "options": {
+        "cTags": {
+            "Buyer": "Buyer",
+            "Vehicle: EV": "Vehicle: EV",
+            "Vehicle: SUV": "Vehicle: SUV"
+        },
+        "cStatus": {
+            "Pending": "Pending",
+            "Vehicle Booked": "Vehicle Booked",
+            "Trip Completed": "Trip Completed",
+            "Pending Review": "Pending Review",
+            "Completed": "Completed",
+            "Account Created": "Account Created"
+        },
+        "cDriversLicenseState": []
+    },
+    "tooltips": {
+        "dob": "Date of Birth!",
+        "cPassword": "Portal password. Allows you to reset the password for a portal user."
+    },
+    "links": {
+        "cTrips": "Trips (Primary Driver)",
+        "cAdditionalTrips": "Trips (Additional Driver)",
+        "cSpouse": "Spouse",
+        "cContact": "Contact"
+    }
+}

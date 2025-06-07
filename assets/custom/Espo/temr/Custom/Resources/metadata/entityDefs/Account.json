@@ -1,0 +1,11 @@
+{
+    "links": {
+        "cVehicles": {
+            "type": "hasMany",
+            "foreign": "account",
+            "entity": "CVehicle",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

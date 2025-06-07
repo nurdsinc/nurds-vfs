@@ -1,0 +1,10 @@
+{
+    "scriptList": [
+        "client/modules/nurds/nurds-helper.js",
+        "__APPEND__"
+    ],
+    "cssList": [
+        "__APPEND__",
+        "client/modules/nurds/css/nurds.css"
+    ]
+}

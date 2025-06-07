@@ -1,0 +1,17 @@
+[
+    {
+        "name": "name",
+        "width": 35,
+        "link": true
+    },
+    {
+        "name": "emailAddress",
+        "notSortable": true
+    },
+    {
+        "name": "phoneNumber"
+    },
+    {
+        "name": "createdAt"
+    }
+]

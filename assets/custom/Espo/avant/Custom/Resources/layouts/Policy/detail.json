@@ -1,0 +1,125 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "contact"
+                }
+            ],
+            [
+                {
+                    "name": "number"
+                },
+                {
+                    "name": "type"
+                }
+            ],
+            [
+                {
+                    "name": "premium"
+                },
+                {
+                    "name": "claim"
+                }
+            ],
+            [
+                {
+                    "name": "limit"
+                },
+                {
+                    "name": "deductable"
+                }
+            ],
+            [
+                {
+                    "name": "startDate"
+                },
+                {
+                    "name": "expirationDate"
+                }
+            ],
+            [
+                {
+                    "name": "inceptionDate"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "insuranceCompany"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "dwelling"
+                },
+                {
+                    "name": "otherStructures"
+                }
+            ],
+            [
+                {
+                    "name": "contentsCoverage"
+                },
+                {
+                    "name": "lossOfUseCoverage"
+                }
+            ],
+            [
+                {
+                    "name": "personalProperty"
+                },
+                {
+                    "name": "additionalLivingExpenses"
+                }
+            ],
+            [
+                {
+                    "name": "personalLiability"
+                },
+                {
+                    "name": "medicalPayments"
+                }
+            ],
+            [
+                {
+                    "name": "itemsCovered"
+                },
+                {
+                    "name": "valueType"
+                }
+            ],
+            [
+                {
+                    "name": "exclusions"
+                },
+                {
+                    "name": "endorsements"
+                }
+            ],
+            [
+                {
+                    "name": "notes"
+                }
+            ]
+        ],
+        "style": "default",
+        "dynamicLogicVisible": null,
+        "customLabel": "Property and Liability Coverages  "
+    }
+]

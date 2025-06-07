@@ -1,0 +1,22 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "status",
+        "width": 17
+    },
+    {
+        "name": "emailAddress",
+        "width": 27,
+        "notSortable": true
+    },
+    {
+        "name": "user"
+    },
+    {
+        "name": "createdAt",
+        "width": 18
+    }
+]

@@ -1,0 +1,10 @@
+{
+  "links": {
+    "meetings": "Srečanja",
+    "calls": "Klici",
+    "tasks": "Naloge"
+  },
+  "labels": {
+    "Create CProduction": "Ustvari Production"
+  }
+}

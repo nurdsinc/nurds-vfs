@@ -1,0 +1,12 @@
+{
+    "labels": {
+        "Create Stages": "Create Stage"
+    },
+    "fields": {
+        "account": "Account",
+        "order": "Order"
+    },
+    "links": {
+        "account": "Account"
+    }
+}

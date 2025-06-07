@@ -1,0 +1,43 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "companyName"
+                }
+            ],
+            [
+                {
+                    "name": "jobTitle"
+                }
+            ],
+            [
+                {
+                    "name": "website"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                }
+            ],
+            [
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "billingAddressCountry"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

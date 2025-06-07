@@ -1,0 +1,28 @@
+[
+    {
+        "label": "",
+        "rows": [
+            [
+                {
+                    "name": "name",
+                    "fullWidth": true
+                },
+                false
+            ],
+            [
+                false,
+                {
+                    "name": "type"
+                }
+            ],
+            [
+                {
+                    "name": "sellsPrice"
+                },
+                {
+                    "name": "cost"
+                }
+            ]
+        ]
+    }
+]

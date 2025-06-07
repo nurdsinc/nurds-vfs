@@ -1,0 +1,34 @@
+{
+    "options": {
+        "type": {
+            "Email": "Email",
+            "Newsletter": "Newsletter",
+            "Web": "Web",
+            "Television": "Television",
+            "Radio": "Radio",
+            "Mail": "Mail",
+            "SMS": "SMS",
+            "": ""
+        },
+        "status": {
+            "Planning": "Planning",
+            "Active": "Active",
+            "Inactive": "Inactive",
+            "Complete": "Complete",
+            "Needs Review": "Needs Review",
+            "Processing": "Processing",
+            "Scheduled": "Scheduled"
+        }
+    },
+    "fields": {
+        "SMSBots": "SMS Bots",
+        "body": "Body",
+        "errorLog": "Error Log"
+    },
+    "links": {
+        "SMSBots": "SMS Bots"
+    },
+    "tooltips": {
+        "body": "What do you want your SMS to say?"
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "_tabBreak_0": {
+        "index": 0,
+        "tabBreak": true,
+        "tabLabel": "Stream"
+    },
+    "stream": {
+        "sticked": false,
+        "index": 1
+    },
+    "_tabBreak_3": {
+        "index": 2,
+        "tabBreak": true,
+        "tabLabel": "Document Uploads"
+    },
+    "estimatesFolders": {
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "dynamicLogicStyled": null,
+        "sticked": false,
+        "index": 3
+    },
+    "documents": {
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "dynamicLogicStyled": null,
+        "sticked": false,
+        "index": 4
+    },
+    "_tabBreak_4": {
+        "index": 5,
+        "tabBreak": true,
+        "tabLabel": "Inspections"
+    },
+    "inspections": {
+        "index": 6
+    },
+    "_tabBreak_5": {
+        "index": 7,
+        "tabBreak": true,
+        "tabLabel": "Cash Flow"
+    },
+    "checks": {
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "dynamicLogicStyled": null,
+        "sticked": false,
+        "index": 8
+    },
+    "payables": {
+        "index": 9
+    },
+    "_delimiter_": {
+        "index": 10
+    }
+}

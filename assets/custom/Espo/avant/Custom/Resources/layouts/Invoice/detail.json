@@ -1,0 +1,74 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "salesOrder"
+                },
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "number"
+                }
+            ],
+            [
+                {
+                    "name": "dateInvoiced"
+                },
+                {
+                    "name": "claim"
+                },
+                {
+                    "name": "account"
+                },
+                {
+                    "name": "billingContact"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "billingAddress"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Details"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "amount"
+                },
+                {
+                    "name": "totalReceived"
+                },
+                {
+                    "name": "balanceDue"
+                },
+                {
+                    "name": "datePaid"
+                }
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": null,
+        "customLabel": "Payment Info"
+    }
+]

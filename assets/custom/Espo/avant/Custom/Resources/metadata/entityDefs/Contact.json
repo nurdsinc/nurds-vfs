@@ -1,0 +1,503 @@
+{
+    "fields": {
+        "birthday": {
+            "notNull": false,
+            "type": "date",
+            "required": false,
+            "audited": false,
+            "isCustom": true
+        },
+        "claimLastSNN": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "maxLength": 4,
+            "audited": false,
+            "isCustom": true
+        },
+        "gender": {
+            "type": "enum",
+            "required": false,
+            "options": [
+                "Male",
+                "Female",
+                ""
+            ],
+            "isSorted": false,
+            "audited": false,
+            "isCustom": true,
+            "style": {
+                "Male": null,
+                "Female": null,
+                "": null
+            },
+            "default": null
+        },
+        "expenses": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "type": {
+            "type": "enum",
+            "required": false,
+            "isSorted": false,
+            "audited": false,
+            "isCustom": true,
+            "options": [
+                "",
+                "Residential",
+                "Commercial",
+                "Potential New Client"
+            ],
+            "style": {
+                "": null,
+                "Residential": null,
+                "Commercial": null,
+                "Potential New Client": null
+            },
+            "default": null
+        },
+        "inventories": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutListDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "payables": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        },
+        "phoneNumber": {
+            "typeList": [
+                "Primary",
+                "Other",
+                "Mobile",
+                "Emergency",
+                "Work",
+                "Home"
+            ],
+            "defaultType": "Primary"
+        },
+        "policyRenewDate": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "maxLength": 30,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "receivables": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "document": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "attn": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "lastName": {
+            "required": false,
+            "default": null,
+            "options": []
+        },
+        "companyName": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "additionalContacts": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "policies": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "claims": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "New",
+                "Active",
+                "Inactive",
+                "In Process",
+                "Assigned",
+                "Converted"
+            ],
+            "style": {
+                "New": null,
+                "Active": null,
+                "Inactive": null,
+                "In Process": null,
+                "Assigned": null,
+                "Converted": null
+            },
+            "default": "New",
+            "isCustom": true
+        },
+        "address": {
+            "name": "address",
+            "label": "Address",
+            "type": "address",
+            "isPersonalData": true,
+            "dynamicLogicVisible": null,
+            "dynamicLogicReadOnly": null,
+            "inlineEditDisabled": false,
+            "tooltip": false
+        },
+        "source": {
+            "type": "enum",
+            "options": [
+                "",
+                "Call",
+                "Email",
+                "Existing Customer",
+                "Partner",
+                "Public Relations",
+                "Web Site",
+                "Campaign",
+                "Other",
+                "WTS",
+                "Inside Sales",
+                "Call In",
+                "EDDM",
+                "Referral"
+            ],
+            "style": {
+                "": null,
+                "Call": null,
+                "Email": null,
+                "Existing Customer": null,
+                "Partner": null,
+                "Public Relations": null,
+                "Web Site": null,
+                "Campaign": null,
+                "Other": null,
+                "WTS": null,
+                "Inside Sales": null,
+                "Call In": null,
+                "EDDM": null,
+                "Referral": null
+            },
+            "default": null,
+            "isCustom": true
+        },
+        "inspections": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "checks": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "contactPhoto": {
+            "type": "image",
+            "maxFileSize": 1,
+            "isCustom": true
+        },
+        "salutationName": {
+            "options": [
+                "",
+                "Mr.",
+                "Ms.",
+                "Mrs.",
+                "Dr.",
+                "Mr. & Mrs."
+            ],
+            "style": {
+                "": null,
+                "Mr.": null,
+                "Ms.": null,
+                "Mrs.": null,
+                "Dr.": null,
+                "Mr. & Mrs.": null
+            },
+            "default": ""
+        },
+        "pronoun": {
+            "type": "enum",
+            "options": [
+                "",
+                "he",
+                "she",
+                "they"
+            ],
+            "style": {
+                "": null,
+                "he": null,
+                "she": null,
+                "they": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "verb": {
+            "type": "enum",
+            "options": [
+                "is",
+                "are"
+            ],
+            "style": {
+                "is": null,
+                "are": null
+            },
+            "default": "is",
+            "isCustom": true
+        },
+        "discProfile": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "High D",
+                "High I",
+                "High S",
+                "High C"
+            ],
+            "style": {
+                "High D": "danger",
+                "High I": "warning",
+                "High S": "success",
+                "High C": "primary"
+            },
+            "allowCustomOptions": false,
+            "displayAsLabel": true,
+            "isCustom": true,
+            "displayAsList": false
+        },
+        "mailingAddress": {
+            "type": "address",
+            "isCustom": true
+        },
+        "progressReports": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "estimatesFolders": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "estimatesFolders1": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "primaryContactName": {
+            "type": "varchar",
+            "trim": true,
+            "maxLength": 100,
+            "options": [],
+            "tooltip": true,
+            "isCustom": true
+        },
+        "emergencyContact": {
+            "type": "varchar",
+            "trim": true,
+            "default": "None",
+            "maxLength": 200,
+            "options": [],
+            "tooltip": true,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "textFilterFields": [
+            "name",
+            "emailAddress",
+            "addressStreet",
+            "addressCity",
+            "addressState",
+            "addressPostalCode",
+            "phoneNumber",
+            "attn"
+        ],
+        "sortBy": "name",
+        "asc": true,
+        "orderBy": "createdAt",
+        "order": "desc",
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "links": {
+        "expenses": {
+            "type": "hasMany",
+            "relationName": "contactExpense",
+            "foreign": "contacts",
+            "entity": "Expense",
+            "isCustom": true
+        },
+        "inventories": {
+            "type": "hasMany",
+            "relationName": "contactInventory",
+            "foreign": "contacts",
+            "entity": "Inventory",
+            "isCustom": true
+        },
+        "payables": {
+            "type": "hasMany",
+            "foreign": "contact",
+            "entity": "Payables",
+            "isCustom": true,
+            "audited": false
+        },
+        "casesPrimary": {
+            "audited": false
+        },
+        "cases": {
+            "audited": false
+        },
+        "documents": {
+            "audited": true
+        },
+        "opportunities": {
+            "audited": false
+        },
+        "accounts": {
+            "audited": false
+        },
+        "receivables": {
+            "type": "hasMany",
+            "foreign": "client",
+            "entity": "Opportunity",
+            "audited": false,
+            "isCustom": true
+        },
+        "document": {
+            "type": "hasMany",
+            "foreign": "client",
+            "entity": "Document",
+            "audited": false,
+            "isCustom": true
+        },
+        "additionalContacts": {
+            "type": "hasMany",
+            "foreign": "contact",
+            "entity": "AdditionalContact",
+            "audited": false,
+            "isCustom": true
+        },
+        "policies": {
+            "type": "hasMany",
+            "foreign": "contact",
+            "entity": "Policy",
+            "audited": false,
+            "isCustom": true
+        },
+        "claims": {
+            "type": "hasMany",
+            "foreign": "contact",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        },
+        "inspections": {
+            "type": "hasMany",
+            "foreign": "contact",
+            "entity": "Inspection",
+            "audited": false,
+            "isCustom": true
+        },
+        "checks": {
+            "type": "hasMany",
+            "foreign": "contact",
+            "entity": "Check",
+            "audited": false,
+            "isCustom": true
+        },
+        "contactPhoto": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "disabled": true
+        },
+        "progressReports": {
+            "type": "hasMany",
+            "foreign": "contact",
+            "entity": "ProgressReport",
+            "audited": false,
+            "isCustom": true
+        },
+        "estimatesFolders": {
+            "type": "hasMany",
+            "foreign": "client",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        },
+        "estimatesFolders1": {
+            "type": "hasMany",
+            "relationName": "estimatesFolderContact",
+            "foreign": "contacts",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "optimisticConcurrencyControl": false
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "additionalContacts"
+    },
+    {
+        "name": "accounts"
+    },
+    {
+        "name": "claims"
+    },
+    {
+        "name": "policies"
+    },
+    {
+        "name": "expenses"
+    },
+    {
+        "name": "opportunities"
+    },
+    {
+        "name": "cases"
+    },
+    {
+        "name": "targetLists"
+    },
+    {
+        "name": "checks"
+    },
+    {
+        "name": "payables"
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "tenantId"
+    },
+    {
+        "name": "path"
+    },
+    {
+        "name": "userPassword"
+    },
+    {
+        "name": "prefix"
+    },
+    {
+        "name": "cidName"
+    },
+    {
+        "name": "cidNumber"
+    },
+    {
+        "name": "enabled"
+    }
+]

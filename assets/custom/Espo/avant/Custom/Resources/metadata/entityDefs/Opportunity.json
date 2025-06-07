@@ -1,0 +1,202 @@
+{
+    "fields": {
+        "type": {
+            "type": "enum",
+            "required": false,
+            "isSorted": false,
+            "audited": false,
+            "isCustom": true,
+            "options": [
+                "Insurance",
+                "Rapid Restore",
+                "APA",
+                "NWPA",
+                "Other"
+            ],
+            "default": "Insurance",
+            "readOnly": false,
+            "probabilityMap": {
+                "Insurance": null,
+                "Rapid Restore": null,
+                "APA": null,
+                "NWPA": null,
+                "Other": null
+            },
+            "tooltip": false
+        },
+        "stage": {
+            "probabilityMap": {
+                "Pending": 0,
+                "Item Needed": 10,
+                "Needs Review": 20,
+                "Ready to Process": 30,
+                "Waiting on Response": 40,
+                "Negotiating": 50,
+                "Legal/Steve": 75,
+                "Waiting on Check": 90,
+                "Payment Received / Won": 100,
+                "Closed Lost": 0,
+                "Prospecting": 10,
+                "Qualification": 10,
+                "Needs Analysis": 20,
+                "Value Proposition": 50,
+                "Id. Decision Makers": 60,
+                "Perception Analysis": 70,
+                "Proposal/Price Quote": 75,
+                "Negotiation/Review": 90,
+                "Closed Won": 100
+            },
+            "fieldManagerAdditionalParamList": [
+                {
+                    "name": "probabilityMap",
+                    "view": "crm:views/opportunity/admin/field-manager/fields/probability-map"
+                }
+            ],
+            "required": false,
+            "isSorted": false,
+            "readOnly": false,
+            "tooltip": false,
+            "options": [
+                "Pending",
+                "Item Needed",
+                "Needs Review",
+                "Ready to Process",
+                "Waiting on Response",
+                "Negotiating",
+                "Legal/Steve",
+                "Waiting on Check",
+                "Payment Received / Won",
+                "Closed Lost"
+            ],
+            "default": "Pending"
+        },
+        "closeDate": {
+            "notNull": false,
+            "readOnly": false,
+            "tooltip": false,
+            "required": false
+        },
+        "category": {
+            "type": "enum",
+            "required": false,
+            "options": [
+                "NA",
+                "ACV",
+                "Mitigation",
+                "Supplement Estimate",
+                "Contents",
+                "Recoverable Depreciation",
+                "Deductible",
+                "ALE",
+                "Repair Estimate",
+                "RCV",
+                "Insurance Estimate",
+                "Vendor Estimate",
+                "Other Estimate",
+                "Other"
+            ],
+            "default": "NA",
+            "isSorted": false,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "ticket": {
+            "type": "link"
+        },
+        "document": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        },
+        "client": {
+            "type": "link",
+            "required": false,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+        "check": {
+            "type": "link"
+        },
+        "estimatesFolders": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "estimatesFolders1": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "documents": {
+            "audited": true
+        },
+        "contacts": {
+            "audited": false
+        },
+        "ticket": {
+            "type": "belongsTo",
+            "foreign": "receivables",
+            "entity": "Case",
+            "audited": true,
+            "isCustom": true
+        },
+        "document": {
+            "type": "hasMany",
+            "foreign": "receivable",
+            "entity": "Document",
+            "audited": false,
+            "isCustom": true
+        },
+        "client": {
+            "type": "belongsTo",
+            "foreign": "receivables",
+            "entity": "Contact",
+            "audited": true,
+            "isCustom": true
+        },
+        "check": {
+            "type": "belongsTo",
+            "foreign": "opportunities",
+            "entity": "Check",
+            "audited": false,
+            "isCustom": true
+        },
+        "estimatesFolders": {
+            "type": "hasMany",
+            "relationName": "estimatesFolderOpportunity",
+            "foreign": "opportunities",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        },
+        "estimatesFolders1": {
+            "type": "hasMany",
+            "foreign": "opportunity",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "sortBy": "createdAt",
+        "asc": false,
+        "textFilterFields": [
+            "name"
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "_delimiter_": {
+        "disabled": true
+    },
+    "stream": {
+        "sticked": true,
+        "index": 0
+    },
+    "documents": {
+        "index": 1
+    },
+    "SMSBots": {
+        "index": 2
+    },
+    "targetLists": {
+        "index": 3
+    },
+    "campaignLogRecords": {
+        "index": 4
+    }
+}

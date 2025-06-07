@@ -1,0 +1,32 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "assignedUsers"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "cStatus"
+    },
+    {
+        "name": "appId"
+    },
+    {
+        "name": "package"
+    },
+    {
+        "name": "groupId"
+    },
+    {
+        "name": "cModules"
+    },
+    {
+        "name": "cPassword"
+    },
+    {
+        "name": "cTags"
+    }
+]

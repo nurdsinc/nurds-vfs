@@ -1,0 +1,621 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "trim": true
+        },
+        "description": {
+            "type": "text",
+            "default": null,
+            "maxLength": null,
+            "rows": null,
+            "cutHeight": null
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": true,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "typeOfRoof": {
+            "type": "enum",
+            "options": [
+                "Gable",
+                "Hip",
+                "Tile",
+                "Metal",
+                "Flat",
+                "Shingle",
+                ""
+            ],
+            "style": {
+                "Gable": null,
+                "Hip": null,
+                "Tile": null,
+                "Metal": null,
+                "Flat": null,
+                "Shingle": null,
+                "": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "patio": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "patioTiedIn": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "patioStormDamage": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "patioArea": {
+            "notNull": false,
+            "type": "float",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "patioLength": {
+            "notNull": false,
+            "type": "float",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "patioWidth": {
+            "notNull": false,
+            "type": "float",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "claim": {
+            "type": "link"
+        },
+        "squares": {
+            "notNull": false,
+            "type": "float",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "patioRoofType": {
+            "type": "enum",
+            "options": [
+                "",
+                "Roll Roofing",
+                "Modified Bitumen",
+                "Metal",
+                "3 Tab",
+                "Laminate",
+                "Foam",
+                "Elastomeric Coating"
+            ],
+            "style": {
+                "": null,
+                "Roll Roofing": null,
+                "Modified Bitumen": null,
+                "Metal": null,
+                "3 Tab": null,
+                "Laminate": null,
+                "Foam": null,
+                "Elastomeric Coating": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "tarpNeeded": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "dripEdge": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "interiorDamage": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "additionalStructureDamage": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "condition": {
+            "type": "enum",
+            "options": [
+                "",
+                "Repairable",
+                "Maybe Repairable",
+                "Not Repairable"
+            ],
+            "style": {
+                "": null,
+                "Repairable": null,
+                "Maybe Repairable": null,
+                "Not Repairable": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "layers": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "rainCaps": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "rainDiverter": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "meterMasts": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "aCUnits": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "exhaustCaps": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "offRidgeVents": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "chimneys": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "evapCoolers": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "tVAntennas": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "splitBoots": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "skyLights": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "solarHeaters": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "solarPanels": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "pVCLF": {
+            "notNull": false,
+            "type": "float",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "valleyType": {
+            "type": "enum",
+            "options": [
+                "Layered",
+                "Metal",
+                "Woven"
+            ],
+            "style": {
+                "Layered": null,
+                "Metal": null,
+                "Woven": null
+            },
+            "default": "Layered",
+            "isCustom": true
+        },
+        "valleyLF": {
+            "notNull": false,
+            "type": "float",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true,
+            "tooltip": true
+        },
+        "turbines": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "aMNotes": {
+            "type": "text",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "satelliteDishes": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "pipeJacksSm": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "pipeJacksLg": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "otherVents": {
+            "type": "text",
+            "default": null,
+            "maxLength": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "multipleStoriesSQs": {
+            "notNull": false,
+            "type": "float",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "addlLayersSQs": {
+            "notNull": false,
+            "type": "float",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "pitches212SQs": {
+            "notNull": false,
+            "type": "float",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "contentsDamage": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "flooringDamage": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "typesOfFlooring": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "Carpet",
+                "Tile",
+                "Wood",
+                "Laminate",
+                "Other"
+            ],
+            "style": {
+                "Carpet": null,
+                "Tile": null,
+                "Wood": null,
+                "Laminate": null,
+                "Other": null
+            },
+            "maxCount": null,
+            "isCustom": true
+        },
+        "tarpNotes": {
+            "type": "text",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true,
+            "required": false,
+            "rows": null,
+            "cutHeight": null,
+            "tooltip": true
+        },
+        "patioNotes": {
+            "type": "text",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "claimNumber": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "claim",
+            "field": "claimNumber",
+            "view": "views/fields/foreign-varchar",
+            "isCustom": true
+        },
+        "dateOfInpsection": {
+            "notNull": false,
+            "type": "datetime",
+            "default": null,
+            "after": null,
+            "before": null,
+            "minuteStep": 30,
+            "isCustom": true
+        },
+        "meetings1": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "meeting": {
+            "type": "link"
+        },
+        "adjuster": {
+            "type": "link"
+        },
+        "contact": {
+            "type": "link"
+        },
+        "riskPhoto": {
+            "type": "image",
+            "required": false,
+            "maxFileSize": null,
+            "tooltip": true,
+            "isCustom": true,
+            "previewSize": "x-small"
+        },
+        "layersPhoto": {
+            "type": "image",
+            "maxFileSize": null,
+            "isCustom": true
+        },
+        "numberOfLayers": {
+            "type": "enum",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "style": {
+                "1": null,
+                "2": null,
+                "3": null,
+                "4": null,
+                "5": null,
+                "6": null,
+                "7": null,
+                "8": null,
+                "9": null,
+                "10": null
+            },
+            "default": "1",
+            "isCustom": true
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "Completed",
+                "Rescheduled",
+                "Pending"
+            ],
+            "default": "Pending",
+            "style": {
+                "Completed": null,
+                "Rescheduled": null,
+                "Pending": null
+            },
+            "maxLength": 100,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "EntityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "claim": {
+            "type": "belongsTo",
+            "foreign": "inspections",
+            "entity": "Claim",
+            "audited": true,
+            "isCustom": true
+        },
+        "meetings1": {
+            "type": "hasMany",
+            "foreign": "inspection",
+            "entity": "Meeting",
+            "audited": false,
+            "isCustom": true
+        },
+        "meeting": {
+            "type": "belongsTo",
+            "foreign": "inspections",
+            "entity": "Meeting",
+            "audited": false,
+            "isCustom": true
+        },
+        "adjuster": {
+            "type": "belongsTo",
+            "foreign": "inspections",
+            "entity": "Adjuster",
+            "audited": false,
+            "isCustom": true
+        },
+        "contact": {
+            "type": "belongsTo",
+            "foreign": "inspections",
+            "entity": "Contact",
+            "audited": false,
+            "isCustom": true
+        },
+        "riskPhoto": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "disabled": true
+        },
+        "layersPhoto": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "disabled": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc"
+    },
+    "indexes": {
+        "name": {
+            "columns": [
+                "name",
+                "deleted"
+            ]
+        },
+        "assignedUser": {
+            "columns": [
+                "assignedUserId",
+                "deleted"
+            ]
+        }
+    }
+}

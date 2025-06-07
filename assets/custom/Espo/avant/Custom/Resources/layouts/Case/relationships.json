@@ -1,0 +1,29 @@
+[
+    {
+        "name": "adjusters"
+    },
+    {
+        "name": "manyaccounts"
+    },
+    {
+        "name": "claims"
+    },
+    {
+        "name": "documents"
+    },
+    {
+        "name": "receivables"
+    },
+    {
+        "name": "checks"
+    },
+    {
+        "name": "payables"
+    },
+    {
+        "name": "inventories"
+    },
+    {
+        "name": "articles"
+    }
+]

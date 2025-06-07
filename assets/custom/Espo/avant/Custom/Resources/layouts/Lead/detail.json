@@ -1,0 +1,257 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "companyName"
+                },
+                {
+                    "name": "title"
+                },
+                {
+                    "name": "type"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                },
+                {
+                    "name": "user"
+                },
+                {
+                    "name": "account"
+                }
+            ],
+            [
+                {
+                    "name": "dateOfLoss"
+                },
+                {
+                    "name": "claimNumber"
+                },
+                {
+                    "name": "typeOfLoss"
+                },
+                {
+                    "name": "serviceRequested"
+                }
+            ],
+            [
+                {
+                    "name": "appointmentTime"
+                },
+                {
+                    "name": "adjuster"
+                },
+                {
+                    "name": "insuranceCompany"
+                }
+            ],
+            [
+                {
+                    "name": "address"
+                },
+                {
+                    "name": "lossUnitType"
+                }
+            ],
+            [
+                {
+                    "name": "lossAddress"
+                },
+                {
+                    "name": "sameAsPhysicalAddress"
+                }
+            ],
+            [
+                {
+                    "name": "companyCamLink"
+                },
+                {
+                    "name": "dropBoxLink"
+                },
+                {
+                    "name": "matterportLink"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "addressMap"
+                }
+            ]
+        ],
+        "style": "success",
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "isTrue",
+                    "attribute": "sameAsPhysicalAddress"
+                }
+            ]
+        },
+        "customLabel": "Loss Location"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "lossAddressMap"
+                }
+            ]
+        ],
+        "style": "success",
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "isFalse",
+                    "attribute": "sameAsPhysicalAddress"
+                }
+            ]
+        },
+        "customLabel": "Loss Address"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "source"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Details"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "mortgageCompany"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "policyNumber"
+                },
+                {
+                    "name": "deductible"
+                },
+                {
+                    "name": "propertyType"
+                },
+                {
+                    "name": "policyType"
+                }
+            ],
+            [
+                {
+                    "name": "dwellingCoverage"
+                },
+                {
+                    "name": "otherStructuresCoverage"
+                },
+                {
+                    "name": "contentsCoverage"
+                },
+                {
+                    "name": "lossOfUseCoverage"
+                }
+            ],
+            [
+                {
+                    "name": "rcvAcv"
+                },
+                {
+                    "name": "priorPayment"
+                },
+                {
+                    "name": "initialOffer"
+                },
+                {
+                    "name": "inceptionDate"
+                }
+            ],
+            [
+                {
+                    "name": "policyNotes"
+                }
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "type",
+                    "value": "Potential New Client"
+                }
+            ]
+        },
+        "customLabel": "Claim | Policy Information"
+    },
+    {
+        "rows": [
+            [
+                false,
+                false
+            ]
+        ],
+        "style": "warning",
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "type",
+                    "value": "Potential New Vendor"
+                }
+            ]
+        },
+        "customLabel": "Contractor"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "claim"
+                },
+                {
+                    "name": "policy"
+                }
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "isNotEmpty",
+                    "attribute": "claimId",
+                    "data": {
+                        "field": "claim"
+                    }
+                }
+            ]
+        },
+        "customLabel": "Conversion Info"
+    }
+]

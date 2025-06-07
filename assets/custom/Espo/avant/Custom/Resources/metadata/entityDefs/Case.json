@@ -1,0 +1,363 @@
+{
+    "fields": {
+        "manyaccounts": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "inventories": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutListDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "parent": {
+            "type": "linkParent",
+            "entityList": [
+                "Contact",
+                "Claim"
+            ],
+            "notStorable": true,
+            "required": false,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+        "documents": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "New",
+                "Assigned",
+                "Pending",
+                "In Progress",
+                "Inspection Scheduled",
+                "Needs Review",
+                "Approved",
+                "Ready to Send",
+                "Waiting on Adjuster",
+                "Approved by Adjuster",
+                "Closed",
+                "Rejected",
+                "Duplicate",
+                "On Hold"
+            ],
+            "default": "New",
+            "view": "views/fields/enum-styled",
+            "style": {
+                "New": null,
+                "Assigned": null,
+                "Pending": null,
+                "In Progress": null,
+                "Inspection Scheduled": null,
+                "Needs Review": null,
+                "Approved": null,
+                "Ready to Send": null,
+                "Waiting on Adjuster": null,
+                "Approved by Adjuster": null,
+                "Closed": "success",
+                "Rejected": "danger",
+                "Duplicate": "danger",
+                "On Hold": null
+            },
+            "audited": true,
+            "required": false,
+            "isSorted": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+        "payables": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "adjusters": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "type": {
+            "type": "enum",
+            "options": [
+                "",
+                "Inspection",
+                "Re-Inspection",
+                "Repair Estimate",
+                "Supplement Estimate",
+                "Adjuster Appointment",
+                "Accounting",
+                "Mitigation Estimate",
+                "Contents Estimate",
+                "Other Estimate",
+                "Question",
+                "Incident",
+                "Problem"
+            ],
+            "default": "",
+            "audited": true,
+            "required": false,
+            "isSorted": false,
+            "readOnly": false,
+            "tooltip": false,
+            "style": {
+                "": null,
+                "Inspection": null,
+                "Re-Inspection": null,
+                "Repair Estimate": null,
+                "Supplement Estimate": null,
+                "Adjuster Appointment": null,
+                "Accounting": null,
+                "Mitigation Estimate": null,
+                "Contents Estimate": null,
+                "Other Estimate": null,
+                "Question": null,
+                "Incident": null,
+                "Problem": null
+            }
+        },
+        "expense": {
+            "type": "link"
+        },
+        "receivables": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "isCustom": true
+        },
+        "claim": {
+            "type": "link"
+        },
+        "claimNumber": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "claim",
+            "field": "claimNumber",
+            "inlineEditDisabled": true,
+            "view": "views/fields/foreign-varchar",
+            "isCustom": true
+        },
+        "policy": {
+            "type": "link"
+        },
+        "insuranceCompany": {
+            "type": "link"
+        },
+        "mortgageCompany": {
+            "type": "link"
+        },
+        "policyNumber": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "policy",
+            "field": "number",
+            "inlineEditDisabled": true,
+            "view": "views/fields/foreign-varchar",
+            "isCustom": true
+        },
+        "emailAddress": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "contact",
+            "field": "emailAddress",
+            "inlineEditDisabled": true,
+            "view": "views/fields/foreign-email",
+            "isCustom": true
+        },
+        "phoneNumber": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "contact",
+            "field": "phoneNumber",
+            "inlineEditDisabled": true,
+            "view": "views/fields/foreign-phone",
+            "isCustom": true
+        },
+        "dateInspectionScheduled": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "inspectionReport": {
+            "type": "file",
+            "maxFileSize": 50,
+            "audited": true,
+            "sourceList": [
+                "Document"
+            ],
+            "isCustom": true
+        },
+        "inspectionNotes": {
+            "type": "wysiwyg",
+            "default": null,
+            "height": null,
+            "minHeight": null,
+            "isCustom": true
+        },
+        "damageConfirmed": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "checks": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "estimatesFolders": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "parent": {
+            "type": "belongsToParent",
+            "entityList": [],
+            "foreign": "case"
+        },
+        "manyaccounts": {
+            "type": "hasMany",
+            "relationName": "casesAccounts",
+            "foreign": "manycases",
+            "entity": "Account",
+            "isCustom": true,
+            "audited": false
+        },
+        "inventories": {
+            "type": "hasMany",
+            "relationName": "caseInventory",
+            "foreign": "cases",
+            "entity": "Inventory",
+            "isCustom": true
+        },
+        "documents": {
+            "type": "hasMany",
+            "foreign": "case",
+            "entity": "Document",
+            "audited": false,
+            "isCustom": true
+        },
+        "payables": {
+            "type": "hasMany",
+            "foreign": "case",
+            "entity": "Payables",
+            "audited": false,
+            "isCustom": true
+        },
+        "contacts": {
+            "audited": false
+        },
+        "adjusters": {
+            "type": "hasMany",
+            "relationName": "adjusterCase",
+            "foreign": "cases",
+            "entity": "Adjuster",
+            "audited": false,
+            "isCustom": true
+        },
+        "expense": {
+            "type": "belongsTo",
+            "foreign": "cases",
+            "entity": "Expense",
+            "audited": true,
+            "isCustom": true
+        },
+        "receivables": {
+            "type": "hasMany",
+            "foreign": "ticket",
+            "entity": "Opportunity",
+            "audited": false,
+            "isCustom": true
+        },
+        "claim": {
+            "type": "belongsTo",
+            "foreign": "cases",
+            "entity": "Claim",
+            "audited": true,
+            "isCustom": true
+        },
+        "policy": {
+            "type": "belongsTo",
+            "foreign": "cases",
+            "entity": "Policy",
+            "audited": false,
+            "isCustom": true
+        },
+        "insuranceCompany": {
+            "type": "belongsTo",
+            "foreign": "cases",
+            "entity": "InsuranceCompany",
+            "audited": false,
+            "isCustom": true
+        },
+        "mortgageCompany": {
+            "type": "belongsTo",
+            "foreign": "cases",
+            "entity": "MortgageCompany",
+            "audited": false,
+            "isCustom": true
+        },
+        "inspectionReport": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "disabled": true
+        },
+        "checks": {
+            "type": "hasMany",
+            "foreign": "case",
+            "entity": "Check",
+            "audited": false,
+            "isCustom": true
+        },
+        "estimatesFolders": {
+            "type": "hasMany",
+            "foreign": "case",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "sortBy": "number",
+        "asc": false,
+        "textFilterFields": [
+            "name"
+        ]
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "fields": {
+        "parent": "Parent",
+        "dateStart": "Date Start",
+        "dateEnd": "Date End",
+        "duration": "Duration",
+        "status": "Status",
+        "reminders": "Reminders",
+        "dateStartDate": "Date Start (all day)",
+        "dateEndDate": "Date End (all day)",
+        "isAllDay": "Is All-Day",
+        "method": "Method",
+        "apiToken": "Nurds App Id",
+        "connectionName": "Connection Name",
+        "extension": "Extension",
+        "extUserId": "Ext User Id",
+        "connectionId": "Connection Id",
+        "activityType": "Activity Type",
+        "domain": "Domain",
+        "callStart": "Call Start",
+        "calledNumber": "Called Number",
+        "callerNumber": "Caller Number",
+        "extCallId": "Ext Call Id",
+        "callRecordingUrl": "Call Recording Url",
+        "uuid": "UUID",
+        "callEnd": "Call End"
+    },
+    "links": {
+        "parent": "Parent"
+    },
+    "options": {
+        "status": {
+            "Planned": "Planned",
+            "Held": "Held",
+            "Not Held": "Not Held"
+        },
+        "method": {
+            "UpdateCallRecording": "Recording Received",
+            "StopCallActivity": "End Call",
+            "StartCallActivity": "Start Call",
+            "": "NA"
+        },
+        "connectionName": {
+            "pbx.nurds.com": "pbx.nurds.com"
+        },
+        "activityType": {
+            "outbound": "Outbound",
+            "inbound": "Inbound",
+            "update": "Update",
+            "": "NA"
+        }
+    },
+    "labels": {
+        "Create CallEvent": "Create Call Event",
+        "Schedule CallEvent": "Schedule Call Event",
+        "Log CallEvent": "Log Call Event",
+        "Set Held": "Set Held",
+        "Set Not Held": "Set Not Held"
+    },
+    "massActions": {
+        "setHeld": "Set Held",
+        "setNotHeld": "Set Not Held"
+    },
+    "presetFilters": {
+        "planned": "Planned",
+        "held": "Held",
+        "todays": "Today's"
+    },
+    "tooltips": {
+        "callStart": "Timestamp of when call started"
+    }
+}

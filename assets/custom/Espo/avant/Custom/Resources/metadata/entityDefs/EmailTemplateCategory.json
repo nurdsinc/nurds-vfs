@@ -1,0 +1,11 @@
+{
+    "collection": {
+        "orderBy": "parent",
+        "order": "asc",
+        "textFilterFields": [
+            "name"
+        ],
+        "fullTextSearch": true,
+        "countDisabled": false
+    }
+}

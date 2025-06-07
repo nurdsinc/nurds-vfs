@@ -1,0 +1,26 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "dateofLoss"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "gamePlan"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

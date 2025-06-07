@@ -1,0 +1,17 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "tripNumber"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "tags"
+    }
+]

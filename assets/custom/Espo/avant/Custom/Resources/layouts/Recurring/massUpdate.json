@@ -1,0 +1,11 @@
+[
+    "type",
+    "status",
+    "parent",
+    "frequency",
+    "dueDate",
+    "day",
+    "amount",
+    "assignedUser",
+    "teams"
+]

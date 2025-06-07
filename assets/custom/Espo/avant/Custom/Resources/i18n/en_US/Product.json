@@ -1,0 +1,17 @@
+{
+    "fields": {
+        "uM": "U/M"
+    },
+    "options": {
+        "uM": {
+            "SF": "SF",
+            "SQ": "SQ",
+            "LF": "LF",
+            "FT": "FT",
+            "IN": "IN",
+            "CM": "CM",
+            "EA": "EA",
+            "HR": "HR"
+        }
+    }
+}

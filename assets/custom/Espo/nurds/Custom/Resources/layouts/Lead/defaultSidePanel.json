@@ -1,0 +1,35 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "emailRequested"
+    },
+    {
+        "name": "requestAttempts"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "lookupPerson"
+    },
+    {
+        "name": "personLookupId"
+    },
+    {
+        "name": "opportunityAmount"
+    },
+    {
+        "name": "cTags"
+    },
+    {
+        "name": "source"
+    },
+    {
+        "name": "convertedAt"
+    }
+]

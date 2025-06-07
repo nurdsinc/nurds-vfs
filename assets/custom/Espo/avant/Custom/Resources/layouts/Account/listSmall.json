@@ -1,0 +1,19 @@
+[
+    {
+        "name": "name",
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "emailAddress"
+    },
+    {
+        "name": "phoneNumber"
+    },
+    {
+        "name": "type"
+    },
+    {
+        "name": "companyName"
+    }
+]

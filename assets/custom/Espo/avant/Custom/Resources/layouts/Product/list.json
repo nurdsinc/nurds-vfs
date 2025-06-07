@@ -1,0 +1,22 @@
+[
+    {
+        "name": "name",
+        "width": 35,
+        "link": true
+    },
+    {
+        "name": "brand",
+        "width": 30
+    },
+    {
+        "name": "status",
+        "width": 10
+    },
+    {
+        "name": "unitPrice",
+        "align": "right"
+    },
+    {
+        "name": "uM"
+    }
+]

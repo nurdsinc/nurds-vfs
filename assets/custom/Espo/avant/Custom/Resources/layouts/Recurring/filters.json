@@ -1,0 +1,12 @@
+[
+    "type",
+    "status",
+    "payee",
+    "parent",
+    "paidFrom",
+    "frequency",
+    "dueDate",
+    "day",
+    "assignedUser",
+    "amount"
+]

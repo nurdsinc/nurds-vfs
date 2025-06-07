@@ -1,0 +1,50 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "riskPhoto"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "claim"
+                },
+                {
+                    "name": "dateOfInpsection"
+                }
+            ],
+            [
+                {
+                    "name": "adjuster"
+                },
+                {
+                    "name": "contact"
+                }
+            ],
+            [
+                {
+                    "name": "meeting"
+                },
+                {
+                    "name": "tarpNeeded"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

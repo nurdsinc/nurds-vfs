@@ -1,0 +1,141 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "companyName"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                }
+            ],
+            [
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "title"
+                },
+                {
+                    "name": "user"
+                }
+            ],
+            [
+                {
+                    "name": "address"
+                },
+                {
+                    "name": "type"
+                }
+            ],
+            [
+                {
+                    "name": "lossAddress"
+                },
+                {
+                    "name": "sameAsPhysicalAddress"
+                }
+            ],
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "source"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "typeOfLoss"
+                },
+                {
+                    "name": "dateOfLoss"
+                }
+            ],
+            [
+                {
+                    "name": "propertyType"
+                },
+                {
+                    "name": "policyType"
+                }
+            ],
+            [
+                {
+                    "name": "claimNumber"
+                },
+                {
+                    "name": "policyNumber"
+                }
+            ],
+            [
+                {
+                    "name": "insuranceCompany"
+                },
+                {
+                    "name": "mortgageCompany"
+                }
+            ],
+            [
+                {
+                    "name": "dwellingCoverage"
+                },
+                {
+                    "name": "otherStructuresCoverage"
+                }
+            ],
+            [
+                {
+                    "name": "contentsCoverage"
+                },
+                {
+                    "name": "lossOfUseCoverage"
+                }
+            ],
+            [
+                {
+                    "name": "endorsements"
+                },
+                {
+                    "name": "opportunityAmount"
+                }
+            ],
+            [
+                {
+                    "name": "policyNotes"
+                }
+            ]
+        ],
+        "style": "info",
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "type",
+                    "value": "Potential New Client"
+                }
+            ]
+        },
+        "customLabel": "Claim | Policy Information"
+    }
+]

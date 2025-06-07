@@ -1,0 +1,186 @@
+{
+    "fields": {
+        "json": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "uniqueId": {
+            "type": "varchar",
+            "maxLength": 50,
+            "options": [],
+            "isCustom": true
+        },
+        "to": {
+            "type": "varchar",
+            "maxLength": 25,
+            "options": [],
+            "isCustom": true
+        },
+        "SMSBots": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        },
+        "emailRequested": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true,
+            "audited": true,
+            "readOnly": true
+        },
+        "requestAttempts": {
+            "type": "int",
+            "default": 0,
+            "min": 0,
+            "readOnly": true,
+            "tooltip": true,
+            "isCustom": true,
+            "audited": true
+        },
+        "accountName": {
+            "options": []
+        },
+        "tags": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "default": [],
+            "allowCustomOptions": true,
+            "options": [
+                "New",
+                "Closed"
+            ],
+            "style": {
+                "New": null,
+                "Closed": null
+            },
+            "isCustom": true
+        },
+        "mailingAddress": {
+            "type": "address",
+            "isCustom": true
+        },
+        "age": {
+            "notNull": false,
+            "type": "float",
+            "isCustom": true
+        },
+        "saleDate": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
+        },
+        "deedDate": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
+        },
+        "salePrice": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "subdivisionName": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
+        },
+        "cashValue": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "apn": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
+        },
+        "phoneNumber": {
+            "type": "phone",
+            "typeList": ["Mobile", "Mobile (Spouse)", "Office", "Home", "Fax", "Other"],
+            "defaultType": "Mobile",
+            "isPersonalData": true
+        },
+        "spouse": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
+        },
+        "nameSpouse": {
+            "type": "personName",
+            "isPersonalData": true,
+            "isCustom": true
+        },
+        "salutationNameSpouse": {
+            "type": "enum",
+            "options": [
+                "",
+                "Mr.",
+                "Ms.",
+                "Mrs.",
+                "Dr."
+            ]
+        },
+        "firstNameSpouse": {
+            "options": [],
+            "maxLength": 100
+        },
+        "middleNameSpouse": {
+            "options": [],
+            "maxLength": 100
+        },
+        "lastNameSpouse": {
+            "options": [],
+            "maxLength": 100
+        },
+        "hoa": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "dob": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
+        },
+        "lookupPerson": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "personLookupId": {
+            "type": "varchar",
+            "maxLength": 50,
+            "copyToClipboard": true,
+            "readOnly": true,
+            "options": [],
+            "tooltip": true,
+            "isCustom": true
+        },
+        "npnNumber": {
+            "type": "int",
+            "disableFormatting": true,
+            "audited": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "SMSBots": {
+            "type": "hasMany",
+            "foreign": "lead",
+            "entity": "SMSBot",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

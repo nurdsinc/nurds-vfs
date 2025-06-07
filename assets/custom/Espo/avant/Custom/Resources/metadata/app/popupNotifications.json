@@ -1,0 +1,8 @@
+{
+    "voipNotification": {
+        "disabled": false
+    },
+    "voipMessageNotification": {
+        "disabled": false
+    }
+}

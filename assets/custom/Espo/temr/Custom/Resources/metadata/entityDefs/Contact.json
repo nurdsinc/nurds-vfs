@@ -1,0 +1,150 @@
+{
+    "fields": {
+        "cTags": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "default": [],
+            "options": [
+                "Buyer",
+                "Vehicle: EV",
+                "Vehicle: SUV"
+            ],
+            "style": {
+                "Buyer": "success",
+                "Vehicle: EV": "info",
+                "Vehicle: SUV": "info"
+            },
+            "allowCustomOptions": true,
+            "displayAsList": true,
+            "isCustom": true,
+            "displayAsLabel": true
+        },
+        "cStatus": {
+            "type": "enum",
+            "options": [
+                "Pending",
+                "Account Created",
+                "Vehicle Booked",
+                "Trip Completed",
+                "Pending Review",
+                "Completed"
+            ],
+            "style": {
+                "Pending": "primary",
+                "Account Created": "primary",
+                "Vehicle Booked": "warning",
+                "Trip Completed": "success",
+                "Pending Review": "info",
+                "Completed": "primary"
+            },
+            "default": "Pending",
+            "displayAsLabel": true,
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "dob": {
+            "inlineEditDisabled": false
+        },
+        "cDriversLicenseBack": {
+            "type": "image",
+            "previewSize": "small",
+            "isCustom": true
+        },
+        "cDriversLicenseExpiration": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
+        },
+        "cDriversLicenseFront": {
+            "type": "image",
+            "previewSize": "small",
+            "isCustom": true
+        },
+        "cDriversLicenseNumber": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
+        },
+        "cDriversLicenseState": {
+            "type": "enum",
+            "style": [],
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "cProfileImage": {
+            "type": "image",
+            "previewSize": "small",
+            "isCustom": true
+        },
+        "cSpouse": {
+            "type": "linkOne"
+        },
+        "cContact": {
+            "type": "link"
+        },
+        "cPassword": {
+            "type": "password",
+            "tooltip": true,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "emailAddress"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "optimisticConcurrencyControl": false,
+    "links": {
+        "cTrips": {
+            "type": "hasMany",
+            "foreign": "primaryDriver",
+            "entity": "CTrip",
+            "audited": false,
+            "isCustom": true
+        },
+        "cDriversLicenseBack": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "utility": true
+        },
+        "cDriversLicenseFront": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "utility": true
+        },
+        "cProfileImage": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "utility": true
+        },
+        "cAdditionalTrips": {
+            "type": "hasMany",
+            "relationName": "cTripContact",
+            "foreign": "additionalDrivers",
+            "entity": "CTrip",
+            "audited": true,
+            "isCustom": true
+        },
+        "cSpouse": {
+            "type": "hasOne",
+            "foreign": "cContact",
+            "entity": "Contact",
+            "isCustom": true
+        },
+        "cContact": {
+            "type": "belongsTo",
+            "foreign": "cSpouse",
+            "entity": "Contact",
+            "isCustom": true
+        }
+    }
+}

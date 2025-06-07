@@ -1,0 +1,33 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "payee"
+    },
+    {
+        "name": "type"
+    },
+    {
+        "name": "amount"
+    },
+    {
+        "name": "dueDate"
+    },
+    {
+        "name": "frequency"
+    },
+    {
+        "name": "day"
+    },
+    {
+        "name": "paidFrom"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "parent"
+    }
+]

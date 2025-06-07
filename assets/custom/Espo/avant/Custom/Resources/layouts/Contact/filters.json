@@ -1,0 +1,17 @@
+[
+    "firstName",
+    "lastName",
+    "account",
+    "addressCity",
+    "addressState",
+    "address",
+    "assignedUser",
+    "createdAt",
+    "emailAddress",
+    "phoneNumber",
+    "title",
+    "teams",
+    "targetLists",
+    "modifiedAt",
+    "type"
+]

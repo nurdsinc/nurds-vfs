@@ -1,0 +1,10 @@
+{
+  "links": {
+    "meetings": "Meetings",
+    "calls": "Calls",
+    "tasks": "Tasks"
+  },
+  "labels": {
+    "Create Inspection": "Créer un Inspection"
+  }
+}

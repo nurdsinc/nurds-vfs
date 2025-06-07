@@ -1,0 +1,26 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "cPassword"
+    },
+    {
+        "name": "emailRequested"
+    },
+    {
+        "name": "requestAttempts"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "source"
+    },
+    {
+        "name": "convertedAt"
+    }
+]

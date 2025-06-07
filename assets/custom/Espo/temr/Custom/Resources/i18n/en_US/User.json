@@ -1,0 +1,8 @@
+{
+    "fields": {
+        "cWelcomeEmail": "Welcome Email"
+    },
+    "tooltips": {
+        "cWelcomeEmail": "Has welcome email been sent?"
+    }
+}

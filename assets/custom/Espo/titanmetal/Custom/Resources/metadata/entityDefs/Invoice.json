@@ -1,0 +1,9 @@
+{
+    "fields": {
+        "cDeliveryDate": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
+        }
+    }
+}

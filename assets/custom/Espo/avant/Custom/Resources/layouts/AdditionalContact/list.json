@@ -1,0 +1,28 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "contact"
+    },
+    {
+        "name": "account1"
+    },
+    {
+        "name": "position",
+        "notSortable": true
+    },
+    {
+        "name": "address"
+    },
+    {
+        "name": "phoneNumber"
+    },
+    {
+        "name": "emailAddress"
+    },
+    {
+        "name": "createdAt"
+    }
+]

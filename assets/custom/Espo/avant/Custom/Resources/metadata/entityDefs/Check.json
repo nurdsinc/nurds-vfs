@@ -1,0 +1,381 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "trim": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": false,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "amount": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true,
+            "audited": true
+        },
+        "category": {
+            "type": "enum",
+            "options": [
+                "NA",
+                "Deductible",
+                "Partial Deductible",
+                "Depreciation",
+                "Supplement",
+                "Misc.",
+                "Mitigation",
+                "Additional Expenses (ALE)",
+                "Contents",
+                "RCV",
+                "ACV"
+            ],
+            "style": {
+                "NA": null,
+                "Deductible": null,
+                "Partial Deductible": null,
+                "Depreciation": null,
+                "Supplement": null,
+                "Misc.": null,
+                "Mitigation": null,
+                "Additional Expenses (ALE)": null,
+                "Contents": null,
+                "RCV": null,
+                "ACV": null
+            },
+            "audited": true,
+            "default": "NA",
+            "isCustom": true
+        },
+        "checkNumber": {
+            "type": "varchar",
+            "audited": true,
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true,
+            "trim": false
+        },
+        "dateReceived": {
+            "notNull": false,
+            "type": "datetime",
+            "audited": true,
+            "default": null,
+            "after": null,
+            "before": null,
+            "minuteStep": 30,
+            "isCustom": true
+        },
+        "deposited": {
+            "type": "enum",
+            "options": [
+                "Pending",
+                "Yes",
+                "No"
+            ],
+            "style": {
+                "Pending": null,
+                "Yes": null,
+                "No": null
+            },
+            "default": "Pending",
+            "isCustom": true
+        },
+        "insuredOwed": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "vendorOwed": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "type": {
+            "type": "enum",
+            "options": [
+                "Unknown",
+                "Insurance",
+                "Client"
+            ],
+            "style": {
+                "Unknown": null,
+                "Insurance": null,
+                "Client": null
+            },
+            "audited": true,
+            "default": "Unknown",
+            "isCustom": true
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "Issued",
+                "Received",
+                "Returned",
+                "Voided",
+                "Mortgage"
+            ],
+            "style": {
+                "Issued": "danger",
+                "Received": "success",
+                "Returned": null,
+                "Voided": null,
+                "Mortgage": null
+            },
+            "default": "Issued",
+            "audited": true,
+            "isCustom": true
+        },
+        "attachment": {
+            "type": "file",
+            "sourceList": [],
+            "maxFileSize": null,
+            "isCustom": true
+        },
+        "payabless": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "importDisabled": true,
+            "noLoad": true,
+            "isCustom": true
+        },
+        "claim": {
+            "type": "link"
+        },
+        "opportunities": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "case": {
+            "type": "link"
+        },
+        "contact": {
+            "type": "link"
+        },
+        "pAFeeCharged": {
+            "type": "enum",
+            "options": [
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18",
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
+            ],
+            "style": {
+                "5": null,
+                "6": null,
+                "7": null,
+                "8": null,
+                "9": null,
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null,
+                "20": null,
+                "21": null,
+                "22": null,
+                "23": null,
+                "24": null,
+                "25": null
+            },
+            "default": "25",
+            "isCustom": true
+        },
+        "invoice": {
+            "type": "link"
+        },
+        "estimatesFolder": {
+            "type": "link"
+        },
+        "dateIssued": {
+            "notNull": false,
+            "type": "date",
+            "required": true,
+            "tooltip": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "EntityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "attachment": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "disabled": true
+        },
+        "payabless": {
+            "type": "hasMany",
+            "relationName": "checkPayables",
+            "foreign": "checks",
+            "entity": "Payables",
+            "audited": false,
+            "isCustom": true
+        },
+        "claim": {
+            "type": "belongsTo",
+            "foreign": "checks",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        },
+        "opportunities": {
+            "type": "hasMany",
+            "foreign": "check",
+            "entity": "Opportunity",
+            "audited": false,
+            "isCustom": true
+        },
+        "case": {
+            "type": "belongsTo",
+            "foreign": "checks",
+            "entity": "Case",
+            "audited": false,
+            "isCustom": true
+        },
+        "contact": {
+            "type": "belongsTo",
+            "foreign": "checks",
+            "entity": "Contact",
+            "audited": false,
+            "isCustom": true
+        },
+        "invoice": {
+            "type": "belongsTo",
+            "foreign": "checks",
+            "entity": "Invoice",
+            "audited": false,
+            "isCustom": true
+        },
+        "estimatesFolders": {
+            "type": "hasMany",
+            "foreign": "check",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        },
+        "estimatesFolder": {
+            "type": "belongsTo",
+            "foreign": "checks",
+            "entity": "EstimatesFolder",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name"
+        ],
+        "fullTextSearch": false
+    },
+    "indexes": {
+        "name": {
+            "columns": [
+                "name",
+                "deleted"
+            ]
+        },
+        "assignedUser": {
+            "columns": [
+                "assignedUserId",
+                "deleted"
+            ]
+        }
+    }
+}

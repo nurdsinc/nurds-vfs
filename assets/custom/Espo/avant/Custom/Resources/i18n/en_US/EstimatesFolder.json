@@ -1,0 +1,70 @@
+{
+    "fields": {
+        "fileAttachment": "File Attachment",
+        "estimateName": "Estimate Name",
+        "rCVestimates": "RCV",
+        "rCVestimatesCurrency": "RCV (Currency)",
+        "rCVestimatesConverted": "RCV (Converted)",
+        "depreciationEst": "Depreciation",
+        "depreciationEstCurrency": "Depreciation (Currency)",
+        "depreciationEstConverted": "Depreciation (Converted)",
+        "aCVEst": "ACV",
+        "aCVEstCurrency": "ACV (Currency)",
+        "aCVEstConverted": "ACV (Converted)",
+        "case": "Ticket",
+        "claim": "Claim",
+        "client": "Insured",
+        "contacts": "Insureds",
+        "account": "Vendor",
+        "accounts": "Vendors",
+        "leads": "Leads",
+        "opportunities": "Receivables",
+        "opportunity": "Opportunity",
+        "user": "User",
+        "folder": "Folder",
+        "claimLink": "Claim Link",
+        "pWI": "PWI",
+        "pWICurrency": "PWI (Currency)",
+        "pWIConverted": "PWI (Converted)",
+        "notes": "Notes",
+        "newChecksReleased": "New Check(s) Released",
+        "check": "Check",
+        "checks": "Checks",
+        "estimateType": "Estimate Type",
+        "nonRecoverableRCV": "Non-Recoverable RCV",
+        "nonRecoverableRCVCurrency": "Non-Recoverable RCV (Currency)",
+        "nonRecoverableRCVConverted": "Non-Recoverable RCV (Converted)"
+    },
+    "links": {
+        "case": "Ticket",
+        "claim": "Claim",
+        "client": "Insured",
+        "contacts": "Insureds",
+        "account": "Vendor",
+        "accounts": "Vendors",
+        "leads": "Leads",
+        "opportunities": "Receivables",
+        "opportunity": "Opportunity",
+        "user": "User",
+        "folder": "Folder",
+        "check": "Check",
+        "checks": "Checks"
+    },
+    "labels": {
+        "Create EstimatesFolder": "Create Estimate Folder"
+    },
+    "tooltips": {
+        "pWI": "Payment When Incurred ",
+        "newChecksReleased": "Check is a new check was issued with estimate",
+        "rCVestimates": "If there is any non-recoverable RCV, RCV will be [RCV-non-recoverable RCV]",
+        "nonRecoverableRCV": "Any part of the total that the insurance has as non-recoverable, including: partial non-recoverable depreciation, endorsements, no code coverage etc. "
+    },
+    "options": {
+        "estimateType": {
+            "Insurance": "Insurance",
+            "Avant": "Avant",
+            "Internal": "Internal",
+            "": "None"
+        }
+    }
+}

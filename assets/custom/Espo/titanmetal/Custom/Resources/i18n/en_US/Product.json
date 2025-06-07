@@ -1,0 +1,14 @@
+{
+    "fields": {
+        "cUnitType": "Unit Type"
+    },
+    "options": {
+        "cUnitType": {
+            "IN": "IN",
+            "FT": "FT",
+            "SQIN": "SQIN",
+            "SQFT": "SQFT",
+            "EACH": "EACH"
+        }
+    }
+}

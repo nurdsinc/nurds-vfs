@@ -1,0 +1,41 @@
+[
+    {
+        "name": "name",
+        "width": 12,
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "lossAddress"
+    },
+    {
+        "name": "dateofLoss"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "highlight",
+        "notSortable": true
+    },
+    {
+        "name": "assignedUser"
+    },
+    {
+        "name": "salesRepNew",
+        "notSortable": true
+    },
+    {
+        "name": "insuranceCompany",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "claimNumber",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "contractedDate"
+    }
+]

@@ -1,0 +1,104 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "parent"
+                }
+            ],
+            [
+                {
+                    "name": "calledNumber"
+                },
+                {
+                    "name": "callerNumber"
+                }
+            ],
+            [
+                {
+                    "name": "connectionId"
+                },
+                {
+                    "name": "connectionName"
+                }
+            ],
+            [
+                {
+                    "name": "extCallId"
+                },
+                {
+                    "name": "extUserId"
+                }
+            ],
+            [
+                {
+                    "name": "callStart"
+                },
+                {
+                    "name": "callEnd"
+                }
+            ],
+            [
+                {
+                    "name": "domain"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "method"
+                },
+                {
+                    "name": "activityType"
+                }
+            ],
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "extension"
+                }
+            ],
+            [
+                {
+                    "name": "dateStart"
+                },
+                {
+                    "name": "dateEnd"
+                }
+            ],
+            [
+                {
+                    "name": "duration"
+                },
+                {
+                    "name": "reminders"
+                }
+            ],
+            [
+                {
+                    "name": "callRecordingUrl"
+                },
+                {
+                    "name": "apiToken"
+                }
+            ],
+            [
+                {
+                    "name": "uuid"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

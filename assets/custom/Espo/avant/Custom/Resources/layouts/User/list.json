@@ -1,0 +1,29 @@
+[
+    {
+        "name": "name",
+        "width": 30,
+        "link": true
+    },
+    {
+        "name": "userName"
+    },
+    {
+        "name": "emailAddress"
+    },
+    {
+        "name": "phoneNumber"
+    },
+    {
+        "name": "title"
+    },
+    {
+        "name": "category"
+    },
+    {
+        "name": "isActive",
+        "width": 10
+    },
+    {
+        "name": "createdAt"
+    }
+]

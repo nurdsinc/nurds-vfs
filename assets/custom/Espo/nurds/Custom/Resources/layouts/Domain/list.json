@@ -1,0 +1,27 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "url"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "registeredDate"
+    },
+    {
+        "name": "expiryDate"
+    },
+    {
+        "name": "applyPrivacy"
+    },
+    {
+        "name": "autoRenew"
+    },
+    {
+        "name": "locked"
+    }
+]

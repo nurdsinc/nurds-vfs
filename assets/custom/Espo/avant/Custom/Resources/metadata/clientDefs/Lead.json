@@ -1,0 +1,57 @@
+{
+    "kanbanViewMode": true,
+    "color": "#d6a2c9",
+    "iconClass": "fas fa-address-card",
+    "dynamicLogic": {
+        "fields": {
+            "lossAddress": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "sameAsPhysicalAddress"
+                        }
+                    ]
+                }
+            },
+            "lossAddressMap": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "isFalse",
+                                    "attribute": "sameAsPhysicalAddress"
+                                },
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "lossAddressStreet"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "addressMap": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "isTrue",
+                                    "attribute": "sameAsPhysicalAddress"
+                                },
+                                {
+                                    "type": "isEmpty",
+                                    "attribute": "lossAddressStreet"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

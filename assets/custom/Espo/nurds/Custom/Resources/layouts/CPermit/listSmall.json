@@ -1,0 +1,10 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "permitNumber",
+        "width": 20
+    }
+]

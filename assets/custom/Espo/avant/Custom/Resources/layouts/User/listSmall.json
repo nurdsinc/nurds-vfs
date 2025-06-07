@@ -1,0 +1,17 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "userName",
+        "width": 30
+    },
+    {
+        "name": "category"
+    },
+    {
+        "name": "emailAddress",
+        "width": 30
+    }
+]

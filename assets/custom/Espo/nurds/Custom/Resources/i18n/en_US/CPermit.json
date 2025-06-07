@@ -1,0 +1,61 @@
+{
+    "fields": {
+        "permitNumber": "Permit Number",
+        "permitId": "Permit Id",
+        "permitType": "Permit Type",
+        "permitStatus": "Permit Status",
+        "projectName": "Project Name",
+        "mainParcel": "Main Parcel",
+        "address": "Address",
+        "addressStreet": "Address Street",
+        "addressCity": "Address City",
+        "addressState": "Address State",
+        "addressCountry": "Address Country",
+        "addressPostalCode": "Address Postal Code",
+        "addressMap": "Address Map",
+        "appliedDate": "Applied Date",
+        "issuedDate": "Issued Date",
+        "finalizedDate": "Finalized Date",
+        "expirationDate": "Expiration Date",
+        "district": "District",
+        "squareFeet": "Square Feet",
+        "valuation": "Valuation",
+        "json": "Json"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks"
+    },
+    "labels": {
+        "Create CPermit": "Create Permit"
+    },
+    "options": {
+        "permitType": {
+            "Residential New Construction": "Residential New Construction",
+            "": "Unknown"
+        },
+        "permitStatus": {
+            "Complete": "Complete",
+            "Approved": "Approved",
+            "Denied": "Denied",
+            "Expired": "Expired",
+            "Fees Due": "Fees Due",
+            "Fees Paid": "Fees Paid",
+            "In Review": "In Review",
+            "Issued": "Issued",
+            "On Hold": "On Hold",
+            "Plan Approval Expired": "Plan Approval Expired",
+            "Requires Customer Attention": "Requires Customer Attention",
+            "Stop Work Order": "Stop Work Order",
+            "Submitted": "Submitted",
+            "Submitted - Online": "Submitted - Online",
+            "Withdrwan": "Withdrwan",
+            "": "NA"
+        },
+        "district": {
+            "Maricopa County": "Maricopa County",
+            "": "NA"
+        }
+    }
+}

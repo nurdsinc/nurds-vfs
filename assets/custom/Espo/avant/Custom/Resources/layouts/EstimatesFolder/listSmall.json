@@ -1,0 +1,29 @@
+[
+    {
+        "name": "name",
+        "width": 30,
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "rCVestimates",
+        "width": 15,
+        "align": "left"
+    },
+    {
+        "name": "depreciationEst",
+        "width": 20,
+        "align": "left"
+    },
+    {
+        "name": "aCVEst",
+        "width": 15,
+        "align": "left"
+    },
+    {
+        "name": "fileAttachment",
+        "width": 15,
+        "link": true,
+        "align": "left"
+    }
+]

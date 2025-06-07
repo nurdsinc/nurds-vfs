@@ -1,0 +1,167 @@
+{
+    "dynamicLogic": {
+        "fields": {
+            "amount": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "source",
+                            "value": "Insurance"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "type",
+                            "value": "Estimate"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "estimateType",
+                            "value": "Repair Estimate"
+                        }
+                    ]
+                }
+            },
+            "estimateType": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "type",
+                            "value": "Estimate"
+                        }
+                    ]
+                }
+            },
+            "deductible": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "estimateType",
+                            "value": "Repair Estimate"
+                        },
+                        {
+                            "type": "and",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "source",
+                                    "value": "Insurance"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "recoverableDepreciation": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "estimateType",
+                            "value": "Repair Estimate"
+                        },
+                        {
+                            "type": "and",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "source",
+                                    "value": "Insurance"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "rcvACV": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Check"
+                                },
+                                {
+                                    "type": "or",
+                                    "value": [
+                                        {
+                                            "type": "equals",
+                                            "attribute": "type",
+                                            "value": "Estimate"
+                                        },
+                                        {
+                                            "type": "or",
+                                            "value": [
+                                                {
+                                                    "type": "equals",
+                                                    "attribute": "type",
+                                                    "value": "Deductible"
+                                                },
+                                                {
+                                                    "type": "or",
+                                                    "value": [
+                                                        {
+                                                            "type": "equals",
+                                                            "attribute": "type",
+                                                            "value": "Invoice"
+                                                        },
+                                                        {
+                                                            "type": "or",
+                                                            "value": [
+                                                                {
+                                                                    "type": "equals",
+                                                                    "attribute": "type",
+                                                                    "value": "Purchase Order"
+                                                                },
+                                                                {
+                                                                    "type": "or",
+                                                                    "value": [
+                                                                        {
+                                                                            "type": "equals",
+                                                                            "attribute": "type",
+                                                                            "value": "Receipt"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "cRCVRecoverable": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Policy"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Certified Policy"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

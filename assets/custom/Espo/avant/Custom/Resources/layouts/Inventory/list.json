@@ -1,0 +1,21 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "type"
+    },
+    {
+        "name": "cost"
+    },
+    {
+        "name": "sellsPrice"
+    },
+    {
+        "name": "createdBy"
+    },
+    {
+        "name": "modifiedAt"
+    }
+]

@@ -1,0 +1,9 @@
+{
+    "fieldInfo": {
+        "personName": "Use this field when you are wanting to have fields for Salutation, First, Middle, Last name",
+        "password": "Password field. Displays as (****), but is readable in the api return.",
+        "colorpicker": "Allows you to store a specific color. Ex: #1174BA",
+        "email": "This is a Beta Feature. Email Address is not part of the default emailAddress.",
+        "phone": "This is a Beta Feature. Phone Humber is not part of the default phoneNumber."
+    }
+}

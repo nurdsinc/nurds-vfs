@@ -1,0 +1,61 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "amount"
+                }
+            ],
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "dateIssued"
+                }
+            ],
+            [
+                {
+                    "name": "dateReceived"
+                },
+                {
+                    "name": "attachment"
+                }
+            ],
+            [
+                {
+                    "name": "checkNumber"
+                },
+                {
+                    "name": "type"
+                }
+            ],
+            [
+                {
+                    "name": "category"
+                },
+                {
+                    "name": "deposited"
+                }
+            ],
+            [
+                {
+                    "name": "claim"
+                },
+                {
+                    "name": "contact"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

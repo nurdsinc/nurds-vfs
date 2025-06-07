@@ -1,0 +1,105 @@
+{
+    "fields": {
+        "account": "Vendor",
+        "type": "Type",
+        "source": "Source",
+        "user": "User",
+        "cases": "Cases",
+        "case": "Ticket",
+        "accounts": "Vendors",
+        "contacts": "Insureds",
+        "opportunities": "Receivables",
+        "amount": "ACV",
+        "estimateType": "Estimate Type",
+        "receivable": "Receivable",
+        "receivabless": "Receivables",
+        "deductible": "Deductible",
+        "recoverableDepreciation": "Recoverable Depreciation",
+        "rcvACV": "RCV / Total Claim",
+        "client": "Insured",
+        "claim": "Claim",
+        "claimLink": "Claim Link",
+        "cRCVRecoverable": "RCV Recoverable"
+    },
+    "links": {
+        "account": "Vendor",
+        "user": "User",
+        "cases": "Cases",
+        "case": "Ticket",
+        "accounts": "Vendors",
+        "contacts": "Insureds",
+        "opportunities": "Receivables",
+        "receivable": "Receivable",
+        "receivabless": "Receivables",
+        "client": "Insured",
+        "claim": "Claim"
+    },
+    "options": {
+        "type": {
+            "None": "None",
+            "Check": "Check",
+            "Contract": "Contract",
+            "Estimate": "Estimate",
+            "Declaration": "Dec Page",
+            "Invoice": "Invoice",
+            "Policy": "Policy/Dec Page",
+            "LOE": "LOE",
+            "PA Agreement": "PA Agreement",
+            "MIT Agreement": "MIT Agreement",
+            "Engineer Report": "Engineer Report",
+            "Receipt": "Receipt",
+            "Letter": "Correspondence/Letter",
+            "Drivers License": "Drivers License",
+            "Proof of Loss": "Proof of Loss",
+            "Certified Policy": "Certified Policy/Dec Page",
+            "Purchase Order": "Purchase Order",
+            "Deductible": "Deductible",
+            "Roof Agreement": "Contract",
+            "Restoration Agreement": "Restoration Agreement",
+            "PA Release": "PA Release",
+            "Certificate of Completion": "Certificate of Completion",
+            "Contractor Of Choice": "Contractor Of Choice",
+            "Warranty": "Warranty",
+            "W9": "W9",
+            "LOR": "LOR",
+            "Appraisal Award": "Appraisal Award",
+            "Photos": "Photos",
+            "Release": "Release"
+        },
+        "source": {
+            "Insurance": "Insurance",
+            "Vendor": "Vendor",
+            "Client": "Client",
+            "Internal": "Internal",
+            "Unknown": "Unknown",
+            "Other": "Other"
+        },
+        "estimateType": {
+            "Mitigation Estimate": "Mitigation Estimate",
+            "Repair Estimate": "Repair Estimate",
+            "Contents Estimate": "Contents Estimate",
+            "Asbestos Estimate": "Asbestos Estimate",
+            "Supplement": "Supplement",
+            "Other": "Other",
+            "NA": "NA"
+        },
+        "status": {
+            "Active": "Active",
+            "Approved": "Approved",
+            "Draft": "Draft",
+            "Invalid": "Invalid",
+            "Expired": "Expired",
+            "Canceled": "Canceled",
+            "Needs Review": "Needs Review"
+        },
+        "cRCVRecoverable": {
+            "ACV Only": "ACV Only",
+            "In Full": "In Full",
+            "Partial": "Partial"
+        }
+    },
+    "tooltips": {
+        "amount": "If the document has a dollar amount enter it. Typically ACV/RCV unless it is the insurance estimate then it is the amount of the check.",
+        "rcvACV": "Total RCV/ACV Value"
+    }
+}

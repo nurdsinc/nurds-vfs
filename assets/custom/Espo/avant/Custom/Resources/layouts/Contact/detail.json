@@ -1,0 +1,48 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "primaryContactName"
+                },
+                {
+                    "name": "emailAddress"
+                }
+            ],
+            [
+                {
+                    "name": "address"
+                },
+                {
+                    "name": "mailingAddress"
+                }
+            ],
+            [
+                {
+                    "name": "emergencyContact"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ],
+            [
+                {
+                    "name": "addressMap"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

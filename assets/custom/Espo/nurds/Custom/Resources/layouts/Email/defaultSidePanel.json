@@ -1,0 +1,29 @@
+[
+    {
+        "name": "teams"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "folderString"
+    },
+    {
+        "name": "replied"
+    },
+    {
+        "name": "replies"
+    },
+    {
+        "name": "tasks"
+    },
+    {
+        "name": "sendAt"
+    },
+    {
+        "name": "deliveryDate"
+    },
+    {
+        "name": "messageId"
+    }
+]

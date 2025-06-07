@@ -1,0 +1,11 @@
+{
+    "labels": {
+        "Create Dealflow": "Create Dealflow"
+    },
+    "fields": {
+        "accounts": "Vendors"
+    },
+    "links": {
+        "accounts": "Vendors"
+    }
+}

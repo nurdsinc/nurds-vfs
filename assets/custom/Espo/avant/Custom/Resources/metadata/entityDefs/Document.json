@@ -1,0 +1,254 @@
+{
+    "fields": {
+        "account": {
+            "type": "link"
+        },
+        "source": {
+            "type": "enum",
+            "options": [
+                "Unknown",
+                "Insurance",
+                "Internal",
+                "Client",
+                "Vendor",
+                "Other"
+            ],
+            "default": "Unknown",
+            "required": false,
+            "isSorted": false,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false,
+            "style": {
+                "Unknown": null,
+                "Insurance": null,
+                "Internal": null,
+                "Client": null,
+                "Vendor": null,
+                "Other": null
+            }
+        },
+        "type": {
+            "type": "enum",
+            "options": [
+                "None",
+                "LOR",
+                "Estimate",
+                "Contract",
+                "Proof of Loss",
+                "Invoice",
+                "Policy",
+                "Certified Policy",
+                "Roof Agreement",
+                "Certificate of Completion",
+                "Engineer Report",
+                "Receipt",
+                "Letter",
+                "Warranty",
+                "W9",
+                "Appraisal Award",
+                "Photos",
+                "Check",
+                "Release"
+            ],
+            "isSorted": false,
+            "audited": true,
+            "required": false,
+            "default": "None",
+            "readOnly": false,
+            "tooltip": false,
+            "style": {
+                "None": null,
+                "LOR": null,
+                "Estimate": null,
+                "Contract": null,
+                "Proof of Loss": null,
+                "Invoice": null,
+                "Policy": null,
+                "Certified Policy": null,
+                "Roof Agreement": null,
+                "Certificate of Completion": null,
+                "Engineer Report": null,
+                "Receipt": null,
+                "Letter": null,
+                "Warranty": null,
+                "W9": null,
+                "Appraisal Award": null,
+                "Photos": null,
+                "Check": null,
+                "Release": null
+            }
+        },
+        "user": {
+            "type": "link"
+        },
+        "case": {
+            "type": "link"
+        },
+        "amount": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "tooltipText": "If the document has a dollar amount enter it. Typically ACV/RCV unless it is the insurance estimate then it is the amount of the check.",
+            "readOnly": false,
+            "tooltip": true,
+            "isCustom": true,
+            "default": null,
+            "min": null,
+            "max": null
+        },
+        "estimateType": {
+            "type": "enum",
+            "required": false,
+            "options": [
+                "Mitigation Estimate",
+                "Repair Estimate",
+                "Contents Estimate",
+                "Asbestos Estimate",
+                "Supplement",
+                "Other",
+                "NA"
+            ],
+            "audited": true,
+            "default": "NA",
+            "isSorted": false,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "deductible": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "recoverableDepreciation": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "rcvACV": {
+            "type": "currency",
+            "required": false,
+            "audited": true,
+            "readOnly": false,
+            "tooltip": true,
+            "isCustom": true,
+            "tooltipText": "Total RCV/ACV Value",
+            "max": null
+        },
+        "receivable": {
+            "type": "link"
+        },
+        "client": {
+            "type": "link"
+        },
+        "claim": {
+            "type": "link"
+        },
+        "status": {
+            "options": [
+                "Active",
+                "Approved",
+                "Needs Review",
+                "Draft",
+                "Invalid",
+                "Expired",
+                "Canceled"
+            ],
+            "style": {
+                "Active": "primary",
+                "Approved": "success",
+                "Needs Review": "info",
+                "Draft": "warning",
+                "Invalid": "danger",
+                "Expired": "danger",
+                "Canceled": "danger"
+            },
+            "displayAsLabel": true,
+            "default": "Active"
+        },
+        "name": {
+            "trim": true,
+            "options": []
+        },
+        "claimLink": {
+            "type": "url",
+            "inlineEditDisabled": true,
+            "isCustom": true
+        },
+        "cRCVRecoverable": {
+            "type": "enum",
+            "options": [
+                "ACV Only",
+                "In Full",
+                "Partial"
+            ],
+            "default": "ACV Only",
+            "style": {
+                "ACV Only": null,
+                "In Full": null,
+                "Partial": null
+            },
+            "maxLength": 100,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "account": {
+            "type": "belongsTo",
+            "foreign": "documentsPrimary",
+            "entity": "Account",
+            "isCustom": true
+        },
+        "user": {
+            "type": "belongsTo",
+            "foreign": "documents",
+            "entity": "User",
+            "audited": false,
+            "isCustom": true
+        },
+        "case": {
+            "type": "belongsTo",
+            "foreign": "documents",
+            "entity": "Case",
+            "audited": false,
+            "isCustom": true
+        },
+        "accounts": {
+            "audited": false
+        },
+        "contacts": {
+            "audited": false
+        },
+        "opportunities": {
+            "audited": false
+        },
+        "receivable": {
+            "type": "belongsTo",
+            "foreign": "document",
+            "entity": "Opportunity",
+            "audited": true,
+            "isCustom": true
+        },
+        "client": {
+            "type": "belongsTo",
+            "foreign": "document",
+            "entity": "Contact",
+            "audited": true,
+            "isCustom": true
+        },
+        "claim": {
+            "type": "belongsTo",
+            "foreign": "documents",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "kanbanViewMode": true,
+    "color": "#edc755",
+    "iconClass": "fas fa-building",
+    "relationshipPanels": {
+        "domains": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "nurdsPBXs": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    }
+}

@@ -1,0 +1,46 @@
+[
+    {
+        "name": "number",
+        "width": 5,
+        "align": "left"
+    },
+    {
+        "name": "name",
+        "width": 15,
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "inboundEmail"
+    },
+    {
+        "name": "claim"
+    },
+    {
+        "name": "contact"
+    },
+    {
+        "name": "status",
+        "width": 6,
+        "align": "left"
+    },
+    {
+        "name": "priority",
+        "width": 6,
+        "align": "left"
+    },
+    {
+        "name": "type"
+    },
+    {
+        "name": "assignedUser"
+    },
+    {
+        "name": "createdAt",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "modifiedAt"
+    }
+]

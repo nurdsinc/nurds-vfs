@@ -1,0 +1,18 @@
+{
+    "fields": {
+        "accountsPrimary": {
+            "type": "link"
+        }
+    },
+    "links": {
+        "accountsPrimary": {
+            "type": "belongsTo",
+            "foreign": "campaigns",
+            "entity": "Account",
+            "isCustom": true
+        },
+        "accounts": {
+            "audited": false
+        }
+    }
+}

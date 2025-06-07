@@ -1,0 +1,21 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "payee"
+    },
+    {
+        "name": "amount"
+    },
+    {
+        "name": "day"
+    },
+    {
+        "name": "dueDate"
+    },
+    {
+        "name": "frequency"
+    }
+]

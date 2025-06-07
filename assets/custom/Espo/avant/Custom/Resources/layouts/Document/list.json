@@ -1,0 +1,22 @@
+[
+    {
+        "name": "name",
+        "width": 40,
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "type",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "createdBy"
+    },
+    {
+        "name": "file",
+        "width": 10,
+        "notSortable": true,
+        "align": "left"
+    }
+]

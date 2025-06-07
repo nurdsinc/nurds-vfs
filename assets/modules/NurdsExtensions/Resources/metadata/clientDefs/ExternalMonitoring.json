@@ -1,0 +1,145 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "iconClass": "fas fa-table",
+    "dynamicLogic": {
+        "fields": {
+            "token": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "authType",
+                            "value": "Token"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "authType",
+                            "value": "Token"
+                        }
+                    ]
+                }
+            },
+            "apiKey": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "authType",
+                            "value": "API Key"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "authType",
+                            "value": "API Key"
+                        }
+                    ]
+                }
+            },
+            "username": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "authType",
+                            "value": "Credentials"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "authType",
+                            "value": "Credentials"
+                        }
+                    ]
+                }
+            },
+            "password": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "authType",
+                            "value": "Credentials"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "authType",
+                            "value": "Credentials"
+                        }
+                    ]
+                }
+            }
+        },
+        "options": {
+            "status": [
+                {
+                    "optionList": [
+                        "Pending"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "isEmpty",
+                            "attribute": "authType"
+                        }
+                    ]
+                },
+                {
+                    "optionList": [
+                        "Pending"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "isEmpty",
+                            "attribute": "source"
+                        }
+                    ]
+                },
+                {
+                    "optionList": [
+                        "Pending",
+                        "Active",
+                        "Monitor",
+                        "Sync",
+                        "Disabled"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "authType"
+                        },
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "source"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "relationshipPanels": {
+        "parent": {
+            "layout": null
+        },
+        "tasks": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    }
+}

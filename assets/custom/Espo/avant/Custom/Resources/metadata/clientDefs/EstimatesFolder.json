@@ -1,0 +1,48 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "color": null,
+    "iconClass": "fas fa-file-alt",
+    "kanbanViewMode": false,
+    "relationshipPanels": {
+        "check": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "checks": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "check": {
+                "visible": null
+            },
+            "newChecksReleased": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "estimateType",
+                            "value": "Insurance"
+                        }
+                    ]
+                }
+            },
+            "nonRecoverableRCV": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "estimateType",
+                            "value": "Insurance"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

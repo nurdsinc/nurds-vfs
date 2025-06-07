@@ -1,0 +1,29 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "cStatus"
+    },
+    {
+        "name": "account"
+    },
+    {
+        "name": "accountType"
+    },
+    {
+        "name": "campaign"
+    },
+    {
+        "name": "portalUser"
+    },
+    {
+        "name": "tags"
+    },
+    {
+        "name": "originalLead"
+    }
+]

@@ -1,0 +1,91 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "accounts"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                }
+            ],
+            [
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "dob"
+                },
+                {
+                    "name": "age"
+                }
+            ],
+            [
+                {
+                    "name": "gender"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "addressCity"
+                },
+                {
+                    "name": "addressCountry"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cDriversLicenseNumber"
+                },
+                {
+                    "name": "cDriversLicenseExpiration"
+                }
+            ],
+            [
+                {
+                    "name": "cDriversLicenseState"
+                },
+                {
+                    "name": "cProfileImage"
+                }
+            ],
+            [
+                {
+                    "name": "cDriversLicenseFront"
+                },
+                {
+                    "name": "cDriversLicenseBack"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Driver",
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": ""
+    }
+]

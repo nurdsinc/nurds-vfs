@@ -1,0 +1,39 @@
+{
+    "fields": {
+        "address": "Address",
+        "contact": "Insured",
+        "account": "Vendor",
+        "account1": "Vendor",
+        "position": "Position",
+        "discProfile": "Disc Profile"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks",
+        "contact": "Insured",
+        "account": "Vendor",
+        "account1": "Vendor"
+    },
+    "labels": {
+        "Create AdditionalContact": "Create Additional Contact"
+    },
+    "options": {
+        "position": {
+            "CEO": "CEO",
+            "CFO": "CFO",
+            "CXO": "CXO",
+            "Manager": "Manager",
+            "Employee": "Employee",
+            "Sales Representative": "Sales Representative",
+            "Assistant": "Assistant",
+            "Administrator": "Administrator"
+        },
+        "discProfile": {
+            "High D": "High D",
+            "High I": "High I",
+            "High S": "High S",
+            "High C": "High C"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+[
+    "assignedUser",
+    "teams",
+    "createdAt",
+    "createdBy",
+    "modifiedAt",
+    "type",
+    "industry",
+    "description",
+    "emailAddress",
+    "phoneNumber",
+    "targetLists",
+    "billingAddressCountry",
+    "billingAddress",
+    "shippingAddress",
+    "website",
+    "campaign",
+    "cStatus",
+    "cTags"
+]

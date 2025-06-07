@@ -1,0 +1,80 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "gender"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "age"
+                },
+                {
+                    "name": "dob"
+                }
+            ],
+            [
+                {
+                    "name": "address"
+                },
+                {
+                    "name": "accounts"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cDriversLicenseNumber"
+                },
+                {
+                    "name": "cDriversLicenseExpiration"
+                },
+                {
+                    "name": "cDriversLicenseState"
+                }
+            ],
+            [
+                {
+                    "name": "cDriversLicenseFront"
+                },
+                {
+                    "name": "cDriversLicenseBack"
+                },
+                {
+                    "name": "cProfileImage"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "dynamicLogicStyled": null,
+        "tabBreak": true,
+        "tabLabel": "Driver",
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "label": ""
+    }
+]

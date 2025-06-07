@@ -1,0 +1,103 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "projectName"
+                }
+            ],
+            [
+                {
+                    "name": "permitNumber"
+                },
+                {
+                    "name": "permitType"
+                }
+            ],
+            [
+                {
+                    "name": "valuation"
+                },
+                {
+                    "name": "squareFeet"
+                }
+            ],
+            [
+                {
+                    "name": "permitStatus"
+                },
+                {
+                    "name": "district"
+                }
+            ],
+            [
+                {
+                    "name": "address"
+                },
+                {
+                    "name": "mainParcel"
+                }
+            ],
+            [
+                {
+                    "name": "addressMap"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "appliedDate"
+                },
+                {
+                    "name": "issuedDate"
+                }
+            ],
+            [
+                {
+                    "name": "expirationDate"
+                },
+                {
+                    "name": "finalizedDate"
+                }
+            ],
+            [
+                {
+                    "name": "permitId"
+                }
+            ]
+        ],
+        "style": "default",
+        "noteStyle": "info",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "json"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Json",
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "label": ""
+    }
+]

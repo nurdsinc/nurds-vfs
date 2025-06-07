@@ -1,0 +1,92 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "fileAttachment"
+                }
+            ],
+            [
+                {
+                    "name": "claimLink"
+                },
+                {
+                    "name": "client"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "success",
+        "dynamicLogicStyled": {
+            "conditionGroup": [
+                {
+                    "type": "isTrue",
+                    "attribute": "newChecksReleased"
+                }
+            ]
+        },
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Estimate Details"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "rCVestimates"
+                }
+            ],
+            [
+                {
+                    "name": "depreciationEst"
+                },
+                {
+                    "name": "pWI"
+                },
+                {
+                    "name": "aCVEst"
+                }
+            ],
+            [
+                {
+                    "name": "nonRecoverableRCV"
+                },
+                {
+                    "name": "newChecksReleased"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Breakdown"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "check"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "success",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Associated Checks"
+    }
+]

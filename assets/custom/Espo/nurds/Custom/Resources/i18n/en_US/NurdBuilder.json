@@ -1,0 +1,42 @@
+{
+    "fields": {
+        "nextBillingDate": "Next Billing Date",
+        "lastBillingDate": "Last Billing Date",
+        "status": "Status",
+        "overchargeEmails": "Overcharge Emails",
+        "billingPeriod": "Billing Period",
+        "created": "Created",
+        "recurringManualSubscription": "Recurring Manual Subscription",
+        "inFreeMonth": "In Free Month",
+        "projectId": "Project Id",
+        "plan": "Plan",
+        "bandwidthPeriod": "Bandwidth Period"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks"
+    },
+    "labels": {
+        "Create NurdBuilder": "Create Nurd Builder"
+    },
+    "options": {
+        "status": {
+            "ACTIVE": "ACTIVE",
+            "EXPIRED": "EXPIRED",
+            "TRIAL": "TRIAL",
+            "PENDING": "PENDING"
+        },
+        "billingPeriod": {
+            "MONTHLY": "MONTHLY",
+            "YEARLY": "YEARLY"
+        },
+        "plan": {
+            "Trial": "Trial",
+            "Personal": "Personal",
+            "Business": "Business",
+            "Growth": "Growth",
+            "WL Growth": "WL Growth"
+        }
+    }
+}

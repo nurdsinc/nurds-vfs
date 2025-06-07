@@ -1,0 +1,46 @@
+{
+    "fields": {
+        "claim": {
+            "type": "link"
+        },
+        "balanceDue": {
+            "type": "currency",
+            "isCustom": true,
+            "default": 0
+        },
+        "totalReceived": {
+            "type": "currency",
+            "isCustom": true,
+            "default": 0
+        },
+        "datePaid": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
+        },
+        "checks": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "claim": {
+            "type": "belongsTo",
+            "foreign": "invoices",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        },
+        "checks": {
+            "type": "hasMany",
+            "foreign": "invoice",
+            "entity": "Check",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

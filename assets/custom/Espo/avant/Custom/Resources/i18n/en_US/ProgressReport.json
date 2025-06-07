@@ -1,0 +1,74 @@
+{
+    "fields": {
+        "claim": "Claim",
+        "sendToVendor": "Send to Referral Partner",
+        "sendToInsured": "Send To Insured",
+        "sendToReferralPartner": "Send to Referral Partner",
+        "customAlert": "Custom Alert",
+        "alerts": "Alerts",
+        "accounts": "Vendors",
+        "mostRecentUpdate": "Most Recent Update",
+        "problemsWithClaim": "Problems With Claim",
+        "expectationsInComingWeeks": "Expectations In Coming Weeks",
+        "publicAdjusterNextSteps": "Public Adjuster Next Steps",
+        "personalAssistantNextSteps": "Personal Assistant Next Steps",
+        "currentStatus": "Current Status",
+        "newStatus": "New Status",
+        "jobType": "Claim Type",
+        "adjusters": "Adjusters",
+        "sendToAdjuster": "Send To Adjuster",
+        "scheduleChecklist": "Schedule Checklist",
+        "timeToSend": "Time to Send",
+        "customEmailToAdjuster": "Custom Email To Adjuster",
+        "customEmailToReferralPartner": "Custom Email To Referral Partner",
+        "sendCustomEmailToAdjuster": "Send Custom Email to Adjuster",
+        "contact": "Insured",
+        "companyName": "Company Name",
+        "claimNumber": "Claim Number",
+        "emailAddress": "Email Address",
+        "phoneNumber": "Phone Number",
+        "vendors": "Vendors",
+        "sendUpdateToVendor": "Send Update to Vendor",
+        "sendCustomUpdateToVendor": "Send Custom Update to Vendor",
+        "sendCustomEmailUpdateToVendor": "Send Custom Email Update to Vendor"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks",
+        "claim": "Claim",
+        "accounts": "Vendors",
+        "adjusters": "Adjusters",
+        "contact": "Insured",
+        "vendors": "Vendors"
+    },
+    "labels": {
+        "Create ProgressReport": "Create Claims Update"
+    },
+    "tooltips": {
+        "sendToVendor": "What do you want to email to the partner?",
+        "sendToInsured": "What do you want to send to Insured.",
+        "sendToReferralPartner": "If this box is selected the email will send to the referral partner.",
+        "customAlert": "If this is selected you will have the ability to create a unique email to the referral partner."
+    },
+    "options": {
+        "alerts": {
+            "Send to Referral Partner": "Send to Referral Partner",
+            "Send Custom Email": "Custom Email to Referral Partner",
+            "Send to Adjuster": "Send to Adjuster",
+            "Send Custom Email Adjuster": "Custom Email to Adjuster",
+            "ASDF": "ASDF",
+            "Send to Vendor": "Send to Vendor",
+            "Send Custom Email Vendor": "Send Custom Email Vendor"
+        },
+        "newStatus": {
+            "Pending": "Pending"
+        },
+        "scheduleChecklist": {
+            "Ready to Send": "Ready to Send",
+            "Set Delay": "Set Delay",
+            "Sent": "Sent",
+            "TEST": "TEST"
+        }
+    }
+}

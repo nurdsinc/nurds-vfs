@@ -1,0 +1,60 @@
+{
+    "labels": {
+        "Create Adjuster": "Create Adjuster"
+    },
+    "fields": {
+        "phone": "phone",
+        "email": "email",
+        "primary": "primary",
+        "extension": "Extension",
+        "cases": "Tickets",
+        "case": "Ticket",
+        "insuranceCompany": "Insurance Company",
+        "claim": "Claim",
+        "user": "User",
+        "inspections": "Inspections",
+        "claims": "Claims",
+        "claims1": "Claims (Carriers Appraiser)",
+        "claims12": "Claims (Umpire)",
+        "claims123": "Claims (Insureds Apprasier",
+        "claims1234": "Claims (Primary Adjuster)",
+        "type": "Type",
+        "insuranceCompanies": "Insurance Companies",
+        "discProfile": "Disc Profile",
+        "progressReports": "Progress Reports",
+        "leads": "Leads"
+    },
+    "links": {
+        "cases": "Tickets",
+        "case": "Ticket",
+        "insuranceCompany": "Insurance Company",
+        "claim": "Claim",
+        "user": "User",
+        "inspections": "Inspections",
+        "claims": "Claims",
+        "claims1": "Claims (Carriers Appraiser)",
+        "claims12": "Claims (Umpire)",
+        "claims123": "Claims (Insureds Apprasier",
+        "claims1234": "Claims (Primary Adjuster)",
+        "insuranceCompanies": "Insurance Companies",
+        "progressReports": "Progress Reports",
+        "leads": "Leads"
+    },
+    "options": {
+        "type": {
+            "": "",
+            "Field": "Field",
+            "Desk": "Desk",
+            "Independent": "Independent",
+            "Appraiser": "Appraiser",
+            "Umpire": "Umpire",
+            "Public Adjuster": "Public Adjuster"
+        },
+        "discProfile": {
+            "High D": "High D",
+            "High I": "High I",
+            "High S": "High S",
+            "High C": "High C"
+        }
+    }
+}

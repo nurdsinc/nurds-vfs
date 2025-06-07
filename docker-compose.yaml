@@ -1,0 +1,264 @@
+services:
+
+  traefik:
+    image: traefik:latest
+    container_name: traefik
+    restart: always
+    command:
+      - --log.level=ERROR
+      - --api.insecure=true
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.websecure.address=:443
+      #- --entrypoints.websecure.asDefault=true
+      #- --entrypoints.websecure.http.tls=true
+      #- --entrypoints.websecure.http.tls.certresolver=digitalocean
+      #- --entrypoints.websecure.http.tls.domains[0].main=*.nurds.dev
+      #- --entrypoints.websecure.http.tls.domains[0].sans=*.crm.nurds.dev
+      - --entrypoints.web.address=:80
+      - --entrypoints.web.http.redirections.entryPoint.to=websecure
+      - --entrypoints.web.http.redirections.entryPoint.scheme=https
+      - --entrypoints.web.http.redirections.entrypoint.permanent=true
+      - --certificatesresolvers.dnsresolver.acme.dnschallenge=true
+      - --certificatesresolvers.dnsresolver.acme.dnschallenge.provider=digitalocean
+      - --certificatesresolvers.dnsresolver.acme.dnschallenge.resolvers=ns1.digitalocean.com:53,ns2.digitalocean.com:53,ns3.digitalocean.com:53
+      - --certificatesresolvers.dnsresolver.acme.email=dustin@nurds.com
+      - --certificatesresolvers.dnsresolver.acme.caserver=https://acme.zerossl.com/v2/DV90
+      - --certificatesresolvers.dnsresolver.acme.eab.kid=zE_CC5eXZgYWMpoJzcp3wA
+      - --certificatesresolvers.dnsresolver.acme.eab.hmacEncoded=5YTP-o3iMTye2UYHXOyiWOzfl2wsnHpRHZe5Mwg6K7G1l8UucxTZMpkK1vQGthaKsH8iSz487-wwicSHM66CTQ
+      - --certificatesresolvers.dnsresolver.acme.storage=/letsencrypt/acme-dns.json
+      - --certificatesresolvers.tlsresolver.acme.tlschallenge=true
+      - --certificatesresolvers.tlsresolver.acme.email=dustin@nurds.com
+      - --certificatesresolvers.tlsresolver.acme.storage=/letsencrypt/acme-tls.json
+    environment:
+      - DO_AUTH_TOKEN=dop_v1_f61b4ca0aaf4f62098952902c00529076fcb007e9023e71dcc5d84ac2ba01650
+    labels:
+      - "traefik.enable=true"
+      # Global HTTP to HTTPS redirect
+      - "traefik.http.routers.http-catchall.rule=HostRegexp(`{host:.+}`)"
+      - "traefik.http.routers.http-catchall.entrypoints=web"
+      - "traefik.http.routers.http-catchall.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+    ports:
+      - "80:80"        # http
+      - "8080:8080"    # :8080 Dashboard
+      - "443:443"      # https
+    volumes:
+      - ./letsencrypt:/letsencrypt                       # volume for certificates (TLS)
+      - /var/run/docker.sock:/var/run/docker.sock:ro     # volume for Docker admin
+    networks:
+      - default
+
+  # mysql:
+  #   image: mysql:latest
+  #   container_name: mysql
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: root_password
+  #     MYSQL_DATABASE: espocrm
+  #     MYSQL_USER: espouser
+  #     MYSQL_PASSWORD: database_password
+  #   volumes:
+  #     - mysql:/var/lib/mysql
+  #   restart: always
+
+  espocrm:
+    image: espocrm/espocrm:9.0.2
+    container_name: espocrm
+    environment:
+      ESPOCRM_DATABASE_HOST: proxysql.nurds.com
+      ESPOCRM_DATABASE_USER: db_user_nurds
+      ESPOCRM_DATABASE_PASSWORD: "P@ssw0rd1!2@3#"
+      ESPOCRM_DATABASE_PORT: 6033
+      ESPOCRM_DATABASE_NAME: selectadjusters
+      ESPOCRM_ADMIN_USERNAME: admin
+      ESPOCRM_ADMIN_PASSWORD: password
+      ESPOCRM_SITE_URL: "https://crm.nurds.dev"
+      ESPOCRM_DATE_FORMAT: MM/DD/YYYY
+      ESPOCRM_TIME_FORMAT: hh:mm A
+      ESPOCRM_TIME_ZONE: America/Phoenix
+      VULTR_ACCESS_KEY: "Q8W99JP7CK1T06CYZ3HR"
+      VULTR_SECRET_KEY: "DxpgneD5tTDDKP0CJDbzrykhjX7p59wOKgAvqT3n"
+      NURDS_SERVER_ID: "crm"
+    volumes:
+      - ./espocrm:/var/www/html
+      - ./scripts:/scripts
+      - ./scripts/initial.sh:/usr/local/bin/initial.sh
+      - ./php/conf.d/nurds.ini:/usr/local/etc/php/conf.d/nurds.ini
+      - ./apache/conf-enabled/expires.conf:/etc/apache2/conf-enabled/expires.conf
+      - ./assets/php/nurds.php:/usr/src/espocrm/nurds.php
+      - ./assets/php/nurds-vultr.php:/usr/src/espocrm/nurds-vultr.php
+      - ./assets/php/bootstrap.php:/usr/src/espocrm/bootstrap.php
+      - ./assets/php/update_all_tenants.php:/usr/src/espocrm/update_all_tenants.php
+      - ./assets/php/update_config.php:/usr/src/espocrm/update_config.php
+      - ./assets/php/Service.php:/usr/src/espocrm/application/Espo/Tools/Pdf/Service.php
+      - ./assets/public/oauth-callback.php:/usr/src/espocrm/public/oauth-callback.php
+      - ./assets/public/install/js/install.js:/usr/src/espocrm/public/install/js/install.js
+      - ./assets/php/Sync.php:/usr/src/espocrm/application/Espo/Core/Authentication/Oidc/UserProvider/Sync.php
+      - ./assets/about.md:/usr/src/espocrm/application/Espo/Resources/texts/about.md
+      - ./logs:/var/log
+      - ./assets/client/img:/usr/src/espocrm/client/img
+      - ./assets/client/custom/modules:/usr/src/espocrm/client/custom/modules
+      - ./assets/custom/Espo/Modules:/usr/src/espocrm/custom/Espo/Modules
+      - ./assets/public/install/img:/usr/src/espocrm/public/install/img
+      - /mnt/vfs:/mnt/vfs
+    restart: always
+    entrypoint: /scripts/bin/docker-entrypoint.sh
+    command: apache2-foreground
+    mem_reservation: 1024m   # Optional memory reservation
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    labels:
+      - traefik.enable=true
+
+      # Specific Routing for crm.nurds.dev
+      - traefik.http.routers.wildcard-crm.rule=HostRegexp(`.+\.crm\.nurds\.dev`)
+      - traefik.http.routers.wildcard-crm.entrypoints=websecure
+      - traefik.http.routers.wildcard-crm.tls=true
+      - traefik.http.routers.wildcard-crm.tls.certresolver=dnsresolver
+      - traefik.http.routers.wildcard-crm.tls.domains[0].main=*.crm.nurds.dev
+
+      # # Specific Routing for crm.nurds.dev
+      - traefik.http.routers.specific-crm.rule=Host(`crm.nurds.dev`)
+      - traefik.http.routers.specific-crm.entrypoints=websecure
+      - traefik.http.routers.specific-crm.tls=true
+      - traefik.http.routers.specific-crm.tls.certresolver=tlsresolver
+
+      # Specific Routing for dev-crm.nurds.com
+      - traefik.http.routers.specific-devcrm.rule=Host(`dev-crm.nurds.com`)
+      - traefik.http.routers.specific-devcrm.entrypoints=websecure
+      - traefik.http.routers.specific-devcrm.tls=true
+      - traefik.http.routers.specific-devcrm.tls.certresolver=tlsresolver
+    networks:
+      - default
+
+  # espocrm-crons:
+  #   image: espocrm/espocrm:9.0.2
+  #   container_name: espocrm-crons
+  #   environment:
+  #     ESPOCRM_DATABASE_HOST: proxysql.nurds.com
+  #     ESPOCRM_DATABASE_USER: db_user_nurds
+  #     ESPOCRM_DATABASE_PASSWORD: "P@ssw0rd1!2@3#"
+  #     ESPOCRM_DATABASE_PORT: 6033
+  #     ESPOCRM_DATABASE_NAME: selectadjusters
+  #     ESPOCRM_ADMIN_USERNAME: admin
+  #     ESPOCRM_ADMIN_PASSWORD: password
+  #     ESPOCRM_SITE_URL: "https://crons.crm.nurds.dev"
+  #     ESPOCRM_DATE_FORMAT: MM/DD/YYYY
+  #     ESPOCRM_TIME_FORMAT: hh:mm A
+  #     ESPOCRM_TIME_ZONE: America/Phoenix
+  #     VULTR_ACCESS_KEY: "Q8W99JP7CK1T06CYZ3HR"
+  #     VULTR_SECRET_KEY: "DxpgneD5tTDDKP0CJDbzrykhjX7p59wOKgAvqT3n"
+  #     NURDS_SERVER_ID: "crons"
+  #   volumes:
+  #     - ./espocrm-crons:/var/www/html
+  #     - ./scripts:/scripts
+  #     - ./scripts/initial.sh:/usr/local/bin/initial.sh
+  #     - ./assets/php/nurds.php:/usr/src/espocrm/nurds.php
+  #     - ./assets/php/nurds-vultr.php:/usr/src/espocrm/nurds-vultr.php
+  #     - ./assets/php/bootstrap.php:/usr/src/espocrm/bootstrap.php
+  #     - ./assets/php/Service.php:/usr/src/espocrm/application/Espo/Tools/Pdf/Service.php
+  #     - ./assets/public/oauth-callback.php:/usr/src/espocrm/public/oauth-callback.php
+  #     - ./assets/public/install/js/install.js:/usr/src/espocrm/public/install/js/install.js
+  #     - ./assets/php/Sync.php:/usr/src/espocrm/application/Espo/Core/Authentication/Oidc/UserProvider/Sync.php
+  #     - ./assets/about.md:/usr/src/espocrm/application/Espo/Resources/texts/about.md
+  #     - ./logs:/var/log
+  #     - ./assets/client/img:/usr/src/espocrm/client/img
+  #     - ./assets/client/custom/modules:/usr/src/espocrm/client/custom/modules
+  #     - ./assets/public/install/img:/usr/src/espocrm/public/install/img
+  #     - /mnt/vfs/assets:/mnt/vfs/assets
+  #     - /mnt/vfs/supervisor:/etc/supervisor/conf.d
+  #   restart: always
+  #   entrypoint: /scripts/bin/docker-entrypoint.sh
+  #   command: apache2-foreground
+  #   mem_limit: 512m  # For standalone mode (non-swarm)
+  #   cpus: '0.5' # Maximum 50% of a single cpu
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "curl -f http://localhost || exit 1"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
+  #     start_period: 60s
+  #   labels:
+  #     - traefik.enable=true
+
+  #     # Specific Routing for crons.nurds.dev
+  #     - traefik.http.routers.crons-crm.rule=Host(`crons.nurds.dev`)
+  #     - traefik.http.routers.crons-crm.entrypoints=websecure
+  #     - traefik.http.routers.crons-crm.tls=true
+  #     - traefik.http.routers.crons-crm.tls.certresolver=tlsresolver
+
+  #   networks:
+  #     - default
+
+  # espocrm-daemon:
+  #   image: espocrm/espocrm:8.4.2
+  #   container_name: espocrm-daemon
+  #   depends_on:
+  #     espocrm:
+  #       condition: service_healthy
+  #   volumes:
+  #     - ./espocrm:/var/www/html
+  #     - ./scripts:/scripts
+      # - ./assets/php/bootstrap.php:/var/www/html/bootstrap.php
+      # - ./assets/php/nurds.php:/var/www/html/nurds.php
+      # - ./assets/php/nurds-vultr.php:/var/www/html/nurds-vultr.php
+      # - ./assets/data/nurds:/var/www/html/data/nurds
+    # restart: always
+    # entrypoint: /scripts/bin/docker-daemon.sh
+    # networks:
+    #   - default
+
+  # espocrm-websocket:
+  #   image: espocrm/espocrm:latest
+  #   container_name: espocrm-websocket
+  #   environment:
+  #    ESPOCRM_CONFIG_USE_WEB_SOCKET: "false"
+  #    ESPOCRM_CONFIG_WEB_SOCKET_URL: "wss://dev-crm.nurds.com/ws"     
+  #    ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBSCRIBER_DSN: "tcp://*:7777"
+  #    ESPOCRM_CONFIG_WEB_SOCKET_ZERO_M_Q_SUBMISSION_DSN: "tcp://espocrm-websocket:7777"
+  #   volumes:
+  #     - espocrm:/var/www/html
+  #   restart: always
+  #   entrypoint: docker-websocket.sh
+  #   labels:
+  #     - traefik.enable=true
+  #     - traefik.http.routers.espocrm-ws.rule=Host(`dev-crm.nurds.com`) && PathPrefix(`/ws`)
+  #     - traefik.http.routers.espocrm-ws.entrypoints=websecure
+  #     - traefik.http.routers.espocrm-ws.tls=true
+  #     - traefik.http.routers.espocrm-ws.tls.certresolver=esporesolver
+  #     - traefik.http.middlewares.websocket-headers.headers.customrequestheaders.Upgrade=websocket
+  #     - traefik.http.middlewares.websocket-headers.headers.customrequestheaders.Connection=Upgrade
+  #     - traefik.http.routers.espocrm-ws.middlewares=websocket-headers
+  #   networks:
+  #     - default
+
+  # nurdscrm-script:
+  #   image: espocrm/espocrm:latest
+  #   container_name: nurdscrm-script
+  #   volumes:
+  #     - espocrm:/var/www/html  # Mount the same volume
+  #     - ./scripts:/scripts
+  #     - ./assets/php/bootstrap.php:/var/www/html/bootstrap.php
+  #     - ./assets/php/nurds.php:/var/www/html/nurds.php
+  #     - ./assets/php/nurds-vultr.php:/var/www/html/nurds-vultr.php
+  #     - ./assets/data/nurds:/var/www/html/data/nurds
+  #     - ./logs/nurdscrm_script.log:/var/log/nurdscrm_script.log
+  #     - ./assets/client/img:/var/www/html/nurd_assets/client/img
+  #     - ./assets/public/install/img:/var/www/html/nurd_assets/public/install/img
+  #   entrypoint:  /bin/bash -c "sleep 10 && /scripts/nurdscrm.sh"
+  #   restart: "always"
+  #   networks:
+  #     - default
+
+volumes:
+  letsencrypt:
+  #espocrm:
+  assets:
+
+networks:
+  default:
+    driver: bridge

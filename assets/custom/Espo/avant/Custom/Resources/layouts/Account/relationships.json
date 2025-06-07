@@ -1,0 +1,23 @@
+[
+    {
+        "name": "additionalContacts"
+    },
+    {
+        "name": "contacts"
+    },
+    {
+        "name": "documentsPrimary"
+    },
+    {
+        "name": "claims"
+    },
+    {
+        "name": "opportunities"
+    },
+    {
+        "name": "cases"
+    },
+    {
+        "name": "payables"
+    }
+]

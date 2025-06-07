@@ -1,0 +1,35 @@
+{
+    "fields": {
+        "commission": "Commission",
+        "checks": "Checks",
+        "documents": "Documents",
+        "primaryOutboundNumber": "Primary Outbound Number",
+        "adjusters": "Adjusters",
+        "claims": "Claims",
+        "claim": "Claim",
+        "category": "Category",
+        "claims1": "Claims",
+        "leads": "Leads",
+        "estimatesFolders": "Estimates Folders",
+        "cClaimStatus": "Claim Status"
+    },
+    "links": {
+        "checks": "Checks",
+        "documents": "Documents",
+        "adjusters": "Adjusters",
+        "claims": "Claims",
+        "claim": "Claim",
+        "claims1": "Claims",
+        "leads": "Leads",
+        "estimatesFolders": "Estimates Folders",
+        "cClaimStatus": "Claim Status"
+    },
+    "options": {
+        "category": {
+            "Public Adjuster": "Public Adjuster",
+            "Office Assistant": "Office Assistant",
+            "": "Not Set",
+            "Sales Rep": "Sales Rep"
+        }
+    }
+}

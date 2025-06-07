@@ -1,0 +1,17 @@
+[
+    "amount",
+    "paidFrom",
+    "checkStatus",
+    "deposited",
+    "payee",
+    "dueDate",
+    "datePaid",
+    "checks",
+    "contact",
+    "claim",
+    "status",
+    "type",
+    "parent",
+    "name",
+    "assignedUser"
+]

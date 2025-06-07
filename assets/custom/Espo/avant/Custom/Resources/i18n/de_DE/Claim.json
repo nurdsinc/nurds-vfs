@@ -1,0 +1,9 @@
+{
+  "links": {
+    "calls": "Anrufe",
+    "tasks": "Aufgaben"
+  },
+  "labels": {
+    "Create Claim": "Claim erstellen"
+  }
+}

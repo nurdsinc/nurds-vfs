@@ -1,0 +1,38 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "extension",
+        "align": "left"
+    },
+    {
+        "name": "dateStart",
+        "align": "left"
+    },
+    {
+        "name": "dateEnd",
+        "align": "left"
+    },
+    {
+        "name": "duration",
+        "align": "left"
+    },
+    {
+        "name": "calledNumber",
+        "align": "left"
+    },
+    {
+        "name": "callerNumber",
+        "align": "left"
+    },
+    {
+        "name": "activityType",
+        "align": "left"
+    },
+    {
+        "name": "assignedUser",
+        "align": "left"
+    }
+]

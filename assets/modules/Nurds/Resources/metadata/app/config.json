@@ -1,0 +1,19 @@
+{
+    "params": {
+        "webhookApi": {
+            "level": "system"
+        },
+        "webhookToken": {
+            "level": "system"
+        },
+        "nurdsPBXKey": {
+            "level": "system"
+        },
+        "digitalOceanToken": {
+            "level": "system"
+        },
+        "adminPanelIframeUrl":{
+            "level": "system"
+        }
+    }
+}

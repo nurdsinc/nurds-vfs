@@ -1,0 +1,17 @@
+{
+    "smtpPassword": "",
+    "restrictedMode": false,
+    "webSocketMessager": "ZeroMQ",
+    "clientSecurityHeadersDisabled": false,
+    "clientCspDisabled": false,
+    "clientCspScriptSourceList": [
+        "https://maps.googleapis.com"
+    ],
+    "adminUpgradeDisabled": false,
+    "passwordSalt": "411d2983aac1785f",
+    "cryptKey": "57f62a34ef6ff332a6171fc3132c4484",
+    "hashSecretKey": "003e9c2d2c68bd3cb3a6a2a82556e29d",
+    "apiSecretKeys": {},
+    "cleanupAppLog": true,
+    "cleanupAppLogPeriod": "30 days"
+}

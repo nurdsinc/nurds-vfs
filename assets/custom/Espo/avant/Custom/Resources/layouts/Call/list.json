@@ -1,0 +1,26 @@
+[
+    {
+        "name": "name",
+        "width": 30,
+        "link": true
+    },
+    {
+        "name": "parent",
+        "width": 18
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "dateStart"
+    },
+    {
+        "name": "duration"
+    },
+    {
+        "name": "direction"
+    },
+    {
+        "name": "assignedUser"
+    }
+]

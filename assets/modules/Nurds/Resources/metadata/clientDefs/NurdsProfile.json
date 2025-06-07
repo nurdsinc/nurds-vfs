@@ -1,0 +1,11 @@
+{
+    "controller": "nurds:controllers/nurdsprofile",
+    "recordViews":{
+       "edit": "nurds:views/nurdsprofile/record/edit"
+    },
+    "views":{
+       "edit": "nurds:views/nurdsprofile/edit"
+    },
+    "acl": "nurds:acl/nurdsprofile"
+ }
+ 

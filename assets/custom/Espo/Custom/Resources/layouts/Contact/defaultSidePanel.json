@@ -1,0 +1,23 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "account"
+    },
+    {
+        "name": "campaign"
+    },
+    {
+        "name": "portalUser"
+    },
+    {
+        "name": "originalLead"
+    },
+    {
+        "name": "tags"
+    }
+]

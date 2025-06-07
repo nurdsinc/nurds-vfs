@@ -1,0 +1,87 @@
+{
+    "fields": {
+        "type": {
+            "options": [
+                "",
+                "Email",
+                "Newsletter",
+                "Web",
+                "Television",
+                "Radio",
+                "Mail",
+                "SMS"
+            ],
+            "style": {
+                "": null,
+                "Email": null,
+                "Newsletter": null,
+                "Web": null,
+                "Television": null,
+                "Radio": null,
+                "Mail": null,
+                "SMS": null
+            },
+            "default": null,
+            "required": true
+        },
+        "SMSBots": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        },
+        "body": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "maxLength": 160,
+            "displayRawText": true,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "status": {
+            "style": {
+                "Planning": null,
+                "Active": null,
+                "Inactive": "info",
+                "Complete": "success",
+                "Needs Review": "danger",
+                "Processing": "warning",
+                "Scheduled": "primary"
+            },
+            "options": [
+                "Planning",
+                "Active",
+                "Inactive",
+                "Complete",
+                "Needs Review",
+                "Processing",
+                "Scheduled"
+            ]
+        },
+        "errorLog": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "maxLength": 200,
+            "isCustom": true
+        },
+        "startDate": {
+            "required": true
+        }
+    },
+    "links": {
+        "SMSBots": {
+            "type": "hasMany",
+            "foreign": "campaign",
+            "entity": "SMSBot",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

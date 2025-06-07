@@ -1,0 +1,65 @@
+{
+    "fields": {
+        "pickupLocation": "Pickup Location",
+        "pickupLocationStreet": "Pickup Location Street",
+        "pickupLocationCity": "Pickup Location City",
+        "pickupLocationState": "Pickup Location State",
+        "pickupLocationCountry": "Pickup Location Country",
+        "pickupLocationPostalCode": "Pickup Location Postal Code",
+        "pickupLocationMap": "Pickup Location Map",
+        "dropoffLocation": "Dropoff Location",
+        "dropoffLocationStreet": "Dropoff Location Street",
+        "dropoffLocationCity": "Dropoff Location City",
+        "dropoffLocationState": "Dropoff Location State",
+        "dropoffLocationCountry": "Dropoff Location Country",
+        "dropoffLocationPostalCode": "Dropoff Location Postal Code",
+        "dropoffLocationMap": "Dropoff Location Map",
+        "pickupDate": "Pickup Date",
+        "dropoffDate": "Dropoff Date",
+        "bookedDate": "Booked Date",
+        "vehicle": "Vehicle",
+        "primaryDriver": "Primary Driver",
+        "additionalDrivers": "Additional Drivers",
+        "status": "Status",
+        "addOns": "Add Ons",
+        "tripNumber": "Trip Number",
+        "creditCard": "Credit Card",
+        "tags": "Tags",
+        "lineItems": "Line Items"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks",
+        "vehicle": "Vehicle",
+        "primaryDriver": "Primary Driver",
+        "additionalDrivers": "Additional Drivers",
+        "creditCard": "Credit Card"
+    },
+    "labels": {
+        "Create CTrip": "Create Trip"
+    },
+    "options": {
+        "status": {
+            "Pending": "Pending",
+            "In Process": "In Process",
+            "Booked": "Booked",
+            "Delivered": "Delivered",
+            "Picked Up": "Picked Up",
+            "Trip In Progress": "Trip In Progress",
+            "Waiting on Return": "Waiting on Return",
+            "Returned": "Returned",
+            "Inspected": "Inspected",
+            "Cleaned": "Cleaned",
+            "Completed": "Completed"
+        },
+        "addOns": {
+            "Car Seat": "Car Seat"
+        },
+        "tags": {
+            "Emailed": "Emailed",
+            "Contacted": "Contacted",
+            "Emailed 2Hr Pre-Trip": "Emailed 2Hr Pre-Trip"
+        }
+    }
+}

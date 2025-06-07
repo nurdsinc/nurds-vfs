@@ -1,0 +1,26 @@
+{
+    "fields": {
+        "dob": "DOB",
+        "gender": "Gender",
+        "age": "Age",
+        "tags": "Tags",
+        "SMSBots": "SMS Bots"
+    },
+    "tooltips": {
+        "dob": "Date of Birth"
+    },
+    "options": {
+        "gender": {
+            "Unknown": "Unknown",
+            "M": "Male",
+            "F": "Female"
+        },
+        "tags": {
+            "Lead": "Lead",
+            "Client": "Client"
+        }
+    },
+    "links": {
+        "SMSBots": "SMS Bots"
+    }
+}

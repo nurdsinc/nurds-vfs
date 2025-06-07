@@ -1,0 +1,99 @@
+{
+    "fields": {
+        "amount": "Amount",
+        "amountCurrency": "Amount (Currency)",
+        "amountConverted": "Amount (Converted)",
+        "category": "Category",
+        "attachment": "Attachment",
+        "case": "Ticket",
+        "claim": "Claim",
+        "opportunities": "Receivable",
+        "payabless": "Payables",
+        "contact": "Insured",
+        "deposited": "Deposited",
+        "status": "Status",
+        "checkNumber": "Check Number",
+        "dateReceived": "Date Received",
+        "insuredOwed": "Insured Owed",
+        "vendorOwed": "Vendor Owed",
+        "pAFeeCharged": "PA Fee Charged",
+        "invoice": "Invoice",
+        "estimatesFolders": "Estimates Folders",
+        "estimatesFolder": "Estimates Folder",
+        "dateIssued": "Date Issued"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks",
+        "case": "Ticket",
+        "claim": "Claim",
+        "opportunities": "Receivable",
+        "payabless": "Payables",
+        "contact": "Insured",
+        "invoice": "Invoice",
+        "estimatesFolders": "Estimates Folders",
+        "estimatesFolder": "Estimates Folder"
+    },
+    "labels": {
+        "Create Check": "Create Check"
+    },
+    "options": {
+        "category": {
+            "NA": "NA",
+            "Deductible": "Deductible",
+            "Partial Deductible": "Partial Deductible",
+            "Depreciation": "Depreciation",
+            "Supplement": "Supplement",
+            "Misc.": "Misc.",
+            "Mitigation": "Mitigation",
+            "Additional Expenses (ALE)": "Additional Expenses (ALE)",
+            "Contents": "Contents",
+            "RCV": "RCV",
+            "ACV": "ACV"
+        },
+        "deposited": {
+            "Pending": "Pending",
+            "Yes": "Yes",
+            "No": "No"
+        },
+        "status": {
+            "Processed": "Processed",
+            "Canceled": "Canceled",
+            "Returned": "Returned",
+            "Pending": "Pending",
+            "Needs Review": "Needs Review",
+            "Deposited": "Deposited",
+            "Issued": "Issued",
+            "Received": "Received",
+            "Voided": "Voided",
+            "Mortgage": "Mortgage"
+        },
+        "pAFeeCharged": {
+            "5": "5%",
+            "6": "6%",
+            "7": "7%",
+            "8": "8%",
+            "9": "9%",
+            "10": "10%",
+            "11": "11%",
+            "12": "12%",
+            "13": "13%",
+            "14": "14%",
+            "15": "15%",
+            "16": "16%",
+            "17": "17%",
+            "18": "18%",
+            "19": "19%",
+            "20": "20%",
+            "21": "21%",
+            "22": "22%",
+            "23": "23%",
+            "24": "24%",
+            "25": "25%"
+        }
+    },
+    "tooltips": {
+        "dateIssued": "date check is issued/expected to be issued"
+    }
+}

@@ -1,0 +1,55 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "bookedDate"
+                }
+            ],
+            [
+                {
+                    "name": "primaryDriver"
+                },
+                {
+                    "name": "vehicle"
+                }
+            ],
+            [
+                {
+                    "name": "pickupLocation"
+                },
+                {
+                    "name": "pickupDate"
+                }
+            ],
+            [
+                {
+                    "name": "dropoffLocation"
+                },
+                {
+                    "name": "dropoffDate"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ],
+            [
+                {
+                    "name": "creditCard"
+                }
+            ],
+            [
+                {
+                    "name": "lineItems"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

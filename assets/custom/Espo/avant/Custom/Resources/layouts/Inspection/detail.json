@@ -1,0 +1,320 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "dateOfInpsection"
+                }
+            ],
+            [
+                {
+                    "name": "claim"
+                },
+                {
+                    "name": "claimNumber"
+                }
+            ],
+            [
+                {
+                    "name": "typeOfRoof"
+                },
+                {
+                    "name": "condition"
+                }
+            ],
+            [
+                {
+                    "name": "meeting"
+                },
+                {
+                    "name": "adjuster"
+                }
+            ],
+            [
+                {
+                    "name": "contact"
+                },
+                {
+                    "name": "status"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "primary",
+        "customLabel": "Claim Information Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "patio"
+                },
+                {
+                    "name": "tarpNeeded"
+                }
+            ],
+            [
+                {
+                    "name": "dripEdge"
+                },
+                {
+                    "name": "interiorDamage"
+                }
+            ],
+            [
+                {
+                    "name": "additionalStructureDamage"
+                },
+                false
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "warning",
+        "customLabel": "Items Affected | Needed"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "patioRoofType"
+                },
+                {
+                    "name": "patioTiedIn"
+                }
+            ],
+            [
+                {
+                    "name": "patioLength"
+                },
+                {
+                    "name": "patioWidth"
+                }
+            ],
+            [
+                {
+                    "name": "patioArea"
+                },
+                {
+                    "name": "squares"
+                }
+            ],
+            [
+                {
+                    "name": "patioStormDamage"
+                },
+                {
+                    "name": "patioNotes"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "isTrue",
+                    "attribute": "patio"
+                }
+            ]
+        },
+        "style": "info",
+        "customLabel": "Patio"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "tarpNotes"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "isTrue",
+                    "attribute": "tarpNeeded"
+                }
+            ]
+        },
+        "style": "info",
+        "customLabel": "Tarping Notes"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "contentsDamage"
+                },
+                {
+                    "name": "flooringDamage"
+                }
+            ],
+            [
+                {
+                    "name": "typesOfFlooring"
+                },
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "isTrue",
+                    "attribute": "interiorDamage"
+                }
+            ]
+        },
+        "style": "info",
+        "customLabel": "Interior Damage"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "layers"
+                },
+                {
+                    "name": "rainCaps"
+                }
+            ],
+            [
+                {
+                    "name": "rainDiverter"
+                },
+                {
+                    "name": "meterMasts"
+                }
+            ],
+            [
+                {
+                    "name": "aCUnits"
+                },
+                {
+                    "name": "exhaustCaps"
+                }
+            ],
+            [
+                {
+                    "name": "pipeJacksSm"
+                },
+                {
+                    "name": "pipeJacksLg"
+                }
+            ],
+            [
+                {
+                    "name": "offRidgeVents"
+                },
+                {
+                    "name": "otherVents"
+                }
+            ],
+            [
+                {
+                    "name": "chimneys"
+                },
+                {
+                    "name": "evapCoolers"
+                }
+            ],
+            [
+                {
+                    "name": "tVAntennas"
+                },
+                {
+                    "name": "satelliteDishes"
+                }
+            ],
+            [
+                {
+                    "name": "solarHeaters"
+                },
+                {
+                    "name": "solarPanels"
+                }
+            ],
+            [
+                {
+                    "name": "turbines"
+                },
+                {
+                    "name": "splitBoots"
+                }
+            ],
+            [
+                {
+                    "name": "skyLights"
+                },
+                {
+                    "name": "valleyType"
+                }
+            ],
+            [
+                {
+                    "name": "pVCLF"
+                },
+                {
+                    "name": "valleyLF"
+                }
+            ],
+            [
+                {
+                    "name": "addlLayersSQs"
+                },
+                {
+                    "name": "multipleStoriesSQs"
+                }
+            ],
+            [
+                {
+                    "name": "pitches212SQs"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "aMNotes"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "info",
+        "customLabel": "Roof Inspection"
+    },
+    {
+        "rows": [
+            [
+                false,
+                false
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "customLabel": "Roof"
+    },
+    {
+        "rows": [
+            [
+                false,
+                false
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "customLabel": "Siding"
+    },
+    {
+        "rows": [
+            [
+                false,
+                false
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "customLabel": "Interior"
+    }
+]

@@ -1,0 +1,10 @@
+{
+  "links": {
+    "meetings": "Ročišta",
+    "calls": "Pozivi",
+    "tasks": "Zadaci"
+  },
+  "labels": {
+    "Create CCreditCard": "Napravi CreditCard"
+  }
+}

@@ -1,0 +1,29 @@
+[
+    {
+        "name": "name",
+        "width": 30,
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "type",
+        "width": 15,
+        "align": "left"
+    },
+    {
+        "name": "status",
+        "width": 15,
+        "align": "left"
+    },
+    {
+        "name": "amount",
+        "width": 15,
+        "align": "left"
+    },
+    {
+        "name": "attachment",
+        "width": 15,
+        "link": true,
+        "align": "left"
+    }
+]

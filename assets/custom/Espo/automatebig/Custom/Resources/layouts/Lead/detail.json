@@ -1,0 +1,144 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "nameSpouse"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "accountName"
+                },
+                {
+                    "name": "title"
+                }
+            ],
+            [
+                {
+                    "name": "website"
+                },
+                {
+                    "name": "spouse"
+                }
+            ],
+            [
+                {
+                    "name": "dob"
+                },
+                {
+                    "name": "age"
+                }
+            ],
+            [
+                {
+                    "name": "address"
+                },
+                {
+                    "name": "mailingAddress"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "saleDate"
+                },
+                {
+                    "name": "deedDate"
+                }
+            ],
+            [
+                {
+                    "name": "salePrice"
+                },
+                {
+                    "name": "cashValue"
+                }
+            ],
+            [
+                {
+                    "name": "subdivisionName"
+                },
+                {
+                    "name": "hoa"
+                }
+            ],
+            [
+                {
+                    "name": "apn"
+                },
+                false
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Property Information",
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "source"
+                }
+            ],
+            [
+                {
+                    "name": "uniqueId"
+                },
+                {
+                    "name": "to"
+                }
+            ],
+            [
+                {
+                    "name": "opportunityAmount"
+                },
+                {
+                    "name": "campaign"
+                }
+            ],
+            [
+                {
+                    "name": "industry"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Details",
+        "hidden": false,
+        "noteText": null,
+        "label": ""
+    }
+]

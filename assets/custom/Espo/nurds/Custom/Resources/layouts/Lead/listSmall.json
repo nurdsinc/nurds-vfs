@@ -1,0 +1,25 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "accountName"
+    },
+    {
+        "name": "status",
+        "width": 17
+    },
+    {
+        "name": "emailAddress",
+        "width": 27,
+        "notSortable": true
+    },
+    {
+        "name": "phoneNumber"
+    },
+    {
+        "name": "createdAt",
+        "width": 18
+    }
+]

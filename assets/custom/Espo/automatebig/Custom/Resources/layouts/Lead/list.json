@@ -1,0 +1,52 @@
+[
+    {
+        "name": "name",
+        "link": "true"
+    },
+    {
+        "name": "nameSpouse",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "emailAddress",
+        "width": 20,
+        "notSortable": true
+    },
+    {
+        "name": "phoneNumber"
+    },
+    {
+        "name": "address",
+        "align": "left"
+    },
+    {
+        "name": "subdivisionName",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "hoa",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "tags",
+        "notSortable": true,
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "status",
+        "width": 15
+    },
+    {
+        "name": "assignedUser",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "createdAt",
+        "width": 13
+    }
+]

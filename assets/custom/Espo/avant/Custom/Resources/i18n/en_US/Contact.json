@@ -1,0 +1,178 @@
+{
+    "fields": {
+        "birthday": "Birthday",
+        "claimLastSNN": "Last 4 of SSN",
+        "gender": "Gender",
+        "claimNumber": "Claim Number",
+        "expenses": "Expenses",
+        "type": "Type",
+        "inventories": "Inventories",
+        "checks": "Checks",
+        "payables": "Payables",
+        "casesPrimary": "Cases (Primary)",
+        "cases": "Cases",
+        "documents": "Documents",
+        "opportunities": "Opportunities",
+        "policyRenewDate": "Policy Renew Date (mm/dd/yyyy)",
+        "accounts": "Vendors",
+        "check": "Checks",
+        "receivables": "Receivables",
+        "document": "Documents",
+        "attn": "Attn",
+        "companyName": "Company Name",
+        "additionalContacts": "Additional Contacts",
+        "policies": "Policies",
+        "claims": "Claims",
+        "status": "Status",
+        "address": "Address",
+        "source": "Source",
+        "inspections": "Inspections",
+        "contactPhoto": "Contact Photo",
+        "pronoun": "Pronoun",
+        "verb": "Verb",
+        "discProfile": "Disc Profile",
+        "mailingAddress": "Mailing Address",
+        "mailingAddressStreet": "Mailing Address Street",
+        "mailingAddressCity": "Mailing Address City",
+        "mailingAddressState": "Mailing Address State",
+        "mailingAddressCountry": "Mailing Address Country",
+        "mailingAddressPostalCode": "Mailing Address Postal Code",
+        "mailingAddressMap": "Mailing Address Map",
+        "progressReports": "Claim Updates",
+        "estimatesFolders": "Estimates Folders",
+        "estimatesFolders1": "Estimates Folders1",
+        "primaryContactName": "Primary Contact Name",
+        "emergencyContact": "Emergency Contact"
+    },
+    "options": {
+        "claimInsuranceType": {
+            "none": "None",
+            "home_owners": "Home Owners",
+            "renters": "Renters",
+            "condominium": "Condominium",
+            "commercial": "Commercial"
+        },
+        "claimEngagement": {
+            "no": "No",
+            "yes": "Yes",
+            "send_now": "Send Now"
+        },
+        "claimPreviousInsurance": {
+            "Less than a Year": "Less than a Year",
+            "1 - 2 Years": "1_2_years",
+            "2 - 5 Years": "2_5_years",
+            "5+ Years": "5_plus_years"
+        },
+        "gender": {
+            "Male": "Male",
+            "Female": "Female",
+            "": "Unknown"
+        },
+        "type": {
+            "": "",
+            "Residential": "Residential",
+            "Commercial": "Commercial",
+            "Potential New Client": "Potential New Client"
+        },
+        "phoneNumber": {
+            "Mobile": "Mobile",
+            "Office": "Office",
+            "Work": "Work",
+            "Home": "Home",
+            "Fax": "Fax",
+            "Other": "Other",
+            "Primary": "Primary",
+            "Emergency": "Emergency"
+        },
+        "status": {
+            "New": "New",
+            "Active": "Active",
+            "Inactive": "Inactive",
+            "In Process": "In Process",
+            "Assigned": "Assigned",
+            "Converted": "Converted"
+        },
+        "source": {
+            "": "None",
+            "Call": "Call",
+            "Email": "Email",
+            "Existing Customer": "Existing Customer",
+            "Partner": "Partner",
+            "Public Relations": "Public Relations",
+            "Web Site": "Web Site",
+            "Campaign": "Campaign",
+            "Other": "Other",
+            "WTS": "WTS",
+            "Inside Sales": "Inside Sales",
+            "Call In": "Call In",
+            "EDDM": "EDDM",
+            "Referral": "Referral"
+        },
+        "salutationName": {
+            "": "",
+            "Mr.": "Mr.",
+            "Ms.": "Ms.",
+            "Mrs.": "Mrs.",
+            "Dr.": "Dr.",
+            "Mr. & Mrs.": "Mr. & Mrs."
+        },
+        "pronoun": {
+            "He": "He",
+            "She": "She",
+            "They": "They",
+            "": "Unknown",
+            "he": "he",
+            "she": "she",
+            "they": "they"
+        },
+        "verb": {
+            "Is": "Is",
+            "Are": "Are",
+            "is": "is",
+            "are": "are"
+        },
+        "discProfile": {
+            "High D": "High D",
+            "High I": "High I",
+            "High S": "High S",
+            "High C": "High C"
+        }
+    },
+    "links": {
+        "adjusters": "Adjusters",
+        "contactParent": "ContactParent",
+        "adjuster": "Adjusters",
+        "contacts": "AContacts",
+        "expenses": "Expenses",
+        "inventories": "Inventories",
+        "checks": "Checks",
+        "payables": "Payables",
+        "casesPrimary": "Cases (Primary)",
+        "cases": "Cases",
+        "documents": "Documents",
+        "opportunities": "Opportunities",
+        "accounts": "Vendors",
+        "check": "Checks",
+        "receivables": "Receivables",
+        "document": "Documents",
+        "additionalContacts": "Additional Contacts",
+        "policies": "Policies",
+        "claims": "Claims",
+        "inspections": "Inspections",
+        "progressReports": "Claim Updates",
+        "estimatesFolders": "Estimates Folders",
+        "estimatesFolders1": "Estimates Folders1"
+    },
+    "labels": {
+        "Create Contact": "Create Contact"
+    },
+    "presetFilters": {
+        "emailSent": "Email Sent",
+        "hasCall": "Has Call",
+        "hasComment": "Has Comment"
+    },
+    "tooltips": {
+        "primaryContactName": "If not insured",
+        "emergencyContact": "If we cannot reach the insured"
+    }
+}

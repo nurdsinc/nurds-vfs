@@ -1,0 +1,402 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "options": []
+        },
+        "description": {
+            "type": "text"
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": true,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "claim": {
+            "type": "link"
+        },
+        "sendToVendor": {
+            "type": "wysiwyg",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "sendToInsured": {
+            "type": "wysiwyg",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "sendToReferralPartner": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "customAlert": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "alerts": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Send to Referral Partner",
+                "Send Custom Email",
+                "Send to Adjuster",
+                "Send Custom Email Adjuster",
+                "Send to Vendor",
+                "Send Custom Email Vendor"
+            ],
+            "isCustom": true
+        },
+        "accounts": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "mostRecentUpdate": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "problemsWithClaim": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "expectationsInComingWeeks": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "publicAdjusterNextSteps": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "personalAssistantNextSteps": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "currentStatus": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "claim",
+            "field": "status",
+            "view": "views/fields/foreign-enum",
+            "isCustom": true
+        },
+        "newStatus": {
+            "type": "enum",
+            "options": [
+                "",
+                "Pending",
+                "Pending LOR",
+                "Pending Demand Letter",
+                "Pending Inspection",
+                "Pending Doc Walk",
+                "Waiting on Documents",
+                "Pending Estimate",
+                "Coverage Dispute",
+                "Pending Supplement",
+                "Pending Re-Inspection",
+                "Negotiation",
+                "Pending Award Letter",
+                "Invoiced ACV Portion To Client",
+                "Invoiced RCV Portion To Client",
+                "Received ACV",
+                "Received RCV",
+                "Contractor Scheduled",
+                "Pending Construction",
+                "Pending Appraisal ",
+                "Recovering Depreciation",
+                "Pending Litigation",
+                "Collections",
+                "Award Paid",
+                "Closed",
+                "Pending Invoice",
+                "Lost"
+            ],
+            "style": {
+                "": null,
+                "Pending": "info",
+                "Pending LOR": null,
+                "Pending Demand Letter": null,
+                "Pending Inspection": null,
+                "Pending Doc Walk": null,
+                "Waiting on Documents": null,
+                "Pending Estimate": null,
+                "Coverage Dispute": null,
+                "Pending Supplement": null,
+                "Pending Re-Inspection": null,
+                "Negotiation": "primary",
+                "Pending Award Letter": null,
+                "Invoiced ACV Portion To Client": null,
+                "Invoiced RCV Portion To Client": null,
+                "Received ACV": null,
+                "Received RCV": null,
+                "Contractor Scheduled": null,
+                "Pending Construction": null,
+                "Pending Appraisal ": null,
+                "Recovering Depreciation": "warning",
+                "Pending Litigation": null,
+                "Collections": "danger",
+                "Award Paid": null,
+                "Closed": null,
+                "Pending Invoice": null,
+                "Lost": null
+            },
+            "default": "Pending",
+            "isCustom": true
+        },
+        "jobType": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "claim",
+            "field": "jobType",
+            "view": "views/fields/foreign-multi-enum",
+            "isCustom": true
+        },
+        "adjusters": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "sendToAdjuster": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "scheduleChecklist": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Ready to Send",
+                "Set Delay",
+                "Sent"
+            ],
+            "isCustom": true
+        },
+        "timeToSend": {
+            "notNull": false,
+            "type": "datetime",
+            "minuteStep": 30,
+            "isCustom": true,
+            "default": "javascript: return this.dateTime.getNow(15);"
+        },
+        "customEmailToAdjuster": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "customEmailToReferralPartner": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "sendCustomEmailToAdjuster": {
+            "type": "wysiwyg",
+            "isCustom": true
+        },
+        "contact": {
+            "type": "link"
+        },
+        "companyName": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "contact",
+            "field": "companyName",
+            "view": "views/fields/foreign-varchar",
+            "isCustom": true
+        },
+        "claimNumber": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "claim",
+            "field": "claimNumber",
+            "view": "views/fields/foreign-varchar",
+            "isCustom": true
+        },
+        "emailAddress": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "contact",
+            "field": "emailAddress",
+            "view": "views/fields/foreign-email",
+            "isCustom": true
+        },
+        "phoneNumber": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "contact",
+            "field": "phoneNumber",
+            "view": "views/fields/foreign-phone",
+            "isCustom": true
+        },
+        "vendors": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        },
+        "sendUpdateToVendor": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "sendCustomUpdateToVendor": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "sendCustomEmailUpdateToVendor": {
+            "type": "wysiwyg",
+            "isCustom": true
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "EntityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "emails": {
+            "type": "hasChildren",
+            "entity": "Email",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "claim": {
+            "type": "belongsTo",
+            "foreign": "progressReports",
+            "entity": "Claim",
+            "audited": false,
+            "isCustom": true
+        },
+        "accounts": {
+            "type": "hasMany",
+            "relationName": "progressReportAccount",
+            "foreign": "progressReports",
+            "entity": "Account",
+            "audited": false,
+            "isCustom": true
+        },
+        "adjusters": {
+            "type": "hasMany",
+            "relationName": "progressReportAdjuster",
+            "foreign": "progressReports",
+            "entity": "Adjuster",
+            "audited": false,
+            "isCustom": true
+        },
+        "contact": {
+            "type": "belongsTo",
+            "foreign": "progressReports",
+            "entity": "Contact",
+            "audited": false,
+            "isCustom": true
+        },
+        "vendors": {
+            "type": "hasMany",
+            "relationName": "progressReportVendor",
+            "foreign": "progressReports",
+            "entity": "Vendor",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "claim.name"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "indexes": {
+        "name": {
+            "columns": [
+                "name",
+                "deleted"
+            ]
+        },
+        "assignedUser": {
+            "columns": [
+                "assignedUserId",
+                "deleted"
+            ]
+        }
+    }
+}

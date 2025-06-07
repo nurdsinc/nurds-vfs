@@ -1,0 +1,3 @@
+{
+    "beforeSaveCustomScript": "balanceDue = amount - totalReceived;"
+}

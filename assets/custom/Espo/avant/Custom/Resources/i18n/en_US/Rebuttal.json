@@ -1,0 +1,12 @@
+{
+    "fields": {
+        "attachments": "Attachments",
+        "claims": "Claims"
+    },
+    "links": {
+        "claims": "Claims"
+    },
+    "labels": {
+        "Create Rebuttal": "Create Rebuttal Database"
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "links": {
+    "meetings": "vergaderingen",
+    "calls": "gesprekken",
+    "tasks": "taken"
+  },
+  "labels": {
+    "Create Claim": "Klant Claim"
+  }
+}

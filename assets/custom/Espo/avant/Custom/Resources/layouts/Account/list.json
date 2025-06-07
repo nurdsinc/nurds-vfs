@@ -1,0 +1,34 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "companyName"
+    },
+    {
+        "name": "additionalContact"
+    },
+    {
+        "name": "emailAddress"
+    },
+    {
+        "name": "phoneNumber"
+    },
+    {
+        "name": "type",
+        "width": 16
+    },
+    {
+        "name": "vendorSource"
+    },
+    {
+        "name": "billingAddressState"
+    },
+    {
+        "name": "cRM"
+    },
+    {
+        "name": "createdAt"
+    }
+]

@@ -1,0 +1,46 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "userName"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                }
+            ],
+            [
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "teams"
+                }
+            ],
+            [
+                {
+                    "name": "category"
+                }
+            ],
+            [
+                {
+                    "name": "type"
+                },
+                {
+                    "name": "isActive"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

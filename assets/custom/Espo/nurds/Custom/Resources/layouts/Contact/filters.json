@@ -1,0 +1,23 @@
+[
+    "assignedUser",
+    "teams",
+    "createdAt",
+    "createdBy",
+    "campaign",
+    "modifiedAt",
+    "accounts",
+    "address",
+    "emailAddress",
+    "phoneNumber",
+    "title",
+    "accountType",
+    "targetLists",
+    "dob",
+    "gender",
+    "age",
+    "account",
+    "tags",
+    "hasPortalUser",
+    "portalUser",
+    "cStatus"
+]

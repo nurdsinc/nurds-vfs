@@ -1,0 +1,10 @@
+{
+    "fields": {
+        "parent": {
+            "entityList": [
+                "__APPEND__",
+                "Claim"
+            ]
+        }
+    }
+}

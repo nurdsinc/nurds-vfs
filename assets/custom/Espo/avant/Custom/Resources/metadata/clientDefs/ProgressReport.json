@@ -1,0 +1,304 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "sidePanels": {
+        "detail": [
+            {
+                "name": "activities",
+                "label": "Activities",
+                "view": "crm:views/record/panels/activities",
+                "aclScope": "Activities"
+            },
+            {
+                "name": "history",
+                "label": "History",
+                "view": "crm:views/record/panels/history",
+                "aclScope": "Activities"
+            },
+            {
+                "name": "tasks",
+                "label": "Tasks",
+                "view": "crm:views/record/panels/tasks",
+                "aclScope": "Task"
+            }
+        ]
+    },
+    "iconClass": "fas fa-clipboard-list",
+    "dynamicLogic": {
+        "options": {
+            "alerts": [
+                {
+                    "optionList": [
+                        "Send to Referral Partner",
+                        "Send to Adjuster",
+                        "Send to Vendor"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "isEmpty",
+                            "attribute": "alerts"
+                        }
+                    ]
+                },
+                {
+                    "optionList": [
+                        "Send to Referral Partner",
+                        "Send Custom Email",
+                        "Send to Adjuster",
+                        "Send to Vendor"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "alerts",
+                                    "value": "Send to Referral Partner"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "alerts",
+                                    "value": "Send Custom Email"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "notHas",
+                            "attribute": "alerts",
+                            "value": "Send to Adjuster"
+                        },
+                        {
+                            "type": "notHas",
+                            "attribute": "alerts",
+                            "value": "Send Custom Email Adjuster"
+                        },
+                        {
+                            "type": "notHas",
+                            "attribute": "alerts",
+                            "value": "Send to Vendor"
+                        },
+                        {
+                            "type": "notHas",
+                            "attribute": "alerts",
+                            "value": "Send Custom Email Vendor"
+                        }
+                    ]
+                },
+                {
+                    "optionList": [
+                        "Send to Referral Partner",
+                        "Send to Adjuster",
+                        "Send Custom Email Adjuster",
+                        "Send to Vendor"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "alerts",
+                                    "value": "Send to Adjuster"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "alerts",
+                                    "value": "Send Custom Email Adjuster"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "notHas",
+                            "attribute": "alerts",
+                            "value": "Send to Referral Partner"
+                        },
+                        {
+                            "type": "notHas",
+                            "attribute": "alerts",
+                            "value": "Send Custom Email"
+                        },
+                        {
+                            "type": "notHas",
+                            "attribute": "alerts",
+                            "value": "Send to Vendor"
+                        },
+                        {
+                            "type": "notHas",
+                            "attribute": "alerts",
+                            "value": "Send Custom Email Vendor"
+                        }
+                    ]
+                },
+                {
+                    "optionList": [
+                        "Send to Referral Partner",
+                        "Send to Adjuster",
+                        "Send to Vendor",
+                        "Send Custom Email Vendor"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "alerts",
+                                    "value": "Send to Vendor"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "alerts",
+                                    "value": "Send Custom Email Vendor"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "notHas",
+                            "attribute": "alerts",
+                            "value": "Send to Referral Partner"
+                        },
+                        {
+                            "type": "notHas",
+                            "attribute": "alerts",
+                            "value": "Send Custom Email"
+                        },
+                        {
+                            "type": "notHas",
+                            "attribute": "alerts",
+                            "value": "Send to Adjuster"
+                        },
+                        {
+                            "type": "notHas",
+                            "attribute": "alerts",
+                            "value": "Send Custom Email Adjuster"
+                        }
+                    ]
+                },
+                {
+                    "optionList": [
+                        "Send to Referral Partner",
+                        "Send Custom Email",
+                        "Send to Adjuster",
+                        "Send Custom Email Adjuster",
+                        "Send to Vendor",
+                        "Send Custom Email Vendor"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "alerts",
+                                    "value": "Send to Referral Partner"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "alerts",
+                                    "value": "Send to Adjuster"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "alerts",
+                                    "value": "Send to Vendor"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "newStatus": [
+                {
+                    "optionList": [
+                        "Pending"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "isEmpty",
+                            "attribute": "jobType"
+                        }
+                    ]
+                },
+                {
+                    "optionList": [
+                        "Pending",
+                        "Pending LOR",
+                        "Pending Inspection",
+                        "Pending Doc Walk",
+                        "Waiting on Documents",
+                        "Pending Estimate",
+                        "Coverage Dispute",
+                        "Pending Re-Inspection",
+                        "Negotiation",
+                        "Pending Supplement",
+                        "Received ACV",
+                        "Invoiced ACV Portion To Client",
+                        "Pending Appraisal ",
+                        "Pending Construction",
+                        "Recovering Depreciation",
+                        "Received RCV",
+                        "Invoiced RCV Portion To Client",
+                        "Pending Litigation",
+                        "Pending Invoice",
+                        "Lost",
+                        "Collections",
+                        "Closed"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "jobType",
+                            "value": [
+                                "Public Adjuster"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "optionList": [
+                        "Pending",
+                        "Pending Demand Letter",
+                        "Pending Inspection",
+                        "Waiting on Documents",
+                        "Pending Estimate",
+                        "Pending Supplement",
+                        "Pending Re-Inspection",
+                        "Negotiation",
+                        "Pending Award Letter",
+                        "Pending Invoice",
+                        "Pending Litigation",
+                        "Collections",
+                        "Closed"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "jobType",
+                            "value": [
+                                "Appraisal"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fields": {
+            "timeToSend": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "scheduleChecklist",
+                            "value": "Set Delay"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "kanbanViewMode": false,
+    "color": null
+}

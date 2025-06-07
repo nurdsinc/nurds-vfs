@@ -1,0 +1,16 @@
+{
+    "fields": {
+        "trips": "Trips",
+        "account": "Account"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks",
+        "trips": "Trips",
+        "account": "Account"
+    },
+    "labels": {
+        "Create CVehicle": "Create Vehicle"
+    }
+}

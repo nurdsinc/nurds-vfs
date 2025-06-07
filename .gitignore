@@ -1,0 +1,23 @@
+# Ignore Composer dependencies
+/vendor/
+
+# Ignore all log files
+*.log
+
+# Ignore all folders named 'cache' anywhere in the project
+**/cache/
+
+# Ignore all zip files
+*.zip
+
+# Ignore all Modules folders inside custom/Espo recursively
+/assets/custom/Espo/**/Modules/
+
+# EXCEPTION: Allow the root Modules folder directly under custom/Espo
+!/assets/custom/Espo/Modules/
+
+# Ignore backup files
+**/.backup/
+
+# Ignore all tmp folders
+**/tmp/

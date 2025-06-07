@@ -1,0 +1,23 @@
+{
+    "fields": {
+        "billingAddress": "Billing Address",
+        "shippingAddress": "Shipping Address",
+        "website": "Website",
+        "jobTitle": "Job Title",
+        "companyName": "Company Name",
+        "claims": "Claims",
+        "progressReports": "Claims Updates",
+        "meetings1": "Meetings"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks",
+        "claims": "Claims",
+        "progressReports": "Claims Updates",
+        "meetings1": "Meetings"
+    },
+    "labels": {
+        "Create Vendor": "Create Vendor"
+    }
+}

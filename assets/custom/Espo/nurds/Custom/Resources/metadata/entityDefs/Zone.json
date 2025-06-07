@@ -1,0 +1,264 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "trim": true,
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "tooltip": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": true,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "domain": {
+            "type": "link"
+        },
+        "type": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "A",
+                "CNAME",
+                "MX",
+                "TXT",
+                "SRV",
+                "AAAA",
+                "CAA",
+                "NS",
+                "SOA",
+                ""
+            ],
+            "style": {
+                "A": null,
+                "CNAME": null,
+                "MX": null,
+                "TXT": null,
+                "SRV": null,
+                "AAAA": null,
+                "CAA": null,
+                "NS": null,
+                "SOA": null,
+                "": null
+            },
+            "default": "",
+            "isCustom": true,
+            "tooltip": true,
+            "isSorted": true,
+            "displayAsLabel": true
+        },
+        "priority": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "port": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "ttl": {
+            "type": "int",
+            "default": 600,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "weight": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "flags": {
+            "type": "int",
+            "min": 0,
+            "max": 255,
+            "default": null,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "tag": {
+            "type": "enum",
+            "options": [
+                "issue",
+                "issuewild",
+                "iodef",
+                ""
+            ],
+            "style": {
+                "issue": null,
+                "issuewild": null,
+                "iodef": null,
+                "": null
+            },
+            "default": "",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "zoneId": {
+            "type": "int",
+            "default": null,
+            "min": null,
+            "max": null,
+            "tooltip": true,
+            "isCustom": true,
+            "disableFormatting": true
+        },
+        "error": {
+            "type": "text",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true,
+            "rows": null,
+            "cutHeight": null
+        },
+        "zoneResults": {
+            "type": "text",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "update": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "jsonSent": {
+            "type": "text",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "Pending",
+                "Active",
+                "Error"
+            ],
+            "style": {
+                "Pending": "warning",
+                "Active": "success",
+                "Error": "danger"
+            },
+            "displayAsLabel": true,
+            "default": "Pending",
+            "isCustom": true
+        },
+        "data": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "rows": 1,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "EntityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "domain": {
+            "type": "belongsTo",
+            "foreign": "zones",
+            "entity": "Domain",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "indexes": {
+        "name": {
+            "columns": [
+                "name",
+                "deleted"
+            ]
+        },
+        "assignedUser": {
+            "columns": [
+                "assignedUserId",
+                "deleted"
+            ]
+        }
+    },
+    "optimisticConcurrencyControl": false
+}

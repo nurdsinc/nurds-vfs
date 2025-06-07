@@ -1,0 +1,21 @@
+[
+    "isNotRead",
+    "isNotReplied",
+    "dateSent",
+    "account",
+    "from",
+    "to",
+    "sentBy",
+    "hasAttachment",
+    "body",
+    "bodyPlain",
+    "name",
+    "status",
+    "emailAddress",
+    "parent",
+    "teams",
+    "users",
+    "createdAt",
+    "inboundEmails",
+    "emailAccounts"
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "name",
+        "width": 20,
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "type",
+        "width": 15,
+        "align": "left"
+    },
+    {
+        "name": "amount",
+        "width": 15,
+        "align": "left"
+    },
+    {
+        "name": "category"
+    },
+    {
+        "name": "stage",
+        "width": 20,
+        "align": "left"
+    }
+]

@@ -1,0 +1,24 @@
+{
+    "_delimiter_": {
+        "disabled": true
+    },
+    "stream": {
+        "sticked": true,
+        "index": 0
+    },
+    "opportunities": {
+        "index": 1
+    },
+    "cases": {
+        "index": 2
+    },
+    "targetLists": {
+        "index": 3
+    },
+    "SMSBots": {
+        "index": 4
+    },
+    "campaignLogRecords": {
+        "index": 5
+    }
+}

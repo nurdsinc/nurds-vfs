@@ -1,0 +1,16 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "claim"
+    },
+    {
+        "name": "dateOfInpsection"
+    },
+    {
+        "name": "status",
+        "width": 16
+    }
+]

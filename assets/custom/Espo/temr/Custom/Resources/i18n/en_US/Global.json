@@ -1,0 +1,14 @@
+{
+    "scopeNames": {
+        "CTrip": "Trip",
+        "CVehicle": "Vehicle",
+        "CCreditCard": "CreditCard",
+        "CReview": "Review"
+    },
+    "scopeNamesPlural": {
+        "CTrip": "Trips",
+        "CVehicle": "Vehicles",
+        "CCreditCard": "CreditCards",
+        "CReview": "Reviews"
+    }
+}

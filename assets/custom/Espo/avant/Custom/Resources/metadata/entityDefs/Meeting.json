@@ -1,0 +1,106 @@
+{
+    "fields": {
+        "parent": {
+            "entityList": [
+                "Account",
+                "Lead",
+                "Contact",
+                "Opportunity",
+                "Case",
+                "InsuranceCompany",
+                "Policy",
+                "Claim",
+                "MortgageCompany",
+                "AdditionalContact",
+                "Inspection",
+                "Check",
+                "ProgressReport",
+                "Vendor"
+            ]
+        },
+        "inspection": {
+            "type": "link"
+        },
+        "inspections": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "meetingType": {
+            "type": "enum",
+            "options": [
+                "Appraisal Inspection ",
+                "Umpire Inspection",
+                "Scope Inspection",
+                "Consultation ",
+                "Client Meeting"
+            ],
+            "style": {
+                "Appraisal Inspection ": null,
+                "Umpire Inspection": null,
+                "Scope Inspection": null,
+                "Consultation ": null,
+                "Client Meeting": null
+            },
+            "default": "Appraisal Inspection ",
+            "isCustom": true
+        },
+        "meetingAttendeesExpected": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "Insured",
+                "Contractor",
+                "Opposing Appraiser ",
+                "Umpire",
+                "Attorney",
+                "Public Adjuster"
+            ],
+            "style": {
+                "Insured": null,
+                "Contractor": null,
+                "Opposing Appraiser ": null,
+                "Umpire": null,
+                "Attorney": null,
+                "Public Adjuster": null
+            },
+            "maxCount": null,
+            "isCustom": true
+        },
+        "vendors": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "importDisabled": false,
+            "noLoad": false,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "inspection": {
+            "type": "belongsTo",
+            "foreign": "meetings1",
+            "entity": "Inspection",
+            "audited": false,
+            "isCustom": true
+        },
+        "inspections": {
+            "type": "hasMany",
+            "foreign": "meeting",
+            "entity": "Inspection",
+            "audited": false,
+            "isCustom": true
+        },
+        "vendors": {
+            "type": "hasMany",
+            "relationName": "meetingVendor",
+            "foreign": "meetings1",
+            "entity": "Vendor",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

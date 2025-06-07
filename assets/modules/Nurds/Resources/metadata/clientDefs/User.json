@@ -1,0 +1,16 @@
+{
+    "dynamicLogic": {
+        "fields": {
+            "userName": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "userName"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

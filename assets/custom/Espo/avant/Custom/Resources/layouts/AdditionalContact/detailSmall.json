@@ -1,0 +1,40 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                }
+            ],
+            [
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "position"
+                }
+            ],
+            [
+                {
+                    "name": "contact"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "account1"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

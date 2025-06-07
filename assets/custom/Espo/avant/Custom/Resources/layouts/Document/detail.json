@@ -1,0 +1,75 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "file"
+                },
+                {
+                    "name": "source"
+                }
+            ],
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "type"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "folder"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "rcvACV"
+                },
+                {
+                    "name": "estimateType"
+                }
+            ],
+            [
+                {
+                    "name": "deductible"
+                },
+                {
+                    "name": "recoverableDepreciation"
+                }
+            ],
+            [
+                {
+                    "name": "cRCVRecoverable"
+                },
+                {
+                    "name": "amount"
+                }
+            ],
+            [
+                {
+                    "name": "account"
+                },
+                {
+                    "name": "case"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Details"
+    }
+]

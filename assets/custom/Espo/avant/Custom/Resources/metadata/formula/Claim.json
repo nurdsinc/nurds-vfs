@@ -1,0 +1,3 @@
+{
+    "beforeSaveCustomScript": "ifThen(\n    checksDeposited != trustAccountPayments,\n    checksReconcile = checksDeposited - trustAccountPayments\n)"
+}

@@ -1,0 +1,366 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "trim": true
+        },
+        "description": {
+            "type": "text",
+            "default": null,
+            "maxLength": null,
+            "rows": null,
+            "cutHeight": null
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": true,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "domainId": {
+            "type": "int",
+            "disableFormatting": true,
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "tld": {
+            "type": "enum",
+            "options": [
+                ".com",
+                ".net",
+                ".us",
+                ".org",
+                ".biz",
+                ".bz",
+                ".solutions",
+                ".io",
+                ".foundation",
+                ".report",
+                ".claims",
+                ".co"
+            ],
+            "style": {
+                ".com": null,
+                ".net": null,
+                ".us": null,
+                ".org": null,
+                ".biz": null,
+                ".bz": null,
+                ".solutions": null,
+                ".io": null,
+                ".foundation": null,
+                ".report": null,
+                ".claims": null,
+                ".co": null
+            },
+            "isSorted": true,
+            "default": ".com",
+            "isCustom": true
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "Registered",
+                "On Hold",
+                "Deleted",
+                "Expired",
+                "Blocked",
+                "Transferred Away",
+                "Pending",
+                "Third Party"
+            ],
+            "style": {
+                "Registered": null,
+                "On Hold": null,
+                "Deleted": null,
+                "Expired": null,
+                "Blocked": null,
+                "Transferred Away": null,
+                "Pending": null,
+                "Third Party": null
+            },
+            "default": "Pending",
+            "isCustom": true
+        },
+        "registeredDate": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "expiryDate": {
+            "notNull": false,
+            "type": "date",
+            "default": null,
+            "after": null,
+            "before": null,
+            "isCustom": true
+        },
+        "registeredDateLong": {
+            "notNull": false,
+            "type": "datetime",
+            "default": null,
+            "after": null,
+            "before": null,
+            "minuteStep": 30,
+            "isCustom": true
+        },
+        "expiryDateLong": {
+            "notNull": false,
+            "type": "datetime",
+            "default": null,
+            "after": null,
+            "before": null,
+            "minuteStep": 30,
+            "isCustom": true
+        },
+        "locked": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "autoRenewDays": {
+            "type": "int",
+            "disableFormatting": true,
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "nameserver1": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "nameserver2": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "nameserver3": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "nameserver4": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "hasDNSZone": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "autoRenew": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "applyPrivacy": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "url": {
+            "type": "url",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "registrantName": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "organisation": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "email": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "phone": {
+            "type": "varchar",
+            "default": null,
+            "maxLength": null,
+            "options": [],
+            "isCustom": true
+        },
+        "address": {
+            "type": "address",
+            "dynamicLogicVisible": null,
+            "dynamicLogicReadOnly": null,
+            "name": "address",
+            "label": "Address",
+            "tooltipText": null,
+            "inlineEditDisabled": false,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "update": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true
+        },
+        "renew": {
+            "notNull": true,
+            "type": "bool",
+            "isCustom": true,
+            "tooltip": true
+        },
+        "availableBalance": {
+            "type": "currency",
+            "default": null,
+            "min": null,
+            "max": null,
+            "isCustom": true
+        },
+        "digitalOcean": {
+            "notNull": true,
+            "type": "bool",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "digitalOceanResponse": {
+            "type": "text",
+            "default": null,
+            "maxLength": null,
+            "isCustom": true
+        },
+        "zones": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "isCustom": true
+        },
+        "json": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "EntityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "zones": {
+            "type": "hasMany",
+            "foreign": "domain",
+            "entity": "Zone",
+            "audited": false,
+            "isCustom": true
+        },
+        "accounts": {
+            "type": "hasMany",
+            "relationName": "cDomainAccount",
+            "foreign": "cDomains",
+            "entity": "Account",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "indexes": {
+        "name": {
+            "columns": [
+                "name",
+                "deleted"
+            ]
+        },
+        "assignedUser": {
+            "columns": [
+                "assignedUserId",
+                "deleted"
+            ]
+        }
+    },
+    "optimisticConcurrencyControl": false
+}

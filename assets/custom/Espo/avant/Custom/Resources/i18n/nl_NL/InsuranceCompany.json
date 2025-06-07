@@ -1,0 +1,14 @@
+{
+  "fields": {
+    "billingAddress": "Facturatie adres",
+    "shippingAddress": "Verzendingsadres"
+  },
+  "links": {
+    "meetings": "vergaderingen",
+    "calls": "gesprekken",
+    "tasks": "taken"
+  },
+  "labels": {
+    "Create InsuranceCompany": "Klant Insurance Company"
+  }
+}

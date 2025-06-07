@@ -1,0 +1,29 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "cTags"
+    },
+    {
+        "name": "cStatus"
+    },
+    {
+        "name": "cSpouse"
+    },
+    {
+        "name": "originalLead"
+    },
+    {
+        "name": "hasPortalUser"
+    },
+    {
+        "name": "portalUser"
+    },
+    {
+        "name": "cPassword"
+    }
+]

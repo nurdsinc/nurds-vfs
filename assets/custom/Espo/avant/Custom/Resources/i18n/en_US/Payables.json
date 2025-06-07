@@ -1,0 +1,92 @@
+{
+    "labels": {
+        "Create Payables": "Create Payables"
+    },
+    "fields": {
+        "checks": "Checks",
+        "type": "Type",
+        "datePaid": "Date Paid",
+        "status": "Status",
+        "contact": "Client",
+        "payableChecks": "Payable Checks",
+        "checkNumber": "Check Number",
+        "account": "Account",
+        "payee": "Payee",
+        "accounts": "Vendors",
+        "case": "Ticket",
+        "checkss": "Checkss",
+        "dueDate": "Due Date",
+        "checkStatus": "Check Status",
+        "paidFrom": "Paid From",
+        "recurring": "Recurring",
+        "amount": "Amount",
+        "amountCurrency": "Amount (Currency)",
+        "amountConverted": "Amount (Converted)",
+        "recID": "Rec ID",
+        "claim": "Claim",
+        "claims": "Claims"
+    },
+    "links": {
+        "checks": "Checks",
+        "contact": "Client",
+        "account": "Account",
+        "accounts": "Vendors",
+        "case": "Ticket",
+        "checkss": "Checkss",
+        "recurring": "Recurring",
+        "claim": "Claim",
+        "claims": "Claims"
+    },
+    "options": {
+        "type": {
+            "commission": "Commission",
+            "refund": "Refund",
+            "insuranceFeeds": "Insurance Proceeds",
+            "Bill": "Bill",
+            "Other": "Other",
+            "Deal Split": "Deal Split",
+            "Repair": "Repair",
+            "Contents": "Contents",
+            "Fee": "Fee",
+            "Subscription": "Subscription",
+            "Utility": "Utility",
+            "Rent": "Rent",
+            "": "",
+            "Customer": "Customer",
+            "Company": "Company",
+            "Contractor": "Contractor",
+            "Commission": "Commission",
+            "Sales Rep": "Sales Rep",
+            "Avant": "Avant",
+            "Adjuster": "Adjuster"
+        },
+        "status": {
+            "pending": "Pending",
+            "approved": "Approved",
+            "paid": "Paid",
+            "void": "Void",
+            "Cut Check": "Cut Check",
+            "Needs Review": "Needs Review"
+        },
+        "paidFrom": {
+            "PENDING": "PENDING",
+            "RAPID RESTORE": "RAPID RESTORE",
+            "APA": "APA",
+            "NWPA": "NWPA",
+            "AMEX": "AMEX",
+            "CREDIT CARD": "CREDIT CARD",
+            "": "",
+            "Trust": "TRUST",
+            "Company": "COMPANY",
+            "Contractor": "CONTRACTOR"
+        }
+    },
+    "tooltips": {
+        "recID": "Recurring ID"
+    },
+    "presetFilters": {
+        "reportFilter5f4e8b2287e7135fd": "Trust Account Payments",
+        "reportFilter5f4e8b5f2468e1442": "Business Account Funds",
+        "reportFilter5f4e8b7c97ffd5fdf": "Business Account Payments"
+    }
+}

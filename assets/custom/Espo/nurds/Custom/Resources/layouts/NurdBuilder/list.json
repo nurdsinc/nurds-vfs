@@ -1,0 +1,26 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "plan",
+        "width": 16
+    },
+    {
+        "name": "created",
+        "width": 16
+    },
+    {
+        "name": "billingPeriod",
+        "width": 16
+    },
+    {
+        "name": "nextBillingDate",
+        "width": 16
+    },
+    {
+        "name": "status",
+        "width": 16
+    }
+]

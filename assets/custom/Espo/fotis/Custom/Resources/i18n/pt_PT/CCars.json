@@ -1,0 +1,10 @@
+{
+  "links": {
+    "meetings": "Reuniões",
+    "calls": "Chamadas",
+    "tasks": "Tarefas"
+  },
+  "labels": {
+    "Create CCars": "Criar Cars"
+  }
+}

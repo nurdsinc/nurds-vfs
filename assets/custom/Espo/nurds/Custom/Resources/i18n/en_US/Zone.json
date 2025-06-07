@@ -1,0 +1,66 @@
+{
+    "fields": {
+        "domain": "Domain",
+        "type": "Type",
+        "priority": "Priority",
+        "port": "Port",
+        "ttl": "TTL (Seconds)",
+        "weight": "Weight",
+        "flags": "Flags",
+        "tag": "Tag",
+        "name": "Hostname",
+        "zoneId": "Zone Id",
+        "error": "Error",
+        "zoneResults": "Zone Results",
+        "update": "Update",
+        "jsonSent": "Json Sent",
+        "status": "Status",
+        "data": "Data"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks",
+        "domain": "Domain"
+    },
+    "labels": {
+        "Create Zone": "Create Zone"
+    },
+    "options": {
+        "type": {
+            "A": "A",
+            "CNAME": "CNAME",
+            "MX": "MX",
+            "TXT": "TXT",
+            "SRV": "SRV",
+            "AAAA": "AAAA",
+            "CAA": "CAA",
+            "NS": "NS",
+            "": "Not Selected",
+            "SOA": "SOA"
+        },
+        "tag": {
+            "issue": "Issue",
+            "issuewild": "Issue Wild",
+            "iodef": "Iodef",
+            "": "Choose a Tag"
+        },
+        "status": {
+            "Pending": "Pending",
+            "Active": "Active",
+            "Error": "Error"
+        }
+    },
+    "tooltips": {
+        "priority": "The priority of the host (for SRV and MX records. null otherwise).\n\nEx: 10",
+        "name": "The host name, alias, or service being defined by the record.",
+        "type": "The record type (A, MX, CNAME, etc).",
+        "port": "The port that the service is accessible on (for SRV records only. null otherwise).",
+        "ttl": "This value is the time to live for the record, in seconds. This defines the time frame that clients can cache queried information before a refresh should be requested. There is a minimum ttl value of 30, unless it is not set. If not set, the default value is the value of the SOA record. For SOA records, defines the time to live for purposes of negative caching.",
+        "weight": "The weight of records with the same priority (for SRV records only. null otherwise).",
+        "flags": "An unsigned integer between 0-255 used for CAA records.",
+        "tag": "The parameter tag for CAA records. Valid values are \"issue\", \"issuewild\", or \"iodef\"",
+        "zoneId": "ID Returned for the Zone Record",
+        "update": "Pull Zone Record info and update locally. This is in case the information was changed on the 3rd party Zone."
+    }
+}

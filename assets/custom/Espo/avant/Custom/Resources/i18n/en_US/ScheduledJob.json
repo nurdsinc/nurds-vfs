@@ -1,0 +1,7 @@
+{
+   "options": { 
+       "job": { 
+           "SendProgressReport": "Send Claim Update"
+       }
+   }
+}

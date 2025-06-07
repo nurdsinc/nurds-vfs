@@ -1,0 +1,31 @@
+{
+    "fields": {
+        "inspections": "Inspections",
+        "inspection": "Inspection",
+        "meetingType": "Meeting Type",
+        "meetingAttendeesExpected": "Meeting Attendees Expected",
+        "vendors": "Vendors"
+    },
+    "links": {
+        "inspections": "Inspections",
+        "inspection": "Inspection",
+        "vendors": "Vendors"
+    },
+    "options": {
+        "meetingType": {
+            "Appraisal Inspection ": "Appraisal Inspection ",
+            "Umpire Inspection": "Umpire Inspection",
+            "Scope Inspection": "Scope Inspection",
+            "Consultation ": "Consultation ",
+            "Client Meeting": "Client Meeting"
+        },
+        "meetingAttendeesExpected": {
+            "Insured": "Insured",
+            "Contractor": "Contractor",
+            "Opposing Appraiser ": "Opposing Appraiser ",
+            "Umpire": "Umpire",
+            "Attorney": "Attorney",
+            "Public Adjuster": "Public Adjuster"
+        }
+    }
+}

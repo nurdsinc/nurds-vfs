@@ -1,0 +1,18 @@
+[
+    "assignedUser",
+    "teams",
+    "createdAt",
+    "createdBy",
+    "modifiedAt",
+    "accounts",
+    "address",
+    "emailAddress",
+    "phoneNumber",
+    "title",
+    "targetLists",
+    "campaign",
+    "cStatus",
+    "cSpouse",
+    "cTags",
+    "portalUser"
+]

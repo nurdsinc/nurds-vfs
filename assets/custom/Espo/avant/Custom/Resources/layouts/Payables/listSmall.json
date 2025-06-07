@@ -1,0 +1,17 @@
+[
+    {
+        "name": "payee"
+    },
+    {
+        "name": "amount"
+    },
+    {
+        "name": "datePaid"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "type"
+    }
+]

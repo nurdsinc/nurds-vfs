@@ -1,0 +1,35 @@
+[
+    {
+        "name": "checks",
+        "style": "success"
+    },
+    {
+        "name": "payables"
+    },
+    {
+        "name": "estimatesFolders"
+    },
+    {
+        "name": "documents"
+    },
+    {
+        "name": "inspections",
+        "style": "warning"
+    },
+    {
+        "name": "adjusters",
+        "style": "primary"
+    },
+    {
+        "name": "vendors"
+    },
+    {
+        "name": "invoices"
+    },
+    {
+        "name": "policies"
+    },
+    {
+        "name": "expenses"
+    }
+]

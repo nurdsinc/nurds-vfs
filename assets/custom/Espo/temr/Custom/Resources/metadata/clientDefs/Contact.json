@@ -1,0 +1,42 @@
+{
+    "kanbanViewMode": true,
+    "color": "#a4c5e0",
+    "iconClass": "fas fa-id-badge",
+    "relationshipPanels": {
+        "trips": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cTrips": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "secondaryTrips": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "additionalTrips": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cAdditionalTrips": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "spouse": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "contact": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "portalUser": {
+                "visible": null
+            }
+        }
+    }
+}

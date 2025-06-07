@@ -1,0 +1,81 @@
+[
+    {
+        "name": "name",
+        "width": 20,
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "emailAddress",
+        "width": 15,
+        "align": "left"
+    },
+    {
+        "name": "phoneNumber",
+        "width": 15,
+        "align": "left"
+    },
+    {
+        "name": "billingAddress",
+        "width": 15,
+        "align": "left"
+    },
+    {
+        "name": "industry",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "type",
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "website",
+        "notSortable": true,
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "cTags",
+        "width": 25,
+        "notSortable": true,
+        "align": "left"
+    },
+    {
+        "name": "cStartDate",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "cStatus",
+        "width": 10,
+        "align": "left",
+        "hidden": true
+    },
+    {
+        "name": "assignedUser",
+        "align": "right",
+        "hidden": true
+    },
+    {
+        "name": "createdAt",
+        "align": "right",
+        "hidden": true
+    },
+    {
+        "name": "createdBy",
+        "align": "right",
+        "hidden": true
+    },
+    {
+        "name": "modifiedAt",
+        "align": "right",
+        "hidden": true
+    },
+    {
+        "name": "modifiedBy",
+        "align": "right",
+        "hidden": true
+    }
+]

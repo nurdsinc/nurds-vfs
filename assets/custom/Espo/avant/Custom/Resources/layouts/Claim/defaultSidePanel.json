@@ -1,0 +1,14 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "statusModifiedBy"
+    },
+    {
+        "name": "statusModifiedAt"
+    },
+    {
+        "name": "streamUpdatedAt"
+    }
+]

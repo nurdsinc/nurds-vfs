@@ -1,0 +1,17 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "scheduleChecklist",
+        "notSortable": true
+    },
+    {
+        "name": "alerts",
+        "notSortable": true
+    },
+    {
+        "name": "timeToSend"
+    }
+]

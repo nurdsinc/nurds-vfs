@@ -1,0 +1,41 @@
+{
+    "fields": {
+        "source": "Source",
+        "direction": "Direction",
+        "to": "To",
+        "from": "From",
+        "body": "Body",
+        "lead": "Lead",
+        "status": "Status",
+        "messageId": "Message Id",
+        "campaign": "Campaign",
+        "contact": "Contact"
+    },
+    "links": {
+        "lead": "Lead",
+        "campaign": "Campaign",
+        "contact": "Contact"
+    },
+    "labels": {
+        "Create SMSBot": "Create SMS Bot"
+    },
+    "options": {
+        "source": {
+            "Voxtel": "Voxtel",
+            "Twiio": "Twiio"
+        },
+        "direction": {
+            "Inbound": "Inbound",
+            "Outbound": "Outbound",
+            "Unknown": "Unknown"
+        },
+        "status": {
+            "Pending": "Pending",
+            "Queued": "Queued",
+            "Sent": "Sent",
+            "Delivered": "Delivered",
+            "Failed": "Failed",
+            "Received": "Received"
+        }
+    }
+}

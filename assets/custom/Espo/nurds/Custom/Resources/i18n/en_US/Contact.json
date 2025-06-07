@@ -1,0 +1,36 @@
+{
+    "fields": {
+        "dob": "Date of Birth",
+        "accountRole": "Account Role",
+        "title": "Title",
+        "cStatus": "Status",
+        "account": "Primary Account",
+        "accountType": "Primary Account Type"
+    },
+    "options": {
+        "tags": {
+            "Lead": "Lead",
+            "Client": "Client",
+            "Test": "Test",
+            "Contacted": "Contacted",
+            "Friendly": "Friendly",
+            "Expiring": "Expiring",
+            "Contractor": "Contractor",
+            "Roofer": "Roofer",
+            "Affiliate": "Affiliate",
+            "Referral Partner": "Referral Partner",
+            "Attorney": "Attorney",
+            "Public Adjuster": "Public Adjuster",
+            "Website Review": "Website Review",
+            "SSL Issue": "SSL Issue"
+        },
+        "cStatus": {
+            "Pending": "Pending",
+            "Active": "Active",
+            "Inactive": "Inactive",
+            "Needs Review": "Needs Review",
+            "Cancelled": "Cancelled",
+            "Disabled": "Disabled"
+        }
+    }
+}

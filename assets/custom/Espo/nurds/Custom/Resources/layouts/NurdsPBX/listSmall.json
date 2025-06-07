@@ -1,0 +1,26 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "emailAddress",
+        "width": 20
+    },
+    {
+        "name": "phoneNumber",
+        "width": 20
+    },
+    {
+        "name": "billingAddress",
+        "width": 20
+    },
+    {
+        "name": "tenantId",
+        "width": 20
+    },
+    {
+        "name": "createdAt",
+        "width": 20
+    }
+]

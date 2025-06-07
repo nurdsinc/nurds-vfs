@@ -1,0 +1,9 @@
+{
+    "fields": {
+        "planType": {
+            "type": "enum",
+            "default": "Free",
+            "view": "nurds:views/settings/fields/plan-type"
+        }
+    }
+}

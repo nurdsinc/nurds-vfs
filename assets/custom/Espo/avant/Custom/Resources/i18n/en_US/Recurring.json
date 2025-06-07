@@ -1,0 +1,81 @@
+{
+    "fields": {
+        "payee": "Payee",
+        "type": "Type",
+        "amount": "Amount",
+        "amountCurrency": "Amount (Currency)",
+        "amountConverted": "Amount (Converted)",
+        "dueDate": "Due Date",
+        "status": "Status",
+        "paidFrom": "Paid From",
+        "vendors": "Vendors",
+        "vendor": "Vendor",
+        "frequency": "Frequency",
+        "day": "Day",
+        "payables": "Payables",
+        "active": "Active",
+        "recID": "Rec ID"
+    },
+    "links": {
+        "vendors": "Vendors",
+        "vendor": "Vendor",
+        "payables": "Payables"
+    },
+    "labels": {
+        "Create Recurring": "Create Recurring"
+    },
+    "tooltips": {
+        "payee": "Who is the payment being made to",
+        "frequency": "How often do you need to pay out? Monthly: 1st, Weekly: Friday, Specific: 3rd",
+        "day": "What day of the month should this put the payable in?"
+    },
+    "options": {
+        "type": {
+            "Bill": "Bill",
+            "Fee": "Fee",
+            "Subscription": "Subscription",
+            "Utility": "Utility",
+            "": "",
+            "Rent": "Rent"
+        },
+        "status": {
+            "Pending": "Pending",
+            "Approved": "Approved",
+            "Cut Check": "Cut Check",
+            "Paid": "Paid",
+            "Needs Review": "Needs Review",
+            "Void": "Void",
+            "": ""
+        },
+        "paidFrom": {
+            "PENDING": "PENDING",
+            "RAPID RESTORE": "RAPID RESTORE",
+            "APA": "APA",
+            "NWPA": "NWPA",
+            "AMEX": "AMEX",
+            "CREDIT CARD": "CREDIT CARD",
+            "": ""
+        },
+        "frequency": {
+            "Monthly": "Monthly",
+            "Weekly": "Weekly",
+            "": "",
+            "Specific Day": "Specific Day"
+        },
+        "day": {
+            "1st": "1st",
+            "5th": "5th",
+            "10th": "10th",
+            "15th": "15th",
+            "20th": "20th",
+            "25th": "25th",
+            "30th": "30th",
+            "": "",
+            "Monday": "Monday",
+            "Tuesday": "Tuesday",
+            "Wednesday": "Wednesday",
+            "Thursday": "Thursday",
+            "Friday": "Friday"
+        }
+    }
+}
