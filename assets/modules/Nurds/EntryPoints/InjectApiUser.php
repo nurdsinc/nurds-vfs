@@ -22,38 +22,22 @@ class InjectApiUser implements EntryPoint
 
     public function run(Request $request, Response $response): void
     {
-        $appId = $request->getQueryParam('appId');
 
-        // Validate appId
-        if (!$appId || !is_string($appId)) {
+        $currentIp = $_SERVER['REMOTE_ADDR'];
+        // Confirm VPN
+        if ($currentIp !== ADMIN_IP) {
             header('Content-Type: application/json');
             echo json_encode([
-                'status' => 'error',
-                'message' => 'Missing or invalid appId parameter.'
+                "status" => "error",
+                "message" => "Access denied from IP: {$currentIp}. Please email support@nurds.com for assistance."
             ]);
             return;
         }
 
-        $tenantId = strtolower($appId);
-        $dataFolderPath = '/var/www/html/data';
-        $tenantFolderPath = $dataFolderPath . '/' . $tenantId;
-
-        // Validate tenant folder
-        if (!is_dir($tenantFolderPath)) {
-            header('Content-Type: application/json');
-            echo json_encode([
-                'status' => 'error',
-                'message' => "Tenant data folder does not exist: /data/{$tenantId}"
-            ]);
-            return;
-        }
-
-        // Set global variable
-        putenv("TENANT={$tenantId}");
-        $_ENV['TENANT'] = $tenantId;
 
         $userName = 'nurds_api';
         $userId = '66eb297573629225e';
+        $apiKey = '3915c6038184cd6f107c4da4984f8e99';
 
         $defaultTeamId = '66eb2898c0fdf41e6';
         $defaultTeamName = 'Admin';
@@ -61,8 +45,20 @@ class InjectApiUser implements EntryPoint
         $roleId = '66eb28fae803acb78';
         $roleName = 'Admin';
 
-        $repo = $this->entityManager->getRepository(User::ENTITY_TYPE);
+        $pdo = $this->entityManager->getPDO();
 
+        // Check if the deleted user exists
+        $stmt = $pdo->prepare("SELECT * FROM user WHERE user_name = :userName LIMIT 1");
+        $stmt->execute(['userName' => $userName]);
+        $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+
+        if ($row && $row['deleted']) {
+            // Undelete the user
+            $undeleteStmt = $pdo->prepare("UPDATE user SET deleted = 0 WHERE id = :id");
+            $undeleteStmt->execute(['id' => $row['id']]);
+        }
+
+        $repo = $this->entityManager->getRepository(User::ENTITY_TYPE);
         $existing = $repo->where(['userName' => $userName])->findOne();
 
         // Check if user already exists
@@ -71,8 +67,7 @@ class InjectApiUser implements EntryPoint
             echo json_encode([
                 'status' => 'exists',
                 'id' => $existing->getId(),
-                'tenant' => $tenantId,
-                'env' => getenv(),
+                'appId' => TENANT,
             ]);
             return;
         }
@@ -85,6 +80,7 @@ class InjectApiUser implements EntryPoint
             'userName' => $userName,
             'lastName' => $userName,
             'authMethod' => 'ApiKey',
+            'apiKey' => $apiKey,
             'defaultTeamId' => $defaultTeamId,
             'defaultTeamName' => $defaultTeamName,
             'teamsIds' => [$defaultTeamId],

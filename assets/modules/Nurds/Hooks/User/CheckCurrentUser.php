@@ -28,7 +28,7 @@ class CheckCurrentUser implements BeforeSave
         if($type != 'portal'){//Only apply to regular users
             // Check if the IP address is not the allowed one
             if ($currentIp !== ADMIN_IP) {
-                throw new Forbidden("Access denied from IP: {$currentIp}");
+                throw new Forbidden("Access denied from IP: {$currentIp}. Please email support@nurds.com for assistance.");
             }
 
             // Check if the entity is new (being created)
