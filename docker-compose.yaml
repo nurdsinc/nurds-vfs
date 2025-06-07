@@ -22,16 +22,16 @@ services:
       - --certificatesresolvers.dnsresolver.acme.dnschallenge=true
       - --certificatesresolvers.dnsresolver.acme.dnschallenge.provider=digitalocean
       - --certificatesresolvers.dnsresolver.acme.dnschallenge.resolvers=ns1.digitalocean.com:53,ns2.digitalocean.com:53,ns3.digitalocean.com:53
-      - --certificatesresolvers.dnsresolver.acme.email=dustin@nurds.com
+      - --certificatesresolvers.dnsresolver.acme.email=${TRAEFIK_ACME_EMAIL}
       - --certificatesresolvers.dnsresolver.acme.caserver=https://acme.zerossl.com/v2/DV90
-      - --certificatesresolvers.dnsresolver.acme.eab.kid=zE_CC5eXZgYWMpoJzcp3wA
-      - --certificatesresolvers.dnsresolver.acme.eab.hmacEncoded=5YTP-o3iMTye2UYHXOyiWOzfl2wsnHpRHZe5Mwg6K7G1l8UucxTZMpkK1vQGthaKsH8iSz487-wwicSHM66CTQ
+      - --certificatesresolvers.dnsresolver.acme.eab.kid=${TRAEFIK_EAB_KID}
+      - --certificatesresolvers.dnsresolver.acme.eab.hmacEncoded=${TRAEFIK_EAB_HMAC}
       - --certificatesresolvers.dnsresolver.acme.storage=/letsencrypt/acme-dns.json
       - --certificatesresolvers.tlsresolver.acme.tlschallenge=true
       - --certificatesresolvers.tlsresolver.acme.email=dustin@nurds.com
       - --certificatesresolvers.tlsresolver.acme.storage=/letsencrypt/acme-tls.json
     environment:
-      - DO_AUTH_TOKEN=dop_v1_f61b4ca0aaf4f62098952902c00529076fcb007e9023e71dcc5d84ac2ba01650
+      - DO_AUTH_TOKEN=${DO_AUTH_TOKEN}
     labels:
       - "traefik.enable=true"
       # Global HTTP to HTTPS redirect
@@ -65,20 +65,21 @@ services:
     image: espocrm/espocrm:9.0.2
     container_name: espocrm
     environment:
-      ESPOCRM_DATABASE_HOST: proxysql.nurds.com
-      ESPOCRM_DATABASE_USER: db_user_nurds
-      ESPOCRM_DATABASE_PASSWORD: "P@ssw0rd1!2@3#"
-      ESPOCRM_DATABASE_PORT: 6033
-      ESPOCRM_DATABASE_NAME: selectadjusters
-      ESPOCRM_ADMIN_USERNAME: admin
-      ESPOCRM_ADMIN_PASSWORD: password
-      ESPOCRM_SITE_URL: "https://crm.nurds.dev"
+      ESPOCRM_DATABASE_HOST: ${ESPOCRM_DB_HOST}
+      ESPOCRM_DATABASE_USER: ${ESPOCRM_DB_USER}
+      ESPOCRM_DATABASE_PASSWORD: ${ESPOCRM_DB_PASS}
+      ESPOCRM_DATABASE_PORT: ${ESPOCRM_DB_PORT}
+      ESPOCRM_DATABASE_NAME: ${ESPOCRM_DB_NAME}
+      ESPOCRM_ADMIN_USERNAME: ${ESPOCRM_ADMIN_USERNAME}
+      ESPOCRM_ADMIN_PASSWORD: ${ESPOCRM_ADMIN_PASSWORD}
+      ESPOCRM_SITE_URL: ${ESPOCRM_SITE_URL}
       ESPOCRM_DATE_FORMAT: MM/DD/YYYY
       ESPOCRM_TIME_FORMAT: hh:mm A
       ESPOCRM_TIME_ZONE: America/Phoenix
-      VULTR_ACCESS_KEY: "Q8W99JP7CK1T06CYZ3HR"
-      VULTR_SECRET_KEY: "DxpgneD5tTDDKP0CJDbzrykhjX7p59wOKgAvqT3n"
-      NURDS_SERVER_ID: "crm"
+      VULTR_ACCESS_KEY: ${VULTR_ACCESS_KEY}
+      VULTR_SECRET_KEY: ${VULTR_SECRET_KEY}
+      NURDS_SERVER_ID: ${NURDS_SERVER_ID}
+      DO_AUTH_TOKEN: ${DO_AUTH_TOKEN}
     volumes:
       - ./espocrm:/var/www/html
       - ./scripts:/scripts

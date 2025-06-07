@@ -53,7 +53,7 @@ class DigitalOceanHook
         //$entity->set('description', 'Hello World');
 		$digitalOceanResponse = $entity->get('digitalOceanResponse');
 		if($entity->get('digitalOcean') == true && $digitalOceanResponse == ""){
-			$token = "73831aa2b7a2c8bbb73394a39611c661d5fa68281a8a6cd444d610b69bd032dc";
+			$token = getenv('DO_AUTH_TOKEN');
 			$domain = $entity->get('name');
 			
 			$baseUrl = "https://api.digitalocean.com/v2/";

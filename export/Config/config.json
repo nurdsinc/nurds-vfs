@@ -420,7 +420,7 @@
     "emailScheduledBatchCount": 50,
     "emailAddressMaxCount": 10,
     "phoneNumberMaxCount": 10,
-    "digitalOceanToken": "dop_v1_c8dca41300691892b7def46dfc0024b37bb52c8b2dcb8eabd88e086bd94b171d",
+    "digitalOceanToken": "",
     "digitalOceanUrl": "https://api.digitalocean.com/v2",
     "adminPanelIframeDisabled": true,
     "awsS3Storage": {

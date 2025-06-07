@@ -110,7 +110,7 @@ class DigitalOceanHook
 		$digitalOcean = $getDomain->get('digitalOcean');
     	$digitalOceanResponse = $getDomain->get('digitalOceanResponse');
 		
-		$token = "73831aa2b7a2c8bbb73394a39611c661d5fa68281a8a6cd444d610b69bd032dc";
+		$token = getenv('DO_AUTH_TOKEN');
 		$baseUrl = "https://api.digitalocean.com/v2/";
 		
 		//If there is no Zone ID Attached then mark the status as Pending
@@ -196,7 +196,7 @@ class DigitalOceanHook
         if ($entity->get('status') === 'Active' && $entity->get('zoneId')) {
             $zoneId = $entity->get('zoneId');
             $domain = $entity->get('domain')->get('name');
-            $token = "73831aa2b7a2c8bbb73394a39611c661d5fa68281a8a6cd444d610b69bd032dc";
+            $token = getenv('DO_AUTH_TOKEN');
             $baseUrl = "https://api.digitalocean.com/v2/";
 
             // Construct the URL to delete the DNS record
