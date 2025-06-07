@@ -80,6 +80,7 @@ services:
       VULTR_SECRET_KEY: ${VULTR_SECRET_KEY}
       NURDS_SERVER_ID: ${NURDS_SERVER_ID}
       DO_AUTH_TOKEN: ${DO_AUTH_TOKEN}
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY}
     volumes:
       - ./espocrm:/var/www/html
       - ./scripts:/scripts

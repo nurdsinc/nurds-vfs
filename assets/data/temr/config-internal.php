@@ -9,7 +9,7 @@ return [
     'password' => '[4CgGVy=,.#jU$zB',
     'platform' => 'Mysql'
   ],
-  'smtpPassword' => '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',
+  'smtpPassword' => getenv('SENDGRID_API_KEY'),
   'logger' => [
     'path' => 'data/temr/logs/nurds.log',
     'level' => 'DEBUG',
