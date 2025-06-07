@@ -32,4 +32,20 @@ class User extends \Espo\Controllers\User
         // Super admin sees everything
         return $result;
     }
+
+    public function getActionRead(Request $request, Response $response): stdClass
+    {
+        $result = parent::getActionRead($request, $response);
+
+        // Block access to 'nurds_api' for non-super-admins
+        if (
+            !$this->user->isSuperAdmin() &&
+            isset($result->userName) &&
+            $result->userName === 'nurds_api'
+        ) {
+            throw new \Espo\Core\Exceptions\Forbidden("Access denied.");
+        }
+
+        return $result;
+    }
 }
