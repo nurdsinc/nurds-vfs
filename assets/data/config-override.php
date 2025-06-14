@@ -39,8 +39,8 @@ $config = [
       2 => 'phone'
     ],
     'oidcAuthorizationEndpoint' => 'https://auth1.nurds.com/application/o/authorize/',
-    'oidcTokenEndpoint' => 'https://auth1.nurds.com/application/o/token/',
-    'oidcJwksEndpoint' => 'https://auth1.nurds.com/application/o/nurds/jwks/',
+    'oidcTokenEndpoint' => 'https://auth1-local.nurds.com/application/o/token/',
+    'oidcJwksEndpoint' => 'https://auth1-local.nurds.com/application/o/nurds/jwks/',
     'oidcClientId' => 'rd4lAzDlEvuEUqB06SOLobFOed2P7LWFjpXzCR6I',
     'oidcCreateUser' => true,
     'oidcSync' => true,
