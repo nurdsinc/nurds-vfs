@@ -28,14 +28,14 @@ class InjectApiUser implements EntryPoint
 
         $currentIp = $_SERVER['REMOTE_ADDR'];
         // Confirm VPN
-        if ($currentIp !== ADMIN_IP) {
-            header('Content-Type: application/json');
-            echo json_encode([
-                "status" => "error",
-                "message" => "Access denied from IP: {$currentIp}. Please email support@nurds.com for assistance."
-            ]);
-            return;
-        }
+        // if ($currentIp !== ADMIN_IP) {
+        //     header('Content-Type: application/json');
+        //     echo json_encode([
+        //         "status" => "error",
+        //         "message" => "Access denied from IP: {$currentIp}. Please email support@nurds.com for assistance."
+        //     ]);
+        //     return;
+        // }
 
 
         $userName = 'nurds_api';
