@@ -1,0 +1,14 @@
+{
+    "fields": {
+        "cInterestedIn": "Interested In"
+    },
+    "options": {
+        "cInterestedIn": {
+            "Metal Roofing Panels": "Metal Roofing Panels",
+            "Metal Roof Flashing and Trim": "Metal Roof Flashing and Trim",
+            "Metal Roof fasteners & accessories": "Metal Roof fasteners & accessories",
+            "Tools": "Tools",
+            "Custom projects": "Custom projects"
+        }
+    }
+}

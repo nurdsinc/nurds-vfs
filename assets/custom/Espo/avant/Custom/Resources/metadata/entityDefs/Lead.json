@@ -776,7 +776,8 @@
     "convertEntityList": [
         "Account",
         "Contact",
-        "Opportunity"
+        "Opportunity",
+        "Claim"
     ],
     "convertFields": {
         "Contact": [],
@@ -791,6 +792,36 @@
         "Opportunity": {
             "amount": "opportunityAmount",
             "leadSource": "source"
+        },
+        "Claim": {
+            "name": "lossAddressStreet",
+            "dateOfLoss": "dateOfLoss",
+            "typeOfLoss": "typeOfLoss",
+            "policyType": "policyType",
+            "policyNumber": "policyNumber",
+            "claimNumber": "claimNumber",
+            "propertyType": "propertyType",
+            "dwellingCoverage": "dwellingCoverage",
+            "otherStructuresCoverage": "otherStructuresCoverage",
+            "contentsCoverage": "contentsCoverage",
+            "lossOfUseCoverage": "lossOfUseCoverage",
+            "endorsements": "endorsements",
+            "policyNotes": "policyNotes",
+            "deductible": "deductible",
+            "inceptionDate": "inceptionDate",
+            "rcvAcv": "rcvAcv",
+            "priorPayment": "priorPayment",
+            "initialOffer": "initialOffer",
+            "lossUnitType": "lossUnitType",
+            "salesRabbitStatus": "salesRabbitStatus",
+            "salesRabbitId": "salesRabbitId",
+            "recoverableDepreciationDeadline": "recoverableDepreciationDeadline",
+            "tollingDeadline": "tollingDeadline",
+            "adjuster": "adjuster",
+            "user": "user",
+            "companyCamLink": "companyCamLink",
+            "dropBoxLink": "dropBoxLink",
+            "matterportLink": "matterportLink"
         }
     },
     "collection": {

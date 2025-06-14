@@ -375,8 +375,8 @@ return [
   'emailScheduledBatchCount' => 50,
   'emailAddressMaxCount' => 10,
   'phoneNumberMaxCount' => 10,
-  'cacheTimestamp' => 1748123353,
-  'microtime' => 1748123353.818325,
+  'cacheTimestamp' => 1749357549,
+  'microtime' => 1749357549.149146,
   'siteUrl' => 'https://ctrlsolutions.crm.nurds.com',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1748112016,
@@ -384,5 +384,6 @@ return [
   'avatarsDisabled' => false,
   'scopeColorsDisabled' => false,
   'tabIconsDisabled' => false,
-  'dashletsOptions' => (object) []
+  'dashletsOptions' => (object) [],
+  'latestVersion' => '9.1.5'
 ];

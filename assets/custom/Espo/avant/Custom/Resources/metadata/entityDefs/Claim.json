@@ -2121,7 +2121,8 @@
         "cOCDate": {
             "notNull": false,
             "type": "date",
-            "isCustom": true
+            "isCustom": true,
+            "tooltip": true
         },
         "interiorDamageHighlight": {
             "type": "varchar",

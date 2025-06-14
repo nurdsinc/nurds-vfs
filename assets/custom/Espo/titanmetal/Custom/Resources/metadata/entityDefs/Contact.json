@@ -1,0 +1,30 @@
+{
+    "fields": {
+        "tags": {
+            "options": [
+                "Lead",
+                "Client",
+                "Supplier",
+                "Equipment Vendor",
+                "Maintenance",
+                "Prospect",
+                "Pitching",
+                "Secure Lead",
+                "Proposal Sent",
+                "Account"
+            ],
+            "style": {
+                "Lead": null,
+                "Client": null,
+                "Supplier": null,
+                "Equipment Vendor": null,
+                "Maintenance": null,
+                "Prospect": null,
+                "Pitching": null,
+                "Secure Lead": null,
+                "Proposal Sent": null,
+                "Account": null
+            }
+        }
+    }
+}

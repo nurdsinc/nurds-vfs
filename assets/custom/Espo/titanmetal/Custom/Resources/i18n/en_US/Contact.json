@@ -1,0 +1,16 @@
+{
+    "options": {
+        "tags": {
+            "Lead": "Lead",
+            "Client": "Client",
+            "Supplier": "Supplier",
+            "Equipment Vendor": "Equipment Vendor",
+            "Maintenance": "Maintenance",
+            "Prospect": "Prospect",
+            "Pitching": "Pitching",
+            "Secure Lead": "Secure Lead",
+            "Proposal Sent": "Proposal Sent",
+            "Account": "Account"
+        }
+    }
+}

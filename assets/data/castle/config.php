@@ -1,6 +1,6 @@
 <?php
 return [
-  'planType' => 'Free',
+  'planType' => 'Enterprise',
   'useCache' => true,
   'jobMaxPortion' => 15,
   'jobRunInParallel' => false,
@@ -352,8 +352,8 @@ return [
   'wysiwygCodeEditorDisabled' => false,
   'customPrefixDisabled' => false,
   'listPagination' => true,
-  'cacheTimestamp' => 1748588886,
-  'microtime' => 1748588886.132832,
+  'cacheTimestamp' => 1749705370,
+  'microtime' => 1749705370.839423,
   'siteUrl' => 'https://castle.crm.nurds.dev',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1729614692,

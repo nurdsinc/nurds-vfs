@@ -1,0 +1,495 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "highlight"
+                },
+                {
+                    "name": "currentAdjusterAppointment"
+                },
+                {
+                    "name": "recoverableDepreciationDeadline"
+                }
+            ],
+            [
+                {
+                    "name": "adjReviewed1stInsEst"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "success",
+        "dynamicLogicStyled": null,
+        "tabBreak": true,
+        "tabLabel": "Quick Look",
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Status"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "gamePlan"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "success",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Game Plan"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "solarInfoHighlight"
+                },
+                {
+                    "name": "insChecksSentToCustomerHighlight"
+                },
+                {
+                    "name": "priorPayment"
+                },
+                {
+                    "name": "photosNeededHighlight"
+                }
+            ],
+            [
+                {
+                    "name": "hVACDamageHighlight"
+                },
+                {
+                    "name": "hVACNotesHighlight"
+                },
+                {
+                    "name": "insVendorHVACInspectionHighlight"
+                }
+            ],
+            [
+                {
+                    "name": "interiorDamageHighlight"
+                },
+                {
+                    "name": "interiorExteriorHighlight"
+                }
+            ],
+            [
+                {
+                    "name": "notesHighlight"
+                }
+            ],
+            [
+                {
+                    "name": "sentToConstructionOn"
+                },
+                {
+                    "name": "constructionNotes"
+                },
+                {
+                    "name": "cOCDate"
+                },
+                {
+                    "name": "thirdPartyContractorHighlight"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "isNotEmpty",
+                    "attribute": "highlight"
+                }
+            ]
+        },
+        "style": "default",
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Highlight Details"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "contact"
+                },
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "claimNumber"
+                },
+                {
+                    "name": "emailAddress"
+                }
+            ],
+            [
+                {
+                    "name": "dateofLoss"
+                },
+                {
+                    "name": "lossAddress"
+                },
+                {
+                    "name": "insuranceCompany"
+                },
+                {
+                    "name": "type"
+                }
+            ],
+            [
+                {
+                    "name": "jobType"
+                },
+                {
+                    "name": "lossUnitType"
+                },
+                {
+                    "name": "adjuster123"
+                },
+                {
+                    "name": "salesRepNew"
+                }
+            ],
+            [
+                {
+                    "name": "user1"
+                },
+                {
+                    "name": "phoneNumber"
+                },
+                false,
+                {
+                    "name": "contractedDate"
+                }
+            ],
+            [
+                {
+                    "name": "companyCamLink"
+                }
+            ],
+            [
+                false,
+                false
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ],
+            [
+                {
+                    "name": "lossAddressMap"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "info",
+        "dynamicLogicStyled": null,
+        "tabBreak": true,
+        "tabLabel": "Claim Overview",
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Claim Details"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "policyNumber"
+                },
+                false,
+                false,
+                {
+                    "name": "certifiedCopyOfPolicy"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "info",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Primary Policy Information"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "runAccounting"
+                }
+            ],
+            [
+                {
+                    "name": "rcvAcv"
+                },
+                {
+                    "name": "supplementTotal"
+                },
+                {
+                    "name": "deductibleAmountConverted"
+                },
+                {
+                    "name": "billableDeductibleConverted"
+                }
+            ],
+            [
+                {
+                    "name": "eCSIntOffer"
+                },
+                {
+                    "name": "depreciation"
+                },
+                {
+                    "name": "nonRecoverableRCVConverted"
+                },
+                {
+                    "name": "priorPaymentConverted"
+                }
+            ],
+            [
+                {
+                    "name": "checksDeposited"
+                },
+                {
+                    "name": "trustAccountPayments"
+                },
+                {
+                    "name": "totalBusinessFunds"
+                },
+                {
+                    "name": "paFee"
+                }
+            ],
+            [
+                {
+                    "name": "checksReconcile"
+                },
+                {
+                    "name": "totalExpenses"
+                },
+                {
+                    "name": "businessPayments"
+                },
+                false
+            ],
+            [
+                false,
+                false
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "warning",
+        "dynamicLogicStyled": null,
+        "tabBreak": true,
+        "tabLabel": "Accounting Overview",
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "General Accounting"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "deductibleAmount"
+                },
+                {
+                    "name": "billableDeductible"
+                }
+            ],
+            [
+                {
+                    "name": "deductibleInvoiceSent"
+                },
+                {
+                    "name": "deductibleInvDate"
+                }
+            ],
+            [
+                {
+                    "name": "deductibleReceived"
+                },
+                {
+                    "name": "deductibleAmtRecieved"
+                }
+            ],
+            [
+                {
+                    "name": "deductibleNotes"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "warning",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "tabLabel": "Accounting Overview",
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Deductible"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "appraisalStatus"
+                }
+            ],
+            [
+                {
+                    "name": "demandSentInToCarrier"
+                },
+                {
+                    "name": "appraiserNamed"
+                }
+            ],
+            [
+                {
+                    "name": "appraisalInspectionDone"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "dateAppraiserAssigned"
+                },
+                {
+                    "name": "appraisalInspection"
+                }
+            ],
+            [
+                {
+                    "name": "adjuster"
+                },
+                {
+                    "name": "adjuster12"
+                }
+            ],
+            [
+                {
+                    "name": "adjuster1"
+                },
+                {
+                    "name": "umpireInspection"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "has",
+                    "attribute": "jobType",
+                    "value": "Appraisal"
+                }
+            ]
+        },
+        "style": "info",
+        "customLabel": "Appraisal Info"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "carrierIntOffer"
+                },
+                {
+                    "name": "awardSettle"
+                }
+            ],
+            [
+                {
+                    "name": "contractorPaEst"
+                },
+                {
+                    "name": "increasePercentage"
+                }
+            ],
+            [
+                {
+                    "name": "totalIncrease"
+                },
+                {
+                    "name": "driveTime"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "has",
+                    "attribute": "jobType",
+                    "value": "Appraisal"
+                }
+            ]
+        },
+        "style": "success",
+        "customLabel": "Appraisal Accounting"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "umpireStatus"
+                }
+            ],
+            [
+                {
+                    "name": "umpireInspectionDone"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "umpireAppointed"
+                },
+                {
+                    "name": "dateUmpireAssigned"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "has",
+                    "attribute": "jobType",
+                    "value": "Umpire"
+                }
+            ]
+        },
+        "style": "info",
+        "customLabel": "Umpire Info"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "umpireEst"
+                },
+                {
+                    "name": "umpireAwardSettle"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "has",
+                    "attribute": "jobType",
+                    "value": "Umpire"
+                }
+            ]
+        },
+        "style": "success",
+        "customLabel": "Umpire Accounting"
+    }
+]

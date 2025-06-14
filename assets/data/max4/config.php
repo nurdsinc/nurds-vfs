@@ -375,8 +375,8 @@ return [
   'emailScheduledBatchCount' => 50,
   'emailAddressMaxCount' => 10,
   'phoneNumberMaxCount' => 10,
-  'cacheTimestamp' => 1748451836,
-  'microtime' => 1748451836.116111,
+  'cacheTimestamp' => 1749370682,
+  'microtime' => 1749370682.489074,
   'siteUrl' => 'https://max4.crm.nurds.com',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1748451101,
@@ -384,5 +384,6 @@ return [
   'avatarsDisabled' => false,
   'scopeColorsDisabled' => false,
   'tabIconsDisabled' => false,
-  'dashletsOptions' => (object) []
+  'dashletsOptions' => (object) [],
+  'latestVersion' => '9.1.5'
 ];

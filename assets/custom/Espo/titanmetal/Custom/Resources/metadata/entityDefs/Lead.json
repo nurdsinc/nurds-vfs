@@ -1,0 +1,31 @@
+{
+    "fields": {
+        "tags": {
+            "displayAsLabel": true,
+            "optionsReference": "Contact.tags"
+        },
+        "cInterestedIn": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "default": [],
+            "options": [
+                "Metal Roofing Panels",
+                "Metal Roof Flashing and Trim",
+                "Metal Roof fasteners & accessories",
+                "Tools",
+                "Custom projects"
+            ],
+            "style": {
+                "Metal Roofing Panels": null,
+                "Metal Roof Flashing and Trim": null,
+                "Metal Roof fasteners & accessories": null,
+                "Tools": null,
+                "Custom projects": null
+            },
+            "allowCustomOptions": true,
+            "displayAsList": true,
+            "audited": true,
+            "isCustom": true
+        }
+    }
+}

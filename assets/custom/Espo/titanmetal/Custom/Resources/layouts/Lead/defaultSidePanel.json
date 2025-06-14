@@ -1,0 +1,23 @@
+[
+    {
+        "name": ":assignedUser"
+    },
+    {
+        "name": "emailRequested"
+    },
+    {
+        "name": "requestAttempts"
+    },
+    {
+        "name": "teams"
+    },
+    {
+        "name": "tags"
+    },
+    {
+        "name": "cInterestedIn"
+    },
+    {
+        "name": "convertedAt"
+    }
+]

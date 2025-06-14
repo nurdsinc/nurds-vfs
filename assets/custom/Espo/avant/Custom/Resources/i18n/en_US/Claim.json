@@ -363,7 +363,7 @@
             "Partial Depreciation Received": "Review Depreciation Response",
             "Claim Dropped/Lost": "Claim Dropped",
             "Upset Customer": "Upset Customer",
-            "Pending Appr-Review": "Review for Appraisal",
+            "Pending Appr-Review": "Appraisal-Review",
             "Pending Appr-Demand Sent": "Pending Appr-Demand Sent",
             "Pending Appr-Reinspect": "Appraisal Inspection",
             "Pend Appr-Pending Docs": "Pend Appraisal Decision",
@@ -808,6 +808,7 @@
         "statusModifiedAt": "Most recent timestamp of when the status was changed.",
         "nonRecoverableRCV": "total amount of non-recoverable depreciation or total of any non-recoverable RCV as a result of policy endorsements (ie: no code cvg). \n*Only include amounts being deducted from ins RCV",
         "billableDeductible": "Total deductible owed after any offsets",
-        "sentToConstructionOn": "Date NCW sent or Construction Advisory sent"
+        "sentToConstructionOn": "Date NCW sent or Construction Advisory sent",
+        "cOCDate": "Date roof completed "
     }
 }

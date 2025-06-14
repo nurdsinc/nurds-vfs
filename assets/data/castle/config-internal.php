@@ -26,7 +26,7 @@ return [
   ],
   'adminUpgradeDisabled' => false,
   'isInstalled' => true,
-  'microtimeInternal' => 1738685308.384979,
+  'microtimeInternal' => 1749583034.101522,
   'passwordSalt' => '16133f9ea6db2267',
   'cryptKey' => '0cbd1dcfbf73f24a11605e4e227f257a',
   'hashSecretKey' => 'cf13d6bdf028da961569d9586659902c',
@@ -35,7 +35,7 @@ return [
     'group' => 33333
   ],
   'actualDatabaseType' => 'mysql',
-  'actualDatabaseVersion' => '8.0.30',
+  'actualDatabaseVersion' => '8.0.35',
   'instanceId' => '3b7c6244-4aa1-4a49-83bf-796a3fddd022',
   'cleanupAppLog' => true,
   'cleanupAppLogPeriod' => '30 days'
